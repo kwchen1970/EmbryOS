@@ -1,8 +1,16 @@
 #include "embryos.h"
 
+static uint64_t ticks_to_ns(uint64_t ticks){
+    uint64_t sec = ticks/time_base;
+    uint64_t rem = ticks%time_base;
+    return sec * 1000000000ULL + ((rem * 1000000000ULL)/ time_base);
+}
+
 void syscall_handler(struct trap_frame *tf) {
     struct pcb *self = sched_self();
     extern struct flat flat_fs;
+    extern uint64_t time_base;
+
 
     switch (tf->a7) {
     case SYS_EXIT:
@@ -48,9 +56,13 @@ void syscall_handler(struct trap_frame *tf) {
         L1(L_NORM, L_USER_DELETE, tf->a0);
         flat_delete(&flat_fs, tf->a0);
         break;
+    case SYS_GETTIME:
+        tf -> a0 = ticks_to_ns(mtime_get());
+        break;
     case 56: case 63: case 64: case 93: case 214:
         selfie_syscall_handler(tf);
         break;
+    
     default:
         die("unknown system call");
     }
