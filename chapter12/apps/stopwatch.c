@@ -8,7 +8,10 @@
 // Used codex to parse through relevant files and functiosn and suggest
 // what kind of code to write
 
+//states of stopwatch
 enum sw_state { SW_STOPPED, SW_RUNNING };
+
+//important stopwatch fields to track
 struct stopwatch {
     enum sw_state state;
     int has_focus;   //1 means focus 0 is not focus
@@ -16,9 +19,11 @@ struct stopwatch {
     uint64_t elapsed_ns;   //accumulates when stopped
 };
 
+// block pixel for rendering
 static struct bp bp;
 static uint8_t bp_buffer[WIDTH * HEIGHT];
 
+//initializes stopwatch
 static void sw_init(struct stopwatch *sw, uint64_t now) {
     sw->state = SW_STOPPED;
     sw->has_focus = 0;
@@ -26,6 +31,7 @@ static void sw_init(struct stopwatch *sw, uint64_t now) {
     sw->elapsed_ns = 0;
 }
 
+//toggles state of stopwatch between running and stopped
 static void sw_toggle(struct stopwatch *sw, uint64_t now) {
     if (sw->state == SW_STOPPED) {
         sw->state = SW_RUNNING;
@@ -54,12 +60,14 @@ static void clear_screen(uint8_t color) {
             bp_put(&bp, x, y, color, BP_LAZY);
 }
 
+// draws rectangle at specified position with given color
 static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     for (int y = y0; y < y0 + h; y++)
         for (int x = x0; x < x0 + w; x++)
             bp_put(&bp, x, y, color, BP_LAZY);
 }
 
+//digit table for 3x5 representation
 static const uint8_t digit3x5[10][5] = {
     {0x7,0x5,0x5,0x5,0x7}, // 0
     {0x2,0x6,0x2,0x2,0x7}, // 1
@@ -73,6 +81,7 @@ static const uint8_t digit3x5[10][5] = {
     {0x7,0x5,0x7,0x1,0x7}, // 9
 };
 
+// uses block pixel to draw a single digit at (x,y) with given color
 static void draw_digit(int x, int y, int d, uint8_t color) {
     for (int row = 0; row < 5; row++) {
         uint8_t bits = digit3x5[d][row];
@@ -83,11 +92,13 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     }
 }
 
+// uses block pixel to draw colon
 static void draw_colon(int x, int y, uint8_t color) {
     bp_put(&bp, x, y + 1, color, BP_LAZY);
     bp_put(&bp, x, y + 3, color, BP_LAZY);
 }
 
+// renders color and design of stopwatch
 static void sw_render(struct stopwatch *sw, uint64_t now) {
     uint64_t elapsed = sw_current_elapsed(sw, now);
     uint64_t ms = elapsed / 1000000ULL;
@@ -117,6 +128,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     bp_flush(&bp);
 }
 
+// handles different events like focus change and key presses
 static void handle_event(struct stopwatch *sw, int ev, uint64_t now) {
     if (ev == USER_GET_GOT_FOCUS) {
         sw->has_focus = 1;
@@ -140,13 +152,17 @@ static void handle_event(struct stopwatch *sw, int ev, uint64_t now) {
 }
 
 int main(void) {
+    // initialize block pixel and stopwatch
     struct stopwatch sw;
     bp_init(&bp, 0, 0, WIDTH, HEIGHT, bp_buffer);
 
     uint64_t now = user_gettime();
     sw_init(&sw, now);
+    
+
     sw_render(&sw, now);
 
+    // loop that handles events and updates display
     for (;;) {
         int ev;
         if (sw.state == SW_RUNNING) {
@@ -164,6 +180,5 @@ int main(void) {
         }
     }
 }
-
 
 
