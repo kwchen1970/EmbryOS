@@ -26,7 +26,7 @@ static uint8_t bp_buffer[WIDTH * HEIGHT];
 //initializes stopwatch
 static void sw_init(struct stopwatch *sw, uint64_t now) {
     sw->state = SW_STOPPED;
-    sw->has_focus = 0;
+    sw->has_focus = 1;
     sw->start_time_ns = now;
     sw->elapsed_ns = 0;
 }
@@ -91,6 +91,7 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
         }
     }
 }
+
 
 // uses block pixel to draw colon
 static void draw_colon(int x, int y, uint8_t color) {
@@ -180,5 +181,3 @@ int main(void) {
         }
     }
 }
-
-

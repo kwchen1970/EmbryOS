@@ -40,8 +40,8 @@ SYMBOL TABLE:
 0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
 0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
 0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
-0000000000000000 l    df *ABS*	0000000000000000 ccAMFYjW.o
-0000000000000000 l    df *ABS*	0000000000000000 ccr09xe3.o
+0000000000000000 l    df *ABS*	0000000000000000 ccNjdtAG.o
+0000000000000000 l    df *ABS*	0000000000000000 ccLlzXOP.o
 0000000000000000 l    df *ABS*	0000000000000000 crt1.c
 0000000000000000 l    df *ABS*	0000000000000000 string.c
 0000000000000000 l    df *ABS*	0000000000000000 string2.c
@@ -4416,8 +4416,8 @@ static inline void user_delay(int ms) {  // pseudo system call
 
 00000000700021ec <sw_init>:
 sw_init():
-/embryos/chapter12/apps/stopwatch.c:26
-
+/embryos/chapter12/apps/stopwatch.c:27
+// block pixel for rendering
 static struct bp bp;
 static uint8_t bp_buffer[WIDTH * HEIGHT];
 
@@ -4429,24 +4429,25 @@ static void sw_init(struct stopwatch *sw, uint64_t now) {
     700021f2:	1000                	addi	s0,sp,32
     700021f4:	fea43423          	sd	a0,-24(s0)
     700021f8:	feb43023          	sd	a1,-32(s0)
-/embryos/chapter12/apps/stopwatch.c:27
+/embryos/chapter12/apps/stopwatch.c:28
     sw->state = SW_STOPPED;
     700021fc:	fe843783          	ld	a5,-24(s0)
     70002200:	0007a023          	sw	zero,0(a5)
-/embryos/chapter12/apps/stopwatch.c:28
-    sw->has_focus = 0;
-    70002204:	fe843783          	ld	a5,-24(s0)
-    70002208:	0007a223          	sw	zero,4(a5)
 /embryos/chapter12/apps/stopwatch.c:29
+    sw->has_focus = 1;
+    70002204:	fe843783          	ld	a5,-24(s0)
+    70002208:	4705                	li	a4,1
+    7000220a:	c3d8                	sw	a4,4(a5)
+/embryos/chapter12/apps/stopwatch.c:30
     sw->start_time_ns = now;
     7000220c:	fe843783          	ld	a5,-24(s0)
     70002210:	fe043703          	ld	a4,-32(s0)
     70002214:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/stopwatch.c:30
+/embryos/chapter12/apps/stopwatch.c:31
     sw->elapsed_ns = 0;
     70002216:	fe843783          	ld	a5,-24(s0)
     7000221a:	0007b823          	sd	zero,16(a5)
-/embryos/chapter12/apps/stopwatch.c:31
+/embryos/chapter12/apps/stopwatch.c:32
 }
     7000221e:	0001                	nop
     70002220:	60e2                	ld	ra,24(sp)
@@ -4456,7 +4457,7 @@ static void sw_init(struct stopwatch *sw, uint64_t now) {
 
 0000000070002228 <sw_toggle>:
 sw_toggle():
-/embryos/chapter12/apps/stopwatch.c:34
+/embryos/chapter12/apps/stopwatch.c:35
 
 //toggles state of stopwatch between running and stopped
 static void sw_toggle(struct stopwatch *sw, uint64_t now) {
@@ -4466,29 +4467,29 @@ static void sw_toggle(struct stopwatch *sw, uint64_t now) {
     7000222e:	1000                	addi	s0,sp,32
     70002230:	fea43423          	sd	a0,-24(s0)
     70002234:	feb43023          	sd	a1,-32(s0)
-/embryos/chapter12/apps/stopwatch.c:35
+/embryos/chapter12/apps/stopwatch.c:36
     if (sw->state == SW_STOPPED) {
     70002238:	fe843783          	ld	a5,-24(s0)
     7000223c:	439c                	lw	a5,0(a5)
     7000223e:	eb99                	bnez	a5,70002254 <sw_toggle+0x2c>
-/embryos/chapter12/apps/stopwatch.c:36
+/embryos/chapter12/apps/stopwatch.c:37
         sw->state = SW_RUNNING;
     70002240:	fe843783          	ld	a5,-24(s0)
     70002244:	4705                	li	a4,1
     70002246:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/stopwatch.c:37
+/embryos/chapter12/apps/stopwatch.c:38
         sw->start_time_ns = now;
     70002248:	fe843783          	ld	a5,-24(s0)
     7000224c:	fe043703          	ld	a4,-32(s0)
     70002250:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/stopwatch.c:42
+/embryos/chapter12/apps/stopwatch.c:43
     } else {
         sw->elapsed_ns += (now - sw->start_time_ns);
         sw->state = SW_STOPPED;
     }
 }
     70002252:	a01d                	j	70002278 <sw_toggle+0x50>
-/embryos/chapter12/apps/stopwatch.c:39
+/embryos/chapter12/apps/stopwatch.c:40
         sw->elapsed_ns += (now - sw->start_time_ns);
     70002254:	fe843783          	ld	a5,-24(s0)
     70002258:	6b98                	ld	a4,16(a5)
@@ -4499,11 +4500,11 @@ static void sw_toggle(struct stopwatch *sw, uint64_t now) {
     70002268:	973e                	add	a4,a4,a5
     7000226a:	fe843783          	ld	a5,-24(s0)
     7000226e:	eb98                	sd	a4,16(a5)
-/embryos/chapter12/apps/stopwatch.c:40
+/embryos/chapter12/apps/stopwatch.c:41
         sw->state = SW_STOPPED;
     70002270:	fe843783          	ld	a5,-24(s0)
     70002274:	0007a023          	sw	zero,0(a5)
-/embryos/chapter12/apps/stopwatch.c:42
+/embryos/chapter12/apps/stopwatch.c:43
 }
     70002278:	0001                	nop
     7000227a:	60e2                	ld	ra,24(sp)
@@ -4513,7 +4514,7 @@ static void sw_toggle(struct stopwatch *sw, uint64_t now) {
 
 0000000070002282 <sw_reset>:
 sw_reset():
-/embryos/chapter12/apps/stopwatch.c:44
+/embryos/chapter12/apps/stopwatch.c:45
 
 static void sw_reset(struct stopwatch *sw, uint64_t now) {
     70002282:	1101                	addi	sp,sp,-32
@@ -4522,22 +4523,22 @@ static void sw_reset(struct stopwatch *sw, uint64_t now) {
     70002288:	1000                	addi	s0,sp,32
     7000228a:	fea43423          	sd	a0,-24(s0)
     7000228e:	feb43023          	sd	a1,-32(s0)
-/embryos/chapter12/apps/stopwatch.c:45
+/embryos/chapter12/apps/stopwatch.c:46
     sw->elapsed_ns = 0;
     70002292:	fe843783          	ld	a5,-24(s0)
     70002296:	0007b823          	sd	zero,16(a5)
-/embryos/chapter12/apps/stopwatch.c:46
+/embryos/chapter12/apps/stopwatch.c:47
     if (sw->state == SW_RUNNING)
     7000229a:	fe843783          	ld	a5,-24(s0)
     7000229e:	4398                	lw	a4,0(a5)
     700022a0:	4785                	li	a5,1
     700022a2:	00f71763          	bne	a4,a5,700022b0 <sw_reset+0x2e>
-/embryos/chapter12/apps/stopwatch.c:47
+/embryos/chapter12/apps/stopwatch.c:48
         sw->start_time_ns = now;
     700022a6:	fe843783          	ld	a5,-24(s0)
     700022aa:	fe043703          	ld	a4,-32(s0)
     700022ae:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/stopwatch.c:48
+/embryos/chapter12/apps/stopwatch.c:49
 }
     700022b0:	0001                	nop
     700022b2:	60e2                	ld	ra,24(sp)
@@ -4547,7 +4548,7 @@ static void sw_reset(struct stopwatch *sw, uint64_t now) {
 
 00000000700022ba <sw_current_elapsed>:
 sw_current_elapsed():
-/embryos/chapter12/apps/stopwatch.c:50
+/embryos/chapter12/apps/stopwatch.c:51
 
 static uint64_t sw_current_elapsed(const struct stopwatch *sw, uint64_t now) {
     700022ba:	1101                	addi	sp,sp,-32
@@ -4556,13 +4557,13 @@ static uint64_t sw_current_elapsed(const struct stopwatch *sw, uint64_t now) {
     700022c0:	1000                	addi	s0,sp,32
     700022c2:	fea43423          	sd	a0,-24(s0)
     700022c6:	feb43023          	sd	a1,-32(s0)
-/embryos/chapter12/apps/stopwatch.c:51
+/embryos/chapter12/apps/stopwatch.c:52
     if (sw->state == SW_RUNNING)
     700022ca:	fe843783          	ld	a5,-24(s0)
     700022ce:	4398                	lw	a4,0(a5)
     700022d0:	4785                	li	a5,1
     700022d2:	00f71e63          	bne	a4,a5,700022ee <sw_current_elapsed+0x34>
-/embryos/chapter12/apps/stopwatch.c:52
+/embryos/chapter12/apps/stopwatch.c:53
         return sw->elapsed_ns + (now - sw->start_time_ns);
     700022d6:	fe843783          	ld	a5,-24(s0)
     700022da:	6b98                	ld	a4,16(a5)
@@ -4572,11 +4573,11 @@ static uint64_t sw_current_elapsed(const struct stopwatch *sw, uint64_t now) {
     700022e6:	40f687b3          	sub	a5,a3,a5
     700022ea:	97ba                	add	a5,a5,a4
     700022ec:	a021                	j	700022f4 <sw_current_elapsed+0x3a>
-/embryos/chapter12/apps/stopwatch.c:53
+/embryos/chapter12/apps/stopwatch.c:54
     return sw->elapsed_ns;
     700022ee:	fe843783          	ld	a5,-24(s0)
     700022f2:	6b9c                	ld	a5,16(a5)
-/embryos/chapter12/apps/stopwatch.c:54
+/embryos/chapter12/apps/stopwatch.c:55
 }
     700022f4:	853e                	mv	a0,a5
     700022f6:	60e2                	ld	ra,24(sp)
@@ -4586,7 +4587,7 @@ static uint64_t sw_current_elapsed(const struct stopwatch *sw, uint64_t now) {
 
 00000000700022fe <clear_screen>:
 clear_screen():
-/embryos/chapter12/apps/stopwatch.c:56
+/embryos/chapter12/apps/stopwatch.c:57
 
 static void clear_screen(uint8_t color) {
     700022fe:	7179                	addi	sp,sp,-48
@@ -4595,15 +4596,15 @@ static void clear_screen(uint8_t color) {
     70002304:	1800                	addi	s0,sp,48
     70002306:	87aa                	mv	a5,a0
     70002308:	fcf40fa3          	sb	a5,-33(s0)
-/embryos/chapter12/apps/stopwatch.c:57
+/embryos/chapter12/apps/stopwatch.c:58
     for (int y = 0; y < HEIGHT; y++)
     7000230c:	fe042623          	sw	zero,-20(s0)
     70002310:	a0b1                	j	7000235c <clear_screen+0x5e>
-/embryos/chapter12/apps/stopwatch.c:58
+/embryos/chapter12/apps/stopwatch.c:59
         for (int x = 0; x < WIDTH; x++)
     70002312:	fe042423          	sw	zero,-24(s0)
     70002316:	a035                	j	70002342 <clear_screen+0x44>
-/embryos/chapter12/apps/stopwatch.c:59
+/embryos/chapter12/apps/stopwatch.c:60
             bp_put(&bp, x, y, color, BP_LAZY);
     70002318:	fdf44683          	lbu	a3,-33(s0)
     7000231c:	fec42603          	lw	a2,-20(s0)
@@ -4614,27 +4615,27 @@ static void clear_screen(uint8_t color) {
     7000232c:	b1050513          	addi	a0,a0,-1264 # 70002e38 <bp>
     70002330:	fffff097          	auipc	ra,0xfffff
     70002334:	fb2080e7          	jalr	-78(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:58 (discriminator 3)
+/embryos/chapter12/apps/stopwatch.c:59 (discriminator 3)
         for (int x = 0; x < WIDTH; x++)
     70002338:	fe842783          	lw	a5,-24(s0)
     7000233c:	2785                	addiw	a5,a5,1
     7000233e:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:58 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:59 (discriminator 1)
     70002342:	fe842783          	lw	a5,-24(s0)
     70002346:	0007871b          	sext.w	a4,a5
     7000234a:	02600793          	li	a5,38
     7000234e:	fce7d5e3          	bge	a5,a4,70002318 <clear_screen+0x1a>
-/embryos/chapter12/apps/stopwatch.c:57 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:58 (discriminator 2)
     for (int y = 0; y < HEIGHT; y++)
     70002352:	fec42783          	lw	a5,-20(s0)
     70002356:	2785                	addiw	a5,a5,1
     70002358:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/stopwatch.c:57 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:58 (discriminator 1)
     7000235c:	fec42783          	lw	a5,-20(s0)
     70002360:	0007871b          	sext.w	a4,a5
     70002364:	47d5                	li	a5,21
     70002366:	fae7d6e3          	bge	a5,a4,70002312 <clear_screen+0x14>
-/embryos/chapter12/apps/stopwatch.c:60
+/embryos/chapter12/apps/stopwatch.c:61
 }
     7000236a:	0001                	nop
     7000236c:	0001                	nop
@@ -4645,7 +4646,7 @@ static void clear_screen(uint8_t color) {
 
 0000000070002376 <draw_rect>:
 draw_rect():
-/embryos/chapter12/apps/stopwatch.c:63
+/embryos/chapter12/apps/stopwatch.c:64
 
 // draws rectangle at specified position with given color
 static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
@@ -4663,17 +4664,17 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     70002392:	fcf42823          	sw	a5,-48(s0)
     70002396:	87ba                	mv	a5,a4
     70002398:	fcf407a3          	sb	a5,-49(s0)
-/embryos/chapter12/apps/stopwatch.c:64
+/embryos/chapter12/apps/stopwatch.c:65
     for (int y = y0; y < y0 + h; y++)
     7000239c:	fd842783          	lw	a5,-40(s0)
     700023a0:	fef42623          	sw	a5,-20(s0)
     700023a4:	a8a1                	j	700023fc <draw_rect+0x86>
-/embryos/chapter12/apps/stopwatch.c:65
+/embryos/chapter12/apps/stopwatch.c:66
         for (int x = x0; x < x0 + w; x++)
     700023a6:	fdc42783          	lw	a5,-36(s0)
     700023aa:	fef42423          	sw	a5,-24(s0)
     700023ae:	a035                	j	700023da <draw_rect+0x64>
-/embryos/chapter12/apps/stopwatch.c:66
+/embryos/chapter12/apps/stopwatch.c:67
             bp_put(&bp, x, y, color, BP_LAZY);
     700023b0:	fcf44683          	lbu	a3,-49(s0)
     700023b4:	fec42603          	lw	a2,-20(s0)
@@ -4684,12 +4685,12 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     700023c4:	a7850513          	addi	a0,a0,-1416 # 70002e38 <bp>
     700023c8:	fffff097          	auipc	ra,0xfffff
     700023cc:	f1a080e7          	jalr	-230(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:65 (discriminator 3)
+/embryos/chapter12/apps/stopwatch.c:66 (discriminator 3)
         for (int x = x0; x < x0 + w; x++)
     700023d0:	fe842783          	lw	a5,-24(s0)
     700023d4:	2785                	addiw	a5,a5,1
     700023d6:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:65 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:66 (discriminator 1)
     700023da:	fdc42783          	lw	a5,-36(s0)
     700023de:	873e                	mv	a4,a5
     700023e0:	fd442783          	lw	a5,-44(s0)
@@ -4698,12 +4699,12 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     700023e8:	fe842703          	lw	a4,-24(s0)
     700023ec:	2701                	sext.w	a4,a4
     700023ee:	fcf741e3          	blt	a4,a5,700023b0 <draw_rect+0x3a>
-/embryos/chapter12/apps/stopwatch.c:64 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:65 (discriminator 2)
     for (int y = y0; y < y0 + h; y++)
     700023f2:	fec42783          	lw	a5,-20(s0)
     700023f6:	2785                	addiw	a5,a5,1
     700023f8:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/stopwatch.c:64 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:65 (discriminator 1)
     700023fc:	fd842783          	lw	a5,-40(s0)
     70002400:	873e                	mv	a4,a5
     70002402:	fd042783          	lw	a5,-48(s0)
@@ -4712,7 +4713,7 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     7000240a:	fec42703          	lw	a4,-20(s0)
     7000240e:	2701                	sext.w	a4,a4
     70002410:	f8f74be3          	blt	a4,a5,700023a6 <draw_rect+0x30>
-/embryos/chapter12/apps/stopwatch.c:67
+/embryos/chapter12/apps/stopwatch.c:68
 }
     70002414:	0001                	nop
     70002416:	0001                	nop
@@ -4723,12 +4724,12 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
 
 0000000070002420 <draw_digit>:
 draw_digit():
-/embryos/chapter12/apps/stopwatch.c:83
-    {0x7,0x1,0x1,0x1,0x1}, // 7
+/embryos/chapter12/apps/stopwatch.c:85
     {0x7,0x5,0x7,0x5,0x7}, // 8
     {0x7,0x5,0x7,0x1,0x7}, // 9
 };
 
+// uses block pixel to draw a single digit at (x,y) with given color
 static void draw_digit(int x, int y, int d, uint8_t color) {
     70002420:	7179                	addi	sp,sp,-48
     70002422:	f406                	sd	ra,40(sp)
@@ -4743,11 +4744,11 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     70002438:	fcf42a23          	sw	a5,-44(s0)
     7000243c:	87ba                	mv	a5,a4
     7000243e:	fcf409a3          	sb	a5,-45(s0)
-/embryos/chapter12/apps/stopwatch.c:84
+/embryos/chapter12/apps/stopwatch.c:86
     for (int row = 0; row < 5; row++) {
     70002442:	fe042623          	sw	zero,-20(s0)
     70002446:	a045                	j	700024e6 <draw_digit+0xc6>
-/embryos/chapter12/apps/stopwatch.c:85
+/embryos/chapter12/apps/stopwatch.c:87
         uint8_t bits = digit3x5[d][row];
     70002448:	00000617          	auipc	a2,0x0
     7000244c:	5d060613          	addi	a2,a2,1488 # 70002a18 <digit3x5>
@@ -4760,11 +4761,11 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     70002460:	97b6                	add	a5,a5,a3
     70002462:	0007c783          	lbu	a5,0(a5)
     70002466:	fef403a3          	sb	a5,-25(s0)
-/embryos/chapter12/apps/stopwatch.c:86
+/embryos/chapter12/apps/stopwatch.c:88
         for (int col = 0; col < 3; col++) {
     7000246a:	fe042423          	sw	zero,-24(s0)
     7000246e:	a085                	j	700024ce <draw_digit+0xae>
-/embryos/chapter12/apps/stopwatch.c:87
+/embryos/chapter12/apps/stopwatch.c:89
             if (bits & (1 << (2 - col)))
     70002470:	fe744783          	lbu	a5,-25(s0)
     70002474:	0007871b          	sext.w	a4,a5
@@ -4777,7 +4778,7 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     70002488:	8b85                	andi	a5,a5,1
     7000248a:	2781                	sext.w	a5,a5
     7000248c:	cf85                	beqz	a5,700024c4 <draw_digit+0xa4>
-/embryos/chapter12/apps/stopwatch.c:88
+/embryos/chapter12/apps/stopwatch.c:90
                 bp_put(&bp, x + col, y + row, color, BP_LAZY);
     7000248e:	fdc42783          	lw	a5,-36(s0)
     70002492:	873e                	mv	a4,a5
@@ -4796,27 +4797,27 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     700024b8:	98450513          	addi	a0,a0,-1660 # 70002e38 <bp>
     700024bc:	fffff097          	auipc	ra,0xfffff
     700024c0:	e26080e7          	jalr	-474(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:86 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:88 (discriminator 2)
         for (int col = 0; col < 3; col++) {
     700024c4:	fe842783          	lw	a5,-24(s0)
     700024c8:	2785                	addiw	a5,a5,1
     700024ca:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:86 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:88 (discriminator 1)
     700024ce:	fe842783          	lw	a5,-24(s0)
     700024d2:	0007871b          	sext.w	a4,a5
     700024d6:	4789                	li	a5,2
     700024d8:	f8e7dce3          	bge	a5,a4,70002470 <draw_digit+0x50>
-/embryos/chapter12/apps/stopwatch.c:84 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:86 (discriminator 2)
     for (int row = 0; row < 5; row++) {
     700024dc:	fec42783          	lw	a5,-20(s0)
     700024e0:	2785                	addiw	a5,a5,1
     700024e2:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/stopwatch.c:84 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:86 (discriminator 1)
     700024e6:	fec42783          	lw	a5,-20(s0)
     700024ea:	0007871b          	sext.w	a4,a5
     700024ee:	4791                	li	a5,4
     700024f0:	f4e7dce3          	bge	a5,a4,70002448 <draw_digit+0x28>
-/embryos/chapter12/apps/stopwatch.c:91
+/embryos/chapter12/apps/stopwatch.c:93
         }
     }
 }
@@ -4829,7 +4830,8 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
 
 0000000070002500 <draw_colon>:
 draw_colon():
-/embryos/chapter12/apps/stopwatch.c:94
+/embryos/chapter12/apps/stopwatch.c:97
+
 
 // uses block pixel to draw colon
 static void draw_colon(int x, int y, uint8_t color) {
@@ -4845,7 +4847,7 @@ static void draw_colon(int x, int y, uint8_t color) {
     70002514:	fef42423          	sw	a5,-24(s0)
     70002518:	87ba                	mv	a5,a4
     7000251a:	fef403a3          	sb	a5,-25(s0)
-/embryos/chapter12/apps/stopwatch.c:95
+/embryos/chapter12/apps/stopwatch.c:98
     bp_put(&bp, x, y + 1, color, BP_LAZY);
     7000251e:	fe842783          	lw	a5,-24(s0)
     70002522:	2785                	addiw	a5,a5,1
@@ -4858,7 +4860,7 @@ static void draw_colon(int x, int y, uint8_t color) {
     70002538:	90450513          	addi	a0,a0,-1788 # 70002e38 <bp>
     7000253c:	fffff097          	auipc	ra,0xfffff
     70002540:	da6080e7          	jalr	-602(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:96
+/embryos/chapter12/apps/stopwatch.c:99
     bp_put(&bp, x, y + 3, color, BP_LAZY);
     70002544:	fe842783          	lw	a5,-24(s0)
     70002548:	278d                	addiw	a5,a5,3
@@ -4871,7 +4873,7 @@ static void draw_colon(int x, int y, uint8_t color) {
     7000255e:	8de50513          	addi	a0,a0,-1826 # 70002e38 <bp>
     70002562:	fffff097          	auipc	ra,0xfffff
     70002566:	d80080e7          	jalr	-640(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:97
+/embryos/chapter12/apps/stopwatch.c:100
 }
     7000256a:	0001                	nop
     7000256c:	60e2                	ld	ra,24(sp)
@@ -4881,7 +4883,7 @@ static void draw_colon(int x, int y, uint8_t color) {
 
 0000000070002574 <sw_render>:
 sw_render():
-/embryos/chapter12/apps/stopwatch.c:100
+/embryos/chapter12/apps/stopwatch.c:103
 
 // renders color and design of stopwatch
 static void sw_render(struct stopwatch *sw, uint64_t now) {
@@ -4891,14 +4893,14 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     7000257a:	0880                	addi	s0,sp,80
     7000257c:	faa43c23          	sd	a0,-72(s0)
     70002580:	fab43823          	sd	a1,-80(s0)
-/embryos/chapter12/apps/stopwatch.c:101
+/embryos/chapter12/apps/stopwatch.c:104
     uint64_t elapsed = sw_current_elapsed(sw, now);
     70002584:	fb043583          	ld	a1,-80(s0)
     70002588:	fb843503          	ld	a0,-72(s0)
     7000258c:	00000097          	auipc	ra,0x0
     70002590:	d2e080e7          	jalr	-722(ra) # 700022ba <sw_current_elapsed>
     70002594:	fea43023          	sd	a0,-32(s0)
-/embryos/chapter12/apps/stopwatch.c:102
+/embryos/chapter12/apps/stopwatch.c:105
     uint64_t ms = elapsed / 1000000ULL;
     70002598:	fe043703          	ld	a4,-32(s0)
     7000259c:	00000797          	auipc	a5,0x0
@@ -4907,7 +4909,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700025a6:	02f737b3          	mulhu	a5,a4,a5
     700025aa:	83c9                	srli	a5,a5,0x12
     700025ac:	fcf43c23          	sd	a5,-40(s0)
-/embryos/chapter12/apps/stopwatch.c:103
+/embryos/chapter12/apps/stopwatch.c:106
     int minutes = (ms / 60000) % 60;
     700025b0:	fd843783          	ld	a5,-40(s0)
     700025b4:	0057d713          	srli	a4,a5,0x5
@@ -4927,7 +4929,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700025e2:	078a                	slli	a5,a5,0x2
     700025e4:	40f68733          	sub	a4,a3,a5
     700025e8:	fce42a23          	sw	a4,-44(s0)
-/embryos/chapter12/apps/stopwatch.c:104
+/embryos/chapter12/apps/stopwatch.c:107
     int seconds = (ms / 1000) % 60;
     700025ec:	fd843783          	ld	a5,-40(s0)
     700025f0:	0037d713          	srli	a4,a5,0x3
@@ -4947,7 +4949,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     7000261e:	078a                	slli	a5,a5,0x2
     70002620:	40f68733          	sub	a4,a3,a5
     70002624:	fce42823          	sw	a4,-48(s0)
-/embryos/chapter12/apps/stopwatch.c:105
+/embryos/chapter12/apps/stopwatch.c:108
     int tenths  = (ms / 100) % 10;
     70002628:	fd843783          	ld	a5,-40(s0)
     7000262c:	0027d713          	srli	a4,a5,0x2
@@ -4967,39 +4969,39 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     7000265a:	0786                	slli	a5,a5,0x1
     7000265c:	40f68733          	sub	a4,a3,a5
     70002660:	fce42623          	sw	a4,-52(s0)
-/embryos/chapter12/apps/stopwatch.c:107
+/embryos/chapter12/apps/stopwatch.c:110
 
     uint8_t bg = sw->has_focus ? ANSI_BLUE : ANSI_BLACK;
     70002664:	fb843783          	ld	a5,-72(s0)
     70002668:	43dc                	lw	a5,4(a5)
     7000266a:	c789                	beqz	a5,70002674 <sw_render+0x100>
-/embryos/chapter12/apps/stopwatch.c:107 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:110 (discriminator 1)
     7000266c:	4791                	li	a5,4
     7000266e:	fef407a3          	sb	a5,-17(s0)
     70002672:	a019                	j	70002678 <sw_render+0x104>
-/embryos/chapter12/apps/stopwatch.c:107 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:110 (discriminator 2)
     70002674:	fe0407a3          	sb	zero,-17(s0)
-/embryos/chapter12/apps/stopwatch.c:108
+/embryos/chapter12/apps/stopwatch.c:111
     uint8_t fg = (sw->state == SW_RUNNING) ? ANSI_GREEN : ANSI_YELLOW;
     70002678:	fb843783          	ld	a5,-72(s0)
     7000267c:	4398                	lw	a4,0(a5)
     7000267e:	4785                	li	a5,1
     70002680:	00f71663          	bne	a4,a5,7000268c <sw_render+0x118>
-/embryos/chapter12/apps/stopwatch.c:108 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:111 (discriminator 1)
     70002684:	4789                	li	a5,2
     70002686:	fef40723          	sb	a5,-18(s0)
     7000268a:	a021                	j	70002692 <sw_render+0x11e>
-/embryos/chapter12/apps/stopwatch.c:108 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:111 (discriminator 2)
     7000268c:	478d                	li	a5,3
     7000268e:	fef40723          	sb	a5,-18(s0)
-/embryos/chapter12/apps/stopwatch.c:110
+/embryos/chapter12/apps/stopwatch.c:113
 
     clear_screen(bg);
     70002692:	fef44783          	lbu	a5,-17(s0)
     70002696:	853e                	mv	a0,a5
     70002698:	00000097          	auipc	ra,0x0
     7000269c:	c66080e7          	jalr	-922(ra) # 700022fe <clear_screen>
-/embryos/chapter12/apps/stopwatch.c:111
+/embryos/chapter12/apps/stopwatch.c:114
     draw_rect(1, 1, WIDTH - 2, HEIGHT - 2, ANSI_BLACK);
     700026a0:	4701                	li	a4,0
     700026a2:	46d1                	li	a3,20
@@ -5008,13 +5010,13 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700026aa:	4505                	li	a0,1
     700026ac:	00000097          	auipc	ra,0x0
     700026b0:	cca080e7          	jalr	-822(ra) # 70002376 <draw_rect>
-/embryos/chapter12/apps/stopwatch.c:114
+/embryos/chapter12/apps/stopwatch.c:117
 
     // MM:SS.t layout
     int y = 8;
     700026b4:	47a1                	li	a5,8
     700026b6:	fcf42423          	sw	a5,-56(s0)
-/embryos/chapter12/apps/stopwatch.c:115
+/embryos/chapter12/apps/stopwatch.c:118
     draw_digit(5,  y, minutes / 10, fg);
     700026ba:	fd442783          	lw	a5,-44(s0)
     700026be:	86be                	mv	a3,a5
@@ -5035,7 +5037,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700026f0:	4515                	li	a0,5
     700026f2:	00000097          	auipc	ra,0x0
     700026f6:	d2e080e7          	jalr	-722(ra) # 70002420 <draw_digit>
-/embryos/chapter12/apps/stopwatch.c:116
+/embryos/chapter12/apps/stopwatch.c:119
     draw_digit(9,  y, minutes % 10, fg);
     700026fa:	fd442783          	lw	a5,-44(s0)
     700026fe:	873e                	mv	a4,a5
@@ -5062,7 +5064,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002742:	4525                	li	a0,9
     70002744:	00000097          	auipc	ra,0x0
     70002748:	cdc080e7          	jalr	-804(ra) # 70002420 <draw_digit>
-/embryos/chapter12/apps/stopwatch.c:117
+/embryos/chapter12/apps/stopwatch.c:120
     draw_colon(13, y, ANSI_WHITE);
     7000274c:	fc842783          	lw	a5,-56(s0)
     70002750:	461d                	li	a2,7
@@ -5070,7 +5072,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002754:	4535                	li	a0,13
     70002756:	00000097          	auipc	ra,0x0
     7000275a:	daa080e7          	jalr	-598(ra) # 70002500 <draw_colon>
-/embryos/chapter12/apps/stopwatch.c:118
+/embryos/chapter12/apps/stopwatch.c:121
     draw_digit(15, y, seconds / 10, fg);
     7000275e:	fd042783          	lw	a5,-48(s0)
     70002762:	86be                	mv	a3,a5
@@ -5091,7 +5093,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002794:	453d                	li	a0,15
     70002796:	00000097          	auipc	ra,0x0
     7000279a:	c8a080e7          	jalr	-886(ra) # 70002420 <draw_digit>
-/embryos/chapter12/apps/stopwatch.c:119
+/embryos/chapter12/apps/stopwatch.c:122
     draw_digit(19, y, seconds % 10, fg);
     7000279e:	fd042783          	lw	a5,-48(s0)
     700027a2:	873e                	mv	a4,a5
@@ -5118,7 +5120,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700027e6:	454d                	li	a0,19
     700027e8:	00000097          	auipc	ra,0x0
     700027ec:	c38080e7          	jalr	-968(ra) # 70002420 <draw_digit>
-/embryos/chapter12/apps/stopwatch.c:120
+/embryos/chapter12/apps/stopwatch.c:123
     bp_put(&bp, 23, y + 4, ANSI_WHITE, BP_LAZY); // dot
     700027f0:	fc842783          	lw	a5,-56(s0)
     700027f4:	2791                	addiw	a5,a5,4
@@ -5131,7 +5133,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002804:	63850513          	addi	a0,a0,1592 # 70002e38 <bp>
     70002808:	fffff097          	auipc	ra,0xfffff
     7000280c:	ada080e7          	jalr	-1318(ra) # 700012e2 <bp_put>
-/embryos/chapter12/apps/stopwatch.c:121
+/embryos/chapter12/apps/stopwatch.c:124
     draw_digit(25, y, tenths, ANSI_RED);
     70002810:	fcc42703          	lw	a4,-52(s0)
     70002814:	fc842783          	lw	a5,-56(s0)
@@ -5141,7 +5143,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     7000281e:	4565                	li	a0,25
     70002820:	00000097          	auipc	ra,0x0
     70002824:	c00080e7          	jalr	-1024(ra) # 70002420 <draw_digit>
-/embryos/chapter12/apps/stopwatch.c:124
+/embryos/chapter12/apps/stopwatch.c:127
 
     // Running/stopped indicator bar
     draw_rect(2, 2, WIDTH - 4, 1, sw->state == SW_RUNNING ? ANSI_GREEN : ANSI_RED);
@@ -5149,12 +5151,12 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     7000282c:	4398                	lw	a4,0(a5)
     7000282e:	4785                	li	a5,1
     70002830:	00f71463          	bne	a4,a5,70002838 <sw_render+0x2c4>
-/embryos/chapter12/apps/stopwatch.c:124 (discriminator 1)
+/embryos/chapter12/apps/stopwatch.c:127 (discriminator 1)
     70002834:	4789                	li	a5,2
     70002836:	a011                	j	7000283a <sw_render+0x2c6>
-/embryos/chapter12/apps/stopwatch.c:124 (discriminator 2)
+/embryos/chapter12/apps/stopwatch.c:127 (discriminator 2)
     70002838:	4785                	li	a5,1
-/embryos/chapter12/apps/stopwatch.c:124 (discriminator 4)
+/embryos/chapter12/apps/stopwatch.c:127 (discriminator 4)
     7000283a:	873e                	mv	a4,a5
     7000283c:	4685                	li	a3,1
     7000283e:	02300613          	li	a2,35
@@ -5162,14 +5164,14 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002844:	4509                	li	a0,2
     70002846:	00000097          	auipc	ra,0x0
     7000284a:	b30080e7          	jalr	-1232(ra) # 70002376 <draw_rect>
-/embryos/chapter12/apps/stopwatch.c:126
+/embryos/chapter12/apps/stopwatch.c:129
 
     bp_flush(&bp);
     7000284e:	00000517          	auipc	a0,0x0
     70002852:	5ea50513          	addi	a0,a0,1514 # 70002e38 <bp>
     70002856:	fffff097          	auipc	ra,0xfffff
     7000285a:	ce4080e7          	jalr	-796(ra) # 7000153a <bp_flush>
-/embryos/chapter12/apps/stopwatch.c:127
+/embryos/chapter12/apps/stopwatch.c:130
 }
     7000285e:	0001                	nop
     70002860:	60a6                	ld	ra,72(sp)
@@ -5179,7 +5181,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
 
 0000000070002868 <handle_event>:
 handle_event():
-/embryos/chapter12/apps/stopwatch.c:130
+/embryos/chapter12/apps/stopwatch.c:133
 
 // handles different events like focus change and key presses
 static void handle_event(struct stopwatch *sw, int ev, uint64_t now) {
@@ -5191,78 +5193,78 @@ static void handle_event(struct stopwatch *sw, int ev, uint64_t now) {
     70002874:	87ae                	mv	a5,a1
     70002876:	fcc43c23          	sd	a2,-40(s0)
     7000287a:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/stopwatch.c:131
+/embryos/chapter12/apps/stopwatch.c:134
     if (ev == USER_GET_GOT_FOCUS) {
     7000287e:	fe442783          	lw	a5,-28(s0)
     70002882:	0007871b          	sext.w	a4,a5
     70002886:	57fd                	li	a5,-1
     70002888:	00f71763          	bne	a4,a5,70002896 <handle_event+0x2e>
-/embryos/chapter12/apps/stopwatch.c:132
+/embryos/chapter12/apps/stopwatch.c:135
         sw->has_focus = 1;
     7000288c:	fe843783          	ld	a5,-24(s0)
     70002890:	4705                	li	a4,1
     70002892:	c3d8                	sw	a4,4(a5)
-/embryos/chapter12/apps/stopwatch.c:133
+/embryos/chapter12/apps/stopwatch.c:136
         return;
     70002894:	a89d                	j	7000290a <handle_event+0xa2>
-/embryos/chapter12/apps/stopwatch.c:135
+/embryos/chapter12/apps/stopwatch.c:138
     }
     if (ev == USER_GET_LOST_FOCUS) {
     70002896:	fe442783          	lw	a5,-28(s0)
     7000289a:	0007871b          	sext.w	a4,a5
     7000289e:	57f9                	li	a5,-2
     700028a0:	00f71763          	bne	a4,a5,700028ae <handle_event+0x46>
-/embryos/chapter12/apps/stopwatch.c:136
+/embryos/chapter12/apps/stopwatch.c:139
         sw->has_focus = 0;
     700028a4:	fe843783          	ld	a5,-24(s0)
     700028a8:	0007a223          	sw	zero,4(a5)
-/embryos/chapter12/apps/stopwatch.c:137
+/embryos/chapter12/apps/stopwatch.c:140
         return;
     700028ac:	a8b9                	j	7000290a <handle_event+0xa2>
-/embryos/chapter12/apps/stopwatch.c:139
+/embryos/chapter12/apps/stopwatch.c:142
     }
     if (ev == 's') {
     700028ae:	fe442783          	lw	a5,-28(s0)
     700028b2:	0007871b          	sext.w	a4,a5
     700028b6:	07300793          	li	a5,115
     700028ba:	00f71b63          	bne	a4,a5,700028d0 <handle_event+0x68>
-/embryos/chapter12/apps/stopwatch.c:140
+/embryos/chapter12/apps/stopwatch.c:143
         sw_toggle(sw, now);
     700028be:	fd843583          	ld	a1,-40(s0)
     700028c2:	fe843503          	ld	a0,-24(s0)
     700028c6:	00000097          	auipc	ra,0x0
     700028ca:	962080e7          	jalr	-1694(ra) # 70002228 <sw_toggle>
-/embryos/chapter12/apps/stopwatch.c:141
+/embryos/chapter12/apps/stopwatch.c:144
         return;
     700028ce:	a835                	j	7000290a <handle_event+0xa2>
-/embryos/chapter12/apps/stopwatch.c:143
+/embryos/chapter12/apps/stopwatch.c:146
     }
     if (ev == 'r') {
     700028d0:	fe442783          	lw	a5,-28(s0)
     700028d4:	0007871b          	sext.w	a4,a5
     700028d8:	07200793          	li	a5,114
     700028dc:	00f71b63          	bne	a4,a5,700028f2 <handle_event+0x8a>
-/embryos/chapter12/apps/stopwatch.c:144
+/embryos/chapter12/apps/stopwatch.c:147
         sw_reset(sw, now);
     700028e0:	fd843583          	ld	a1,-40(s0)
     700028e4:	fe843503          	ld	a0,-24(s0)
     700028e8:	00000097          	auipc	ra,0x0
     700028ec:	99a080e7          	jalr	-1638(ra) # 70002282 <sw_reset>
-/embryos/chapter12/apps/stopwatch.c:145
+/embryos/chapter12/apps/stopwatch.c:148
         return;
     700028f0:	a829                	j	7000290a <handle_event+0xa2>
-/embryos/chapter12/apps/stopwatch.c:147
+/embryos/chapter12/apps/stopwatch.c:150
     }
     if (ev == 'q') {
     700028f2:	fe442783          	lw	a5,-28(s0)
     700028f6:	0007871b          	sext.w	a4,a5
     700028fa:	07100793          	li	a5,113
     700028fe:	00f71663          	bne	a4,a5,7000290a <handle_event+0xa2>
-/embryos/chapter12/apps/stopwatch.c:148
+/embryos/chapter12/apps/stopwatch.c:151
         user_exit();
     70002902:	ffffd097          	auipc	ra,0xffffd
     70002906:	712080e7          	jalr	1810(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/stopwatch.c:150
+/embryos/chapter12/apps/stopwatch.c:153
     }
 }
     7000290a:	70a2                	ld	ra,40(sp)
@@ -5272,14 +5274,15 @@ static void handle_event(struct stopwatch *sw, int ev, uint64_t now) {
 
 0000000070002912 <main>:
 main():
-/embryos/chapter12/apps/stopwatch.c:152
+/embryos/chapter12/apps/stopwatch.c:155
 
 int main(void) {
     70002912:	7139                	addi	sp,sp,-64
     70002914:	fc06                	sd	ra,56(sp)
     70002916:	f822                	sd	s0,48(sp)
     70002918:	0080                	addi	s0,sp,64
-/embryos/chapter12/apps/stopwatch.c:154
+/embryos/chapter12/apps/stopwatch.c:158
+    // initialize block pixel and stopwatch
     struct stopwatch sw;
     bp_init(&bp, 0, 0, WIDTH, HEIGHT, bp_buffer);
     7000291a:	00000797          	auipc	a5,0x0
@@ -5292,20 +5295,20 @@ int main(void) {
     70002930:	50c50513          	addi	a0,a0,1292 # 70002e38 <bp>
     70002934:	fffff097          	auipc	ra,0xfffff
     70002938:	90c080e7          	jalr	-1780(ra) # 70001240 <bp_init>
-/embryos/chapter12/apps/stopwatch.c:156
+/embryos/chapter12/apps/stopwatch.c:160
 
     uint64_t now = user_gettime();
     7000293c:	ffffd097          	auipc	ra,0xffffd
     70002940:	728080e7          	jalr	1832(ra) # 70000064 <user_gettime>
     70002944:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:157
+/embryos/chapter12/apps/stopwatch.c:161
     sw_init(&sw, now);
     70002948:	fc840793          	addi	a5,s0,-56
     7000294c:	fe843583          	ld	a1,-24(s0)
     70002950:	853e                	mv	a0,a5
     70002952:	00000097          	auipc	ra,0x0
     70002956:	89a080e7          	jalr	-1894(ra) # 700021ec <sw_init>
-/embryos/chapter12/apps/stopwatch.c:160
+/embryos/chapter12/apps/stopwatch.c:164
     
 
     sw_render(&sw, now);
@@ -5314,7 +5317,7 @@ int main(void) {
     70002962:	853e                	mv	a0,a5
     70002964:	00000097          	auipc	ra,0x0
     70002968:	c10080e7          	jalr	-1008(ra) # 70002574 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:165
+/embryos/chapter12/apps/stopwatch.c:169
 
     // loop that handles events and updates display
     for (;;) {
@@ -5323,24 +5326,24 @@ int main(void) {
     7000296c:	fc842703          	lw	a4,-56(s0)
     70002970:	4785                	li	a5,1
     70002972:	04f71f63          	bne	a4,a5,700029d0 <main+0xbe>
-/embryos/chapter12/apps/stopwatch.c:166
+/embryos/chapter12/apps/stopwatch.c:170
             ev = user_get(0);
     70002976:	4501                	li	a0,0
     70002978:	ffffd097          	auipc	ra,0xffffd
     7000297c:	6bc080e7          	jalr	1724(ra) # 70000034 <user_get>
     70002980:	87aa                	mv	a5,a0
     70002982:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/stopwatch.c:167
+/embryos/chapter12/apps/stopwatch.c:171
             now = user_gettime();
     70002986:	ffffd097          	auipc	ra,0xffffd
     7000298a:	6de080e7          	jalr	1758(ra) # 70000064 <user_gettime>
     7000298e:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:168
+/embryos/chapter12/apps/stopwatch.c:172
             if (ev != USER_GET_NO_INPUT)
     70002992:	fe442783          	lw	a5,-28(s0)
     70002996:	2781                	sext.w	a5,a5
     70002998:	cf89                	beqz	a5,700029b2 <main+0xa0>
-/embryos/chapter12/apps/stopwatch.c:169
+/embryos/chapter12/apps/stopwatch.c:173
                 handle_event(&sw, ev, now);
     7000299a:	fe442703          	lw	a4,-28(s0)
     7000299e:	fc840793          	addi	a5,s0,-56
@@ -5349,20 +5352,20 @@ int main(void) {
     700029a8:	853e                	mv	a0,a5
     700029aa:	00000097          	auipc	ra,0x0
     700029ae:	ebe080e7          	jalr	-322(ra) # 70002868 <handle_event>
-/embryos/chapter12/apps/stopwatch.c:170
+/embryos/chapter12/apps/stopwatch.c:174
             sw_render(&sw, now);
     700029b2:	fc840793          	addi	a5,s0,-56
     700029b6:	fe843583          	ld	a1,-24(s0)
     700029ba:	853e                	mv	a0,a5
     700029bc:	00000097          	auipc	ra,0x0
     700029c0:	bb8080e7          	jalr	-1096(ra) # 70002574 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:171
+/embryos/chapter12/apps/stopwatch.c:175
             user_delay(10);
     700029c4:	4529                	li	a0,10
     700029c6:	fffff097          	auipc	ra,0xfffff
     700029ca:	7c6080e7          	jalr	1990(ra) # 7000218c <user_delay>
     700029ce:	bf79                	j	7000296c <main+0x5a>
-/embryos/chapter12/apps/stopwatch.c:173
+/embryos/chapter12/apps/stopwatch.c:177
         } else {
             ev = user_get(1);
     700029d0:	4505                	li	a0,1
@@ -5370,12 +5373,12 @@ int main(void) {
     700029d6:	662080e7          	jalr	1634(ra) # 70000034 <user_get>
     700029da:	87aa                	mv	a5,a0
     700029dc:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/stopwatch.c:174
+/embryos/chapter12/apps/stopwatch.c:178
             now = user_gettime();
     700029e0:	ffffd097          	auipc	ra,0xffffd
     700029e4:	684080e7          	jalr	1668(ra) # 70000064 <user_gettime>
     700029e8:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:175
+/embryos/chapter12/apps/stopwatch.c:179
             handle_event(&sw, ev, now);
     700029ec:	fe442703          	lw	a4,-28(s0)
     700029f0:	fc840793          	addi	a5,s0,-56
@@ -5384,14 +5387,14 @@ int main(void) {
     700029fa:	853e                	mv	a0,a5
     700029fc:	00000097          	auipc	ra,0x0
     70002a00:	e6c080e7          	jalr	-404(ra) # 70002868 <handle_event>
-/embryos/chapter12/apps/stopwatch.c:176
+/embryos/chapter12/apps/stopwatch.c:180
             sw_render(&sw, now);
     70002a04:	fc840793          	addi	a5,s0,-56
     70002a08:	fe843583          	ld	a1,-24(s0)
     70002a0c:	853e                	mv	a0,a5
     70002a0e:	00000097          	auipc	ra,0x0
     70002a12:	b66080e7          	jalr	-1178(ra) # 70002574 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:163
+/embryos/chapter12/apps/stopwatch.c:167
     for (;;) {
     70002a16:	bf99                	j	7000296c <main+0x5a>
 
