@@ -72,3 +72,9 @@ user_gettime:
     li      a7, SYS_GETTIME
     ecall
     ret
+
+user_sleep:
+    li    a7, SYS_SLEEP
+    ecall 
+    ret
+    

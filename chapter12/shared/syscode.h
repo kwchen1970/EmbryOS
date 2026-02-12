@@ -9,3 +9,4 @@
 #define SYS_SIZE   8     // get the size of a file
 #define SYS_DELETE 9     // delete a file
 #define SYS_GETTIME 10  //get time
+#define SYS_SLEEP 11 // sleep for a certain number of milliseconds

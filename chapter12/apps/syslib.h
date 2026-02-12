@@ -14,6 +14,7 @@ extern int user_write(int file, int off, const void *src, int n);
 extern int user_size(int file);
 extern void user_delete(int file);
 extern uint64_t user_gettime(void);
+extern void user_sleep(uint64_t deadline);
 
 
 static inline void user_delay(int ms) {  // pseudo system call
@@ -21,3 +22,5 @@ static inline void user_delay(int ms) {  // pseudo system call
     while (--ms > 0)
         for (volatile int i = 0; i < DELAY_MS; i++) ;
 }
+
+
