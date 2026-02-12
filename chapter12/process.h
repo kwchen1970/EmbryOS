@@ -28,6 +28,7 @@ struct pcb {
     char *base;           // page table
     struct selfie selfie; // selfie process state
     struct hart *hart;    // the hart the process is running on
+    uint64_t sleep_deadline;        // deadline for sleeping (0 if not sleeping)
 };
 
 // Allocate a new PCB

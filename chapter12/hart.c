@@ -16,6 +16,7 @@ void timer_handler(struct trap_frame *tf) {
     if (!self->hart->interrupts_work)
         L1(L_BASE, L_INTERRUPTS_WORK, self->hart->id);
     self->hart->interrupts_work = 1;
+    sched_wake_sleeping();  // Wake up processes whose deadline has expired
     sbi_set_timer(mtime_get() + time_base * QUANTUM / 1000);
 }
 

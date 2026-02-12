@@ -1,6 +1,7 @@
 #include "embryos.h"
 
-static uint64_t ticks_to_ns(uint64_t ticks){
+uint64_t ticks_to_ns(uint64_t ticks){
+    extern uint64_t time_base;
     uint64_t sec = ticks/time_base;
     uint64_t rem = ticks%time_base;
     return sec * 1000000000ULL + ((rem * 1000000000ULL)/ time_base);
@@ -58,6 +59,10 @@ void syscall_handler(struct trap_frame *tf) {
         break;
     case SYS_GETTIME:
         tf -> a0 = ticks_to_ns(mtime_get());
+        break;
+    case SYS_SLEEP:
+        L1(L_NORM, L_USER_SLEEP, tf->a0);
+        sched_sleep(tf->a0);
         break;
     case 56: case 63: case 64: case 93: case 214:
         selfie_syscall_handler(tf);

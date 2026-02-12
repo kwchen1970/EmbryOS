@@ -24,6 +24,12 @@ void sched_idle();
 // Kill the current process
 void sched_exit(void);
 
+// Put the current process to sleep until the specified deadline
+void sched_sleep(uint64_t deadline);
+
+// Wake up processes whose deadline has expired
+void sched_wake_sleeping(void);
+
 // Set 'self', which is maintained in the tp register
 static inline void sched_set_self(struct pcb *ptr) {
     asm volatile ("mv tp, %0" :: "r"(ptr));
