@@ -16,11 +16,11 @@ extern void user_delete(int file);
 extern uint64_t user_gettime(void);
 extern void user_sleep(uint64_t deadline);
 
+static inline void user_delay(int delay_ms) {  // pseudo system call
+    uint64_t start = get_time_ms();
+    uint64_t deadline = start + delay_ms;
 
-static inline void user_delay(int ms) {  // pseudo system call
-    user_yield();
-    while (--ms > 0)
-        for (volatile int i = 0; i < DELAY_MS; i++) ;
+    user_sleep(deadline);
 }
 
 
