@@ -61,45 +61,46 @@ void sched_sleep(uint64_t deadline) {
         current->next = sleep_queue->next;  // new head
         sleep_queue->next = current;        // old tail points to new
     }
-    
+
+
     // Context switch to another process
     sched_block(current);
 }
 
 void sched_wake_sleeping(void) {
     if (sleep_queue == 0) return;
-    
-    uint64_t current_time = ticks_to_ns(mtime_get());
-    struct pcb *pcb = sleep_queue->next;  // start from head
-    
-    // Check all sleeping processes
-    while (pcb != sleep_queue->next || sleep_queue != 0) {
-        struct pcb *next = pcb->next;
-        
-        // Wake up if deadline has expired
-        if (pcb->sleep_deadline <= current_time) {
-            L2(L_NORM, L_USER_SLEEP_END, (uintptr_t) pcb, current_time);
-            
-            // Remove from sleep queue
-            if (pcb == sleep_queue) {
-                if (pcb->next == pcb) {
-                    sleep_queue = 0;  // only one process
-                } else {
-                    sleep_queue = sleep_queue->next;  // move tail pointer
-                    sleep_queue->next = pcb->next;    // bypass current
-                }
+    uint64_t now = ticks_to_ns(mtime_get());
+
+    // count nodes once so can examine each sleeper at most once
+    int n = 0;
+    struct pcb *p = sleep_queue->next;
+    do {
+        n++;
+        p = p->next;
+    } while (p != sleep_queue->next);
+    struct pcb *prev = sleep_queue; // starts with tail 
+    struct pcb *curr = sleep_queue->next; //the head
+
+    for (int i = 0; i <n && sleep_queue != 0; i++) {
+        struct pcb *next = curr->next;
+        if (curr->sleep_deadline <=now){
+            //need to unlink the curr
+            if (curr==prev){
+                sleep_queue = 0; // only one element
             } else {
-                // Find the node before pcb and update its next pointer
-                struct pcb *prev = sleep_queue;
-                while (prev->next != pcb) prev = prev->next;
-                prev->next = pcb->next;
+                prev->next = next; // unlink curr
+                if (curr == sleep_queue) {
+                    sleep_queue = prev; // removes tail
+                }
             }
-            
-            pcb->sleep_deadline = 0;  // clear deadline
-            sched_resume(pcb);  // move back to run queue
+            curr->sleep_deadline = 0; // clear deadline
+            sched_resume(curr); // move to run queue
+            curr = next; // prev stays same after removal 
+        } else {
+            prev = curr;
+            curr = next;
         }
-        
-        if (sleep_queue == 0) break;
-        pcb = next;
     }
+    
+    
 }

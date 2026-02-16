@@ -5,6 +5,7 @@
     .globl user_exit, user_yield, user_spawn, user_put, user_get
     .globl user_create, user_read, user_write, user_size, user_delete
     .globl user_gettime
+    .globl user_sleep
 
     # void user_exit(void);
 

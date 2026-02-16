@@ -17,9 +17,9 @@ extern uint64_t user_gettime(void);
 extern void user_sleep(uint64_t deadline);
 
 static inline void user_delay(int delay_ms) {  // pseudo system call
-    uint64_t start = get_time_ms();
-    uint64_t deadline = start + delay_ms;
-
+    if (delay_ms <=0) return;  // no need to sleep
+    uint64_t now = user_gettime(); // nanoseconds since boot
+    uint64_t deadline = now + (uint64_t) delay_ms * 1000000ULL; // convert ms to ns
     user_sleep(deadline);
 }
 

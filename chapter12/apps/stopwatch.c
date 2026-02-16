@@ -171,6 +171,9 @@ int main(void) {
             now = user_gettime();
             if (ev != USER_GET_NO_INPUT)
                 handle_event(&sw, ev, now);
+            // test for sleep by adding delay to make sure it doesn't affect timekeeping accuracy
+            user_delay(5000);
+
             sw_render(&sw, now);
             user_delay(10);
         } else {

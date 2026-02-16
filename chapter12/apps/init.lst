@@ -1,0 +1,4421 @@
+
+init:     file format elf64-littleriscv
+init
+architecture: riscv:rv64, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0000000070000000
+
+Program Header:
+0x70000003 off    0x00000000000035c8 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+         filesz 0x0000000000000063 memsz 0x0000000000000000 flags r--
+    LOAD off    0x0000000000001000 vaddr 0x0000000070000000 paddr 0x0000000000001000 align 2**12
+         filesz 0x000000000000220f memsz 0x000000000000220f flags r-x
+    LOAD off    0x0000000000003210 vaddr 0x0000000070002210 paddr 0x000000000000320f align 2**12
+         filesz 0x00000000000003b8 memsz 0x00000000000003b8 flags rw-
+
+Sections:
+Idx Name              Size      VMA               LMA               File off  Algn  Flags
+  0 .text             0000220f  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data             000003b8  0000000070002210  000000000000320f  00003210  2**3  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000035c8  2**0  CONTENTS, READONLY
+  3 .comment          00000034  0000000000000000  0000000000000000  0000362b  2**0  CONTENTS, READONLY
+  4 .debug_line       0000209d  0000000000000000  0000000000000000  0000365f  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_line_str   0000015e  0000000000000000  0000000000000000  000056fc  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_info       00002084  0000000000000000  0000000000000000  0000585a  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev     00000da6  0000000000000000  0000000000000000  000078de  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges    00000270  0000000000000000  0000000000000000  00008690  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str        0000054a  0000000000000000  0000000000000000  00008900  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_frame      000009f0  0000000000000000  0000000000000000  00008e50  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_rnglists   00000017  0000000000000000  0000000000000000  00009840  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+0000000070000000 l    d  .text	0000000000000000 .text
+0000000070002210 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_line_str	0000000000000000 .debug_line_str
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
+0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
+0000000000000000 l    df *ABS*	0000000000000000 ccckhL3y.o
+0000000000000000 l    df *ABS*	0000000000000000 ccvEsLg8.o
+0000000000000000 l    df *ABS*	0000000000000000 crt1.c
+0000000000000000 l    df *ABS*	0000000000000000 string.c
+0000000000000000 l    df *ABS*	0000000000000000 string2.c
+0000000000000000 l    df *ABS*	0000000000000000 stdio.c
+0000000070002230 l     O .data	0000000000000018 dev
+0000000070000712 l     F .text	00000000000000c2 print_unsigned
+0000000000000000 l    df *ABS*	0000000000000000 dir.c
+0000000000000000 l    df *ABS*	0000000000000000 blockpixel.c
+0000000070001182 l     F .text	000000000000003c idx
+00000000700011be l     F .text	000000000000008a bp_render_pair
+0000000000000000 l    df *ABS*	0000000000000000 window1.c
+0000000000000000 l    df *ABS*	0000000000000000 window2.c
+0000000000000000 l    df *ABS*	0000000000000000 putchar.c
+0000000070002248 l     O .data	0000000000000368 window
+00000000700025b0 l     O .data	0000000000000004 initialized
+0000000070001eb6 l     F .text	000000000000004a init
+0000000000000000 l    df *ABS*	0000000000000000 malloc.c
+00000000700025b8 l     O .data	0000000000000008 free_list
+00000000700025c0 l     O .data	0000000000000008 brk
+0000000000000000 l    df *ABS*	0000000000000000 init.c
+0000000070001f00 g     F .text	0000000000000036 putchar
+0000000070000156 g     F .text	000000000000004e strcpy
+0000000070000b82 g     F .text	000000000000005a printf
+0000000070000800 g       *ABS*	0000000000000000 __global_pointer$
+0000000070002218 g     O .data	0000000000000008 stdout
+0000000070001754 g     F .text	0000000000000096 window_init
+00000000700004c4 g     F .text	00000000000000d8 memmove
+0000000070000024 g       .text	0000000000000000 user_spawn
+0000000070000da4 g     F .text	000000000000006c fgets
+000000007000059c g     F .text	0000000000000034 memcpy
+0000000070001022 g     F .text	00000000000000d4 dir_delete
+0000000070001f36 g     F .text	0000000000000040 readline
+000000007000002c g       .text	0000000000000000 user_put
+0000000070000000 g       *ABS*	0000000000000000 flat_vaddr
+0000000070000e10 g     F .text	000000000000001c feof
+0000000070001f76 g     F .text	00000000000000e0 malloc
+0000000070001956 g     F .text	00000000000001ca window_putchar
+000000007000004c g       .text	0000000000000000 user_write
+0000000070000e2c g     F .text	0000000000000016 fflush
+0000000000001000 g       *ABS*	0000000000000000 flat_file_off
+0000000070000f22 g     F .text	0000000000000100 dir_create
+00000000700025c8 g       .data	0000000000000000 __bss_end
+0000000070000054 g       .text	0000000000000000 user_size
+000000007000038e g     F .text	000000000000004a strnlen
+000000007000031c g     F .text	0000000000000072 strrchr
+0000000070002056 g     F .text	0000000000000056 calloc
+0000000070001b20 g     F .text	0000000000000396 window_readline
+0000000070000ab8 g     F .text	0000000000000054 fprintf
+00000000700012ea g     F .text	0000000000000258 bp_put
+0000000070001542 g     F .text	0000000000000212 bp_flush
+0000000070000014 g       .text	0000000000000000 user_exit
+0000000070001248 g     F .text	00000000000000a2 bp_init
+000000007000045e g     F .text	0000000000000066 memchr
+0000000070002210 g     O .data	0000000000000008 stdin
+0000000070000000 g       .text	0000000000000000 _start
+0000000070000274 g     F .text	00000000000000a8 strstr
+0000000070000000 g       .text	0000000000000000 _image_start
+00000000700001a4 g     F .text	0000000000000090 strncpy
+00000000700020ac g     F .text	00000000000000a2 realloc
+00000000700017ea g     F .text	000000000000008c window_sync
+00000000700003d8 g     F .text	0000000000000086 memcmp
+000000007000006c g       .text	0000000000000000 user_sleep
+0000000070000bdc g     F .text	00000000000000fe fopen
+0000000070002230 g       .data	0000000000000000 __bss_start
+00000000700005d0 g     F .text	0000000000000054 memset
+0000000070002194 g     F .text	0000000000000068 main
+0000000070000034 g       .text	0000000000000000 user_get
+0000000070000e42 g     F .text	000000000000001e clearerr
+0000000070000e60 g     F .text	000000000000002e fclose
+00000000700000ae g     F .text	00000000000000a8 strcmp
+000000007000001c g       .text	0000000000000000 user_yield
+0000000070000b0c g     F .text	0000000000000076 sprintf
+0000000070002220 g     O .data	0000000000000008 stderr
+0000000070000074 g     F .text	000000000000003a _crt_init
+0000000070000044 g       .text	0000000000000000 user_read
+0000000070000624 g     F .text	00000000000000a6 fputc
+000000007000005c g       .text	0000000000000000 user_delete
+000000007000003c g       .text	0000000000000000 user_create
+00000000700025c8 g       .data	0000000000000000 _image_end
+0000000070000e8e g     F .text	0000000000000094 dir_lookup
+0000000070001876 g     F .text	00000000000000e0 window_scroll
+0000000070000064 g       .text	0000000000000000 user_gettime
+0000000070000234 g     F .text	0000000000000040 strlen
+00000000700010f6 g     F .text	000000000000008c dir_list
+00000000700006ca g     F .text	0000000000000048 fputs
+000000000000320f g       *ABS*	0000000000000000 text_file_end
+0000000070000cda g     F .text	00000000000000ca freadline
+00000000700007d4 g     F .text	00000000000002e4 vfprintf
+000000007000214e g     F .text	0000000000000046 free
+
+
+
+Disassembly of section .text:
+
+0000000070000000 <_image_start>:
+_start():
+/embryos/chapter12/apps/crt0.s:5
+.globl _start
+_start:
+    .option push
+    .option norelax
+    la      gp, __global_pointer$
+    70000000:	00001197          	auipc	gp,0x1
+    70000004:	80018193          	addi	gp,gp,-2048 # 70000800 <__global_pointer$>
+/embryos/chapter12/apps/crt0.s:8
+    .option pop
+
+    mv      a0, sp
+    70000008:	850a                	mv	a0,sp
+/embryos/chapter12/apps/crt0.s:9
+    call    _crt_init
+    7000000a:	00000097          	auipc	ra,0x0
+    7000000e:	06a080e7          	jalr	106(ra) # 70000074 <_crt_init>
+	...
+
+0000000070000014 <user_exit>:
+user_exit():
+/embryos/chapter12/apps/syslib.S:13
+    .globl user_sleep
+
+    # void user_exit(void);
+
+user_exit:
+    li      a7, SYS_EXIT
+    70000014:	4881                	li	a7,0
+/embryos/chapter12/apps/syslib.S:14
+    ecall
+    70000016:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:15
+    ret
+    7000001a:	8082                	ret
+
+000000007000001c <user_yield>:
+user_yield():
+/embryos/chapter12/apps/syslib.S:19
+
+    # void user_yield(void);
+user_yield:
+    li      a7, SYS_YIELD
+    7000001c:	4885                	li	a7,1
+/embryos/chapter12/apps/syslib.S:20
+    ecall
+    7000001e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:21
+    ret
+    70000022:	8082                	ret
+
+0000000070000024 <user_spawn>:
+user_spawn():
+/embryos/chapter12/apps/syslib.S:26
+
+    # void user_spawn(int app, int row, char col, int wd, int ht,
+    #                 const void *args, int sz)
+user_spawn:
+    li      a7, SYS_SPAWN
+    70000024:	4889                	li	a7,2
+/embryos/chapter12/apps/syslib.S:27
+    ecall
+    70000026:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:28
+    ret
+    7000002a:	8082                	ret
+
+000000007000002c <user_put>:
+user_put():
+/embryos/chapter12/apps/syslib.S:32
+
+    # void user_put(int row, int col, cell_t cell)
+user_put:
+    li      a7, SYS_PUT
+    7000002c:	4891                	li	a7,4
+/embryos/chapter12/apps/syslib.S:33
+    ecall
+    7000002e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:34
+    ret
+    70000032:	8082                	ret
+
+0000000070000034 <user_get>:
+user_get():
+/embryos/chapter12/apps/syslib.S:38
+
+    # int user_get(int block)
+user_get:
+    li      a7, SYS_GET
+    70000034:	488d                	li	a7,3
+/embryos/chapter12/apps/syslib.S:39
+    ecall
+    70000036:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:40
+    ret
+    7000003a:	8082                	ret
+
+000000007000003c <user_create>:
+user_create():
+/embryos/chapter12/apps/syslib.S:44
+
+    # int user_create(void)
+user_create:
+    li      a7, SYS_CREATE
+    7000003c:	4895                	li	a7,5
+/embryos/chapter12/apps/syslib.S:45
+    ecall
+    7000003e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:46
+    ret
+    70000042:	8082                	ret
+
+0000000070000044 <user_read>:
+user_read():
+/embryos/chapter12/apps/syslib.S:50
+
+    # int user_read(int file, int off, void* dst, int n)
+user_read:
+    li      a7, SYS_READ
+    70000044:	4899                	li	a7,6
+/embryos/chapter12/apps/syslib.S:51
+    ecall
+    70000046:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:52
+    ret
+    7000004a:	8082                	ret
+
+000000007000004c <user_write>:
+user_write():
+/embryos/chapter12/apps/syslib.S:56
+
+    # int user_write(int file, int off, const void* src, int n)
+user_write:
+    li      a7, SYS_WRITE
+    7000004c:	489d                	li	a7,7
+/embryos/chapter12/apps/syslib.S:57
+    ecall
+    7000004e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:58
+    ret
+    70000052:	8082                	ret
+
+0000000070000054 <user_size>:
+user_size():
+/embryos/chapter12/apps/syslib.S:62
+
+    # int user_size(int file)
+user_size:
+    li      a7, SYS_SIZE
+    70000054:	48a1                	li	a7,8
+/embryos/chapter12/apps/syslib.S:63
+    ecall
+    70000056:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:64
+    ret
+    7000005a:	8082                	ret
+
+000000007000005c <user_delete>:
+user_delete():
+/embryos/chapter12/apps/syslib.S:68
+
+    # void user_delete(int file)
+user_delete:
+    li      a7, SYS_DELETE
+    7000005c:	48a5                	li	a7,9
+/embryos/chapter12/apps/syslib.S:69
+    ecall
+    7000005e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:70
+    ret
+    70000062:	8082                	ret
+
+0000000070000064 <user_gettime>:
+user_gettime():
+/embryos/chapter12/apps/syslib.S:73
+
+user_gettime:
+    li      a7, SYS_GETTIME
+    70000064:	48a9                	li	a7,10
+/embryos/chapter12/apps/syslib.S:74
+    ecall
+    70000066:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:75
+    ret
+    7000006a:	8082                	ret
+
+000000007000006c <user_sleep>:
+user_sleep():
+/embryos/chapter12/apps/syslib.S:78
+
+user_sleep:
+    li    a7, SYS_SLEEP
+    7000006c:	48ad                	li	a7,11
+/embryos/chapter12/apps/syslib.S:79
+    ecall 
+    7000006e:	00000073          	ecall
+/embryos/chapter12/apps/syslib.S:80
+    ret
+    70000072:	8082                	ret
+
+0000000070000074 <_crt_init>:
+_crt_init():
+/embryos/chapter12/apps/crt1.c:4
+#include <stdint.h>
+#include "syslib.h"
+
+void _crt_init(char **argv) {
+    70000074:	1101                	addi	sp,sp,-32
+    70000076:	ec06                	sd	ra,24(sp)
+    70000078:	e822                	sd	s0,16(sp)
+    7000007a:	1000                	addi	s0,sp,32
+    7000007c:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/crt1.c:6
+    extern int main(int argc, char **argv);
+    (void) main((uintptr_t) argv[0], argv + 1);
+    70000080:	fe843783          	ld	a5,-24(s0)
+    70000084:	639c                	ld	a5,0(a5)
+    70000086:	0007871b          	sext.w	a4,a5
+    7000008a:	fe843783          	ld	a5,-24(s0)
+    7000008e:	07a1                	addi	a5,a5,8
+    70000090:	85be                	mv	a1,a5
+    70000092:	853a                	mv	a0,a4
+    70000094:	00002097          	auipc	ra,0x2
+    70000098:	100080e7          	jalr	256(ra) # 70002194 <main>
+/embryos/chapter12/apps/crt1.c:7
+    user_exit();
+    7000009c:	00000097          	auipc	ra,0x0
+    700000a0:	f78080e7          	jalr	-136(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/crt1.c:8
+}
+    700000a4:	0001                	nop
+    700000a6:	60e2                	ld	ra,24(sp)
+    700000a8:	6442                	ld	s0,16(sp)
+    700000aa:	6105                	addi	sp,sp,32
+    700000ac:	8082                	ret
+
+00000000700000ae <strcmp>:
+strcmp():
+/embryos/chapter12/apps/../shared/string.c:3
+#include "string.h"
+
+int strcmp(const char *p, const char *q) {
+    700000ae:	1101                	addi	sp,sp,-32
+    700000b0:	ec06                	sd	ra,24(sp)
+    700000b2:	e822                	sd	s0,16(sp)
+    700000b4:	1000                	addi	s0,sp,32
+    700000b6:	fea43423          	sd	a0,-24(s0)
+    700000ba:	feb43023          	sd	a1,-32(s0)
+/embryos/chapter12/apps/../shared/string.c:4
+    while (*p != 0 && *q != 0 && *p == *q) { p++; q++; }
+    700000be:	a819                	j	700000d4 <strcmp+0x26>
+/embryos/chapter12/apps/../shared/string.c:4 (discriminator 4)
+    700000c0:	fe843783          	ld	a5,-24(s0)
+    700000c4:	0785                	addi	a5,a5,1
+    700000c6:	fef43423          	sd	a5,-24(s0)
+    700000ca:	fe043783          	ld	a5,-32(s0)
+    700000ce:	0785                	addi	a5,a5,1
+    700000d0:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/../shared/string.c:4 (discriminator 1)
+    700000d4:	fe843783          	ld	a5,-24(s0)
+    700000d8:	0007c783          	lbu	a5,0(a5)
+    700000dc:	c385                	beqz	a5,700000fc <strcmp+0x4e>
+/embryos/chapter12/apps/../shared/string.c:4 (discriminator 2)
+    700000de:	fe043783          	ld	a5,-32(s0)
+    700000e2:	0007c783          	lbu	a5,0(a5)
+    700000e6:	cb99                	beqz	a5,700000fc <strcmp+0x4e>
+/embryos/chapter12/apps/../shared/string.c:4 (discriminator 3)
+    700000e8:	fe843783          	ld	a5,-24(s0)
+    700000ec:	0007c703          	lbu	a4,0(a5)
+    700000f0:	fe043783          	ld	a5,-32(s0)
+    700000f4:	0007c783          	lbu	a5,0(a5)
+    700000f8:	fcf704e3          	beq	a4,a5,700000c0 <strcmp+0x12>
+/embryos/chapter12/apps/../shared/string.c:5
+    if (*p == *q) return 0;
+    700000fc:	fe843783          	ld	a5,-24(s0)
+    70000100:	0007c703          	lbu	a4,0(a5)
+    70000104:	fe043783          	ld	a5,-32(s0)
+    70000108:	0007c783          	lbu	a5,0(a5)
+    7000010c:	00f71463          	bne	a4,a5,70000114 <strcmp+0x66>
+/embryos/chapter12/apps/../shared/string.c:5 (discriminator 1)
+    70000110:	4781                	li	a5,0
+/embryos/chapter12/apps/../shared/string.c:5
+    70000112:	a82d                	j	7000014c <strcmp+0x9e>
+/embryos/chapter12/apps/../shared/string.c:6
+    if (*p == 0)  return -1;
+    70000114:	fe843783          	ld	a5,-24(s0)
+    70000118:	0007c783          	lbu	a5,0(a5)
+    7000011c:	e399                	bnez	a5,70000122 <strcmp+0x74>
+/embryos/chapter12/apps/../shared/string.c:6 (discriminator 1)
+    7000011e:	57fd                	li	a5,-1
+/embryos/chapter12/apps/../shared/string.c:6
+    70000120:	a035                	j	7000014c <strcmp+0x9e>
+/embryos/chapter12/apps/../shared/string.c:7
+    if (*q == 0)  return 1;
+    70000122:	fe043783          	ld	a5,-32(s0)
+    70000126:	0007c783          	lbu	a5,0(a5)
+    7000012a:	e399                	bnez	a5,70000130 <strcmp+0x82>
+/embryos/chapter12/apps/../shared/string.c:7 (discriminator 1)
+    7000012c:	4785                	li	a5,1
+/embryos/chapter12/apps/../shared/string.c:7
+    7000012e:	a839                	j	7000014c <strcmp+0x9e>
+/embryos/chapter12/apps/../shared/string.c:8
+    return *p - *q;
+    70000130:	fe843783          	ld	a5,-24(s0)
+    70000134:	0007c783          	lbu	a5,0(a5)
+    70000138:	0007871b          	sext.w	a4,a5
+    7000013c:	fe043783          	ld	a5,-32(s0)
+    70000140:	0007c783          	lbu	a5,0(a5)
+    70000144:	2781                	sext.w	a5,a5
+    70000146:	40f707bb          	subw	a5,a4,a5
+    7000014a:	2781                	sext.w	a5,a5
+/embryos/chapter12/apps/../shared/string.c:9
+}
+    7000014c:	853e                	mv	a0,a5
+    7000014e:	60e2                	ld	ra,24(sp)
+    70000150:	6442                	ld	s0,16(sp)
+    70000152:	6105                	addi	sp,sp,32
+    70000154:	8082                	ret
+
+0000000070000156 <strcpy>:
+strcpy():
+/embryos/chapter12/apps/../shared/string.c:11
+
+char *strcpy(char *dst, const char *src) {
+    70000156:	7179                	addi	sp,sp,-48
+    70000158:	f406                	sd	ra,40(sp)
+    7000015a:	f022                	sd	s0,32(sp)
+    7000015c:	1800                	addi	s0,sp,48
+    7000015e:	fca43c23          	sd	a0,-40(s0)
+    70000162:	fcb43823          	sd	a1,-48(s0)
+/embryos/chapter12/apps/../shared/string.c:12
+    char *ret = dst;
+    70000166:	fd843783          	ld	a5,-40(s0)
+    7000016a:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:13
+    while ((*dst++ = *src++) != '\0') ;
+    7000016e:	0001                	nop
+/embryos/chapter12/apps/../shared/string.c:13 (discriminator 1)
+    70000170:	fd043703          	ld	a4,-48(s0)
+    70000174:	00170793          	addi	a5,a4,1
+    70000178:	fcf43823          	sd	a5,-48(s0)
+    7000017c:	fd843783          	ld	a5,-40(s0)
+    70000180:	00178693          	addi	a3,a5,1
+    70000184:	fcd43c23          	sd	a3,-40(s0)
+    70000188:	00074703          	lbu	a4,0(a4)
+    7000018c:	00e78023          	sb	a4,0(a5)
+    70000190:	0007c783          	lbu	a5,0(a5)
+    70000194:	fff1                	bnez	a5,70000170 <strcpy+0x1a>
+/embryos/chapter12/apps/../shared/string.c:14
+    return ret;
+    70000196:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:15
+}
+    7000019a:	853e                	mv	a0,a5
+    7000019c:	70a2                	ld	ra,40(sp)
+    7000019e:	7402                	ld	s0,32(sp)
+    700001a0:	6145                	addi	sp,sp,48
+    700001a2:	8082                	ret
+
+00000000700001a4 <strncpy>:
+strncpy():
+/embryos/chapter12/apps/../shared/string.c:17
+
+char *strncpy(char *dst, const char *src, size_t n) {
+    700001a4:	7139                	addi	sp,sp,-64
+    700001a6:	fc06                	sd	ra,56(sp)
+    700001a8:	f822                	sd	s0,48(sp)
+    700001aa:	0080                	addi	s0,sp,64
+    700001ac:	fca43c23          	sd	a0,-40(s0)
+    700001b0:	fcb43823          	sd	a1,-48(s0)
+    700001b4:	fcc43423          	sd	a2,-56(s0)
+/embryos/chapter12/apps/../shared/string.c:18
+    size_t i = 0;
+    700001b8:	fe043423          	sd	zero,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:19
+    for (; i < n && src[i] != '\0'; i++) dst[i] = src[i];
+    700001bc:	a025                	j	700001e4 <strncpy+0x40>
+/embryos/chapter12/apps/../shared/string.c:19 (discriminator 3)
+    700001be:	fd043703          	ld	a4,-48(s0)
+    700001c2:	fe843783          	ld	a5,-24(s0)
+    700001c6:	973e                	add	a4,a4,a5
+    700001c8:	fd843683          	ld	a3,-40(s0)
+    700001cc:	fe843783          	ld	a5,-24(s0)
+    700001d0:	97b6                	add	a5,a5,a3
+    700001d2:	00074703          	lbu	a4,0(a4)
+    700001d6:	00e78023          	sb	a4,0(a5)
+    700001da:	fe843783          	ld	a5,-24(s0)
+    700001de:	0785                	addi	a5,a5,1
+    700001e0:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:19 (discriminator 1)
+    700001e4:	fe843703          	ld	a4,-24(s0)
+    700001e8:	fc843783          	ld	a5,-56(s0)
+    700001ec:	02f77763          	bgeu	a4,a5,7000021a <strncpy+0x76>
+/embryos/chapter12/apps/../shared/string.c:19 (discriminator 2)
+    700001f0:	fd043703          	ld	a4,-48(s0)
+    700001f4:	fe843783          	ld	a5,-24(s0)
+    700001f8:	97ba                	add	a5,a5,a4
+    700001fa:	0007c783          	lbu	a5,0(a5)
+    700001fe:	f3e1                	bnez	a5,700001be <strncpy+0x1a>
+/embryos/chapter12/apps/../shared/string.c:20
+    for (; i < n; i++) dst[i] = '\0';
+    70000200:	a829                	j	7000021a <strncpy+0x76>
+/embryos/chapter12/apps/../shared/string.c:20 (discriminator 2)
+    70000202:	fd843703          	ld	a4,-40(s0)
+    70000206:	fe843783          	ld	a5,-24(s0)
+    7000020a:	97ba                	add	a5,a5,a4
+    7000020c:	00078023          	sb	zero,0(a5)
+    70000210:	fe843783          	ld	a5,-24(s0)
+    70000214:	0785                	addi	a5,a5,1
+    70000216:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:20 (discriminator 1)
+    7000021a:	fe843703          	ld	a4,-24(s0)
+    7000021e:	fc843783          	ld	a5,-56(s0)
+    70000222:	fef760e3          	bltu	a4,a5,70000202 <strncpy+0x5e>
+/embryos/chapter12/apps/../shared/string.c:21
+    return dst;
+    70000226:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string.c:22
+}
+    7000022a:	853e                	mv	a0,a5
+    7000022c:	70e2                	ld	ra,56(sp)
+    7000022e:	7442                	ld	s0,48(sp)
+    70000230:	6121                	addi	sp,sp,64
+    70000232:	8082                	ret
+
+0000000070000234 <strlen>:
+strlen():
+/embryos/chapter12/apps/../shared/string.c:24
+
+size_t strlen(const char *s) {
+    70000234:	7179                	addi	sp,sp,-48
+    70000236:	f406                	sd	ra,40(sp)
+    70000238:	f022                	sd	s0,32(sp)
+    7000023a:	1800                	addi	s0,sp,48
+    7000023c:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/../shared/string.c:25
+    const char *p = s;
+    70000240:	fd843783          	ld	a5,-40(s0)
+    70000244:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:26
+    while (*p) p++;
+    70000248:	a031                	j	70000254 <strlen+0x20>
+/embryos/chapter12/apps/../shared/string.c:26 (discriminator 2)
+    7000024a:	fe843783          	ld	a5,-24(s0)
+    7000024e:	0785                	addi	a5,a5,1
+    70000250:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:26 (discriminator 1)
+    70000254:	fe843783          	ld	a5,-24(s0)
+    70000258:	0007c783          	lbu	a5,0(a5)
+    7000025c:	f7fd                	bnez	a5,7000024a <strlen+0x16>
+/embryos/chapter12/apps/../shared/string.c:27
+    return (size_t) (p - s);
+    7000025e:	fe843703          	ld	a4,-24(s0)
+    70000262:	fd843783          	ld	a5,-40(s0)
+    70000266:	40f707b3          	sub	a5,a4,a5
+/embryos/chapter12/apps/../shared/string.c:28
+}
+    7000026a:	853e                	mv	a0,a5
+    7000026c:	70a2                	ld	ra,40(sp)
+    7000026e:	7402                	ld	s0,32(sp)
+    70000270:	6145                	addi	sp,sp,48
+    70000272:	8082                	ret
+
+0000000070000274 <strstr>:
+strstr():
+/embryos/chapter12/apps/../shared/string.c:30
+
+char *strstr(const char *haystack, const char *needle) {
+    70000274:	7139                	addi	sp,sp,-64
+    70000276:	fc06                	sd	ra,56(sp)
+    70000278:	f822                	sd	s0,48(sp)
+    7000027a:	0080                	addi	s0,sp,64
+    7000027c:	fca43423          	sd	a0,-56(s0)
+    70000280:	fcb43023          	sd	a1,-64(s0)
+/embryos/chapter12/apps/../shared/string.c:31
+    if (*needle == 0) return (char *) haystack;
+    70000284:	fc043783          	ld	a5,-64(s0)
+    70000288:	0007c783          	lbu	a5,0(a5)
+    7000028c:	e781                	bnez	a5,70000294 <strstr+0x20>
+/embryos/chapter12/apps/../shared/string.c:31 (discriminator 1)
+    7000028e:	fc843783          	ld	a5,-56(s0)
+/embryos/chapter12/apps/../shared/string.c:31
+    70000292:	a041                	j	70000312 <strstr+0x9e>
+/embryos/chapter12/apps/../shared/string.c:32
+    for (const char *h = haystack; *h; h++) {
+    70000294:	fc843783          	ld	a5,-56(s0)
+    70000298:	fef43423          	sd	a5,-24(s0)
+    7000029c:	a0ad                	j	70000306 <strstr+0x92>
+/embryos/chapter12/apps/../shared/string.c:33
+        const char *h2 = h, *n2 = needle;
+    7000029e:	fe843783          	ld	a5,-24(s0)
+    700002a2:	fef43023          	sd	a5,-32(s0)
+    700002a6:	fc043783          	ld	a5,-64(s0)
+    700002aa:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string.c:34
+        while (*h2 && *n2 && *h2 == *n2) { h2++; n2++; }
+    700002ae:	a819                	j	700002c4 <strstr+0x50>
+/embryos/chapter12/apps/../shared/string.c:34 (discriminator 4)
+    700002b0:	fe043783          	ld	a5,-32(s0)
+    700002b4:	0785                	addi	a5,a5,1
+    700002b6:	fef43023          	sd	a5,-32(s0)
+    700002ba:	fd843783          	ld	a5,-40(s0)
+    700002be:	0785                	addi	a5,a5,1
+    700002c0:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string.c:34 (discriminator 1)
+    700002c4:	fe043783          	ld	a5,-32(s0)
+    700002c8:	0007c783          	lbu	a5,0(a5)
+    700002cc:	c385                	beqz	a5,700002ec <strstr+0x78>
+/embryos/chapter12/apps/../shared/string.c:34 (discriminator 2)
+    700002ce:	fd843783          	ld	a5,-40(s0)
+    700002d2:	0007c783          	lbu	a5,0(a5)
+    700002d6:	cb99                	beqz	a5,700002ec <strstr+0x78>
+/embryos/chapter12/apps/../shared/string.c:34 (discriminator 3)
+    700002d8:	fe043783          	ld	a5,-32(s0)
+    700002dc:	0007c703          	lbu	a4,0(a5)
+    700002e0:	fd843783          	ld	a5,-40(s0)
+    700002e4:	0007c783          	lbu	a5,0(a5)
+    700002e8:	fcf704e3          	beq	a4,a5,700002b0 <strstr+0x3c>
+/embryos/chapter12/apps/../shared/string.c:35
+        if (!*n2) return (char *) h;
+    700002ec:	fd843783          	ld	a5,-40(s0)
+    700002f0:	0007c783          	lbu	a5,0(a5)
+    700002f4:	e781                	bnez	a5,700002fc <strstr+0x88>
+/embryos/chapter12/apps/../shared/string.c:35 (discriminator 1)
+    700002f6:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:35
+    700002fa:	a821                	j	70000312 <strstr+0x9e>
+/embryos/chapter12/apps/../shared/string.c:32 (discriminator 2)
+    for (const char *h = haystack; *h; h++) {
+    700002fc:	fe843783          	ld	a5,-24(s0)
+    70000300:	0785                	addi	a5,a5,1
+    70000302:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:32 (discriminator 1)
+    70000306:	fe843783          	ld	a5,-24(s0)
+    7000030a:	0007c783          	lbu	a5,0(a5)
+    7000030e:	fbc1                	bnez	a5,7000029e <strstr+0x2a>
+/embryos/chapter12/apps/../shared/string.c:37
+    }
+    return 0;
+    70000310:	4781                	li	a5,0
+/embryos/chapter12/apps/../shared/string.c:38
+}
+    70000312:	853e                	mv	a0,a5
+    70000314:	70e2                	ld	ra,56(sp)
+    70000316:	7442                	ld	s0,48(sp)
+    70000318:	6121                	addi	sp,sp,64
+    7000031a:	8082                	ret
+
+000000007000031c <strrchr>:
+strrchr():
+/embryos/chapter12/apps/../shared/string.c:40
+
+char *strrchr(const char *s, int c) {
+    7000031c:	7179                	addi	sp,sp,-48
+    7000031e:	f406                	sd	ra,40(sp)
+    70000320:	f022                	sd	s0,32(sp)
+    70000322:	1800                	addi	s0,sp,48
+    70000324:	fca43c23          	sd	a0,-40(s0)
+    70000328:	87ae                	mv	a5,a1
+    7000032a:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/../shared/string.c:41
+    const char *last = 0;
+    7000032e:	fe043423          	sd	zero,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:43
+    char ch;
+    while ((ch = *s++) != 0)
+    70000332:	a005                	j	70000352 <strrchr+0x36>
+/embryos/chapter12/apps/../shared/string.c:44
+        if (ch == (char) c) last = s - 1;
+    70000334:	fd442783          	lw	a5,-44(s0)
+    70000338:	0ff7f713          	zext.b	a4,a5
+    7000033c:	fe744783          	lbu	a5,-25(s0)
+    70000340:	0ff7f793          	zext.b	a5,a5
+    70000344:	00e79763          	bne	a5,a4,70000352 <strrchr+0x36>
+/embryos/chapter12/apps/../shared/string.c:44 (discriminator 1)
+    70000348:	fd843783          	ld	a5,-40(s0)
+    7000034c:	17fd                	addi	a5,a5,-1
+    7000034e:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:43
+    while ((ch = *s++) != 0)
+    70000352:	fd843783          	ld	a5,-40(s0)
+    70000356:	00178713          	addi	a4,a5,1
+    7000035a:	fce43c23          	sd	a4,-40(s0)
+    7000035e:	0007c783          	lbu	a5,0(a5)
+    70000362:	fef403a3          	sb	a5,-25(s0)
+    70000366:	fe744783          	lbu	a5,-25(s0)
+    7000036a:	0ff7f793          	zext.b	a5,a5
+    7000036e:	f3f9                	bnez	a5,70000334 <strrchr+0x18>
+/embryos/chapter12/apps/../shared/string.c:45
+    return (char *)((c == 0) ? s - 1 : last);
+    70000370:	fd442783          	lw	a5,-44(s0)
+    70000374:	2781                	sext.w	a5,a5
+    70000376:	e789                	bnez	a5,70000380 <strrchr+0x64>
+/embryos/chapter12/apps/../shared/string.c:45 (discriminator 1)
+    70000378:	fd843783          	ld	a5,-40(s0)
+    7000037c:	17fd                	addi	a5,a5,-1
+/embryos/chapter12/apps/../shared/string.c:45
+    7000037e:	a019                	j	70000384 <strrchr+0x68>
+/embryos/chapter12/apps/../shared/string.c:45 (discriminator 2)
+    70000380:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:46
+}
+    70000384:	853e                	mv	a0,a5
+    70000386:	70a2                	ld	ra,40(sp)
+    70000388:	7402                	ld	s0,32(sp)
+    7000038a:	6145                	addi	sp,sp,48
+    7000038c:	8082                	ret
+
+000000007000038e <strnlen>:
+strnlen():
+/embryos/chapter12/apps/../shared/string.c:48
+
+size_t strnlen(const char *s, size_t maxlen) {
+    7000038e:	7179                	addi	sp,sp,-48
+    70000390:	f406                	sd	ra,40(sp)
+    70000392:	f022                	sd	s0,32(sp)
+    70000394:	1800                	addi	s0,sp,48
+    70000396:	fca43c23          	sd	a0,-40(s0)
+    7000039a:	fcb43823          	sd	a1,-48(s0)
+/embryos/chapter12/apps/../shared/string.c:49
+    size_t len = 0;
+    7000039e:	fe043423          	sd	zero,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:50
+    while (len < maxlen && s[len] != '\0') len++;
+    700003a2:	a031                	j	700003ae <strnlen+0x20>
+/embryos/chapter12/apps/../shared/string.c:50 (discriminator 3)
+    700003a4:	fe843783          	ld	a5,-24(s0)
+    700003a8:	0785                	addi	a5,a5,1
+    700003aa:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:50 (discriminator 1)
+    700003ae:	fe843703          	ld	a4,-24(s0)
+    700003b2:	fd043783          	ld	a5,-48(s0)
+    700003b6:	00f77a63          	bgeu	a4,a5,700003ca <strnlen+0x3c>
+/embryos/chapter12/apps/../shared/string.c:50 (discriminator 2)
+    700003ba:	fd843703          	ld	a4,-40(s0)
+    700003be:	fe843783          	ld	a5,-24(s0)
+    700003c2:	97ba                	add	a5,a5,a4
+    700003c4:	0007c783          	lbu	a5,0(a5)
+    700003c8:	fff1                	bnez	a5,700003a4 <strnlen+0x16>
+/embryos/chapter12/apps/../shared/string.c:51
+    return len;
+    700003ca:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string.c:52
+}
+    700003ce:	853e                	mv	a0,a5
+    700003d0:	70a2                	ld	ra,40(sp)
+    700003d2:	7402                	ld	s0,32(sp)
+    700003d4:	6145                	addi	sp,sp,48
+    700003d6:	8082                	ret
+
+00000000700003d8 <memcmp>:
+memcmp():
+/embryos/chapter12/apps/../shared/string2.c:3
+#include "string.h"
+
+int memcmp(const void *s1, const void *s2, size_t n) {
+    700003d8:	7139                	addi	sp,sp,-64
+    700003da:	fc06                	sd	ra,56(sp)
+    700003dc:	f822                	sd	s0,48(sp)
+    700003de:	0080                	addi	s0,sp,64
+    700003e0:	fca43c23          	sd	a0,-40(s0)
+    700003e4:	fcb43823          	sd	a1,-48(s0)
+    700003e8:	fcc43423          	sd	a2,-56(s0)
+/embryos/chapter12/apps/../shared/string2.c:4
+    const unsigned char *p1 = s1, *p2 = s2;
+    700003ec:	fd843783          	ld	a5,-40(s0)
+    700003f0:	fef43423          	sd	a5,-24(s0)
+    700003f4:	fd043783          	ld	a5,-48(s0)
+    700003f8:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/../shared/string2.c:5
+    for (; n--; p1++, p2++)
+    700003fc:	a0a1                	j	70000444 <memcmp+0x6c>
+/embryos/chapter12/apps/../shared/string2.c:6
+        if (*p1 != *p2) return *p1 - *p2;
+    700003fe:	fe843783          	ld	a5,-24(s0)
+    70000402:	0007c703          	lbu	a4,0(a5)
+    70000406:	fe043783          	ld	a5,-32(s0)
+    7000040a:	0007c783          	lbu	a5,0(a5)
+    7000040e:	02f70163          	beq	a4,a5,70000430 <memcmp+0x58>
+/embryos/chapter12/apps/../shared/string2.c:6 (discriminator 1)
+    70000412:	fe843783          	ld	a5,-24(s0)
+    70000416:	0007c783          	lbu	a5,0(a5)
+    7000041a:	0007871b          	sext.w	a4,a5
+    7000041e:	fe043783          	ld	a5,-32(s0)
+    70000422:	0007c783          	lbu	a5,0(a5)
+    70000426:	2781                	sext.w	a5,a5
+    70000428:	40f707bb          	subw	a5,a4,a5
+    7000042c:	2781                	sext.w	a5,a5
+/embryos/chapter12/apps/../shared/string2.c:6
+    7000042e:	a01d                	j	70000454 <memcmp+0x7c>
+/embryos/chapter12/apps/../shared/string2.c:5
+    for (; n--; p1++, p2++)
+    70000430:	fe843783          	ld	a5,-24(s0)
+    70000434:	0785                	addi	a5,a5,1
+    70000436:	fef43423          	sd	a5,-24(s0)
+    7000043a:	fe043783          	ld	a5,-32(s0)
+    7000043e:	0785                	addi	a5,a5,1
+    70000440:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/../shared/string2.c:5 (discriminator 1)
+    70000444:	fc843783          	ld	a5,-56(s0)
+    70000448:	fff78713          	addi	a4,a5,-1
+    7000044c:	fce43423          	sd	a4,-56(s0)
+    70000450:	f7dd                	bnez	a5,700003fe <memcmp+0x26>
+/embryos/chapter12/apps/../shared/string2.c:7
+    return 0;
+    70000452:	4781                	li	a5,0
+/embryos/chapter12/apps/../shared/string2.c:8
+}
+    70000454:	853e                	mv	a0,a5
+    70000456:	70e2                	ld	ra,56(sp)
+    70000458:	7442                	ld	s0,48(sp)
+    7000045a:	6121                	addi	sp,sp,64
+    7000045c:	8082                	ret
+
+000000007000045e <memchr>:
+memchr():
+/embryos/chapter12/apps/../shared/string2.c:10
+
+void *memchr(const void *s, int c, size_t n) {
+    7000045e:	7139                	addi	sp,sp,-64
+    70000460:	fc06                	sd	ra,56(sp)
+    70000462:	f822                	sd	s0,48(sp)
+    70000464:	0080                	addi	s0,sp,64
+    70000466:	fca43c23          	sd	a0,-40(s0)
+    7000046a:	87ae                	mv	a5,a1
+    7000046c:	fcc43423          	sd	a2,-56(s0)
+    70000470:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/../shared/string2.c:11
+    const unsigned char *p = s;
+    70000474:	fd843783          	ld	a5,-40(s0)
+    70000478:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string2.c:12
+    unsigned char uc = (unsigned char) c;
+    7000047c:	fd442783          	lw	a5,-44(s0)
+    70000480:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter12/apps/../shared/string2.c:13
+    for (; n--; p++)
+    70000484:	a01d                	j	700004aa <memchr+0x4c>
+/embryos/chapter12/apps/../shared/string2.c:14
+        if (*p == uc) return (void *) p;
+    70000486:	fe843783          	ld	a5,-24(s0)
+    7000048a:	0007c703          	lbu	a4,0(a5)
+    7000048e:	fe744783          	lbu	a5,-25(s0)
+    70000492:	0ff7f793          	zext.b	a5,a5
+    70000496:	00e79563          	bne	a5,a4,700004a0 <memchr+0x42>
+/embryos/chapter12/apps/../shared/string2.c:14 (discriminator 1)
+    7000049a:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string2.c:14
+    7000049e:	a831                	j	700004ba <memchr+0x5c>
+/embryos/chapter12/apps/../shared/string2.c:13
+    for (; n--; p++)
+    700004a0:	fe843783          	ld	a5,-24(s0)
+    700004a4:	0785                	addi	a5,a5,1
+    700004a6:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string2.c:13 (discriminator 1)
+    700004aa:	fc843783          	ld	a5,-56(s0)
+    700004ae:	fff78713          	addi	a4,a5,-1
+    700004b2:	fce43423          	sd	a4,-56(s0)
+    700004b6:	fbe1                	bnez	a5,70000486 <memchr+0x28>
+/embryos/chapter12/apps/../shared/string2.c:15
+    return 0;
+    700004b8:	4781                	li	a5,0
+/embryos/chapter12/apps/../shared/string2.c:16
+}
+    700004ba:	853e                	mv	a0,a5
+    700004bc:	70e2                	ld	ra,56(sp)
+    700004be:	7442                	ld	s0,48(sp)
+    700004c0:	6121                	addi	sp,sp,64
+    700004c2:	8082                	ret
+
+00000000700004c4 <memmove>:
+memmove():
+/embryos/chapter12/apps/../shared/string2.c:18
+
+void *memmove(void *dst, const void *src, size_t n) {
+    700004c4:	7139                	addi	sp,sp,-64
+    700004c6:	fc06                	sd	ra,56(sp)
+    700004c8:	f822                	sd	s0,48(sp)
+    700004ca:	0080                	addi	s0,sp,64
+    700004cc:	fca43c23          	sd	a0,-40(s0)
+    700004d0:	fcb43823          	sd	a1,-48(s0)
+    700004d4:	fcc43423          	sd	a2,-56(s0)
+/embryos/chapter12/apps/../shared/string2.c:19
+    unsigned char *d = dst;
+    700004d8:	fd843783          	ld	a5,-40(s0)
+    700004dc:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string2.c:20
+    const unsigned char *s = src;
+    700004e0:	fd043783          	ld	a5,-48(s0)
+    700004e4:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/../shared/string2.c:21
+    if (d == s || n == 0) return dst;
+    700004e8:	fe843703          	ld	a4,-24(s0)
+    700004ec:	fe043783          	ld	a5,-32(s0)
+    700004f0:	00f70563          	beq	a4,a5,700004fa <memmove+0x36>
+/embryos/chapter12/apps/../shared/string2.c:21 (discriminator 2)
+    700004f4:	fc843783          	ld	a5,-56(s0)
+    700004f8:	e781                	bnez	a5,70000500 <memmove+0x3c>
+/embryos/chapter12/apps/../shared/string2.c:21 (discriminator 3)
+    700004fa:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string2.c:21
+    700004fe:	a851                	j	70000592 <memmove+0xce>
+/embryos/chapter12/apps/../shared/string2.c:22
+    if (d < s)
+    70000500:	fe843703          	ld	a4,-24(s0)
+    70000504:	fe043783          	ld	a5,-32(s0)
+    70000508:	02f77b63          	bgeu	a4,a5,7000053e <memmove+0x7a>
+/embryos/chapter12/apps/../shared/string2.c:23
+        while (n--) *d++ = *s++;
+    7000050c:	a00d                	j	7000052e <memmove+0x6a>
+/embryos/chapter12/apps/../shared/string2.c:23 (discriminator 2)
+    7000050e:	fe043703          	ld	a4,-32(s0)
+    70000512:	00170793          	addi	a5,a4,1
+    70000516:	fef43023          	sd	a5,-32(s0)
+    7000051a:	fe843783          	ld	a5,-24(s0)
+    7000051e:	00178693          	addi	a3,a5,1
+    70000522:	fed43423          	sd	a3,-24(s0)
+    70000526:	00074703          	lbu	a4,0(a4)
+    7000052a:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/../shared/string2.c:23 (discriminator 1)
+    7000052e:	fc843783          	ld	a5,-56(s0)
+    70000532:	fff78713          	addi	a4,a5,-1
+    70000536:	fce43423          	sd	a4,-56(s0)
+    7000053a:	fbf1                	bnez	a5,7000050e <memmove+0x4a>
+    7000053c:	a889                	j	7000058e <memmove+0xca>
+/embryos/chapter12/apps/../shared/string2.c:25
+    else {
+        d += n; s += n;
+    7000053e:	fe843703          	ld	a4,-24(s0)
+    70000542:	fc843783          	ld	a5,-56(s0)
+    70000546:	97ba                	add	a5,a5,a4
+    70000548:	fef43423          	sd	a5,-24(s0)
+    7000054c:	fe043703          	ld	a4,-32(s0)
+    70000550:	fc843783          	ld	a5,-56(s0)
+    70000554:	97ba                	add	a5,a5,a4
+    70000556:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/../shared/string2.c:26
+        while (n--) *--d = *--s;
+    7000055a:	a01d                	j	70000580 <memmove+0xbc>
+/embryos/chapter12/apps/../shared/string2.c:26 (discriminator 2)
+    7000055c:	fe043783          	ld	a5,-32(s0)
+    70000560:	17fd                	addi	a5,a5,-1
+    70000562:	fef43023          	sd	a5,-32(s0)
+    70000566:	fe843783          	ld	a5,-24(s0)
+    7000056a:	17fd                	addi	a5,a5,-1
+    7000056c:	fef43423          	sd	a5,-24(s0)
+    70000570:	fe043783          	ld	a5,-32(s0)
+    70000574:	0007c703          	lbu	a4,0(a5)
+    70000578:	fe843783          	ld	a5,-24(s0)
+    7000057c:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/../shared/string2.c:26 (discriminator 1)
+    70000580:	fc843783          	ld	a5,-56(s0)
+    70000584:	fff78713          	addi	a4,a5,-1
+    70000588:	fce43423          	sd	a4,-56(s0)
+    7000058c:	fbe1                	bnez	a5,7000055c <memmove+0x98>
+/embryos/chapter12/apps/../shared/string2.c:28
+    }
+    return dst;
+    7000058e:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string2.c:29
+}
+    70000592:	853e                	mv	a0,a5
+    70000594:	70e2                	ld	ra,56(sp)
+    70000596:	7442                	ld	s0,48(sp)
+    70000598:	6121                	addi	sp,sp,64
+    7000059a:	8082                	ret
+
+000000007000059c <memcpy>:
+memcpy():
+/embryos/chapter12/apps/../shared/string2.c:31
+
+void *memcpy(void *dst, const void *src, size_t n) {
+    7000059c:	7179                	addi	sp,sp,-48
+    7000059e:	f406                	sd	ra,40(sp)
+    700005a0:	f022                	sd	s0,32(sp)
+    700005a2:	1800                	addi	s0,sp,48
+    700005a4:	fea43423          	sd	a0,-24(s0)
+    700005a8:	feb43023          	sd	a1,-32(s0)
+    700005ac:	fcc43c23          	sd	a2,-40(s0)
+/embryos/chapter12/apps/../shared/string2.c:32
+    return memmove(dst, src, n);
+    700005b0:	fd843603          	ld	a2,-40(s0)
+    700005b4:	fe043583          	ld	a1,-32(s0)
+    700005b8:	fe843503          	ld	a0,-24(s0)
+    700005bc:	00000097          	auipc	ra,0x0
+    700005c0:	f08080e7          	jalr	-248(ra) # 700004c4 <memmove>
+    700005c4:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/../shared/string2.c:33
+}
+    700005c6:	853e                	mv	a0,a5
+    700005c8:	70a2                	ld	ra,40(sp)
+    700005ca:	7402                	ld	s0,32(sp)
+    700005cc:	6145                	addi	sp,sp,48
+    700005ce:	8082                	ret
+
+00000000700005d0 <memset>:
+memset():
+/embryos/chapter12/apps/../shared/string2.c:35
+
+void *memset(void *dst, int c, size_t n) {
+    700005d0:	7139                	addi	sp,sp,-64
+    700005d2:	fc06                	sd	ra,56(sp)
+    700005d4:	f822                	sd	s0,48(sp)
+    700005d6:	0080                	addi	s0,sp,64
+    700005d8:	fca43c23          	sd	a0,-40(s0)
+    700005dc:	87ae                	mv	a5,a1
+    700005de:	fcc43423          	sd	a2,-56(s0)
+    700005e2:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/../shared/string2.c:36
+    unsigned char *d = dst;
+    700005e6:	fd843783          	ld	a5,-40(s0)
+    700005ea:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/../shared/string2.c:37
+    while (n--) *d++ = c;
+    700005ee:	a829                	j	70000608 <memset+0x38>
+/embryos/chapter12/apps/../shared/string2.c:37 (discriminator 2)
+    700005f0:	fe843783          	ld	a5,-24(s0)
+    700005f4:	00178713          	addi	a4,a5,1
+    700005f8:	fee43423          	sd	a4,-24(s0)
+    700005fc:	fd442703          	lw	a4,-44(s0)
+    70000600:	0ff77713          	zext.b	a4,a4
+    70000604:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/../shared/string2.c:37 (discriminator 1)
+    70000608:	fc843783          	ld	a5,-56(s0)
+    7000060c:	fff78713          	addi	a4,a5,-1
+    70000610:	fce43423          	sd	a4,-56(s0)
+    70000614:	fff1                	bnez	a5,700005f0 <memset+0x20>
+/embryos/chapter12/apps/../shared/string2.c:38
+    return dst;
+    70000616:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/../shared/string2.c:39
+}
+    7000061a:	853e                	mv	a0,a5
+    7000061c:	70e2                	ld	ra,56(sp)
+    7000061e:	7442                	ld	s0,48(sp)
+    70000620:	6121                	addi	sp,sp,64
+    70000622:	8082                	ret
+
+0000000070000624 <fputc>:
+fputc():
+/embryos/chapter12/apps/stdio.c:11
+#include "malloc.h"
+
+static FILE dev = { .type = STDIO_DEV };
+FILE *stdin = &dev, *stdout = &dev, *stderr = &dev;
+
+int fputc(int c, FILE *file) {
+    70000624:	7179                	addi	sp,sp,-48
+    70000626:	f406                	sd	ra,40(sp)
+    70000628:	f022                	sd	s0,32(sp)
+    7000062a:	1800                	addi	s0,sp,48
+    7000062c:	87aa                	mv	a5,a0
+    7000062e:	fcb43823          	sd	a1,-48(s0)
+    70000632:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/stdio.c:12
+    char ch = c;
+    70000636:	fdc42783          	lw	a5,-36(s0)
+    7000063a:	0ff7f793          	zext.b	a5,a5
+    7000063e:	fef407a3          	sb	a5,-17(s0)
+/embryos/chapter12/apps/stdio.c:13
+    switch (file->type) {
+    70000642:	fd043783          	ld	a5,-48(s0)
+    70000646:	439c                	lw	a5,0(a5)
+    70000648:	4709                	li	a4,2
+    7000064a:	04e78363          	beq	a5,a4,70000690 <fputc+0x6c>
+    7000064e:	4709                	li	a4,2
+    70000650:	04f76e63          	bltu	a4,a5,700006ac <fputc+0x88>
+    70000654:	c789                	beqz	a5,7000065e <fputc+0x3a>
+    70000656:	4705                	li	a4,1
+    70000658:	00e78b63          	beq	a5,a4,7000066e <fputc+0x4a>
+    7000065c:	a881                	j	700006ac <fputc+0x88>
+/embryos/chapter12/apps/stdio.c:14
+    case STDIO_DEV:    putchar(ch); break;
+    7000065e:	fef44783          	lbu	a5,-17(s0)
+    70000662:	853e                	mv	a0,a5
+    70000664:	00002097          	auipc	ra,0x2
+    70000668:	89c080e7          	jalr	-1892(ra) # 70001f00 <putchar>
+    7000066c:	a081                	j	700006ac <fputc+0x88>
+/embryos/chapter12/apps/stdio.c:15
+    case STDIO_FILE:   user_write(file->u.file, file->offset, &ch, 1); break;
+    7000066e:	fd043783          	ld	a5,-48(s0)
+    70000672:	4b98                	lw	a4,16(a5)
+    70000674:	fd043783          	ld	a5,-48(s0)
+    70000678:	43dc                	lw	a5,4(a5)
+    7000067a:	85be                	mv	a1,a5
+    7000067c:	fef40793          	addi	a5,s0,-17
+    70000680:	4685                	li	a3,1
+    70000682:	863e                	mv	a2,a5
+    70000684:	853a                	mv	a0,a4
+    70000686:	00000097          	auipc	ra,0x0
+    7000068a:	9c6080e7          	jalr	-1594(ra) # 7000004c <user_write>
+    7000068e:	a839                	j	700006ac <fputc+0x88>
+/embryos/chapter12/apps/stdio.c:16
+    case STDIO_STRING: file->u.string[file->offset] = ch; break;
+    70000690:	fd043783          	ld	a5,-48(s0)
+    70000694:	6b98                	ld	a4,16(a5)
+    70000696:	fd043783          	ld	a5,-48(s0)
+    7000069a:	43dc                	lw	a5,4(a5)
+    7000069c:	1782                	slli	a5,a5,0x20
+    7000069e:	9381                	srli	a5,a5,0x20
+    700006a0:	97ba                	add	a5,a5,a4
+    700006a2:	fef44703          	lbu	a4,-17(s0)
+    700006a6:	00e78023          	sb	a4,0(a5)
+    700006aa:	0001                	nop
+/embryos/chapter12/apps/stdio.c:18
+    }
+    file->offset++;
+    700006ac:	fd043783          	ld	a5,-48(s0)
+    700006b0:	43dc                	lw	a5,4(a5)
+    700006b2:	2785                	addiw	a5,a5,1
+    700006b4:	0007871b          	sext.w	a4,a5
+    700006b8:	fd043783          	ld	a5,-48(s0)
+    700006bc:	c3d8                	sw	a4,4(a5)
+/embryos/chapter12/apps/stdio.c:19
+}
+    700006be:	0001                	nop
+    700006c0:	853e                	mv	a0,a5
+    700006c2:	70a2                	ld	ra,40(sp)
+    700006c4:	7402                	ld	s0,32(sp)
+    700006c6:	6145                	addi	sp,sp,48
+    700006c8:	8082                	ret
+
+00000000700006ca <fputs>:
+fputs():
+/embryos/chapter12/apps/stdio.c:21
+
+int fputs(const char *s, FILE *file) {
+    700006ca:	1101                	addi	sp,sp,-32
+    700006cc:	ec06                	sd	ra,24(sp)
+    700006ce:	e822                	sd	s0,16(sp)
+    700006d0:	1000                	addi	s0,sp,32
+    700006d2:	fea43423          	sd	a0,-24(s0)
+    700006d6:	feb43023          	sd	a1,-32(s0)
+/embryos/chapter12/apps/stdio.c:22
+    while (*s != 0) fputc(*s++, file);
+    700006da:	a00d                	j	700006fc <fputs+0x32>
+/embryos/chapter12/apps/stdio.c:22 (discriminator 3)
+    700006dc:	fe843783          	ld	a5,-24(s0)
+    700006e0:	00178713          	addi	a4,a5,1
+    700006e4:	fee43423          	sd	a4,-24(s0)
+    700006e8:	0007c783          	lbu	a5,0(a5)
+    700006ec:	2781                	sext.w	a5,a5
+    700006ee:	fe043583          	ld	a1,-32(s0)
+    700006f2:	853e                	mv	a0,a5
+    700006f4:	00000097          	auipc	ra,0x0
+    700006f8:	f30080e7          	jalr	-208(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:22 (discriminator 2)
+    700006fc:	fe843783          	ld	a5,-24(s0)
+    70000700:	0007c783          	lbu	a5,0(a5)
+    70000704:	ffe1                	bnez	a5,700006dc <fputs+0x12>
+/embryos/chapter12/apps/stdio.c:23
+}
+    70000706:	0001                	nop
+    70000708:	853e                	mv	a0,a5
+    7000070a:	60e2                	ld	ra,24(sp)
+    7000070c:	6442                	ld	s0,16(sp)
+    7000070e:	6105                	addi	sp,sp,32
+    70000710:	8082                	ret
+
+0000000070000712 <print_unsigned>:
+print_unsigned():
+/embryos/chapter12/apps/stdio.c:25
+
+static void print_unsigned(FILE *file, uword_t x, unsigned int base) {
+    70000712:	711d                	addi	sp,sp,-96
+    70000714:	ec86                	sd	ra,88(sp)
+    70000716:	e8a2                	sd	s0,80(sp)
+    70000718:	1080                	addi	s0,sp,96
+    7000071a:	faa43c23          	sd	a0,-72(s0)
+    7000071e:	fab43823          	sd	a1,-80(s0)
+    70000722:	87b2                	mv	a5,a2
+    70000724:	faf42623          	sw	a5,-84(s0)
+/embryos/chapter12/apps/stdio.c:27
+    char buf[32];
+    int i = 0;
+    70000728:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter12/apps/stdio.c:29
+    do {
+        int d = x % base;
+    7000072c:	fac46783          	lwu	a5,-84(s0)
+    70000730:	fb043703          	ld	a4,-80(s0)
+    70000734:	02f777b3          	remu	a5,a4,a5
+    70000738:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:30
+        buf[i++] = (d < 10) ? '0'+d : 'a'+(d-10);
+    7000073c:	fe842783          	lw	a5,-24(s0)
+    70000740:	0007871b          	sext.w	a4,a5
+    70000744:	47a5                	li	a5,9
+    70000746:	00e7cb63          	blt	a5,a4,7000075c <print_unsigned+0x4a>
+/embryos/chapter12/apps/stdio.c:30 (discriminator 1)
+    7000074a:	fe842783          	lw	a5,-24(s0)
+    7000074e:	0ff7f793          	zext.b	a5,a5
+    70000752:	0307879b          	addiw	a5,a5,48
+    70000756:	0ff7f793          	zext.b	a5,a5
+    7000075a:	a809                	j	7000076c <print_unsigned+0x5a>
+/embryos/chapter12/apps/stdio.c:30 (discriminator 2)
+    7000075c:	fe842783          	lw	a5,-24(s0)
+    70000760:	0ff7f793          	zext.b	a5,a5
+    70000764:	0577879b          	addiw	a5,a5,87
+    70000768:	0ff7f793          	zext.b	a5,a5
+/embryos/chapter12/apps/stdio.c:30 (discriminator 4)
+    7000076c:	fec42703          	lw	a4,-20(s0)
+    70000770:	0017069b          	addiw	a3,a4,1
+    70000774:	fed42623          	sw	a3,-20(s0)
+    70000778:	1741                	addi	a4,a4,-16
+    7000077a:	9722                	add	a4,a4,s0
+    7000077c:	fcf70c23          	sb	a5,-40(a4)
+/embryos/chapter12/apps/stdio.c:31
+        x /= base;
+    70000780:	fac46783          	lwu	a5,-84(s0)
+    70000784:	fb043703          	ld	a4,-80(s0)
+    70000788:	02f757b3          	divu	a5,a4,a5
+    7000078c:	faf43823          	sd	a5,-80(s0)
+/embryos/chapter12/apps/stdio.c:32
+    } while (x);
+    70000790:	fb043783          	ld	a5,-80(s0)
+    70000794:	ffc1                	bnez	a5,7000072c <print_unsigned+0x1a>
+/embryos/chapter12/apps/stdio.c:33
+    while (--i >= 0) fputc(buf[i], file);
+    70000796:	a839                	j	700007b4 <print_unsigned+0xa2>
+/embryos/chapter12/apps/stdio.c:33 (discriminator 3)
+    70000798:	fec42783          	lw	a5,-20(s0)
+    7000079c:	17c1                	addi	a5,a5,-16
+    7000079e:	97a2                	add	a5,a5,s0
+    700007a0:	fd87c783          	lbu	a5,-40(a5)
+    700007a4:	2781                	sext.w	a5,a5
+    700007a6:	fb843583          	ld	a1,-72(s0)
+    700007aa:	853e                	mv	a0,a5
+    700007ac:	00000097          	auipc	ra,0x0
+    700007b0:	e78080e7          	jalr	-392(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:33 (discriminator 2)
+    700007b4:	fec42783          	lw	a5,-20(s0)
+    700007b8:	37fd                	addiw	a5,a5,-1
+    700007ba:	fef42623          	sw	a5,-20(s0)
+    700007be:	fec42783          	lw	a5,-20(s0)
+    700007c2:	2781                	sext.w	a5,a5
+    700007c4:	fc07dae3          	bgez	a5,70000798 <print_unsigned+0x86>
+/embryos/chapter12/apps/stdio.c:34
+}
+    700007c8:	0001                	nop
+    700007ca:	0001                	nop
+    700007cc:	60e6                	ld	ra,88(sp)
+    700007ce:	6446                	ld	s0,80(sp)
+    700007d0:	6125                	addi	sp,sp,96
+    700007d2:	8082                	ret
+
+00000000700007d4 <vfprintf>:
+vfprintf():
+/embryos/chapter12/apps/stdio.c:36
+
+void vfprintf(FILE *file, const char *fmt, va_list ap) {
+    700007d4:	715d                	addi	sp,sp,-80
+    700007d6:	e486                	sd	ra,72(sp)
+    700007d8:	e0a2                	sd	s0,64(sp)
+    700007da:	0880                	addi	s0,sp,80
+    700007dc:	fca43423          	sd	a0,-56(s0)
+    700007e0:	fcb43023          	sd	a1,-64(s0)
+    700007e4:	fac43c23          	sd	a2,-72(s0)
+/embryos/chapter12/apps/stdio.c:37
+    for (; *fmt; fmt++) {
+    700007e8:	ac65                	j	70000aa0 <__global_pointer$+0x2a0>
+/embryos/chapter12/apps/stdio.c:38
+        if (*fmt != '%') { fputc(*fmt, file); continue; }
+    700007ea:	fc043783          	ld	a5,-64(s0)
+    700007ee:	0007c783          	lbu	a5,0(a5)
+    700007f2:	873e                	mv	a4,a5
+    700007f4:	02500793          	li	a5,37
+    700007f8:	00f70f63          	beq	a4,a5,70000816 <__global_pointer$+0x16>
+/embryos/chapter12/apps/stdio.c:38 (discriminator 1)
+    700007fc:	fc043783          	ld	a5,-64(s0)
+    70000800:	0007c783          	lbu	a5,0(a5)
+    70000804:	2781                	sext.w	a5,a5
+    70000806:	fc843583          	ld	a1,-56(s0)
+    7000080a:	853e                	mv	a0,a5
+    7000080c:	00000097          	auipc	ra,0x0
+    70000810:	e18080e7          	jalr	-488(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:38
+    70000814:	a449                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:39
+        fmt++;
+    70000816:	fc043783          	ld	a5,-64(s0)
+    7000081a:	0785                	addi	a5,a5,1
+    7000081c:	fcf43023          	sd	a5,-64(s0)
+/embryos/chapter12/apps/stdio.c:40
+        switch (*fmt) {
+    70000820:	fc043783          	ld	a5,-64(s0)
+    70000824:	0007c783          	lbu	a5,0(a5)
+    70000828:	2781                	sext.w	a5,a5
+    7000082a:	07800713          	li	a4,120
+    7000082e:	16e78663          	beq	a5,a4,7000099a <__global_pointer$+0x19a>
+    70000832:	07800713          	li	a4,120
+    70000836:	22f74c63          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000083a:	07500713          	li	a4,117
+    7000083e:	10e78c63          	beq	a5,a4,70000956 <__global_pointer$+0x156>
+    70000842:	07500713          	li	a4,117
+    70000846:	22f74463          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000084a:	07300713          	li	a4,115
+    7000084e:	1ce78763          	beq	a5,a4,70000a1c <__global_pointer$+0x21c>
+    70000852:	07300713          	li	a4,115
+    70000856:	20f74c63          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000085a:	07000713          	li	a4,112
+    7000085e:	18e78063          	beq	a5,a4,700009de <__global_pointer$+0x1de>
+    70000862:	07000713          	li	a4,112
+    70000866:	20f74463          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000086a:	06400713          	li	a4,100
+    7000086e:	04e78763          	beq	a5,a4,700008bc <__global_pointer$+0xbc>
+    70000872:	06400713          	li	a4,100
+    70000876:	1ef74c63          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000087a:	06300713          	li	a4,99
+    7000087e:	18e78063          	beq	a5,a4,700009fe <__global_pointer$+0x1fe>
+    70000882:	06300713          	li	a4,99
+    70000886:	1ef74463          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000088a:	05800713          	li	a4,88
+    7000088e:	12e78863          	beq	a5,a4,700009be <__global_pointer$+0x1be>
+    70000892:	05800713          	li	a4,88
+    70000896:	1cf74c63          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    7000089a:	05500713          	li	a4,85
+    7000089e:	0ce78e63          	beq	a5,a4,7000097a <__global_pointer$+0x17a>
+    700008a2:	05500713          	li	a4,85
+    700008a6:	1cf74463          	blt	a4,a5,70000a6e <__global_pointer$+0x26e>
+    700008aa:	02500713          	li	a4,37
+    700008ae:	1ae78763          	beq	a5,a4,70000a5c <__global_pointer$+0x25c>
+    700008b2:	04400713          	li	a4,68
+    700008b6:	04e78a63          	beq	a5,a4,7000090a <__global_pointer$+0x10a>
+    700008ba:	aa55                	j	70000a6e <__global_pointer$+0x26e>
+/embryos/chapter12/apps/stdio.c:42
+        case 'd': {
+            int x = va_arg(ap, int);
+    700008bc:	fb843783          	ld	a5,-72(s0)
+    700008c0:	00878713          	addi	a4,a5,8
+    700008c4:	fae43c23          	sd	a4,-72(s0)
+    700008c8:	439c                	lw	a5,0(a5)
+    700008ca:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/stdio.c:43
+            if (x < 0) { fputc('-', file); x = -x; }
+    700008ce:	fec42783          	lw	a5,-20(s0)
+    700008d2:	2781                	sext.w	a5,a5
+    700008d4:	0207d063          	bgez	a5,700008f4 <__global_pointer$+0xf4>
+/embryos/chapter12/apps/stdio.c:43 (discriminator 1)
+    700008d8:	fc843583          	ld	a1,-56(s0)
+    700008dc:	02d00513          	li	a0,45
+    700008e0:	00000097          	auipc	ra,0x0
+    700008e4:	d44080e7          	jalr	-700(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:43 (discriminator 2)
+    700008e8:	fec42783          	lw	a5,-20(s0)
+    700008ec:	40f007bb          	negw	a5,a5
+    700008f0:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/stdio.c:44
+            print_unsigned(file, (uword_t) x, 10);
+    700008f4:	fec42783          	lw	a5,-20(s0)
+    700008f8:	4629                	li	a2,10
+    700008fa:	85be                	mv	a1,a5
+    700008fc:	fc843503          	ld	a0,-56(s0)
+    70000900:	00000097          	auipc	ra,0x0
+    70000904:	e12080e7          	jalr	-494(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:45
+            break;
+    70000908:	a279                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:48
+        }
+        case 'D': {
+            sword_t x = va_arg(ap, sword_t);
+    7000090a:	fb843783          	ld	a5,-72(s0)
+    7000090e:	00878713          	addi	a4,a5,8
+    70000912:	fae43c23          	sd	a4,-72(s0)
+    70000916:	639c                	ld	a5,0(a5)
+    70000918:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/stdio.c:49
+            if (x < 0) { fputc('-', file); x = -x; }
+    7000091c:	fe043783          	ld	a5,-32(s0)
+    70000920:	0207d063          	bgez	a5,70000940 <__global_pointer$+0x140>
+/embryos/chapter12/apps/stdio.c:49 (discriminator 1)
+    70000924:	fc843583          	ld	a1,-56(s0)
+    70000928:	02d00513          	li	a0,45
+    7000092c:	00000097          	auipc	ra,0x0
+    70000930:	cf8080e7          	jalr	-776(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:49 (discriminator 2)
+    70000934:	fe043783          	ld	a5,-32(s0)
+    70000938:	40f007b3          	neg	a5,a5
+    7000093c:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/stdio.c:50
+            print_unsigned(file, (uword_t) x, 10);
+    70000940:	fe043783          	ld	a5,-32(s0)
+    70000944:	4629                	li	a2,10
+    70000946:	85be                	mv	a1,a5
+    70000948:	fc843503          	ld	a0,-56(s0)
+    7000094c:	00000097          	auipc	ra,0x0
+    70000950:	dc6080e7          	jalr	-570(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:51
+            break;
+    70000954:	a289                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:53
+        }
+        case 'u': print_unsigned(file, va_arg(ap, unsigned int), 10); break;
+    70000956:	fb843783          	ld	a5,-72(s0)
+    7000095a:	00878713          	addi	a4,a5,8
+    7000095e:	fae43c23          	sd	a4,-72(s0)
+    70000962:	439c                	lw	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:53 (discriminator 1)
+    70000964:	1782                	slli	a5,a5,0x20
+    70000966:	9381                	srli	a5,a5,0x20
+    70000968:	4629                	li	a2,10
+    7000096a:	85be                	mv	a1,a5
+    7000096c:	fc843503          	ld	a0,-56(s0)
+    70000970:	00000097          	auipc	ra,0x0
+    70000974:	da2080e7          	jalr	-606(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:53
+    70000978:	aa39                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:54
+        case 'U': print_unsigned(file, va_arg(ap, uword_t),      10); break;
+    7000097a:	fb843783          	ld	a5,-72(s0)
+    7000097e:	00878713          	addi	a4,a5,8
+    70000982:	fae43c23          	sd	a4,-72(s0)
+    70000986:	639c                	ld	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:54 (discriminator 1)
+    70000988:	4629                	li	a2,10
+    7000098a:	85be                	mv	a1,a5
+    7000098c:	fc843503          	ld	a0,-56(s0)
+    70000990:	00000097          	auipc	ra,0x0
+    70000994:	d82080e7          	jalr	-638(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:54
+    70000998:	a8fd                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:55
+        case 'x': print_unsigned(file, va_arg(ap, unsigned int), 16); break;
+    7000099a:	fb843783          	ld	a5,-72(s0)
+    7000099e:	00878713          	addi	a4,a5,8
+    700009a2:	fae43c23          	sd	a4,-72(s0)
+    700009a6:	439c                	lw	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:55 (discriminator 1)
+    700009a8:	1782                	slli	a5,a5,0x20
+    700009aa:	9381                	srli	a5,a5,0x20
+    700009ac:	4641                	li	a2,16
+    700009ae:	85be                	mv	a1,a5
+    700009b0:	fc843503          	ld	a0,-56(s0)
+    700009b4:	00000097          	auipc	ra,0x0
+    700009b8:	d5e080e7          	jalr	-674(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:55
+    700009bc:	a8e9                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:56
+        case 'X': print_unsigned(file, va_arg(ap, uword_t),      16); break;
+    700009be:	fb843783          	ld	a5,-72(s0)
+    700009c2:	00878713          	addi	a4,a5,8
+    700009c6:	fae43c23          	sd	a4,-72(s0)
+    700009ca:	639c                	ld	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:56 (discriminator 1)
+    700009cc:	4641                	li	a2,16
+    700009ce:	85be                	mv	a1,a5
+    700009d0:	fc843503          	ld	a0,-56(s0)
+    700009d4:	00000097          	auipc	ra,0x0
+    700009d8:	d3e080e7          	jalr	-706(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:56
+    700009dc:	a86d                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:57
+        case 'p': print_unsigned(file, va_arg(ap, uintptr_t),    16); break;
+    700009de:	fb843783          	ld	a5,-72(s0)
+    700009e2:	00878713          	addi	a4,a5,8
+    700009e6:	fae43c23          	sd	a4,-72(s0)
+    700009ea:	639c                	ld	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:57 (discriminator 1)
+    700009ec:	4641                	li	a2,16
+    700009ee:	85be                	mv	a1,a5
+    700009f0:	fc843503          	ld	a0,-56(s0)
+    700009f4:	00000097          	auipc	ra,0x0
+    700009f8:	d1e080e7          	jalr	-738(ra) # 70000712 <print_unsigned>
+/embryos/chapter12/apps/stdio.c:57
+    700009fc:	a869                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:58
+        case 'c': fputc(va_arg(ap, int), file); break;
+    700009fe:	fb843783          	ld	a5,-72(s0)
+    70000a02:	00878713          	addi	a4,a5,8
+    70000a06:	fae43c23          	sd	a4,-72(s0)
+    70000a0a:	439c                	lw	a5,0(a5)
+/embryos/chapter12/apps/stdio.c:58 (discriminator 1)
+    70000a0c:	fc843583          	ld	a1,-56(s0)
+    70000a10:	853e                	mv	a0,a5
+    70000a12:	00000097          	auipc	ra,0x0
+    70000a16:	c12080e7          	jalr	-1006(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:58
+    70000a1a:	a8b5                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:60
+        case 's': {
+            char *s = va_arg(ap, char*);
+    70000a1c:	fb843783          	ld	a5,-72(s0)
+    70000a20:	00878713          	addi	a4,a5,8
+    70000a24:	fae43c23          	sd	a4,-72(s0)
+    70000a28:	639c                	ld	a5,0(a5)
+    70000a2a:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/stdio.c:61
+            while (*s) fputc(*s++, file);
+    70000a2e:	a00d                	j	70000a50 <__global_pointer$+0x250>
+/embryos/chapter12/apps/stdio.c:61 (discriminator 3)
+    70000a30:	fd843783          	ld	a5,-40(s0)
+    70000a34:	00178713          	addi	a4,a5,1
+    70000a38:	fce43c23          	sd	a4,-40(s0)
+    70000a3c:	0007c783          	lbu	a5,0(a5)
+    70000a40:	2781                	sext.w	a5,a5
+    70000a42:	fc843583          	ld	a1,-56(s0)
+    70000a46:	853e                	mv	a0,a5
+    70000a48:	00000097          	auipc	ra,0x0
+    70000a4c:	bdc080e7          	jalr	-1060(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:61 (discriminator 2)
+    70000a50:	fd843783          	ld	a5,-40(s0)
+    70000a54:	0007c783          	lbu	a5,0(a5)
+    70000a58:	ffe1                	bnez	a5,70000a30 <__global_pointer$+0x230>
+/embryos/chapter12/apps/stdio.c:62
+            break;
+    70000a5a:	a835                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:64
+        }
+        case '%': fputc('%', file); break;
+    70000a5c:	fc843583          	ld	a1,-56(s0)
+    70000a60:	02500513          	li	a0,37
+    70000a64:	00000097          	auipc	ra,0x0
+    70000a68:	bc0080e7          	jalr	-1088(ra) # 70000624 <fputc>
+    70000a6c:	a02d                	j	70000a96 <__global_pointer$+0x296>
+/embryos/chapter12/apps/stdio.c:65
+        default:  fputc('%', file); fputc(*fmt, file);
+    70000a6e:	fc843583          	ld	a1,-56(s0)
+    70000a72:	02500513          	li	a0,37
+    70000a76:	00000097          	auipc	ra,0x0
+    70000a7a:	bae080e7          	jalr	-1106(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:65 (discriminator 1)
+    70000a7e:	fc043783          	ld	a5,-64(s0)
+    70000a82:	0007c783          	lbu	a5,0(a5)
+    70000a86:	2781                	sext.w	a5,a5
+    70000a88:	fc843583          	ld	a1,-56(s0)
+    70000a8c:	853e                	mv	a0,a5
+    70000a8e:	00000097          	auipc	ra,0x0
+    70000a92:	b96080e7          	jalr	-1130(ra) # 70000624 <fputc>
+/embryos/chapter12/apps/stdio.c:37
+    for (; *fmt; fmt++) {
+    70000a96:	fc043783          	ld	a5,-64(s0)
+    70000a9a:	0785                	addi	a5,a5,1
+    70000a9c:	fcf43023          	sd	a5,-64(s0)
+/embryos/chapter12/apps/stdio.c:37 (discriminator 1)
+    70000aa0:	fc043783          	ld	a5,-64(s0)
+    70000aa4:	0007c783          	lbu	a5,0(a5)
+    70000aa8:	d40791e3          	bnez	a5,700007ea <vfprintf+0x16>
+/embryos/chapter12/apps/stdio.c:68
+        }
+    }
+}
+    70000aac:	0001                	nop
+    70000aae:	0001                	nop
+    70000ab0:	60a6                	ld	ra,72(sp)
+    70000ab2:	6406                	ld	s0,64(sp)
+    70000ab4:	6161                	addi	sp,sp,80
+    70000ab6:	8082                	ret
+
+0000000070000ab8 <fprintf>:
+fprintf():
+/embryos/chapter12/apps/stdio.c:70
+
+void fprintf(FILE *file, const char *fmt, ...) {
+    70000ab8:	7159                	addi	sp,sp,-112
+    70000aba:	fc06                	sd	ra,56(sp)
+    70000abc:	f822                	sd	s0,48(sp)
+    70000abe:	0080                	addi	s0,sp,64
+    70000ac0:	fca43c23          	sd	a0,-40(s0)
+    70000ac4:	fcb43823          	sd	a1,-48(s0)
+    70000ac8:	e010                	sd	a2,0(s0)
+    70000aca:	e414                	sd	a3,8(s0)
+    70000acc:	e818                	sd	a4,16(s0)
+    70000ace:	ec1c                	sd	a5,24(s0)
+    70000ad0:	03043023          	sd	a6,32(s0)
+    70000ad4:	03143423          	sd	a7,40(s0)
+/embryos/chapter12/apps/stdio.c:72
+    va_list ap;
+    va_start(ap, fmt);
+    70000ad8:	03040793          	addi	a5,s0,48
+    70000adc:	fcf43423          	sd	a5,-56(s0)
+    70000ae0:	fc843783          	ld	a5,-56(s0)
+    70000ae4:	fd078793          	addi	a5,a5,-48
+    70000ae8:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:73
+    vfprintf(file, fmt, ap);
+    70000aec:	fe843783          	ld	a5,-24(s0)
+    70000af0:	863e                	mv	a2,a5
+    70000af2:	fd043583          	ld	a1,-48(s0)
+    70000af6:	fd843503          	ld	a0,-40(s0)
+    70000afa:	00000097          	auipc	ra,0x0
+    70000afe:	cda080e7          	jalr	-806(ra) # 700007d4 <vfprintf>
+/embryos/chapter12/apps/stdio.c:75
+    va_end(ap);
+}
+    70000b02:	0001                	nop
+    70000b04:	70e2                	ld	ra,56(sp)
+    70000b06:	7442                	ld	s0,48(sp)
+    70000b08:	6165                	addi	sp,sp,112
+    70000b0a:	8082                	ret
+
+0000000070000b0c <sprintf>:
+sprintf():
+/embryos/chapter12/apps/stdio.c:77
+
+void sprintf(char *s, const char *fmt, ...) {
+    70000b0c:	7119                	addi	sp,sp,-128
+    70000b0e:	e486                	sd	ra,72(sp)
+    70000b10:	e0a2                	sd	s0,64(sp)
+    70000b12:	0880                	addi	s0,sp,80
+    70000b14:	fca43423          	sd	a0,-56(s0)
+    70000b18:	fcb43023          	sd	a1,-64(s0)
+    70000b1c:	e010                	sd	a2,0(s0)
+    70000b1e:	e414                	sd	a3,8(s0)
+    70000b20:	e818                	sd	a4,16(s0)
+    70000b22:	ec1c                	sd	a5,24(s0)
+    70000b24:	03043023          	sd	a6,32(s0)
+    70000b28:	03143423          	sd	a7,40(s0)
+/embryos/chapter12/apps/stdio.c:79
+    FILE file;
+    file.type = STDIO_STRING;
+    70000b2c:	4789                	li	a5,2
+    70000b2e:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter12/apps/stdio.c:80
+    file.u.string = s;
+    70000b32:	fc843783          	ld	a5,-56(s0)
+    70000b36:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:82
+    va_list ap;
+    va_start(ap, fmt);
+    70000b3a:	03040793          	addi	a5,s0,48
+    70000b3e:	faf43c23          	sd	a5,-72(s0)
+    70000b42:	fb843783          	ld	a5,-72(s0)
+    70000b46:	fd078793          	addi	a5,a5,-48
+    70000b4a:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter12/apps/stdio.c:83
+    vfprintf(&file, fmt, ap);
+    70000b4e:	fd043703          	ld	a4,-48(s0)
+    70000b52:	fd840793          	addi	a5,s0,-40
+    70000b56:	863a                	mv	a2,a4
+    70000b58:	fc043583          	ld	a1,-64(s0)
+    70000b5c:	853e                	mv	a0,a5
+    70000b5e:	00000097          	auipc	ra,0x0
+    70000b62:	c76080e7          	jalr	-906(ra) # 700007d4 <vfprintf>
+/embryos/chapter12/apps/stdio.c:85
+    va_end(ap);
+    s[file.offset] = 0;
+    70000b66:	fdc42783          	lw	a5,-36(s0)
+    70000b6a:	1782                	slli	a5,a5,0x20
+    70000b6c:	9381                	srli	a5,a5,0x20
+    70000b6e:	fc843703          	ld	a4,-56(s0)
+    70000b72:	97ba                	add	a5,a5,a4
+    70000b74:	00078023          	sb	zero,0(a5)
+/embryos/chapter12/apps/stdio.c:86
+}
+    70000b78:	0001                	nop
+    70000b7a:	60a6                	ld	ra,72(sp)
+    70000b7c:	6406                	ld	s0,64(sp)
+    70000b7e:	6109                	addi	sp,sp,128
+    70000b80:	8082                	ret
+
+0000000070000b82 <printf>:
+printf():
+/embryos/chapter12/apps/stdio.c:88
+
+void printf(const char *fmt, ...) {
+    70000b82:	7159                	addi	sp,sp,-112
+    70000b84:	f406                	sd	ra,40(sp)
+    70000b86:	f022                	sd	s0,32(sp)
+    70000b88:	1800                	addi	s0,sp,48
+    70000b8a:	fca43c23          	sd	a0,-40(s0)
+    70000b8e:	e40c                	sd	a1,8(s0)
+    70000b90:	e810                	sd	a2,16(s0)
+    70000b92:	ec14                	sd	a3,24(s0)
+    70000b94:	f018                	sd	a4,32(s0)
+    70000b96:	f41c                	sd	a5,40(s0)
+    70000b98:	03043823          	sd	a6,48(s0)
+    70000b9c:	03143c23          	sd	a7,56(s0)
+/embryos/chapter12/apps/stdio.c:90
+    va_list ap;
+    va_start(ap, fmt);
+    70000ba0:	04040793          	addi	a5,s0,64
+    70000ba4:	fcf43823          	sd	a5,-48(s0)
+    70000ba8:	fd043783          	ld	a5,-48(s0)
+    70000bac:	fc878793          	addi	a5,a5,-56
+    70000bb0:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:91
+    vfprintf(stdout, fmt, ap);
+    70000bb4:	00001797          	auipc	a5,0x1
+    70000bb8:	66478793          	addi	a5,a5,1636 # 70002218 <stdout>
+    70000bbc:	639c                	ld	a5,0(a5)
+    70000bbe:	fe843703          	ld	a4,-24(s0)
+    70000bc2:	863a                	mv	a2,a4
+    70000bc4:	fd843583          	ld	a1,-40(s0)
+    70000bc8:	853e                	mv	a0,a5
+    70000bca:	00000097          	auipc	ra,0x0
+    70000bce:	c0a080e7          	jalr	-1014(ra) # 700007d4 <vfprintf>
+/embryos/chapter12/apps/stdio.c:93
+    va_end(ap);
+}
+    70000bd2:	0001                	nop
+    70000bd4:	70a2                	ld	ra,40(sp)
+    70000bd6:	7402                	ld	s0,32(sp)
+    70000bd8:	6165                	addi	sp,sp,112
+    70000bda:	8082                	ret
+
+0000000070000bdc <fopen>:
+fopen():
+/embryos/chapter12/apps/stdio.c:95
+
+FILE *fopen(const char *name, const char *access) {
+    70000bdc:	7139                	addi	sp,sp,-64
+    70000bde:	fc06                	sd	ra,56(sp)
+    70000be0:	f822                	sd	s0,48(sp)
+    70000be2:	0080                	addi	s0,sp,64
+    70000be4:	fca43423          	sd	a0,-56(s0)
+    70000be8:	fcb43023          	sd	a1,-64(s0)
+/embryos/chapter12/apps/stdio.c:96
+    if (*access == 'r') {
+    70000bec:	fc043783          	ld	a5,-64(s0)
+    70000bf0:	0007c783          	lbu	a5,0(a5)
+    70000bf4:	873e                	mv	a4,a5
+    70000bf6:	07200793          	li	a5,114
+    70000bfa:	04f71b63          	bne	a4,a5,70000c50 <fopen+0x74>
+/embryos/chapter12/apps/stdio.c:97
+        int fh = dir_lookup(name);
+    70000bfe:	fc843503          	ld	a0,-56(s0)
+    70000c02:	00000097          	auipc	ra,0x0
+    70000c06:	28c080e7          	jalr	652(ra) # 70000e8e <dir_lookup>
+    70000c0a:	87aa                	mv	a5,a0
+    70000c0c:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/stdio.c:98
+        if (fh < 0) return 0;
+    70000c10:	fdc42783          	lw	a5,-36(s0)
+    70000c14:	2781                	sext.w	a5,a5
+    70000c16:	0007d463          	bgez	a5,70000c1e <fopen+0x42>
+/embryos/chapter12/apps/stdio.c:98 (discriminator 1)
+    70000c1a:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:98
+    70000c1c:	a855                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:99
+        FILE *file = calloc(1, sizeof(*file));
+    70000c1e:	45e1                	li	a1,24
+    70000c20:	4505                	li	a0,1
+    70000c22:	00001097          	auipc	ra,0x1
+    70000c26:	434080e7          	jalr	1076(ra) # 70002056 <calloc>
+    70000c2a:	fca43823          	sd	a0,-48(s0)
+/embryos/chapter12/apps/stdio.c:100
+        if (file == 0) return 0;
+    70000c2e:	fd043783          	ld	a5,-48(s0)
+    70000c32:	e399                	bnez	a5,70000c38 <fopen+0x5c>
+/embryos/chapter12/apps/stdio.c:100 (discriminator 1)
+    70000c34:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:100
+    70000c36:	a869                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:101
+        file->type = STDIO_FILE;
+    70000c38:	fd043783          	ld	a5,-48(s0)
+    70000c3c:	4705                	li	a4,1
+    70000c3e:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/stdio.c:102
+        file->u.file = fh;
+    70000c40:	fd043783          	ld	a5,-48(s0)
+    70000c44:	fdc42703          	lw	a4,-36(s0)
+    70000c48:	cb98                	sw	a4,16(a5)
+/embryos/chapter12/apps/stdio.c:103
+        return file;
+    70000c4a:	fd043783          	ld	a5,-48(s0)
+    70000c4e:	a049                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:105
+    }
+    if (*access == 'w') {
+    70000c50:	fc043783          	ld	a5,-64(s0)
+    70000c54:	0007c783          	lbu	a5,0(a5)
+    70000c58:	873e                	mv	a4,a5
+    70000c5a:	07700793          	li	a5,119
+    70000c5e:	06f71863          	bne	a4,a5,70000cce <fopen+0xf2>
+/embryos/chapter12/apps/stdio.c:106
+        int fh = user_create();     // create a new file
+    70000c62:	fffff097          	auipc	ra,0xfffff
+    70000c66:	3da080e7          	jalr	986(ra) # 7000003c <user_create>
+    70000c6a:	87aa                	mv	a5,a0
+    70000c6c:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/stdio.c:107
+        if (fh < 0) return 0;
+    70000c70:	fec42783          	lw	a5,-20(s0)
+    70000c74:	2781                	sext.w	a5,a5
+    70000c76:	0007d463          	bgez	a5,70000c7e <fopen+0xa2>
+/embryos/chapter12/apps/stdio.c:107 (discriminator 1)
+    70000c7a:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:107
+    70000c7c:	a891                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:108
+        dir_delete(name);           // delete the old file if any
+    70000c7e:	fc843503          	ld	a0,-56(s0)
+    70000c82:	00000097          	auipc	ra,0x0
+    70000c86:	3a0080e7          	jalr	928(ra) # 70001022 <dir_delete>
+/embryos/chapter12/apps/stdio.c:109
+        dir_create(name, fh);
+    70000c8a:	fec42783          	lw	a5,-20(s0)
+    70000c8e:	85be                	mv	a1,a5
+    70000c90:	fc843503          	ld	a0,-56(s0)
+    70000c94:	00000097          	auipc	ra,0x0
+    70000c98:	28e080e7          	jalr	654(ra) # 70000f22 <dir_create>
+/embryos/chapter12/apps/stdio.c:110
+        FILE *file = calloc(1, sizeof(*file));
+    70000c9c:	45e1                	li	a1,24
+    70000c9e:	4505                	li	a0,1
+    70000ca0:	00001097          	auipc	ra,0x1
+    70000ca4:	3b6080e7          	jalr	950(ra) # 70002056 <calloc>
+    70000ca8:	fea43023          	sd	a0,-32(s0)
+/embryos/chapter12/apps/stdio.c:111
+        if (file == 0) return 0;
+    70000cac:	fe043783          	ld	a5,-32(s0)
+    70000cb0:	e399                	bnez	a5,70000cb6 <fopen+0xda>
+/embryos/chapter12/apps/stdio.c:111 (discriminator 1)
+    70000cb2:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:111
+    70000cb4:	a831                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:112
+        file->type = STDIO_FILE;
+    70000cb6:	fe043783          	ld	a5,-32(s0)
+    70000cba:	4705                	li	a4,1
+    70000cbc:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/stdio.c:113
+        file->u.file = fh;
+    70000cbe:	fe043783          	ld	a5,-32(s0)
+    70000cc2:	fec42703          	lw	a4,-20(s0)
+    70000cc6:	cb98                	sw	a4,16(a5)
+/embryos/chapter12/apps/stdio.c:114
+        return file;
+    70000cc8:	fe043783          	ld	a5,-32(s0)
+    70000ccc:	a011                	j	70000cd0 <fopen+0xf4>
+/embryos/chapter12/apps/stdio.c:116
+    }
+    return 0;
+    70000cce:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:117
+}
+    70000cd0:	853e                	mv	a0,a5
+    70000cd2:	70e2                	ld	ra,56(sp)
+    70000cd4:	7442                	ld	s0,48(sp)
+    70000cd6:	6121                	addi	sp,sp,64
+    70000cd8:	8082                	ret
+
+0000000070000cda <freadline>:
+freadline():
+/embryos/chapter12/apps/stdio.c:119
+
+char *freadline(char *str, int size, FILE *file) {
+    70000cda:	7139                	addi	sp,sp,-64
+    70000cdc:	fc06                	sd	ra,56(sp)
+    70000cde:	f822                	sd	s0,48(sp)
+    70000ce0:	0080                	addi	s0,sp,64
+    70000ce2:	fca43c23          	sd	a0,-40(s0)
+    70000ce6:	87ae                	mv	a5,a1
+    70000ce8:	fcc43423          	sd	a2,-56(s0)
+    70000cec:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/stdio.c:120
+    if (file->eof) return 0;
+    70000cf0:	fc843783          	ld	a5,-56(s0)
+    70000cf4:	479c                	lw	a5,8(a5)
+    70000cf6:	c399                	beqz	a5,70000cfc <freadline+0x22>
+/embryos/chapter12/apps/stdio.c:120 (discriminator 1)
+    70000cf8:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:120
+    70000cfa:	a045                	j	70000d9a <freadline+0xc0>
+/embryos/chapter12/apps/stdio.c:121
+    int nread = 0;
+    70000cfc:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter12/apps/stdio.c:122
+    while (nread < size - 1) {
+    70000d00:	a88d                	j	70000d72 <freadline+0x98>
+/embryos/chapter12/apps/stdio.c:123
+        int n = user_read(file->u.file, file->offset, &str[nread], 1);
+    70000d02:	fc843783          	ld	a5,-56(s0)
+    70000d06:	4b88                	lw	a0,16(a5)
+    70000d08:	fc843783          	ld	a5,-56(s0)
+    70000d0c:	43dc                	lw	a5,4(a5)
+    70000d0e:	85be                	mv	a1,a5
+    70000d10:	fec42783          	lw	a5,-20(s0)
+    70000d14:	fd843703          	ld	a4,-40(s0)
+    70000d18:	97ba                	add	a5,a5,a4
+    70000d1a:	4685                	li	a3,1
+    70000d1c:	863e                	mv	a2,a5
+    70000d1e:	fffff097          	auipc	ra,0xfffff
+    70000d22:	326080e7          	jalr	806(ra) # 70000044 <user_read>
+    70000d26:	87aa                	mv	a5,a0
+    70000d28:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:124
+        if (n == 0) {
+    70000d2c:	fe842783          	lw	a5,-24(s0)
+    70000d30:	2781                	sext.w	a5,a5
+    70000d32:	e791                	bnez	a5,70000d3e <freadline+0x64>
+/embryos/chapter12/apps/stdio.c:125
+            file->eof = 1;
+    70000d34:	fc843783          	ld	a5,-56(s0)
+    70000d38:	4705                	li	a4,1
+    70000d3a:	c798                	sw	a4,8(a5)
+/embryos/chapter12/apps/stdio.c:126
+            break;
+    70000d3c:	a0b1                	j	70000d88 <freadline+0xae>
+/embryos/chapter12/apps/stdio.c:128
+        }
+        file->offset++;
+    70000d3e:	fc843783          	ld	a5,-56(s0)
+    70000d42:	43dc                	lw	a5,4(a5)
+    70000d44:	2785                	addiw	a5,a5,1
+    70000d46:	0007871b          	sext.w	a4,a5
+    70000d4a:	fc843783          	ld	a5,-56(s0)
+    70000d4e:	c3d8                	sw	a4,4(a5)
+/embryos/chapter12/apps/stdio.c:129
+        nread++;
+    70000d50:	fec42783          	lw	a5,-20(s0)
+    70000d54:	2785                	addiw	a5,a5,1
+    70000d56:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/stdio.c:130
+        if (str[nread - 1] == '\n') break;
+    70000d5a:	fec42783          	lw	a5,-20(s0)
+    70000d5e:	17fd                	addi	a5,a5,-1
+    70000d60:	fd843703          	ld	a4,-40(s0)
+    70000d64:	97ba                	add	a5,a5,a4
+    70000d66:	0007c783          	lbu	a5,0(a5)
+    70000d6a:	873e                	mv	a4,a5
+    70000d6c:	47a9                	li	a5,10
+    70000d6e:	00f70c63          	beq	a4,a5,70000d86 <freadline+0xac>
+/embryos/chapter12/apps/stdio.c:122
+    while (nread < size - 1) {
+    70000d72:	fd442783          	lw	a5,-44(s0)
+    70000d76:	37fd                	addiw	a5,a5,-1
+    70000d78:	2781                	sext.w	a5,a5
+    70000d7a:	fec42703          	lw	a4,-20(s0)
+    70000d7e:	2701                	sext.w	a4,a4
+    70000d80:	f8f741e3          	blt	a4,a5,70000d02 <freadline+0x28>
+    70000d84:	a011                	j	70000d88 <freadline+0xae>
+/embryos/chapter12/apps/stdio.c:130
+        if (str[nread - 1] == '\n') break;
+    70000d86:	0001                	nop
+/embryos/chapter12/apps/stdio.c:132
+    }
+    str[nread] = 0;
+    70000d88:	fec42783          	lw	a5,-20(s0)
+    70000d8c:	fd843703          	ld	a4,-40(s0)
+    70000d90:	97ba                	add	a5,a5,a4
+    70000d92:	00078023          	sb	zero,0(a5)
+/embryos/chapter12/apps/stdio.c:133
+    return str;
+    70000d96:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/stdio.c:134
+}
+    70000d9a:	853e                	mv	a0,a5
+    70000d9c:	70e2                	ld	ra,56(sp)
+    70000d9e:	7442                	ld	s0,48(sp)
+    70000da0:	6121                	addi	sp,sp,64
+    70000da2:	8082                	ret
+
+0000000070000da4 <fgets>:
+fgets():
+/embryos/chapter12/apps/stdio.c:136
+
+char *fgets(char *str, int size, FILE *file) {
+    70000da4:	7179                	addi	sp,sp,-48
+    70000da6:	f406                	sd	ra,40(sp)
+    70000da8:	f022                	sd	s0,32(sp)
+    70000daa:	1800                	addi	s0,sp,48
+    70000dac:	fea43423          	sd	a0,-24(s0)
+    70000db0:	87ae                	mv	a5,a1
+    70000db2:	fcc43c23          	sd	a2,-40(s0)
+    70000db6:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/stdio.c:137
+    switch (file->type) {
+    70000dba:	fd843783          	ld	a5,-40(s0)
+    70000dbe:	439c                	lw	a5,0(a5)
+    70000dc0:	c789                	beqz	a5,70000dca <fgets+0x26>
+    70000dc2:	4705                	li	a4,1
+    70000dc4:	02e78363          	beq	a5,a4,70000dea <fgets+0x46>
+    70000dc8:	a835                	j	70000e04 <fgets+0x60>
+/embryos/chapter12/apps/stdio.c:139
+    case STDIO_DEV:
+        return readline(str, size) ? str : 0;
+    70000dca:	fe442783          	lw	a5,-28(s0)
+    70000dce:	85be                	mv	a1,a5
+    70000dd0:	fe843503          	ld	a0,-24(s0)
+    70000dd4:	00001097          	auipc	ra,0x1
+    70000dd8:	162080e7          	jalr	354(ra) # 70001f36 <readline>
+    70000ddc:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/stdio.c:139 (discriminator 1)
+    70000dde:	c781                	beqz	a5,70000de6 <fgets+0x42>
+/embryos/chapter12/apps/stdio.c:139 (discriminator 2)
+    70000de0:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/stdio.c:139
+    70000de4:	a00d                	j	70000e06 <fgets+0x62>
+/embryos/chapter12/apps/stdio.c:139 (discriminator 3)
+    70000de6:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:139
+    70000de8:	a839                	j	70000e06 <fgets+0x62>
+/embryos/chapter12/apps/stdio.c:141
+    case STDIO_FILE:
+        return freadline(str, size, file);
+    70000dea:	fe442783          	lw	a5,-28(s0)
+    70000dee:	fd843603          	ld	a2,-40(s0)
+    70000df2:	85be                	mv	a1,a5
+    70000df4:	fe843503          	ld	a0,-24(s0)
+    70000df8:	00000097          	auipc	ra,0x0
+    70000dfc:	ee2080e7          	jalr	-286(ra) # 70000cda <freadline>
+    70000e00:	87aa                	mv	a5,a0
+    70000e02:	a011                	j	70000e06 <fgets+0x62>
+/embryos/chapter12/apps/stdio.c:143
+    default:
+        return 0;
+    70000e04:	4781                	li	a5,0
+/embryos/chapter12/apps/stdio.c:145
+    }
+}
+    70000e06:	853e                	mv	a0,a5
+    70000e08:	70a2                	ld	ra,40(sp)
+    70000e0a:	7402                	ld	s0,32(sp)
+    70000e0c:	6145                	addi	sp,sp,48
+    70000e0e:	8082                	ret
+
+0000000070000e10 <feof>:
+feof():
+/embryos/chapter12/apps/stdio.c:147
+
+int feof(FILE *file) { return file->eof; }
+    70000e10:	1101                	addi	sp,sp,-32
+    70000e12:	ec06                	sd	ra,24(sp)
+    70000e14:	e822                	sd	s0,16(sp)
+    70000e16:	1000                	addi	s0,sp,32
+    70000e18:	fea43423          	sd	a0,-24(s0)
+    70000e1c:	fe843783          	ld	a5,-24(s0)
+    70000e20:	479c                	lw	a5,8(a5)
+    70000e22:	853e                	mv	a0,a5
+    70000e24:	60e2                	ld	ra,24(sp)
+    70000e26:	6442                	ld	s0,16(sp)
+    70000e28:	6105                	addi	sp,sp,32
+    70000e2a:	8082                	ret
+
+0000000070000e2c <fflush>:
+fflush():
+/embryos/chapter12/apps/stdio.c:149
+
+void fflush(FILE *file) { /* no buffering */ }
+    70000e2c:	1101                	addi	sp,sp,-32
+    70000e2e:	ec06                	sd	ra,24(sp)
+    70000e30:	e822                	sd	s0,16(sp)
+    70000e32:	1000                	addi	s0,sp,32
+    70000e34:	fea43423          	sd	a0,-24(s0)
+    70000e38:	0001                	nop
+    70000e3a:	60e2                	ld	ra,24(sp)
+    70000e3c:	6442                	ld	s0,16(sp)
+    70000e3e:	6105                	addi	sp,sp,32
+    70000e40:	8082                	ret
+
+0000000070000e42 <clearerr>:
+clearerr():
+/embryos/chapter12/apps/stdio.c:151
+
+void clearerr(FILE *file) { file->eof = 0; }
+    70000e42:	1101                	addi	sp,sp,-32
+    70000e44:	ec06                	sd	ra,24(sp)
+    70000e46:	e822                	sd	s0,16(sp)
+    70000e48:	1000                	addi	s0,sp,32
+    70000e4a:	fea43423          	sd	a0,-24(s0)
+    70000e4e:	fe843783          	ld	a5,-24(s0)
+    70000e52:	0007a423          	sw	zero,8(a5)
+    70000e56:	0001                	nop
+    70000e58:	60e2                	ld	ra,24(sp)
+    70000e5a:	6442                	ld	s0,16(sp)
+    70000e5c:	6105                	addi	sp,sp,32
+    70000e5e:	8082                	ret
+
+0000000070000e60 <fclose>:
+fclose():
+/embryos/chapter12/apps/stdio.c:153
+
+void fclose(FILE *file) {
+    70000e60:	1101                	addi	sp,sp,-32
+    70000e62:	ec06                	sd	ra,24(sp)
+    70000e64:	e822                	sd	s0,16(sp)
+    70000e66:	1000                	addi	s0,sp,32
+    70000e68:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/stdio.c:154
+    if (file->type == STDIO_FILE) free(file);
+    70000e6c:	fe843783          	ld	a5,-24(s0)
+    70000e70:	4398                	lw	a4,0(a5)
+    70000e72:	4785                	li	a5,1
+    70000e74:	00f71863          	bne	a4,a5,70000e84 <fclose+0x24>
+/embryos/chapter12/apps/stdio.c:154 (discriminator 1)
+    70000e78:	fe843503          	ld	a0,-24(s0)
+    70000e7c:	00001097          	auipc	ra,0x1
+    70000e80:	2d2080e7          	jalr	722(ra) # 7000214e <free>
+/embryos/chapter12/apps/stdio.c:155
+}
+    70000e84:	0001                	nop
+    70000e86:	60e2                	ld	ra,24(sp)
+    70000e88:	6442                	ld	s0,16(sp)
+    70000e8a:	6105                	addi	sp,sp,32
+    70000e8c:	8082                	ret
+
+0000000070000e8e <dir_lookup>:
+dir_lookup():
+/embryos/chapter12/apps/dir.c:5
+#include "syslib.h"
+#include "string.h"
+#include "dir.h"
+
+int dir_lookup(const char *name) {
+    70000e8e:	7139                	addi	sp,sp,-64
+    70000e90:	fc06                	sd	ra,56(sp)
+    70000e92:	f822                	sd	s0,48(sp)
+    70000e94:	0080                	addi	s0,sp,64
+    70000e96:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/dir.c:7
+    struct dirent e;
+    int n = user_size(ROOT_DIR) / sizeof e;
+    70000e9a:	4505                	li	a0,1
+    70000e9c:	fffff097          	auipc	ra,0xfffff
+    70000ea0:	1b8080e7          	jalr	440(ra) # 70000054 <user_size>
+    70000ea4:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:7 (discriminator 1)
+    70000ea6:	8391                	srli	a5,a5,0x4
+    70000ea8:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/dir.c:8
+    for (int i = 0; i < n; i++) {
+    70000eac:	fe042623          	sw	zero,-20(s0)
+    70000eb0:	a891                	j	70000f04 <dir_lookup+0x76>
+/embryos/chapter12/apps/dir.c:9
+        user_read(ROOT_DIR, i * sizeof e, &e, sizeof e);
+    70000eb2:	fec42783          	lw	a5,-20(s0)
+    70000eb6:	0047979b          	slliw	a5,a5,0x4
+    70000eba:	2781                	sext.w	a5,a5
+    70000ebc:	873e                	mv	a4,a5
+    70000ebe:	fd840793          	addi	a5,s0,-40
+    70000ec2:	46c1                	li	a3,16
+    70000ec4:	863e                	mv	a2,a5
+    70000ec6:	85ba                	mv	a1,a4
+    70000ec8:	4505                	li	a0,1
+    70000eca:	fffff097          	auipc	ra,0xfffff
+    70000ece:	17a080e7          	jalr	378(ra) # 70000044 <user_read>
+/embryos/chapter12/apps/dir.c:10
+        if (e.file != 0) {
+    70000ed2:	fe645783          	lhu	a5,-26(s0)
+    70000ed6:	c395                	beqz	a5,70000efa <dir_lookup+0x6c>
+/embryos/chapter12/apps/dir.c:11
+            e.name[NAME_LEN - 1] = 0;
+    70000ed8:	fe0402a3          	sb	zero,-27(s0)
+/embryos/chapter12/apps/dir.c:12
+            if (strcmp(e.name, name) == 0) return e.file;
+    70000edc:	fd840793          	addi	a5,s0,-40
+    70000ee0:	fc843583          	ld	a1,-56(s0)
+    70000ee4:	853e                	mv	a0,a5
+    70000ee6:	fffff097          	auipc	ra,0xfffff
+    70000eea:	1c8080e7          	jalr	456(ra) # 700000ae <strcmp>
+    70000eee:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:12 (discriminator 1)
+    70000ef0:	e789                	bnez	a5,70000efa <dir_lookup+0x6c>
+/embryos/chapter12/apps/dir.c:12 (discriminator 2)
+    70000ef2:	fe645783          	lhu	a5,-26(s0)
+    70000ef6:	2781                	sext.w	a5,a5
+/embryos/chapter12/apps/dir.c:12
+    70000ef8:	a005                	j	70000f18 <dir_lookup+0x8a>
+/embryos/chapter12/apps/dir.c:8 (discriminator 2)
+    for (int i = 0; i < n; i++) {
+    70000efa:	fec42783          	lw	a5,-20(s0)
+    70000efe:	2785                	addiw	a5,a5,1
+    70000f00:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/dir.c:8 (discriminator 1)
+    70000f04:	fec42783          	lw	a5,-20(s0)
+    70000f08:	873e                	mv	a4,a5
+    70000f0a:	fe842783          	lw	a5,-24(s0)
+    70000f0e:	2701                	sext.w	a4,a4
+    70000f10:	2781                	sext.w	a5,a5
+    70000f12:	faf740e3          	blt	a4,a5,70000eb2 <dir_lookup+0x24>
+/embryos/chapter12/apps/dir.c:15
+        }
+    }
+    return -1;
+    70000f16:	57fd                	li	a5,-1
+/embryos/chapter12/apps/dir.c:16
+}
+    70000f18:	853e                	mv	a0,a5
+    70000f1a:	70e2                	ld	ra,56(sp)
+    70000f1c:	7442                	ld	s0,48(sp)
+    70000f1e:	6121                	addi	sp,sp,64
+    70000f20:	8082                	ret
+
+0000000070000f22 <dir_create>:
+dir_create():
+/embryos/chapter12/apps/dir.c:18
+
+int dir_create(const char *name, int file) {
+    70000f22:	7139                	addi	sp,sp,-64
+    70000f24:	fc06                	sd	ra,56(sp)
+    70000f26:	f822                	sd	s0,48(sp)
+    70000f28:	0080                	addi	s0,sp,64
+    70000f2a:	fca43423          	sd	a0,-56(s0)
+    70000f2e:	87ae                	mv	a5,a1
+    70000f30:	fcf42223          	sw	a5,-60(s0)
+/embryos/chapter12/apps/dir.c:19
+    if (strlen(name) >= NAME_LEN - 1) return -1;
+    70000f34:	fc843503          	ld	a0,-56(s0)
+    70000f38:	fffff097          	auipc	ra,0xfffff
+    70000f3c:	2fc080e7          	jalr	764(ra) # 70000234 <strlen>
+    70000f40:	872a                	mv	a4,a0
+/embryos/chapter12/apps/dir.c:19 (discriminator 1)
+    70000f42:	47b1                	li	a5,12
+    70000f44:	00e7f463          	bgeu	a5,a4,70000f4c <dir_create+0x2a>
+/embryos/chapter12/apps/dir.c:19 (discriminator 2)
+    70000f48:	57fd                	li	a5,-1
+/embryos/chapter12/apps/dir.c:19
+    70000f4a:	a0f9                	j	70001018 <dir_create+0xf6>
+/embryos/chapter12/apps/dir.c:21
+    struct dirent e;
+    int n = user_size(ROOT_DIR) / sizeof e, unused = n;
+    70000f4c:	4505                	li	a0,1
+    70000f4e:	fffff097          	auipc	ra,0xfffff
+    70000f52:	106080e7          	jalr	262(ra) # 70000054 <user_size>
+    70000f56:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:21 (discriminator 1)
+    70000f58:	8391                	srli	a5,a5,0x4
+    70000f5a:	fef42223          	sw	a5,-28(s0)
+    70000f5e:	fe442783          	lw	a5,-28(s0)
+    70000f62:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/dir.c:22
+    for (int i = 0; i < n; i++) {
+    70000f66:	fe042423          	sw	zero,-24(s0)
+    70000f6a:	a8a9                	j	70000fc4 <dir_create+0xa2>
+/embryos/chapter12/apps/dir.c:23
+        user_read(ROOT_DIR, i * sizeof e, &e, sizeof e);
+    70000f6c:	fe842783          	lw	a5,-24(s0)
+    70000f70:	0047979b          	slliw	a5,a5,0x4
+    70000f74:	2781                	sext.w	a5,a5
+    70000f76:	873e                	mv	a4,a5
+    70000f78:	fd040793          	addi	a5,s0,-48
+    70000f7c:	46c1                	li	a3,16
+    70000f7e:	863e                	mv	a2,a5
+    70000f80:	85ba                	mv	a1,a4
+    70000f82:	4505                	li	a0,1
+    70000f84:	fffff097          	auipc	ra,0xfffff
+    70000f88:	0c0080e7          	jalr	192(ra) # 70000044 <user_read>
+/embryos/chapter12/apps/dir.c:24
+        if (e.file == 0) unused = i;
+    70000f8c:	fde45783          	lhu	a5,-34(s0)
+    70000f90:	e791                	bnez	a5,70000f9c <dir_create+0x7a>
+/embryos/chapter12/apps/dir.c:24 (discriminator 1)
+    70000f92:	fe842783          	lw	a5,-24(s0)
+    70000f96:	fef42623          	sw	a5,-20(s0)
+    70000f9a:	a005                	j	70000fba <dir_create+0x98>
+/embryos/chapter12/apps/dir.c:26
+        else {
+            e.name[NAME_LEN - 1] = 0;
+    70000f9c:	fc040ea3          	sb	zero,-35(s0)
+/embryos/chapter12/apps/dir.c:27
+            if (strcmp(e.name, name) == 0) return -1;
+    70000fa0:	fd040793          	addi	a5,s0,-48
+    70000fa4:	fc843583          	ld	a1,-56(s0)
+    70000fa8:	853e                	mv	a0,a5
+    70000faa:	fffff097          	auipc	ra,0xfffff
+    70000fae:	104080e7          	jalr	260(ra) # 700000ae <strcmp>
+    70000fb2:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:27 (discriminator 1)
+    70000fb4:	e399                	bnez	a5,70000fba <dir_create+0x98>
+/embryos/chapter12/apps/dir.c:27 (discriminator 2)
+    70000fb6:	57fd                	li	a5,-1
+/embryos/chapter12/apps/dir.c:27
+    70000fb8:	a085                	j	70001018 <dir_create+0xf6>
+/embryos/chapter12/apps/dir.c:22 (discriminator 2)
+    for (int i = 0; i < n; i++) {
+    70000fba:	fe842783          	lw	a5,-24(s0)
+    70000fbe:	2785                	addiw	a5,a5,1
+    70000fc0:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/dir.c:22 (discriminator 1)
+    70000fc4:	fe842783          	lw	a5,-24(s0)
+    70000fc8:	873e                	mv	a4,a5
+    70000fca:	fe442783          	lw	a5,-28(s0)
+    70000fce:	2701                	sext.w	a4,a4
+    70000fd0:	2781                	sext.w	a5,a5
+    70000fd2:	f8f74de3          	blt	a4,a5,70000f6c <dir_create+0x4a>
+/embryos/chapter12/apps/dir.c:30
+        }
+    }
+    e.file = file;
+    70000fd6:	fc442783          	lw	a5,-60(s0)
+    70000fda:	17c2                	slli	a5,a5,0x30
+    70000fdc:	93c1                	srli	a5,a5,0x30
+    70000fde:	fcf41f23          	sh	a5,-34(s0)
+/embryos/chapter12/apps/dir.c:31
+    strcpy(e.name, name);
+    70000fe2:	fd040793          	addi	a5,s0,-48
+    70000fe6:	fc843583          	ld	a1,-56(s0)
+    70000fea:	853e                	mv	a0,a5
+    70000fec:	fffff097          	auipc	ra,0xfffff
+    70000ff0:	16a080e7          	jalr	362(ra) # 70000156 <strcpy>
+/embryos/chapter12/apps/dir.c:32
+    user_write(ROOT_DIR, unused * sizeof(e), &e, sizeof(e));
+    70000ff4:	fec42783          	lw	a5,-20(s0)
+    70000ff8:	0047979b          	slliw	a5,a5,0x4
+    70000ffc:	2781                	sext.w	a5,a5
+    70000ffe:	873e                	mv	a4,a5
+    70001000:	fd040793          	addi	a5,s0,-48
+    70001004:	46c1                	li	a3,16
+    70001006:	863e                	mv	a2,a5
+    70001008:	85ba                	mv	a1,a4
+    7000100a:	4505                	li	a0,1
+    7000100c:	fffff097          	auipc	ra,0xfffff
+    70001010:	040080e7          	jalr	64(ra) # 7000004c <user_write>
+/embryos/chapter12/apps/dir.c:33
+    return file;
+    70001014:	fc442783          	lw	a5,-60(s0)
+/embryos/chapter12/apps/dir.c:34
+}
+    70001018:	853e                	mv	a0,a5
+    7000101a:	70e2                	ld	ra,56(sp)
+    7000101c:	7442                	ld	s0,48(sp)
+    7000101e:	6121                	addi	sp,sp,64
+    70001020:	8082                	ret
+
+0000000070001022 <dir_delete>:
+dir_delete():
+/embryos/chapter12/apps/dir.c:36
+
+void dir_delete(const char *name) {
+    70001022:	7139                	addi	sp,sp,-64
+    70001024:	fc06                	sd	ra,56(sp)
+    70001026:	f822                	sd	s0,48(sp)
+    70001028:	0080                	addi	s0,sp,64
+    7000102a:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/dir.c:38
+    struct dirent e;
+    int n = user_size(ROOT_DIR) / sizeof e;
+    7000102e:	4505                	li	a0,1
+    70001030:	fffff097          	auipc	ra,0xfffff
+    70001034:	024080e7          	jalr	36(ra) # 70000054 <user_size>
+    70001038:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:38 (discriminator 1)
+    7000103a:	8391                	srli	a5,a5,0x4
+    7000103c:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/dir.c:39
+    for (int i = 0; i < n; i++) {
+    70001040:	fe042623          	sw	zero,-20(s0)
+    70001044:	a851                	j	700010d8 <dir_delete+0xb6>
+/embryos/chapter12/apps/dir.c:40
+        user_read(ROOT_DIR, i * sizeof e, &e, sizeof e);
+    70001046:	fec42783          	lw	a5,-20(s0)
+    7000104a:	0047979b          	slliw	a5,a5,0x4
+    7000104e:	2781                	sext.w	a5,a5
+    70001050:	873e                	mv	a4,a5
+    70001052:	fd840793          	addi	a5,s0,-40
+    70001056:	46c1                	li	a3,16
+    70001058:	863e                	mv	a2,a5
+    7000105a:	85ba                	mv	a1,a4
+    7000105c:	4505                	li	a0,1
+    7000105e:	fffff097          	auipc	ra,0xfffff
+    70001062:	fe6080e7          	jalr	-26(ra) # 70000044 <user_read>
+/embryos/chapter12/apps/dir.c:41
+        e.name[NAME_LEN - 1] = 0;
+    70001066:	fe0402a3          	sb	zero,-27(s0)
+/embryos/chapter12/apps/dir.c:42
+        if (e.file != 0) {
+    7000106a:	fe645783          	lhu	a5,-26(s0)
+    7000106e:	c3a5                	beqz	a5,700010ce <dir_delete+0xac>
+/embryos/chapter12/apps/dir.c:43
+            e.name[NAME_LEN - 1] = 0;
+    70001070:	fe0402a3          	sb	zero,-27(s0)
+/embryos/chapter12/apps/dir.c:44
+            if (strcmp(e.name, name) == 0) {
+    70001074:	fd840793          	addi	a5,s0,-40
+    70001078:	fc843583          	ld	a1,-56(s0)
+    7000107c:	853e                	mv	a0,a5
+    7000107e:	fffff097          	auipc	ra,0xfffff
+    70001082:	030080e7          	jalr	48(ra) # 700000ae <strcmp>
+    70001086:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:44 (discriminator 1)
+    70001088:	e3b9                	bnez	a5,700010ce <dir_delete+0xac>
+/embryos/chapter12/apps/dir.c:45
+                user_delete(e.file);
+    7000108a:	fe645783          	lhu	a5,-26(s0)
+    7000108e:	2781                	sext.w	a5,a5
+    70001090:	853e                	mv	a0,a5
+    70001092:	fffff097          	auipc	ra,0xfffff
+    70001096:	fca080e7          	jalr	-54(ra) # 7000005c <user_delete>
+/embryos/chapter12/apps/dir.c:46
+                memset(&e, 0, sizeof(e));
+    7000109a:	fd840793          	addi	a5,s0,-40
+    7000109e:	4641                	li	a2,16
+    700010a0:	4581                	li	a1,0
+    700010a2:	853e                	mv	a0,a5
+    700010a4:	fffff097          	auipc	ra,0xfffff
+    700010a8:	52c080e7          	jalr	1324(ra) # 700005d0 <memset>
+/embryos/chapter12/apps/dir.c:47
+                user_write(ROOT_DIR, i * sizeof e, &e, sizeof e);
+    700010ac:	fec42783          	lw	a5,-20(s0)
+    700010b0:	0047979b          	slliw	a5,a5,0x4
+    700010b4:	2781                	sext.w	a5,a5
+    700010b6:	873e                	mv	a4,a5
+    700010b8:	fd840793          	addi	a5,s0,-40
+    700010bc:	46c1                	li	a3,16
+    700010be:	863e                	mv	a2,a5
+    700010c0:	85ba                	mv	a1,a4
+    700010c2:	4505                	li	a0,1
+    700010c4:	fffff097          	auipc	ra,0xfffff
+    700010c8:	f88080e7          	jalr	-120(ra) # 7000004c <user_write>
+/embryos/chapter12/apps/dir.c:48
+                break;
+    700010cc:	a005                	j	700010ec <dir_delete+0xca>
+/embryos/chapter12/apps/dir.c:39 (discriminator 2)
+    for (int i = 0; i < n; i++) {
+    700010ce:	fec42783          	lw	a5,-20(s0)
+    700010d2:	2785                	addiw	a5,a5,1
+    700010d4:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/dir.c:39 (discriminator 1)
+    700010d8:	fec42783          	lw	a5,-20(s0)
+    700010dc:	873e                	mv	a4,a5
+    700010de:	fe842783          	lw	a5,-24(s0)
+    700010e2:	2701                	sext.w	a4,a4
+    700010e4:	2781                	sext.w	a5,a5
+    700010e6:	f6f740e3          	blt	a4,a5,70001046 <dir_delete+0x24>
+/embryos/chapter12/apps/dir.c:52
+            }
+        }
+    }
+}
+    700010ea:	0001                	nop
+    700010ec:	0001                	nop
+    700010ee:	70e2                	ld	ra,56(sp)
+    700010f0:	7442                	ld	s0,48(sp)
+    700010f2:	6121                	addi	sp,sp,64
+    700010f4:	8082                	ret
+
+00000000700010f6 <dir_list>:
+dir_list():
+/embryos/chapter12/apps/dir.c:54
+
+void dir_list(void (*fn)(const char *name, int file)) {
+    700010f6:	7139                	addi	sp,sp,-64
+    700010f8:	fc06                	sd	ra,56(sp)
+    700010fa:	f822                	sd	s0,48(sp)
+    700010fc:	0080                	addi	s0,sp,64
+    700010fe:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/dir.c:56
+    struct dirent e;
+    int n = user_size(ROOT_DIR) / sizeof e;
+    70001102:	4505                	li	a0,1
+    70001104:	fffff097          	auipc	ra,0xfffff
+    70001108:	f50080e7          	jalr	-176(ra) # 70000054 <user_size>
+    7000110c:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/dir.c:56 (discriminator 1)
+    7000110e:	8391                	srli	a5,a5,0x4
+    70001110:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/dir.c:57
+    for (int i = 0; i < n; i++) {
+    70001114:	fe042623          	sw	zero,-20(s0)
+    70001118:	a0b1                	j	70001164 <dir_list+0x6e>
+/embryos/chapter12/apps/dir.c:58
+        user_read(ROOT_DIR, i * sizeof e, &e, sizeof e);
+    7000111a:	fec42783          	lw	a5,-20(s0)
+    7000111e:	0047979b          	slliw	a5,a5,0x4
+    70001122:	2781                	sext.w	a5,a5
+    70001124:	873e                	mv	a4,a5
+    70001126:	fd840793          	addi	a5,s0,-40
+    7000112a:	46c1                	li	a3,16
+    7000112c:	863e                	mv	a2,a5
+    7000112e:	85ba                	mv	a1,a4
+    70001130:	4505                	li	a0,1
+    70001132:	fffff097          	auipc	ra,0xfffff
+    70001136:	f12080e7          	jalr	-238(ra) # 70000044 <user_read>
+/embryos/chapter12/apps/dir.c:59
+        if (e.file != 0) {
+    7000113a:	fe645783          	lhu	a5,-26(s0)
+    7000113e:	cf91                	beqz	a5,7000115a <dir_list+0x64>
+/embryos/chapter12/apps/dir.c:60
+            e.name[NAME_LEN - 1] = 0;
+    70001140:	fe0402a3          	sb	zero,-27(s0)
+/embryos/chapter12/apps/dir.c:61
+            fn(e.name, e.file);
+    70001144:	fe645783          	lhu	a5,-26(s0)
+    70001148:	0007869b          	sext.w	a3,a5
+    7000114c:	fd840713          	addi	a4,s0,-40
+    70001150:	fc843783          	ld	a5,-56(s0)
+    70001154:	85b6                	mv	a1,a3
+    70001156:	853a                	mv	a0,a4
+    70001158:	9782                	jalr	a5
+/embryos/chapter12/apps/dir.c:57 (discriminator 2)
+    for (int i = 0; i < n; i++) {
+    7000115a:	fec42783          	lw	a5,-20(s0)
+    7000115e:	2785                	addiw	a5,a5,1
+    70001160:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/dir.c:57 (discriminator 1)
+    70001164:	fec42783          	lw	a5,-20(s0)
+    70001168:	873e                	mv	a4,a5
+    7000116a:	fe842783          	lw	a5,-24(s0)
+    7000116e:	2701                	sext.w	a4,a4
+    70001170:	2781                	sext.w	a5,a5
+    70001172:	faf744e3          	blt	a4,a5,7000111a <dir_list+0x24>
+/embryos/chapter12/apps/dir.c:64
+        }
+    }
+}
+    70001176:	0001                	nop
+    70001178:	0001                	nop
+    7000117a:	70e2                	ld	ra,56(sp)
+    7000117c:	7442                	ld	s0,48(sp)
+    7000117e:	6121                	addi	sp,sp,64
+    70001180:	8082                	ret
+
+0000000070001182 <idx>:
+idx():
+/embryos/chapter12/apps/blockpixel.c:12
+#define BP_IS_DIRTY(b)        ((b) & BP_DIRTY_MASK)
+#define BP_SET_DIRTY(b)       ((b) |=  BP_DIRTY_MASK)
+#define BP_CLEAR_DIRTY(b)     ((b) &= ~BP_DIRTY_MASK)
+#define BP_MAKE(color, dirty) (((color)&7) | ((dirty)?BP_DIRTY_MASK:0))
+
+static inline int idx(struct bp *bp, int px, int py) {
+    70001182:	1101                	addi	sp,sp,-32
+    70001184:	ec06                	sd	ra,24(sp)
+    70001186:	e822                	sd	s0,16(sp)
+    70001188:	1000                	addi	s0,sp,32
+    7000118a:	fea43423          	sd	a0,-24(s0)
+    7000118e:	87ae                	mv	a5,a1
+    70001190:	8732                	mv	a4,a2
+    70001192:	fef42223          	sw	a5,-28(s0)
+    70001196:	87ba                	mv	a5,a4
+    70001198:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter12/apps/blockpixel.c:13
+    return py * bp->width + px;
+    7000119c:	fe843783          	ld	a5,-24(s0)
+    700011a0:	479c                	lw	a5,8(a5)
+    700011a2:	fe042703          	lw	a4,-32(s0)
+    700011a6:	02f707bb          	mulw	a5,a4,a5
+    700011aa:	2781                	sext.w	a5,a5
+    700011ac:	fe442703          	lw	a4,-28(s0)
+    700011b0:	9fb9                	addw	a5,a5,a4
+    700011b2:	2781                	sext.w	a5,a5
+/embryos/chapter12/apps/blockpixel.c:14
+}
+    700011b4:	853e                	mv	a0,a5
+    700011b6:	60e2                	ld	ra,24(sp)
+    700011b8:	6442                	ld	s0,16(sp)
+    700011ba:	6105                	addi	sp,sp,32
+    700011bc:	8082                	ret
+
+00000000700011be <bp_render_pair>:
+bp_render_pair():
+/embryos/chapter12/apps/blockpixel.c:17
+
+static inline void bp_render_pair(uint8_t top_color, uint8_t bottom_color,
+                                  int *code, int *fg, int *bg) {
+    700011be:	7179                	addi	sp,sp,-48
+    700011c0:	f406                	sd	ra,40(sp)
+    700011c2:	f022                	sd	s0,32(sp)
+    700011c4:	1800                	addi	s0,sp,48
+    700011c6:	87aa                	mv	a5,a0
+    700011c8:	fec43023          	sd	a2,-32(s0)
+    700011cc:	fcd43c23          	sd	a3,-40(s0)
+    700011d0:	fce43823          	sd	a4,-48(s0)
+    700011d4:	fef407a3          	sb	a5,-17(s0)
+    700011d8:	87ae                	mv	a5,a1
+    700011da:	fef40723          	sb	a5,-18(s0)
+/embryos/chapter12/apps/blockpixel.c:18
+    if (top_color == bottom_color) { // Entire cell drawn using background
+    700011de:	fef44783          	lbu	a5,-17(s0)
+    700011e2:	873e                	mv	a4,a5
+    700011e4:	fee44783          	lbu	a5,-18(s0)
+    700011e8:	0ff77713          	zext.b	a4,a4
+    700011ec:	0ff7f793          	zext.b	a5,a5
+    700011f0:	02f71563          	bne	a4,a5,7000121a <bp_render_pair+0x5c>
+/embryos/chapter12/apps/blockpixel.c:19
+        *code = 0; // space with bg filling the full cell
+    700011f4:	fe043783          	ld	a5,-32(s0)
+    700011f8:	0007a023          	sw	zero,0(a5)
+/embryos/chapter12/apps/blockpixel.c:20
+        *fg = top_color; *bg = top_color;
+    700011fc:	fef44783          	lbu	a5,-17(s0)
+    70001200:	0007871b          	sext.w	a4,a5
+    70001204:	fd843783          	ld	a5,-40(s0)
+    70001208:	c398                	sw	a4,0(a5)
+    7000120a:	fef44783          	lbu	a5,-17(s0)
+    7000120e:	0007871b          	sext.w	a4,a5
+    70001212:	fd043783          	ld	a5,-48(s0)
+    70001216:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:26
+    }
+    else { // Mixed colors: choose canonical representation
+        *code = 1; // top pixel = fg, bottom pixel = bg
+        *fg = top_color; *bg = bottom_color;
+    }
+}
+    70001218:	a01d                	j	7000123e <bp_render_pair+0x80>
+/embryos/chapter12/apps/blockpixel.c:23
+        *code = 1; // top pixel = fg, bottom pixel = bg
+    7000121a:	fe043783          	ld	a5,-32(s0)
+    7000121e:	4705                	li	a4,1
+    70001220:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:24
+        *fg = top_color; *bg = bottom_color;
+    70001222:	fef44783          	lbu	a5,-17(s0)
+    70001226:	0007871b          	sext.w	a4,a5
+    7000122a:	fd843783          	ld	a5,-40(s0)
+    7000122e:	c398                	sw	a4,0(a5)
+    70001230:	fee44783          	lbu	a5,-18(s0)
+    70001234:	0007871b          	sext.w	a4,a5
+    70001238:	fd043783          	ld	a5,-48(s0)
+    7000123c:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:26
+}
+    7000123e:	0001                	nop
+    70001240:	70a2                	ld	ra,40(sp)
+    70001242:	7402                	ld	s0,32(sp)
+    70001244:	6145                	addi	sp,sp,48
+    70001246:	8082                	ret
+
+0000000070001248 <bp_init>:
+bp_init():
+/embryos/chapter12/apps/blockpixel.c:29
+
+void bp_init(struct bp *bp, int x, int y, int width, int height,
+                                 uint8_t *buffer) {
+    70001248:	7139                	addi	sp,sp,-64
+    7000124a:	fc06                	sd	ra,56(sp)
+    7000124c:	f822                	sd	s0,48(sp)
+    7000124e:	0080                	addi	s0,sp,64
+    70001250:	fca43c23          	sd	a0,-40(s0)
+    70001254:	fcf43023          	sd	a5,-64(s0)
+    70001258:	87ae                	mv	a5,a1
+    7000125a:	fcf42a23          	sw	a5,-44(s0)
+    7000125e:	87b2                	mv	a5,a2
+    70001260:	fcf42823          	sw	a5,-48(s0)
+    70001264:	87b6                	mv	a5,a3
+    70001266:	fcf42623          	sw	a5,-52(s0)
+    7000126a:	87ba                	mv	a5,a4
+    7000126c:	fcf42423          	sw	a5,-56(s0)
+/embryos/chapter12/apps/blockpixel.c:30
+    bp->x = x; bp->y = y; bp->width = width; bp->height = height;
+    70001270:	fd843783          	ld	a5,-40(s0)
+    70001274:	fd442703          	lw	a4,-44(s0)
+    70001278:	c398                	sw	a4,0(a5)
+    7000127a:	fd843783          	ld	a5,-40(s0)
+    7000127e:	fd042703          	lw	a4,-48(s0)
+    70001282:	c3d8                	sw	a4,4(a5)
+    70001284:	fd843783          	ld	a5,-40(s0)
+    70001288:	fcc42703          	lw	a4,-52(s0)
+    7000128c:	c798                	sw	a4,8(a5)
+    7000128e:	fd843783          	ld	a5,-40(s0)
+    70001292:	fc842703          	lw	a4,-56(s0)
+    70001296:	c7d8                	sw	a4,12(a5)
+/embryos/chapter12/apps/blockpixel.c:31
+    bp->buf = buffer;
+    70001298:	fd843783          	ld	a5,-40(s0)
+    7000129c:	fc043703          	ld	a4,-64(s0)
+    700012a0:	eb98                	sd	a4,16(a5)
+/embryos/chapter12/apps/blockpixel.c:32
+    for (int i = 0; i < width * height; i++) bp->buf[i] = BP_MAKE(0, 1);
+    700012a2:	fe042623          	sw	zero,-20(s0)
+    700012a6:	a839                	j	700012c4 <bp_init+0x7c>
+/embryos/chapter12/apps/blockpixel.c:32 (discriminator 3)
+    700012a8:	fd843783          	ld	a5,-40(s0)
+    700012ac:	6b98                	ld	a4,16(a5)
+    700012ae:	fec42783          	lw	a5,-20(s0)
+    700012b2:	97ba                	add	a5,a5,a4
+    700012b4:	4721                	li	a4,8
+    700012b6:	00e78023          	sb	a4,0(a5)
+    700012ba:	fec42783          	lw	a5,-20(s0)
+    700012be:	2785                	addiw	a5,a5,1
+    700012c0:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/blockpixel.c:32 (discriminator 1)
+    700012c4:	fcc42783          	lw	a5,-52(s0)
+    700012c8:	873e                	mv	a4,a5
+    700012ca:	fc842783          	lw	a5,-56(s0)
+    700012ce:	02f707bb          	mulw	a5,a4,a5
+    700012d2:	2781                	sext.w	a5,a5
+    700012d4:	fec42703          	lw	a4,-20(s0)
+    700012d8:	2701                	sext.w	a4,a4
+    700012da:	fcf747e3          	blt	a4,a5,700012a8 <bp_init+0x60>
+/embryos/chapter12/apps/blockpixel.c:33
+}
+    700012de:	0001                	nop
+    700012e0:	0001                	nop
+    700012e2:	70e2                	ld	ra,56(sp)
+    700012e4:	7442                	ld	s0,48(sp)
+    700012e6:	6121                	addi	sp,sp,64
+    700012e8:	8082                	ret
+
+00000000700012ea <bp_put>:
+bp_put():
+/embryos/chapter12/apps/blockpixel.c:35
+
+void bp_put(struct bp *bp, int px, int py, uint8_t color, enum bp_mode mode) {
+    700012ea:	711d                	addi	sp,sp,-96
+    700012ec:	ec86                	sd	ra,88(sp)
+    700012ee:	e8a2                	sd	s0,80(sp)
+    700012f0:	e4a6                	sd	s1,72(sp)
+    700012f2:	e0ca                	sd	s2,64(sp)
+    700012f4:	1080                	addi	s0,sp,96
+    700012f6:	faa43c23          	sd	a0,-72(s0)
+    700012fa:	87ae                	mv	a5,a1
+    700012fc:	faf42a23          	sw	a5,-76(s0)
+    70001300:	87b2                	mv	a5,a2
+    70001302:	faf42823          	sw	a5,-80(s0)
+    70001306:	87b6                	mv	a5,a3
+    70001308:	faf407a3          	sb	a5,-81(s0)
+    7000130c:	87ba                	mv	a5,a4
+    7000130e:	faf42423          	sw	a5,-88(s0)
+/embryos/chapter12/apps/blockpixel.c:36
+    if (px < 0 || px >= bp->width) return;
+    70001312:	fb442783          	lw	a5,-76(s0)
+    70001316:	2781                	sext.w	a5,a5
+    70001318:	2007ca63          	bltz	a5,7000152c <bp_put+0x242>
+/embryos/chapter12/apps/blockpixel.c:36 (discriminator 2)
+    7000131c:	fb843783          	ld	a5,-72(s0)
+    70001320:	479c                	lw	a5,8(a5)
+    70001322:	fb442703          	lw	a4,-76(s0)
+    70001326:	2701                	sext.w	a4,a4
+    70001328:	20f75263          	bge	a4,a5,7000152c <bp_put+0x242>
+/embryos/chapter12/apps/blockpixel.c:37
+    if (py < 0 || py >= bp->height) return;
+    7000132c:	fb042783          	lw	a5,-80(s0)
+    70001330:	2781                	sext.w	a5,a5
+    70001332:	1e07cf63          	bltz	a5,70001530 <bp_put+0x246>
+/embryos/chapter12/apps/blockpixel.c:37 (discriminator 2)
+    70001336:	fb843783          	ld	a5,-72(s0)
+    7000133a:	47dc                	lw	a5,12(a5)
+    7000133c:	fb042703          	lw	a4,-80(s0)
+    70001340:	2701                	sext.w	a4,a4
+    70001342:	1ef75763          	bge	a4,a5,70001530 <bp_put+0x246>
+/embryos/chapter12/apps/blockpixel.c:38
+    bp->buf[idx(bp, px, py)] = BP_MAKE(color, 1);
+    70001346:	faf40783          	lb	a5,-81(s0)
+    7000134a:	8b9d                	andi	a5,a5,7
+    7000134c:	0187979b          	slliw	a5,a5,0x18
+    70001350:	4187d79b          	sraiw	a5,a5,0x18
+    70001354:	0087e793          	ori	a5,a5,8
+    70001358:	0187991b          	slliw	s2,a5,0x18
+    7000135c:	4189591b          	sraiw	s2,s2,0x18
+    70001360:	fb843783          	ld	a5,-72(s0)
+    70001364:	6b84                	ld	s1,16(a5)
+    70001366:	fb042703          	lw	a4,-80(s0)
+    7000136a:	fb442783          	lw	a5,-76(s0)
+    7000136e:	863a                	mv	a2,a4
+    70001370:	85be                	mv	a1,a5
+    70001372:	fb843503          	ld	a0,-72(s0)
+    70001376:	00000097          	auipc	ra,0x0
+    7000137a:	e0c080e7          	jalr	-500(ra) # 70001182 <idx>
+    7000137e:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/blockpixel.c:38 (discriminator 1)
+    70001380:	97a6                	add	a5,a5,s1
+    70001382:	0ff97713          	zext.b	a4,s2
+    70001386:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:39
+    if (mode == BP_LAZY) return;
+    7000138a:	fa842783          	lw	a5,-88(s0)
+    7000138e:	0007871b          	sext.w	a4,a5
+    70001392:	4785                	li	a5,1
+    70001394:	1af70063          	beq	a4,a5,70001534 <bp_put+0x24a>
+/embryos/chapter12/apps/blockpixel.c:40
+    int cell_x = px, cell_y = py / 2;
+    70001398:	fb442783          	lw	a5,-76(s0)
+    7000139c:	fcf42e23          	sw	a5,-36(s0)
+    700013a0:	fb042783          	lw	a5,-80(s0)
+    700013a4:	01f7d71b          	srliw	a4,a5,0x1f
+    700013a8:	9fb9                	addw	a5,a5,a4
+    700013aa:	4017d79b          	sraiw	a5,a5,0x1
+    700013ae:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter12/apps/blockpixel.c:41
+    int top_index    = (cell_y * 2) * bp->width + cell_x;
+    700013b2:	fb843783          	ld	a5,-72(s0)
+    700013b6:	479c                	lw	a5,8(a5)
+    700013b8:	fd842703          	lw	a4,-40(s0)
+    700013bc:	02f707bb          	mulw	a5,a4,a5
+    700013c0:	2781                	sext.w	a5,a5
+    700013c2:	0017979b          	slliw	a5,a5,0x1
+    700013c6:	2781                	sext.w	a5,a5
+    700013c8:	fdc42703          	lw	a4,-36(s0)
+    700013cc:	9fb9                	addw	a5,a5,a4
+    700013ce:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/blockpixel.c:42
+    int bottom_index = top_index + bp->width;
+    700013d2:	fb843783          	ld	a5,-72(s0)
+    700013d6:	479c                	lw	a5,8(a5)
+    700013d8:	fd442703          	lw	a4,-44(s0)
+    700013dc:	9fb9                	addw	a5,a5,a4
+    700013de:	fcf42823          	sw	a5,-48(s0)
+/embryos/chapter12/apps/blockpixel.c:43
+    uint8_t top_color    = BP_GET_COLOR(bp->buf[top_index]);
+    700013e2:	fb843783          	ld	a5,-72(s0)
+    700013e6:	6b98                	ld	a4,16(a5)
+    700013e8:	fd442783          	lw	a5,-44(s0)
+    700013ec:	97ba                	add	a5,a5,a4
+    700013ee:	0007c783          	lbu	a5,0(a5)
+    700013f2:	8b9d                	andi	a5,a5,7
+    700013f4:	fcf407a3          	sb	a5,-49(s0)
+/embryos/chapter12/apps/blockpixel.c:44
+    uint8_t bottom_color = BP_GET_COLOR(bp->buf[bottom_index]);
+    700013f8:	fb843783          	ld	a5,-72(s0)
+    700013fc:	6b98                	ld	a4,16(a5)
+    700013fe:	fd042783          	lw	a5,-48(s0)
+    70001402:	97ba                	add	a5,a5,a4
+    70001404:	0007c783          	lbu	a5,0(a5)
+    70001408:	8b9d                	andi	a5,a5,7
+    7000140a:	fcf40723          	sb	a5,-50(s0)
+/embryos/chapter12/apps/blockpixel.c:46
+    int code, fg, bg;
+    bp_render_pair(top_color, bottom_color, &code, &fg, &bg);
+    7000140e:	fc040713          	addi	a4,s0,-64
+    70001412:	fc440693          	addi	a3,s0,-60
+    70001416:	fc840613          	addi	a2,s0,-56
+    7000141a:	fce44583          	lbu	a1,-50(s0)
+    7000141e:	fcf44783          	lbu	a5,-49(s0)
+    70001422:	853e                	mv	a0,a5
+    70001424:	00000097          	auipc	ra,0x0
+    70001428:	d9a080e7          	jalr	-614(ra) # 700011be <bp_render_pair>
+/embryos/chapter12/apps/blockpixel.c:47
+    user_put(bp->x + cell_x, bp->y + cell_y,
+    7000142c:	fb843783          	ld	a5,-72(s0)
+    70001430:	439c                	lw	a5,0(a5)
+    70001432:	fdc42703          	lw	a4,-36(s0)
+    70001436:	9fb9                	addw	a5,a5,a4
+    70001438:	0007851b          	sext.w	a0,a5
+    7000143c:	fb843783          	ld	a5,-72(s0)
+    70001440:	43dc                	lw	a5,4(a5)
+    70001442:	fd842703          	lw	a4,-40(s0)
+    70001446:	9fb9                	addw	a5,a5,a4
+    70001448:	0007859b          	sext.w	a1,a5
+/embryos/chapter12/apps/blockpixel.c:48
+             CELL_EXT(CELL_BLOCK, code, fg, bg));
+    7000144c:	fc842783          	lw	a5,-56(s0)
+    70001450:	0107979b          	slliw	a5,a5,0x10
+    70001454:	4107d79b          	sraiw	a5,a5,0x10
+    70001458:	0ff7f793          	zext.b	a5,a5
+    7000145c:	0107971b          	slliw	a4,a5,0x10
+    70001460:	4107571b          	sraiw	a4,a4,0x10
+    70001464:	fc442783          	lw	a5,-60(s0)
+    70001468:	0107979b          	slliw	a5,a5,0x10
+    7000146c:	4107d79b          	sraiw	a5,a5,0x10
+    70001470:	0087979b          	slliw	a5,a5,0x8
+    70001474:	0107979b          	slliw	a5,a5,0x10
+    70001478:	4107d79b          	sraiw	a5,a5,0x10
+    7000147c:	7007f793          	andi	a5,a5,1792
+    70001480:	0107979b          	slliw	a5,a5,0x10
+    70001484:	4107d79b          	sraiw	a5,a5,0x10
+    70001488:	8fd9                	or	a5,a5,a4
+    7000148a:	0107971b          	slliw	a4,a5,0x10
+    7000148e:	4107571b          	sraiw	a4,a4,0x10
+    70001492:	fc042783          	lw	a5,-64(s0)
+    70001496:	0107979b          	slliw	a5,a5,0x10
+    7000149a:	4107d79b          	sraiw	a5,a5,0x10
+    7000149e:	00b7979b          	slliw	a5,a5,0xb
+    700014a2:	0107969b          	slliw	a3,a5,0x10
+    700014a6:	4106d69b          	sraiw	a3,a3,0x10
+    700014aa:	6791                	lui	a5,0x4
+    700014ac:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    700014b0:	8ff5                	and	a5,a5,a3
+    700014b2:	0107979b          	slliw	a5,a5,0x10
+    700014b6:	4107d79b          	sraiw	a5,a5,0x10
+    700014ba:	8fd9                	or	a5,a5,a4
+    700014bc:	0107971b          	slliw	a4,a5,0x10
+    700014c0:	4107571b          	sraiw	a4,a4,0x10
+    700014c4:	6791                	lui	a5,0x4
+    700014c6:	8fd9                	or	a5,a5,a4
+    700014c8:	0107979b          	slliw	a5,a5,0x10
+    700014cc:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter12/apps/blockpixel.c:47
+    user_put(bp->x + cell_x, bp->y + cell_y,
+    700014d0:	17c2                	slli	a5,a5,0x30
+    700014d2:	93c1                	srli	a5,a5,0x30
+    700014d4:	863e                	mv	a2,a5
+    700014d6:	fffff097          	auipc	ra,0xfffff
+    700014da:	b56080e7          	jalr	-1194(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/blockpixel.c:49
+    BP_CLEAR_DIRTY(bp->buf[top_index]);
+    700014de:	fb843783          	ld	a5,-72(s0)
+    700014e2:	6b98                	ld	a4,16(a5)
+    700014e4:	fd442783          	lw	a5,-44(s0)
+    700014e8:	97ba                	add	a5,a5,a4
+    700014ea:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0xdf1>
+    700014ee:	fb843783          	ld	a5,-72(s0)
+    700014f2:	6b94                	ld	a3,16(a5)
+    700014f4:	fd442783          	lw	a5,-44(s0)
+    700014f8:	97b6                	add	a5,a5,a3
+    700014fa:	9b5d                	andi	a4,a4,-9
+    700014fc:	0ff77713          	zext.b	a4,a4
+    70001500:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:50
+    BP_CLEAR_DIRTY(bp->buf[bottom_index]);
+    70001504:	fb843783          	ld	a5,-72(s0)
+    70001508:	6b98                	ld	a4,16(a5)
+    7000150a:	fd042783          	lw	a5,-48(s0)
+    7000150e:	97ba                	add	a5,a5,a4
+    70001510:	0007c703          	lbu	a4,0(a5)
+    70001514:	fb843783          	ld	a5,-72(s0)
+    70001518:	6b94                	ld	a3,16(a5)
+    7000151a:	fd042783          	lw	a5,-48(s0)
+    7000151e:	97b6                	add	a5,a5,a3
+    70001520:	9b5d                	andi	a4,a4,-9
+    70001522:	0ff77713          	zext.b	a4,a4
+    70001526:	00e78023          	sb	a4,0(a5)
+    7000152a:	a031                	j	70001536 <bp_put+0x24c>
+/embryos/chapter12/apps/blockpixel.c:36
+    if (px < 0 || px >= bp->width) return;
+    7000152c:	0001                	nop
+    7000152e:	a021                	j	70001536 <bp_put+0x24c>
+/embryos/chapter12/apps/blockpixel.c:37
+    if (py < 0 || py >= bp->height) return;
+    70001530:	0001                	nop
+    70001532:	a011                	j	70001536 <bp_put+0x24c>
+/embryos/chapter12/apps/blockpixel.c:39
+    if (mode == BP_LAZY) return;
+    70001534:	0001                	nop
+/embryos/chapter12/apps/blockpixel.c:51
+}
+    70001536:	60e6                	ld	ra,88(sp)
+    70001538:	6446                	ld	s0,80(sp)
+    7000153a:	64a6                	ld	s1,72(sp)
+    7000153c:	6906                	ld	s2,64(sp)
+    7000153e:	6125                	addi	sp,sp,96
+    70001540:	8082                	ret
+
+0000000070001542 <bp_flush>:
+bp_flush():
+/embryos/chapter12/apps/blockpixel.c:53
+
+void bp_flush(struct bp *bp) {
+    70001542:	7139                	addi	sp,sp,-64
+    70001544:	fc06                	sd	ra,56(sp)
+    70001546:	f822                	sd	s0,48(sp)
+    70001548:	0080                	addi	s0,sp,64
+    7000154a:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/blockpixel.c:54
+    for (int cell_y = 0; cell_y < bp->height/2; cell_y++)
+    7000154e:	fe042623          	sw	zero,-20(s0)
+    70001552:	aae9                	j	7000172c <bp_flush+0x1ea>
+/embryos/chapter12/apps/blockpixel.c:55
+        for (int cell_x = 0; cell_x < bp->width; cell_x++) {
+    70001554:	fe042423          	sw	zero,-24(s0)
+    70001558:	aa6d                	j	70001712 <bp_flush+0x1d0>
+/embryos/chapter12/apps/blockpixel.c:56
+            int top_index    = (cell_y * 2) * bp->width + cell_x;
+    7000155a:	fc843783          	ld	a5,-56(s0)
+    7000155e:	479c                	lw	a5,8(a5)
+    70001560:	fec42703          	lw	a4,-20(s0)
+    70001564:	02f707bb          	mulw	a5,a4,a5
+    70001568:	2781                	sext.w	a5,a5
+    7000156a:	0017979b          	slliw	a5,a5,0x1
+    7000156e:	2781                	sext.w	a5,a5
+    70001570:	fe842703          	lw	a4,-24(s0)
+    70001574:	9fb9                	addw	a5,a5,a4
+    70001576:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/blockpixel.c:57
+            int bottom_index = top_index + bp->width;
+    7000157a:	fc843783          	ld	a5,-56(s0)
+    7000157e:	479c                	lw	a5,8(a5)
+    70001580:	fe442703          	lw	a4,-28(s0)
+    70001584:	9fb9                	addw	a5,a5,a4
+    70001586:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter12/apps/blockpixel.c:58
+            if (!BP_IS_DIRTY(bp->buf[top_index]) &&
+    7000158a:	fc843783          	ld	a5,-56(s0)
+    7000158e:	6b98                	ld	a4,16(a5)
+    70001590:	fe442783          	lw	a5,-28(s0)
+    70001594:	97ba                	add	a5,a5,a4
+    70001596:	0007c783          	lbu	a5,0(a5)
+    7000159a:	2781                	sext.w	a5,a5
+    7000159c:	8ba1                	andi	a5,a5,8
+    7000159e:	2781                	sext.w	a5,a5
+    700015a0:	ef91                	bnez	a5,700015bc <bp_flush+0x7a>
+/embryos/chapter12/apps/blockpixel.c:59
+                !BP_IS_DIRTY(bp->buf[bottom_index])) continue;
+    700015a2:	fc843783          	ld	a5,-56(s0)
+    700015a6:	6b98                	ld	a4,16(a5)
+    700015a8:	fe042783          	lw	a5,-32(s0)
+    700015ac:	97ba                	add	a5,a5,a4
+    700015ae:	0007c783          	lbu	a5,0(a5)
+    700015b2:	2781                	sext.w	a5,a5
+    700015b4:	8ba1                	andi	a5,a5,8
+    700015b6:	2781                	sext.w	a5,a5
+/embryos/chapter12/apps/blockpixel.c:58 (discriminator 1)
+            if (!BP_IS_DIRTY(bp->buf[top_index]) &&
+    700015b8:	14078763          	beqz	a5,70001706 <bp_flush+0x1c4>
+/embryos/chapter12/apps/blockpixel.c:60
+            uint8_t top_color    = BP_GET_COLOR(bp->buf[top_index]);
+    700015bc:	fc843783          	ld	a5,-56(s0)
+    700015c0:	6b98                	ld	a4,16(a5)
+    700015c2:	fe442783          	lw	a5,-28(s0)
+    700015c6:	97ba                	add	a5,a5,a4
+    700015c8:	0007c783          	lbu	a5,0(a5)
+    700015cc:	8b9d                	andi	a5,a5,7
+    700015ce:	fcf40fa3          	sb	a5,-33(s0)
+/embryos/chapter12/apps/blockpixel.c:61
+            uint8_t bottom_color = BP_GET_COLOR(bp->buf[bottom_index]);
+    700015d2:	fc843783          	ld	a5,-56(s0)
+    700015d6:	6b98                	ld	a4,16(a5)
+    700015d8:	fe042783          	lw	a5,-32(s0)
+    700015dc:	97ba                	add	a5,a5,a4
+    700015de:	0007c783          	lbu	a5,0(a5)
+    700015e2:	8b9d                	andi	a5,a5,7
+    700015e4:	fcf40f23          	sb	a5,-34(s0)
+/embryos/chapter12/apps/blockpixel.c:63
+            int code, fg, bg;
+            bp_render_pair(top_color, bottom_color, &code, &fg, &bg);
+    700015e8:	fd040713          	addi	a4,s0,-48
+    700015ec:	fd440693          	addi	a3,s0,-44
+    700015f0:	fd840613          	addi	a2,s0,-40
+    700015f4:	fde44583          	lbu	a1,-34(s0)
+    700015f8:	fdf44783          	lbu	a5,-33(s0)
+    700015fc:	853e                	mv	a0,a5
+    700015fe:	00000097          	auipc	ra,0x0
+    70001602:	bc0080e7          	jalr	-1088(ra) # 700011be <bp_render_pair>
+/embryos/chapter12/apps/blockpixel.c:64
+            user_put(bp->x + cell_x, bp->y + cell_y,
+    70001606:	fc843783          	ld	a5,-56(s0)
+    7000160a:	439c                	lw	a5,0(a5)
+    7000160c:	fe842703          	lw	a4,-24(s0)
+    70001610:	9fb9                	addw	a5,a5,a4
+    70001612:	0007851b          	sext.w	a0,a5
+    70001616:	fc843783          	ld	a5,-56(s0)
+    7000161a:	43dc                	lw	a5,4(a5)
+    7000161c:	fec42703          	lw	a4,-20(s0)
+    70001620:	9fb9                	addw	a5,a5,a4
+    70001622:	0007859b          	sext.w	a1,a5
+/embryos/chapter12/apps/blockpixel.c:65
+                     CELL_EXT(CELL_BLOCK, code, fg, bg));
+    70001626:	fd842783          	lw	a5,-40(s0)
+    7000162a:	0107979b          	slliw	a5,a5,0x10
+    7000162e:	4107d79b          	sraiw	a5,a5,0x10
+    70001632:	0ff7f793          	zext.b	a5,a5
+    70001636:	0107971b          	slliw	a4,a5,0x10
+    7000163a:	4107571b          	sraiw	a4,a4,0x10
+    7000163e:	fd442783          	lw	a5,-44(s0)
+    70001642:	0107979b          	slliw	a5,a5,0x10
+    70001646:	4107d79b          	sraiw	a5,a5,0x10
+    7000164a:	0087979b          	slliw	a5,a5,0x8
+    7000164e:	0107979b          	slliw	a5,a5,0x10
+    70001652:	4107d79b          	sraiw	a5,a5,0x10
+    70001656:	7007f793          	andi	a5,a5,1792
+    7000165a:	0107979b          	slliw	a5,a5,0x10
+    7000165e:	4107d79b          	sraiw	a5,a5,0x10
+    70001662:	8fd9                	or	a5,a5,a4
+    70001664:	0107971b          	slliw	a4,a5,0x10
+    70001668:	4107571b          	sraiw	a4,a4,0x10
+    7000166c:	fd042783          	lw	a5,-48(s0)
+    70001670:	0107979b          	slliw	a5,a5,0x10
+    70001674:	4107d79b          	sraiw	a5,a5,0x10
+    70001678:	00b7979b          	slliw	a5,a5,0xb
+    7000167c:	0107969b          	slliw	a3,a5,0x10
+    70001680:	4106d69b          	sraiw	a3,a3,0x10
+    70001684:	6791                	lui	a5,0x4
+    70001686:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    7000168a:	8ff5                	and	a5,a5,a3
+    7000168c:	0107979b          	slliw	a5,a5,0x10
+    70001690:	4107d79b          	sraiw	a5,a5,0x10
+    70001694:	8fd9                	or	a5,a5,a4
+    70001696:	0107971b          	slliw	a4,a5,0x10
+    7000169a:	4107571b          	sraiw	a4,a4,0x10
+    7000169e:	6791                	lui	a5,0x4
+    700016a0:	8fd9                	or	a5,a5,a4
+    700016a2:	0107979b          	slliw	a5,a5,0x10
+    700016a6:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter12/apps/blockpixel.c:64
+            user_put(bp->x + cell_x, bp->y + cell_y,
+    700016aa:	17c2                	slli	a5,a5,0x30
+    700016ac:	93c1                	srli	a5,a5,0x30
+    700016ae:	863e                	mv	a2,a5
+    700016b0:	fffff097          	auipc	ra,0xfffff
+    700016b4:	97c080e7          	jalr	-1668(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/blockpixel.c:66
+            BP_CLEAR_DIRTY(bp->buf[top_index]);
+    700016b8:	fc843783          	ld	a5,-56(s0)
+    700016bc:	6b98                	ld	a4,16(a5)
+    700016be:	fe442783          	lw	a5,-28(s0)
+    700016c2:	97ba                	add	a5,a5,a4
+    700016c4:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0xdf1>
+    700016c8:	fc843783          	ld	a5,-56(s0)
+    700016cc:	6b94                	ld	a3,16(a5)
+    700016ce:	fe442783          	lw	a5,-28(s0)
+    700016d2:	97b6                	add	a5,a5,a3
+    700016d4:	9b5d                	andi	a4,a4,-9
+    700016d6:	0ff77713          	zext.b	a4,a4
+    700016da:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/blockpixel.c:67
+            BP_CLEAR_DIRTY(bp->buf[bottom_index]);
+    700016de:	fc843783          	ld	a5,-56(s0)
+    700016e2:	6b98                	ld	a4,16(a5)
+    700016e4:	fe042783          	lw	a5,-32(s0)
+    700016e8:	97ba                	add	a5,a5,a4
+    700016ea:	0007c703          	lbu	a4,0(a5)
+    700016ee:	fc843783          	ld	a5,-56(s0)
+    700016f2:	6b94                	ld	a3,16(a5)
+    700016f4:	fe042783          	lw	a5,-32(s0)
+    700016f8:	97b6                	add	a5,a5,a3
+    700016fa:	9b5d                	andi	a4,a4,-9
+    700016fc:	0ff77713          	zext.b	a4,a4
+    70001700:	00e78023          	sb	a4,0(a5)
+    70001704:	a011                	j	70001708 <bp_flush+0x1c6>
+/embryos/chapter12/apps/blockpixel.c:59
+                !BP_IS_DIRTY(bp->buf[bottom_index])) continue;
+    70001706:	0001                	nop
+/embryos/chapter12/apps/blockpixel.c:55 (discriminator 2)
+        for (int cell_x = 0; cell_x < bp->width; cell_x++) {
+    70001708:	fe842783          	lw	a5,-24(s0)
+    7000170c:	2785                	addiw	a5,a5,1
+    7000170e:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/blockpixel.c:55 (discriminator 1)
+    70001712:	fc843783          	ld	a5,-56(s0)
+    70001716:	479c                	lw	a5,8(a5)
+    70001718:	fe842703          	lw	a4,-24(s0)
+    7000171c:	2701                	sext.w	a4,a4
+    7000171e:	e2f74ee3          	blt	a4,a5,7000155a <bp_flush+0x18>
+/embryos/chapter12/apps/blockpixel.c:54 (discriminator 2)
+    for (int cell_y = 0; cell_y < bp->height/2; cell_y++)
+    70001722:	fec42783          	lw	a5,-20(s0)
+    70001726:	2785                	addiw	a5,a5,1
+    70001728:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/blockpixel.c:54 (discriminator 1)
+    7000172c:	fc843783          	ld	a5,-56(s0)
+    70001730:	47dc                	lw	a5,12(a5)
+    70001732:	01f7d71b          	srliw	a4,a5,0x1f
+    70001736:	9fb9                	addw	a5,a5,a4
+    70001738:	4017d79b          	sraiw	a5,a5,0x1
+    7000173c:	2781                	sext.w	a5,a5
+    7000173e:	fec42703          	lw	a4,-20(s0)
+    70001742:	2701                	sext.w	a4,a4
+    70001744:	e0f748e3          	blt	a4,a5,70001554 <bp_flush+0x12>
+/embryos/chapter12/apps/blockpixel.c:69
+        }
+}
+    70001748:	0001                	nop
+    7000174a:	0001                	nop
+    7000174c:	70e2                	ld	ra,56(sp)
+    7000174e:	7442                	ld	s0,48(sp)
+    70001750:	6121                	addi	sp,sp,64
+    70001752:	8082                	ret
+
+0000000070001754 <window_init>:
+window_init():
+/embryos/chapter12/apps/window1.c:4
+#include "syslib.h"
+#include "window.h"
+
+void window_init(struct window *window) {
+    70001754:	7179                	addi	sp,sp,-48
+    70001756:	f406                	sd	ra,40(sp)
+    70001758:	f022                	sd	s0,32(sp)
+    7000175a:	1800                	addi	s0,sp,48
+    7000175c:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/window1.c:5
+    window->cur_col = 0; window->cur_fg = 0; window->cur_bg = 7;
+    70001760:	fd843783          	ld	a5,-40(s0)
+    70001764:	3407ae23          	sw	zero,860(a5)
+    70001768:	fd843783          	ld	a5,-40(s0)
+    7000176c:	3607a023          	sw	zero,864(a5)
+    70001770:	fd843783          	ld	a5,-40(s0)
+    70001774:	471d                	li	a4,7
+    70001776:	36e7a223          	sw	a4,868(a5)
+/embryos/chapter12/apps/window1.c:6
+    for (int row = 0; row < NROWS; row++)
+    7000177a:	fe042623          	sw	zero,-20(s0)
+    7000177e:	a889                	j	700017d0 <window_init+0x7c>
+/embryos/chapter12/apps/window1.c:7
+        for (int col = 0; col < NCOLS; col++)
+    70001780:	fe042423          	sw	zero,-24(s0)
+    70001784:	a80d                	j	700017b6 <window_init+0x62>
+/embryos/chapter12/apps/window1.c:8
+            window->cells[row][col] = CELL(' ', ANSI_BLACK, ANSI_WHITE);
+    70001786:	fd843683          	ld	a3,-40(s0)
+    7000178a:	fe842603          	lw	a2,-24(s0)
+    7000178e:	fec42703          	lw	a4,-20(s0)
+    70001792:	87ba                	mv	a5,a4
+    70001794:	078a                	slli	a5,a5,0x2
+    70001796:	97ba                	add	a5,a5,a4
+    70001798:	078e                	slli	a5,a5,0x3
+    7000179a:	8f99                	sub	a5,a5,a4
+    7000179c:	97b2                	add	a5,a5,a2
+    7000179e:	0786                	slli	a5,a5,0x1
+    700017a0:	97b6                	add	a5,a5,a3
+    700017a2:	6711                	lui	a4,0x4
+    700017a4:	82070713          	addi	a4,a4,-2016 # 3820 <text_file_end+0x611>
+    700017a8:	00e79023          	sh	a4,0(a5)
+/embryos/chapter12/apps/window1.c:7 (discriminator 3)
+        for (int col = 0; col < NCOLS; col++)
+    700017ac:	fe842783          	lw	a5,-24(s0)
+    700017b0:	2785                	addiw	a5,a5,1
+    700017b2:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/window1.c:7 (discriminator 1)
+    700017b6:	fe842783          	lw	a5,-24(s0)
+    700017ba:	0007871b          	sext.w	a4,a5
+    700017be:	02600793          	li	a5,38
+    700017c2:	fce7d2e3          	bge	a5,a4,70001786 <window_init+0x32>
+/embryos/chapter12/apps/window1.c:6 (discriminator 2)
+    for (int row = 0; row < NROWS; row++)
+    700017c6:	fec42783          	lw	a5,-20(s0)
+    700017ca:	2785                	addiw	a5,a5,1
+    700017cc:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/window1.c:6 (discriminator 1)
+    700017d0:	fec42783          	lw	a5,-20(s0)
+    700017d4:	0007871b          	sext.w	a4,a5
+    700017d8:	47a9                	li	a5,10
+    700017da:	fae7d3e3          	bge	a5,a4,70001780 <window_init+0x2c>
+/embryos/chapter12/apps/window1.c:9
+}
+    700017de:	0001                	nop
+    700017e0:	0001                	nop
+    700017e2:	70a2                	ld	ra,40(sp)
+    700017e4:	7402                	ld	s0,32(sp)
+    700017e6:	6145                	addi	sp,sp,48
+    700017e8:	8082                	ret
+
+00000000700017ea <window_sync>:
+window_sync():
+/embryos/chapter12/apps/window1.c:11
+
+void window_sync(struct window *window) {
+    700017ea:	7179                	addi	sp,sp,-48
+    700017ec:	f406                	sd	ra,40(sp)
+    700017ee:	f022                	sd	s0,32(sp)
+    700017f0:	1800                	addi	s0,sp,48
+    700017f2:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/window1.c:12
+    for (int row = 0; row < NROWS; row++)
+    700017f6:	fe042623          	sw	zero,-20(s0)
+    700017fa:	a08d                	j	7000185c <window_sync+0x72>
+/embryos/chapter12/apps/window1.c:13
+        for (int col = 0; col < NCOLS; col++)
+    700017fc:	fe042423          	sw	zero,-24(s0)
+    70001800:	a089                	j	70001842 <window_sync+0x58>
+/embryos/chapter12/apps/window1.c:14
+            user_put(col, row, window->cells[row][col]);
+    70001802:	fd843683          	ld	a3,-40(s0)
+    70001806:	fe842603          	lw	a2,-24(s0)
+    7000180a:	fec42703          	lw	a4,-20(s0)
+    7000180e:	87ba                	mv	a5,a4
+    70001810:	078a                	slli	a5,a5,0x2
+    70001812:	97ba                	add	a5,a5,a4
+    70001814:	078e                	slli	a5,a5,0x3
+    70001816:	8f99                	sub	a5,a5,a4
+    70001818:	97b2                	add	a5,a5,a2
+    7000181a:	0786                	slli	a5,a5,0x1
+    7000181c:	97b6                	add	a5,a5,a3
+    7000181e:	0007d683          	lhu	a3,0(a5)
+    70001822:	fec42703          	lw	a4,-20(s0)
+    70001826:	fe842783          	lw	a5,-24(s0)
+    7000182a:	8636                	mv	a2,a3
+    7000182c:	85ba                	mv	a1,a4
+    7000182e:	853e                	mv	a0,a5
+    70001830:	ffffe097          	auipc	ra,0xffffe
+    70001834:	7fc080e7          	jalr	2044(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window1.c:13 (discriminator 3)
+        for (int col = 0; col < NCOLS; col++)
+    70001838:	fe842783          	lw	a5,-24(s0)
+    7000183c:	2785                	addiw	a5,a5,1
+    7000183e:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/window1.c:13 (discriminator 1)
+    70001842:	fe842783          	lw	a5,-24(s0)
+    70001846:	0007871b          	sext.w	a4,a5
+    7000184a:	02600793          	li	a5,38
+    7000184e:	fae7dae3          	bge	a5,a4,70001802 <window_sync+0x18>
+/embryos/chapter12/apps/window1.c:12 (discriminator 2)
+    for (int row = 0; row < NROWS; row++)
+    70001852:	fec42783          	lw	a5,-20(s0)
+    70001856:	2785                	addiw	a5,a5,1
+    70001858:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/window1.c:12 (discriminator 1)
+    7000185c:	fec42783          	lw	a5,-20(s0)
+    70001860:	0007871b          	sext.w	a4,a5
+    70001864:	47a9                	li	a5,10
+    70001866:	f8e7dbe3          	bge	a5,a4,700017fc <window_sync+0x12>
+/embryos/chapter12/apps/window1.c:15
+}
+    7000186a:	0001                	nop
+    7000186c:	0001                	nop
+    7000186e:	70a2                	ld	ra,40(sp)
+    70001870:	7402                	ld	s0,32(sp)
+    70001872:	6145                	addi	sp,sp,48
+    70001874:	8082                	ret
+
+0000000070001876 <window_scroll>:
+window_scroll():
+/embryos/chapter12/apps/window1.c:17
+
+void window_scroll(struct window *window) {
+    70001876:	7179                	addi	sp,sp,-48
+    70001878:	f406                	sd	ra,40(sp)
+    7000187a:	f022                	sd	s0,32(sp)
+    7000187c:	1800                	addi	s0,sp,48
+    7000187e:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/window1.c:18
+    for (int row = 0; row < NROWS - 1; row++)
+    70001882:	fe042623          	sw	zero,-20(s0)
+    70001886:	a88d                	j	700018f8 <window_scroll+0x82>
+/embryos/chapter12/apps/window1.c:19
+        for (int col = 0; col < NCOLS; col++)
+    70001888:	fe042423          	sw	zero,-24(s0)
+    7000188c:	a889                	j	700018de <window_scroll+0x68>
+/embryos/chapter12/apps/window1.c:20
+            window->cells[row][col] = window->cells[row + 1][col];
+    7000188e:	fec42783          	lw	a5,-20(s0)
+    70001892:	2785                	addiw	a5,a5,1
+    70001894:	0007871b          	sext.w	a4,a5
+    70001898:	fd843683          	ld	a3,-40(s0)
+    7000189c:	fe842603          	lw	a2,-24(s0)
+    700018a0:	87ba                	mv	a5,a4
+    700018a2:	078a                	slli	a5,a5,0x2
+    700018a4:	97ba                	add	a5,a5,a4
+    700018a6:	078e                	slli	a5,a5,0x3
+    700018a8:	8f99                	sub	a5,a5,a4
+    700018aa:	97b2                	add	a5,a5,a2
+    700018ac:	0786                	slli	a5,a5,0x1
+    700018ae:	97b6                	add	a5,a5,a3
+    700018b0:	0007d683          	lhu	a3,0(a5)
+    700018b4:	fd843603          	ld	a2,-40(s0)
+    700018b8:	fe842583          	lw	a1,-24(s0)
+    700018bc:	fec42703          	lw	a4,-20(s0)
+    700018c0:	87ba                	mv	a5,a4
+    700018c2:	078a                	slli	a5,a5,0x2
+    700018c4:	97ba                	add	a5,a5,a4
+    700018c6:	078e                	slli	a5,a5,0x3
+    700018c8:	8f99                	sub	a5,a5,a4
+    700018ca:	97ae                	add	a5,a5,a1
+    700018cc:	0786                	slli	a5,a5,0x1
+    700018ce:	97b2                	add	a5,a5,a2
+    700018d0:	00d79023          	sh	a3,0(a5)
+/embryos/chapter12/apps/window1.c:19 (discriminator 3)
+        for (int col = 0; col < NCOLS; col++)
+    700018d4:	fe842783          	lw	a5,-24(s0)
+    700018d8:	2785                	addiw	a5,a5,1
+    700018da:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/window1.c:19 (discriminator 1)
+    700018de:	fe842783          	lw	a5,-24(s0)
+    700018e2:	0007871b          	sext.w	a4,a5
+    700018e6:	02600793          	li	a5,38
+    700018ea:	fae7d2e3          	bge	a5,a4,7000188e <window_scroll+0x18>
+/embryos/chapter12/apps/window1.c:18 (discriminator 2)
+    for (int row = 0; row < NROWS - 1; row++)
+    700018ee:	fec42783          	lw	a5,-20(s0)
+    700018f2:	2785                	addiw	a5,a5,1
+    700018f4:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/window1.c:18 (discriminator 1)
+    700018f8:	fec42783          	lw	a5,-20(s0)
+    700018fc:	0007871b          	sext.w	a4,a5
+    70001900:	47a5                	li	a5,9
+    70001902:	f8e7d3e3          	bge	a5,a4,70001888 <window_scroll+0x12>
+/embryos/chapter12/apps/window1.c:21
+    for (int col = 0; col < NCOLS; col++)
+    70001906:	fe042223          	sw	zero,-28(s0)
+    7000190a:	a01d                	j	70001930 <window_scroll+0xba>
+/embryos/chapter12/apps/window1.c:22
+        window->cells[NROWS - 1][col] = CELL(' ', ANSI_BLACK, ANSI_WHITE);
+    7000190c:	fd843703          	ld	a4,-40(s0)
+    70001910:	fe442783          	lw	a5,-28(s0)
+    70001914:	18678793          	addi	a5,a5,390
+    70001918:	0786                	slli	a5,a5,0x1
+    7000191a:	97ba                	add	a5,a5,a4
+    7000191c:	6711                	lui	a4,0x4
+    7000191e:	82070713          	addi	a4,a4,-2016 # 3820 <text_file_end+0x611>
+    70001922:	00e79023          	sh	a4,0(a5)
+/embryos/chapter12/apps/window1.c:21 (discriminator 3)
+    for (int col = 0; col < NCOLS; col++)
+    70001926:	fe442783          	lw	a5,-28(s0)
+    7000192a:	2785                	addiw	a5,a5,1
+    7000192c:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/window1.c:21 (discriminator 1)
+    70001930:	fe442783          	lw	a5,-28(s0)
+    70001934:	0007871b          	sext.w	a4,a5
+    70001938:	02600793          	li	a5,38
+    7000193c:	fce7d8e3          	bge	a5,a4,7000190c <window_scroll+0x96>
+/embryos/chapter12/apps/window1.c:23
+    window_sync(window);
+    70001940:	fd843503          	ld	a0,-40(s0)
+    70001944:	00000097          	auipc	ra,0x0
+    70001948:	ea6080e7          	jalr	-346(ra) # 700017ea <window_sync>
+/embryos/chapter12/apps/window1.c:24
+}
+    7000194c:	0001                	nop
+    7000194e:	70a2                	ld	ra,40(sp)
+    70001950:	7402                	ld	s0,32(sp)
+    70001952:	6145                	addi	sp,sp,48
+    70001954:	8082                	ret
+
+0000000070001956 <window_putchar>:
+window_putchar():
+/embryos/chapter12/apps/window1.c:26
+
+void window_putchar(struct window *window, char c) {
+    70001956:	1101                	addi	sp,sp,-32
+    70001958:	ec06                	sd	ra,24(sp)
+    7000195a:	e822                	sd	s0,16(sp)
+    7000195c:	1000                	addi	s0,sp,32
+    7000195e:	fea43423          	sd	a0,-24(s0)
+    70001962:	87ae                	mv	a5,a1
+    70001964:	fef403a3          	sb	a5,-25(s0)
+/embryos/chapter12/apps/window1.c:27
+    if (c == '\b') {
+    70001968:	fe744783          	lbu	a5,-25(s0)
+    7000196c:	0ff7f713          	zext.b	a4,a5
+    70001970:	47a1                	li	a5,8
+    70001972:	02f71463          	bne	a4,a5,7000199a <window_putchar+0x44>
+/embryos/chapter12/apps/window1.c:28
+        if (window->cur_col > 0) window->cur_col--;
+    70001976:	fe843783          	ld	a5,-24(s0)
+    7000197a:	35c7a783          	lw	a5,860(a5)
+    7000197e:	18f05c63          	blez	a5,70001b16 <window_putchar+0x1c0>
+/embryos/chapter12/apps/window1.c:28 (discriminator 1)
+    70001982:	fe843783          	ld	a5,-24(s0)
+    70001986:	35c7a783          	lw	a5,860(a5)
+    7000198a:	37fd                	addiw	a5,a5,-1
+    7000198c:	0007871b          	sext.w	a4,a5
+    70001990:	fe843783          	ld	a5,-24(s0)
+    70001994:	34e7ae23          	sw	a4,860(a5)
+/embryos/chapter12/apps/window1.c:29
+        return;
+    70001998:	aabd                	j	70001b16 <window_putchar+0x1c0>
+/embryos/chapter12/apps/window1.c:31
+    }
+    if (c == '\n') {
+    7000199a:	fe744783          	lbu	a5,-25(s0)
+    7000199e:	0ff7f713          	zext.b	a4,a5
+    700019a2:	47a9                	li	a5,10
+    700019a4:	00f71d63          	bne	a4,a5,700019be <window_putchar+0x68>
+/embryos/chapter12/apps/window1.c:32
+        window_scroll(window);
+    700019a8:	fe843503          	ld	a0,-24(s0)
+    700019ac:	00000097          	auipc	ra,0x0
+    700019b0:	eca080e7          	jalr	-310(ra) # 70001876 <window_scroll>
+/embryos/chapter12/apps/window1.c:33
+        window->cur_col = 0;
+    700019b4:	fe843783          	ld	a5,-24(s0)
+    700019b8:	3407ae23          	sw	zero,860(a5)
+    700019bc:	aab1                	j	70001b18 <window_putchar+0x1c2>
+/embryos/chapter12/apps/window1.c:36
+    }
+    else {
+        user_put(window->cur_col, NROWS - 1,
+    700019be:	fe843783          	ld	a5,-24(s0)
+    700019c2:	35c7a503          	lw	a0,860(a5)
+/embryos/chapter12/apps/window1.c:37
+                    CELL(c, window->cur_fg, window->cur_bg));
+    700019c6:	fe744783          	lbu	a5,-25(s0)
+    700019ca:	0107971b          	slliw	a4,a5,0x10
+    700019ce:	4107571b          	sraiw	a4,a4,0x10
+    700019d2:	fe843783          	ld	a5,-24(s0)
+    700019d6:	3607a783          	lw	a5,864(a5)
+    700019da:	0107979b          	slliw	a5,a5,0x10
+    700019de:	4107d79b          	sraiw	a5,a5,0x10
+    700019e2:	0087979b          	slliw	a5,a5,0x8
+    700019e6:	0107979b          	slliw	a5,a5,0x10
+    700019ea:	4107d79b          	sraiw	a5,a5,0x10
+    700019ee:	7007f793          	andi	a5,a5,1792
+    700019f2:	0107979b          	slliw	a5,a5,0x10
+    700019f6:	4107d79b          	sraiw	a5,a5,0x10
+    700019fa:	8fd9                	or	a5,a5,a4
+    700019fc:	0107971b          	slliw	a4,a5,0x10
+    70001a00:	4107571b          	sraiw	a4,a4,0x10
+    70001a04:	fe843783          	ld	a5,-24(s0)
+    70001a08:	3647a783          	lw	a5,868(a5)
+    70001a0c:	0107979b          	slliw	a5,a5,0x10
+    70001a10:	4107d79b          	sraiw	a5,a5,0x10
+    70001a14:	00b7979b          	slliw	a5,a5,0xb
+    70001a18:	0107969b          	slliw	a3,a5,0x10
+    70001a1c:	4106d69b          	sraiw	a3,a3,0x10
+    70001a20:	6791                	lui	a5,0x4
+    70001a22:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    70001a26:	8ff5                	and	a5,a5,a3
+    70001a28:	0107979b          	slliw	a5,a5,0x10
+    70001a2c:	4107d79b          	sraiw	a5,a5,0x10
+    70001a30:	8fd9                	or	a5,a5,a4
+    70001a32:	0107979b          	slliw	a5,a5,0x10
+    70001a36:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter12/apps/window1.c:36
+        user_put(window->cur_col, NROWS - 1,
+    70001a3a:	17c2                	slli	a5,a5,0x30
+    70001a3c:	93c1                	srli	a5,a5,0x30
+    70001a3e:	863e                	mv	a2,a5
+    70001a40:	45a9                	li	a1,10
+    70001a42:	ffffe097          	auipc	ra,0xffffe
+    70001a46:	5ea080e7          	jalr	1514(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window1.c:39
+        window->cells[NROWS - 1][window->cur_col] =
+                    CELL(c, window->cur_fg, window->cur_bg);
+    70001a4a:	fe744783          	lbu	a5,-25(s0)
+    70001a4e:	0107971b          	slliw	a4,a5,0x10
+    70001a52:	4107571b          	sraiw	a4,a4,0x10
+    70001a56:	fe843783          	ld	a5,-24(s0)
+    70001a5a:	3607a783          	lw	a5,864(a5)
+    70001a5e:	0107979b          	slliw	a5,a5,0x10
+    70001a62:	4107d79b          	sraiw	a5,a5,0x10
+    70001a66:	0087979b          	slliw	a5,a5,0x8
+    70001a6a:	0107979b          	slliw	a5,a5,0x10
+    70001a6e:	4107d79b          	sraiw	a5,a5,0x10
+    70001a72:	7007f793          	andi	a5,a5,1792
+    70001a76:	0107979b          	slliw	a5,a5,0x10
+    70001a7a:	4107d79b          	sraiw	a5,a5,0x10
+    70001a7e:	8fd9                	or	a5,a5,a4
+    70001a80:	0107971b          	slliw	a4,a5,0x10
+    70001a84:	4107571b          	sraiw	a4,a4,0x10
+    70001a88:	fe843783          	ld	a5,-24(s0)
+    70001a8c:	3647a783          	lw	a5,868(a5)
+    70001a90:	0107979b          	slliw	a5,a5,0x10
+    70001a94:	4107d79b          	sraiw	a5,a5,0x10
+    70001a98:	00b7979b          	slliw	a5,a5,0xb
+    70001a9c:	0107969b          	slliw	a3,a5,0x10
+    70001aa0:	4106d69b          	sraiw	a3,a3,0x10
+    70001aa4:	6791                	lui	a5,0x4
+    70001aa6:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    70001aaa:	8ff5                	and	a5,a5,a3
+    70001aac:	0107979b          	slliw	a5,a5,0x10
+    70001ab0:	4107d79b          	sraiw	a5,a5,0x10
+    70001ab4:	8fd9                	or	a5,a5,a4
+    70001ab6:	0107971b          	slliw	a4,a5,0x10
+    70001aba:	4107571b          	sraiw	a4,a4,0x10
+/embryos/chapter12/apps/window1.c:38
+        window->cells[NROWS - 1][window->cur_col] =
+    70001abe:	fe843783          	ld	a5,-24(s0)
+    70001ac2:	35c7a783          	lw	a5,860(a5)
+/embryos/chapter12/apps/window1.c:39
+                    CELL(c, window->cur_fg, window->cur_bg);
+    70001ac6:	1742                	slli	a4,a4,0x30
+    70001ac8:	9341                	srli	a4,a4,0x30
+/embryos/chapter12/apps/window1.c:38
+        window->cells[NROWS - 1][window->cur_col] =
+    70001aca:	fe843683          	ld	a3,-24(s0)
+    70001ace:	18678793          	addi	a5,a5,390
+    70001ad2:	0786                	slli	a5,a5,0x1
+    70001ad4:	97b6                	add	a5,a5,a3
+    70001ad6:	00e79023          	sh	a4,0(a5)
+/embryos/chapter12/apps/window1.c:40
+        if (++window->cur_col == NCOLS) {
+    70001ada:	fe843783          	ld	a5,-24(s0)
+    70001ade:	35c7a783          	lw	a5,860(a5)
+    70001ae2:	2785                	addiw	a5,a5,1
+    70001ae4:	0007871b          	sext.w	a4,a5
+    70001ae8:	fe843783          	ld	a5,-24(s0)
+    70001aec:	34e7ae23          	sw	a4,860(a5)
+    70001af0:	fe843783          	ld	a5,-24(s0)
+    70001af4:	35c7a703          	lw	a4,860(a5)
+    70001af8:	02700793          	li	a5,39
+    70001afc:	00f71e63          	bne	a4,a5,70001b18 <window_putchar+0x1c2>
+/embryos/chapter12/apps/window1.c:41
+            window_scroll(window);
+    70001b00:	fe843503          	ld	a0,-24(s0)
+    70001b04:	00000097          	auipc	ra,0x0
+    70001b08:	d72080e7          	jalr	-654(ra) # 70001876 <window_scroll>
+/embryos/chapter12/apps/window1.c:42
+            window->cur_col = 0;
+    70001b0c:	fe843783          	ld	a5,-24(s0)
+    70001b10:	3407ae23          	sw	zero,860(a5)
+    70001b14:	a011                	j	70001b18 <window_putchar+0x1c2>
+/embryos/chapter12/apps/window1.c:29
+        return;
+    70001b16:	0001                	nop
+/embryos/chapter12/apps/window1.c:45
+        }
+    }
+}
+    70001b18:	60e2                	ld	ra,24(sp)
+    70001b1a:	6442                	ld	s0,16(sp)
+    70001b1c:	6105                	addi	sp,sp,32
+    70001b1e:	8082                	ret
+
+0000000070001b20 <window_readline>:
+window_readline():
+/embryos/chapter12/apps/window2.c:4
+#include "syslib.h"
+#include "window.h"
+
+int window_readline(struct window *window, char *line, int size) {
+    70001b20:	7139                	addi	sp,sp,-64
+    70001b22:	fc06                	sd	ra,56(sp)
+    70001b24:	f822                	sd	s0,48(sp)
+    70001b26:	0080                	addi	s0,sp,64
+    70001b28:	fca43c23          	sd	a0,-40(s0)
+    70001b2c:	fcb43823          	sd	a1,-48(s0)
+    70001b30:	87b2                	mv	a5,a2
+    70001b32:	fcf42623          	sw	a5,-52(s0)
+/embryos/chapter12/apps/window2.c:5
+    int n = 0;
+    70001b36:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter12/apps/window2.c:7
+    for (;;) {
+        user_put(window->cur_col, NROWS - 1, CELL(' ',  ANSI_WHITE,  ANSI_CYAN));
+    70001b3a:	fd843783          	ld	a5,-40(s0)
+    70001b3e:	35c7a703          	lw	a4,860(a5)
+    70001b42:	678d                	lui	a5,0x3
+    70001b44:	72078613          	addi	a2,a5,1824 # 3720 <text_file_end+0x511>
+    70001b48:	45a9                	li	a1,10
+    70001b4a:	853a                	mv	a0,a4
+    70001b4c:	ffffe097          	auipc	ra,0xffffe
+    70001b50:	4e0080e7          	jalr	1248(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window2.c:10
+        int c;
+        for (;;) {
+            c = user_get(1);
+    70001b54:	4505                	li	a0,1
+    70001b56:	ffffe097          	auipc	ra,0xffffe
+    70001b5a:	4de080e7          	jalr	1246(ra) # 70000034 <user_get>
+    70001b5e:	87aa                	mv	a5,a0
+    70001b60:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/window2.c:11
+            if (c == USER_GET_GOT_FOCUS)
+    70001b64:	fe842783          	lw	a5,-24(s0)
+    70001b68:	0007871b          	sext.w	a4,a5
+    70001b6c:	57fd                	li	a5,-1
+    70001b6e:	02f71063          	bne	a4,a5,70001b8e <window_readline+0x6e>
+/embryos/chapter12/apps/window2.c:12
+                user_put(window->cur_col, NROWS - 1, CELL(' ',  ANSI_WHITE,  ANSI_CYAN));
+    70001b72:	fd843783          	ld	a5,-40(s0)
+    70001b76:	35c7a703          	lw	a4,860(a5)
+    70001b7a:	678d                	lui	a5,0x3
+    70001b7c:	72078613          	addi	a2,a5,1824 # 3720 <text_file_end+0x511>
+    70001b80:	45a9                	li	a1,10
+    70001b82:	853a                	mv	a0,a4
+    70001b84:	ffffe097          	auipc	ra,0xffffe
+    70001b88:	4a8080e7          	jalr	1192(ra) # 7000002c <user_put>
+    70001b8c:	b7e1                	j	70001b54 <window_readline+0x34>
+/embryos/chapter12/apps/window2.c:13
+            else if (c == USER_GET_LOST_FOCUS)
+    70001b8e:	fe842783          	lw	a5,-24(s0)
+    70001b92:	0007871b          	sext.w	a4,a5
+    70001b96:	57f9                	li	a5,-2
+    70001b98:	02f71063          	bne	a4,a5,70001bb8 <window_readline+0x98>
+/embryos/chapter12/apps/window2.c:14
+                user_put(window->cur_col, NROWS - 1, CELL(' ',  ANSI_WHITE,  ANSI_MAGENTA));
+    70001b9c:	fd843783          	ld	a5,-40(s0)
+    70001ba0:	35c7a703          	lw	a4,860(a5)
+    70001ba4:	678d                	lui	a5,0x3
+    70001ba6:	f2078613          	addi	a2,a5,-224 # 2f20 <flat_file_off+0x1f20>
+    70001baa:	45a9                	li	a1,10
+    70001bac:	853a                	mv	a0,a4
+    70001bae:	ffffe097          	auipc	ra,0xffffe
+    70001bb2:	47e080e7          	jalr	1150(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window2.c:10
+            c = user_get(1);
+    70001bb6:	bf79                	j	70001b54 <window_readline+0x34>
+/embryos/chapter12/apps/window2.c:15
+            else break;
+    70001bb8:	0001                	nop
+/embryos/chapter12/apps/window2.c:17
+        }
+        if (c == 4) {   // <ctrl>D is EOF
+    70001bba:	fe842783          	lw	a5,-24(s0)
+    70001bbe:	0007871b          	sext.w	a4,a5
+    70001bc2:	4791                	li	a5,4
+    70001bc4:	04f71263          	bne	a4,a5,70001c08 <window_readline+0xe8>
+/embryos/chapter12/apps/window2.c:18
+            line[(n < size - 1) ? n : (size - 1)] = 0;
+    70001bc8:	fcc42783          	lw	a5,-52(s0)
+    70001bcc:	37fd                	addiw	a5,a5,-1
+    70001bce:	2781                	sext.w	a5,a5
+    70001bd0:	863e                	mv	a2,a5
+    70001bd2:	fec42783          	lw	a5,-20(s0)
+    70001bd6:	86be                	mv	a3,a5
+    70001bd8:	0006871b          	sext.w	a4,a3
+    70001bdc:	0006079b          	sext.w	a5,a2
+    70001be0:	00e7d363          	bge	a5,a4,70001be6 <window_readline+0xc6>
+    70001be4:	86b2                	mv	a3,a2
+    70001be6:	0006879b          	sext.w	a5,a3
+    70001bea:	873e                	mv	a4,a5
+    70001bec:	fd043783          	ld	a5,-48(s0)
+    70001bf0:	97ba                	add	a5,a5,a4
+    70001bf2:	00078023          	sb	zero,0(a5)
+/embryos/chapter12/apps/window2.c:19
+            return n > 0;
+    70001bf6:	fec42783          	lw	a5,-20(s0)
+    70001bfa:	2781                	sext.w	a5,a5
+    70001bfc:	00f027b3          	sgtz	a5,a5
+    70001c00:	0ff7f793          	zext.b	a5,a5
+    70001c04:	2781                	sext.w	a5,a5
+    70001c06:	a45d                	j	70001eac <window_readline+0x38c>
+/embryos/chapter12/apps/window2.c:21
+        }
+        if (c == '\b' || c == '\177') {
+    70001c08:	fe842783          	lw	a5,-24(s0)
+    70001c0c:	0007871b          	sext.w	a4,a5
+    70001c10:	47a1                	li	a5,8
+    70001c12:	00f70a63          	beq	a4,a5,70001c26 <window_readline+0x106>
+/embryos/chapter12/apps/window2.c:21 (discriminator 1)
+    70001c16:	fe842783          	lw	a5,-24(s0)
+    70001c1a:	0007871b          	sext.w	a4,a5
+    70001c1e:	07f00793          	li	a5,127
+    70001c22:	1af71d63          	bne	a4,a5,70001ddc <window_readline+0x2bc>
+/embryos/chapter12/apps/window2.c:22
+            if (n > 0) {
+    70001c26:	fec42783          	lw	a5,-20(s0)
+    70001c2a:	2781                	sext.w	a5,a5
+    70001c2c:	26f05f63          	blez	a5,70001eaa <window_readline+0x38a>
+/embryos/chapter12/apps/window2.c:23
+                user_put(window->cur_col, NROWS - 1,   // erase cursor
+    70001c30:	fd843783          	ld	a5,-40(s0)
+    70001c34:	35c7a503          	lw	a0,860(a5)
+/embryos/chapter12/apps/window2.c:24
+                        CELL(' ', window->cur_fg, window->cur_bg));
+    70001c38:	fd843783          	ld	a5,-40(s0)
+    70001c3c:	3607a783          	lw	a5,864(a5)
+    70001c40:	0107979b          	slliw	a5,a5,0x10
+    70001c44:	4107d79b          	sraiw	a5,a5,0x10
+    70001c48:	0087979b          	slliw	a5,a5,0x8
+    70001c4c:	0107979b          	slliw	a5,a5,0x10
+    70001c50:	4107d79b          	sraiw	a5,a5,0x10
+    70001c54:	7007f793          	andi	a5,a5,1792
+    70001c58:	0107979b          	slliw	a5,a5,0x10
+    70001c5c:	4107d79b          	sraiw	a5,a5,0x10
+    70001c60:	0207e793          	ori	a5,a5,32
+    70001c64:	0107971b          	slliw	a4,a5,0x10
+    70001c68:	4107571b          	sraiw	a4,a4,0x10
+    70001c6c:	fd843783          	ld	a5,-40(s0)
+    70001c70:	3647a783          	lw	a5,868(a5)
+    70001c74:	0107979b          	slliw	a5,a5,0x10
+    70001c78:	4107d79b          	sraiw	a5,a5,0x10
+    70001c7c:	00b7979b          	slliw	a5,a5,0xb
+    70001c80:	0107969b          	slliw	a3,a5,0x10
+    70001c84:	4106d69b          	sraiw	a3,a3,0x10
+    70001c88:	6791                	lui	a5,0x4
+    70001c8a:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    70001c8e:	8ff5                	and	a5,a5,a3
+    70001c90:	0107979b          	slliw	a5,a5,0x10
+    70001c94:	4107d79b          	sraiw	a5,a5,0x10
+    70001c98:	8fd9                	or	a5,a5,a4
+    70001c9a:	0107979b          	slliw	a5,a5,0x10
+    70001c9e:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter12/apps/window2.c:23
+                user_put(window->cur_col, NROWS - 1,   // erase cursor
+    70001ca2:	17c2                	slli	a5,a5,0x30
+    70001ca4:	93c1                	srli	a5,a5,0x30
+    70001ca6:	863e                	mv	a2,a5
+    70001ca8:	45a9                	li	a1,10
+    70001caa:	ffffe097          	auipc	ra,0xffffe
+    70001cae:	382080e7          	jalr	898(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window2.c:25
+                window->cur_col--;
+    70001cb2:	fd843783          	ld	a5,-40(s0)
+    70001cb6:	35c7a783          	lw	a5,860(a5)
+    70001cba:	37fd                	addiw	a5,a5,-1
+    70001cbc:	0007871b          	sext.w	a4,a5
+    70001cc0:	fd843783          	ld	a5,-40(s0)
+    70001cc4:	34e7ae23          	sw	a4,860(a5)
+/embryos/chapter12/apps/window2.c:27
+                window->cells[NROWS - 1][window->cur_col] =
+                        CELL(' ', window->cur_fg, window->cur_bg);
+    70001cc8:	fd843783          	ld	a5,-40(s0)
+    70001ccc:	3607a783          	lw	a5,864(a5)
+    70001cd0:	0107979b          	slliw	a5,a5,0x10
+    70001cd4:	4107d79b          	sraiw	a5,a5,0x10
+    70001cd8:	0087979b          	slliw	a5,a5,0x8
+    70001cdc:	0107979b          	slliw	a5,a5,0x10
+    70001ce0:	4107d79b          	sraiw	a5,a5,0x10
+    70001ce4:	7007f793          	andi	a5,a5,1792
+    70001ce8:	0107979b          	slliw	a5,a5,0x10
+    70001cec:	4107d79b          	sraiw	a5,a5,0x10
+    70001cf0:	0207e793          	ori	a5,a5,32
+    70001cf4:	0107971b          	slliw	a4,a5,0x10
+    70001cf8:	4107571b          	sraiw	a4,a4,0x10
+    70001cfc:	fd843783          	ld	a5,-40(s0)
+    70001d00:	3647a783          	lw	a5,868(a5)
+    70001d04:	0107979b          	slliw	a5,a5,0x10
+    70001d08:	4107d79b          	sraiw	a5,a5,0x10
+    70001d0c:	00b7979b          	slliw	a5,a5,0xb
+    70001d10:	0107969b          	slliw	a3,a5,0x10
+    70001d14:	4106d69b          	sraiw	a3,a3,0x10
+    70001d18:	6791                	lui	a5,0x4
+    70001d1a:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    70001d1e:	8ff5                	and	a5,a5,a3
+    70001d20:	0107979b          	slliw	a5,a5,0x10
+    70001d24:	4107d79b          	sraiw	a5,a5,0x10
+    70001d28:	8fd9                	or	a5,a5,a4
+    70001d2a:	0107971b          	slliw	a4,a5,0x10
+    70001d2e:	4107571b          	sraiw	a4,a4,0x10
+/embryos/chapter12/apps/window2.c:26
+                window->cells[NROWS - 1][window->cur_col] =
+    70001d32:	fd843783          	ld	a5,-40(s0)
+    70001d36:	35c7a783          	lw	a5,860(a5)
+/embryos/chapter12/apps/window2.c:27
+                        CELL(' ', window->cur_fg, window->cur_bg);
+    70001d3a:	1742                	slli	a4,a4,0x30
+    70001d3c:	9341                	srli	a4,a4,0x30
+/embryos/chapter12/apps/window2.c:26
+                window->cells[NROWS - 1][window->cur_col] =
+    70001d3e:	fd843683          	ld	a3,-40(s0)
+    70001d42:	18678793          	addi	a5,a5,390
+    70001d46:	0786                	slli	a5,a5,0x1
+    70001d48:	97b6                	add	a5,a5,a3
+    70001d4a:	00e79023          	sh	a4,0(a5)
+/embryos/chapter12/apps/window2.c:28
+                user_put(window->cur_col, NROWS - 1,   // erase last char
+    70001d4e:	fd843783          	ld	a5,-40(s0)
+    70001d52:	35c7a503          	lw	a0,860(a5)
+/embryos/chapter12/apps/window2.c:29
+                        CELL(' ', window->cur_fg, window->cur_bg));
+    70001d56:	fd843783          	ld	a5,-40(s0)
+    70001d5a:	3607a783          	lw	a5,864(a5)
+    70001d5e:	0107979b          	slliw	a5,a5,0x10
+    70001d62:	4107d79b          	sraiw	a5,a5,0x10
+    70001d66:	0087979b          	slliw	a5,a5,0x8
+    70001d6a:	0107979b          	slliw	a5,a5,0x10
+    70001d6e:	4107d79b          	sraiw	a5,a5,0x10
+    70001d72:	7007f793          	andi	a5,a5,1792
+    70001d76:	0107979b          	slliw	a5,a5,0x10
+    70001d7a:	4107d79b          	sraiw	a5,a5,0x10
+    70001d7e:	0207e793          	ori	a5,a5,32
+    70001d82:	0107971b          	slliw	a4,a5,0x10
+    70001d86:	4107571b          	sraiw	a4,a4,0x10
+    70001d8a:	fd843783          	ld	a5,-40(s0)
+    70001d8e:	3647a783          	lw	a5,868(a5)
+    70001d92:	0107979b          	slliw	a5,a5,0x10
+    70001d96:	4107d79b          	sraiw	a5,a5,0x10
+    70001d9a:	00b7979b          	slliw	a5,a5,0xb
+    70001d9e:	0107969b          	slliw	a3,a5,0x10
+    70001da2:	4106d69b          	sraiw	a3,a3,0x10
+    70001da6:	6791                	lui	a5,0x4
+    70001da8:	80078793          	addi	a5,a5,-2048 # 3800 <text_file_end+0x5f1>
+    70001dac:	8ff5                	and	a5,a5,a3
+    70001dae:	0107979b          	slliw	a5,a5,0x10
+    70001db2:	4107d79b          	sraiw	a5,a5,0x10
+    70001db6:	8fd9                	or	a5,a5,a4
+    70001db8:	0107979b          	slliw	a5,a5,0x10
+    70001dbc:	4107d79b          	sraiw	a5,a5,0x10
+/embryos/chapter12/apps/window2.c:28
+                user_put(window->cur_col, NROWS - 1,   // erase last char
+    70001dc0:	17c2                	slli	a5,a5,0x30
+    70001dc2:	93c1                	srli	a5,a5,0x30
+    70001dc4:	863e                	mv	a2,a5
+    70001dc6:	45a9                	li	a1,10
+    70001dc8:	ffffe097          	auipc	ra,0xffffe
+    70001dcc:	264080e7          	jalr	612(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/window2.c:30
+                n--;
+    70001dd0:	fec42783          	lw	a5,-20(s0)
+    70001dd4:	37fd                	addiw	a5,a5,-1
+    70001dd6:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/window2.c:22
+            if (n > 0) {
+    70001dda:	a8c1                	j	70001eaa <window_readline+0x38a>
+/embryos/chapter12/apps/window2.c:34
+            }
+        }
+        else {
+            if (c == '\r') c = '\n';
+    70001ddc:	fe842783          	lw	a5,-24(s0)
+    70001de0:	0007871b          	sext.w	a4,a5
+    70001de4:	47b5                	li	a5,13
+    70001de6:	00f71563          	bne	a4,a5,70001df0 <window_readline+0x2d0>
+/embryos/chapter12/apps/window2.c:34 (discriminator 1)
+    70001dea:	47a9                	li	a5,10
+    70001dec:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/window2.c:35
+            if (n < size - 1) line[n] = c;
+    70001df0:	fcc42783          	lw	a5,-52(s0)
+    70001df4:	37fd                	addiw	a5,a5,-1
+    70001df6:	2781                	sext.w	a5,a5
+    70001df8:	fec42703          	lw	a4,-20(s0)
+    70001dfc:	2701                	sext.w	a4,a4
+    70001dfe:	00f75d63          	bge	a4,a5,70001e18 <window_readline+0x2f8>
+/embryos/chapter12/apps/window2.c:35 (discriminator 1)
+    70001e02:	fec42783          	lw	a5,-20(s0)
+    70001e06:	fd043703          	ld	a4,-48(s0)
+    70001e0a:	97ba                	add	a5,a5,a4
+    70001e0c:	fe842703          	lw	a4,-24(s0)
+    70001e10:	0ff77713          	zext.b	a4,a4
+    70001e14:	00e78023          	sb	a4,0(a5)
+/embryos/chapter12/apps/window2.c:36
+            n++;
+    70001e18:	fec42783          	lw	a5,-20(s0)
+    70001e1c:	2785                	addiw	a5,a5,1
+    70001e1e:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/window2.c:37
+            if (c == '\n') {
+    70001e22:	fe842783          	lw	a5,-24(s0)
+    70001e26:	0007871b          	sext.w	a4,a5
+    70001e2a:	47a9                	li	a5,10
+    70001e2c:	04f71263          	bne	a4,a5,70001e70 <window_readline+0x350>
+/embryos/chapter12/apps/window2.c:38
+                line[(n < size - 1) ? n : (size - 1)] = 0;
+    70001e30:	fcc42783          	lw	a5,-52(s0)
+    70001e34:	37fd                	addiw	a5,a5,-1
+    70001e36:	2781                	sext.w	a5,a5
+    70001e38:	863e                	mv	a2,a5
+    70001e3a:	fec42783          	lw	a5,-20(s0)
+    70001e3e:	86be                	mv	a3,a5
+    70001e40:	0006871b          	sext.w	a4,a3
+    70001e44:	0006079b          	sext.w	a5,a2
+    70001e48:	00e7d363          	bge	a5,a4,70001e4e <window_readline+0x32e>
+    70001e4c:	86b2                	mv	a3,a2
+    70001e4e:	0006879b          	sext.w	a5,a3
+    70001e52:	873e                	mv	a4,a5
+    70001e54:	fd043783          	ld	a5,-48(s0)
+    70001e58:	97ba                	add	a5,a5,a4
+    70001e5a:	00078023          	sb	zero,0(a5)
+/embryos/chapter12/apps/window2.c:39
+                window_putchar(window, '\n');
+    70001e5e:	45a9                	li	a1,10
+    70001e60:	fd843503          	ld	a0,-40(s0)
+    70001e64:	00000097          	auipc	ra,0x0
+    70001e68:	af2080e7          	jalr	-1294(ra) # 70001956 <window_putchar>
+/embryos/chapter12/apps/window2.c:40
+                return 1;
+    70001e6c:	4785                	li	a5,1
+    70001e6e:	a83d                	j	70001eac <window_readline+0x38c>
+/embryos/chapter12/apps/window2.c:42
+            }
+            else window_putchar(window, (32 <= c && c < 127) ? c : '?');
+    70001e70:	fe842783          	lw	a5,-24(s0)
+    70001e74:	0007871b          	sext.w	a4,a5
+    70001e78:	47fd                	li	a5,31
+    70001e7a:	00e7df63          	bge	a5,a4,70001e98 <window_readline+0x378>
+/embryos/chapter12/apps/window2.c:42 (discriminator 1)
+    70001e7e:	fe842783          	lw	a5,-24(s0)
+    70001e82:	0007871b          	sext.w	a4,a5
+    70001e86:	07e00793          	li	a5,126
+    70001e8a:	00e7c763          	blt	a5,a4,70001e98 <window_readline+0x378>
+/embryos/chapter12/apps/window2.c:42 (discriminator 3)
+    70001e8e:	fe842783          	lw	a5,-24(s0)
+    70001e92:	0ff7f793          	zext.b	a5,a5
+/embryos/chapter12/apps/window2.c:42
+    70001e96:	a019                	j	70001e9c <window_readline+0x37c>
+/embryos/chapter12/apps/window2.c:42 (discriminator 4)
+    70001e98:	03f00793          	li	a5,63
+/embryos/chapter12/apps/window2.c:42 (discriminator 6)
+    70001e9c:	85be                	mv	a1,a5
+    70001e9e:	fd843503          	ld	a0,-40(s0)
+    70001ea2:	00000097          	auipc	ra,0x0
+    70001ea6:	ab4080e7          	jalr	-1356(ra) # 70001956 <window_putchar>
+/embryos/chapter12/apps/window2.c:6
+    for (;;) {
+    70001eaa:	b941                	j	70001b3a <window_readline+0x1a>
+/embryos/chapter12/apps/window2.c:45
+        }
+    }
+}
+    70001eac:	853e                	mv	a0,a5
+    70001eae:	70e2                	ld	ra,56(sp)
+    70001eb0:	7442                	ld	s0,48(sp)
+    70001eb2:	6121                	addi	sp,sp,64
+    70001eb4:	8082                	ret
+
+0000000070001eb6 <init>:
+init():
+/embryos/chapter12/apps/putchar.c:8
+#include "stdio.h"
+
+static struct window window;
+static int initialized = 0;
+
+static void init(){
+    70001eb6:	1141                	addi	sp,sp,-16
+    70001eb8:	e406                	sd	ra,8(sp)
+    70001eba:	e022                	sd	s0,0(sp)
+    70001ebc:	0800                	addi	s0,sp,16
+/embryos/chapter12/apps/putchar.c:9
+    if (!initialized) {
+    70001ebe:	00000797          	auipc	a5,0x0
+    70001ec2:	6f278793          	addi	a5,a5,1778 # 700025b0 <initialized>
+    70001ec6:	439c                	lw	a5,0(a5)
+    70001ec8:	e79d                	bnez	a5,70001ef6 <init+0x40>
+/embryos/chapter12/apps/putchar.c:10
+        window_init(&window);
+    70001eca:	00000517          	auipc	a0,0x0
+    70001ece:	37e50513          	addi	a0,a0,894 # 70002248 <window>
+    70001ed2:	00000097          	auipc	ra,0x0
+    70001ed6:	882080e7          	jalr	-1918(ra) # 70001754 <window_init>
+/embryos/chapter12/apps/putchar.c:11
+        window_sync(&window);
+    70001eda:	00000517          	auipc	a0,0x0
+    70001ede:	36e50513          	addi	a0,a0,878 # 70002248 <window>
+    70001ee2:	00000097          	auipc	ra,0x0
+    70001ee6:	908080e7          	jalr	-1784(ra) # 700017ea <window_sync>
+/embryos/chapter12/apps/putchar.c:12
+        initialized = 1;
+    70001eea:	00000797          	auipc	a5,0x0
+    70001eee:	6c678793          	addi	a5,a5,1734 # 700025b0 <initialized>
+    70001ef2:	4705                	li	a4,1
+    70001ef4:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/putchar.c:14
+    }
+}
+    70001ef6:	0001                	nop
+    70001ef8:	60a2                	ld	ra,8(sp)
+    70001efa:	6402                	ld	s0,0(sp)
+    70001efc:	0141                	addi	sp,sp,16
+    70001efe:	8082                	ret
+
+0000000070001f00 <putchar>:
+putchar():
+/embryos/chapter12/apps/putchar.c:16
+
+void putchar(char c) {
+    70001f00:	1101                	addi	sp,sp,-32
+    70001f02:	ec06                	sd	ra,24(sp)
+    70001f04:	e822                	sd	s0,16(sp)
+    70001f06:	1000                	addi	s0,sp,32
+    70001f08:	87aa                	mv	a5,a0
+    70001f0a:	fef407a3          	sb	a5,-17(s0)
+/embryos/chapter12/apps/putchar.c:17
+    init();
+    70001f0e:	00000097          	auipc	ra,0x0
+    70001f12:	fa8080e7          	jalr	-88(ra) # 70001eb6 <init>
+/embryos/chapter12/apps/putchar.c:18
+    window_putchar(&window, c);
+    70001f16:	fef44783          	lbu	a5,-17(s0)
+    70001f1a:	85be                	mv	a1,a5
+    70001f1c:	00000517          	auipc	a0,0x0
+    70001f20:	32c50513          	addi	a0,a0,812 # 70002248 <window>
+    70001f24:	00000097          	auipc	ra,0x0
+    70001f28:	a32080e7          	jalr	-1486(ra) # 70001956 <window_putchar>
+/embryos/chapter12/apps/putchar.c:19
+}
+    70001f2c:	0001                	nop
+    70001f2e:	60e2                	ld	ra,24(sp)
+    70001f30:	6442                	ld	s0,16(sp)
+    70001f32:	6105                	addi	sp,sp,32
+    70001f34:	8082                	ret
+
+0000000070001f36 <readline>:
+readline():
+/embryos/chapter12/apps/putchar.c:21
+
+int readline(char *line, int size) {
+    70001f36:	1101                	addi	sp,sp,-32
+    70001f38:	ec06                	sd	ra,24(sp)
+    70001f3a:	e822                	sd	s0,16(sp)
+    70001f3c:	1000                	addi	s0,sp,32
+    70001f3e:	fea43423          	sd	a0,-24(s0)
+    70001f42:	87ae                	mv	a5,a1
+    70001f44:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/putchar.c:22
+    init();
+    70001f48:	00000097          	auipc	ra,0x0
+    70001f4c:	f6e080e7          	jalr	-146(ra) # 70001eb6 <init>
+/embryos/chapter12/apps/putchar.c:23
+    return window_readline(&window, line, size);
+    70001f50:	fe442783          	lw	a5,-28(s0)
+    70001f54:	863e                	mv	a2,a5
+    70001f56:	fe843583          	ld	a1,-24(s0)
+    70001f5a:	00000517          	auipc	a0,0x0
+    70001f5e:	2ee50513          	addi	a0,a0,750 # 70002248 <window>
+    70001f62:	00000097          	auipc	ra,0x0
+    70001f66:	bbe080e7          	jalr	-1090(ra) # 70001b20 <window_readline>
+    70001f6a:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/putchar.c:24
+}
+    70001f6c:	853e                	mv	a0,a5
+    70001f6e:	60e2                	ld	ra,24(sp)
+    70001f70:	6442                	ld	s0,16(sp)
+    70001f72:	6105                	addi	sp,sp,32
+    70001f74:	8082                	ret
+
+0000000070001f76 <malloc>:
+malloc():
+/embryos/chapter12/apps/malloc.c:20
+};
+
+static struct m_hdr *free_list, *brk;
+extern struct m_hdr __bss_end[];
+
+void *malloc(size_t size) {
+    70001f76:	7139                	addi	sp,sp,-64
+    70001f78:	fc06                	sd	ra,56(sp)
+    70001f7a:	f822                	sd	s0,48(sp)
+    70001f7c:	0080                	addi	s0,sp,64
+    70001f7e:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/malloc.c:22
+    struct m_hdr *mh;
+    size = ROUNDUP(sizeof(*mh) + size);
+    70001f82:	fc843783          	ld	a5,-56(s0)
+    70001f86:	07fd                	addi	a5,a5,31
+    70001f88:	9bc1                	andi	a5,a5,-16
+    70001f8a:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter12/apps/malloc.c:23
+    for (struct m_hdr **pmh = &free_list; (mh = *pmh); pmh = &mh->next)
+    70001f8e:	00000797          	auipc	a5,0x0
+    70001f92:	62a78793          	addi	a5,a5,1578 # 700025b8 <free_list>
+    70001f96:	fef43423          	sd	a5,-24(s0)
+    70001f9a:	a035                	j	70001fc6 <malloc+0x50>
+/embryos/chapter12/apps/malloc.c:24
+        if (mh->size == size) {
+    70001f9c:	fe043783          	ld	a5,-32(s0)
+    70001fa0:	679c                	ld	a5,8(a5)
+    70001fa2:	fc843703          	ld	a4,-56(s0)
+    70001fa6:	00f71c63          	bne	a4,a5,70001fbe <malloc+0x48>
+/embryos/chapter12/apps/malloc.c:25
+            *pmh = mh->next;
+    70001faa:	fe043783          	ld	a5,-32(s0)
+    70001fae:	6398                	ld	a4,0(a5)
+    70001fb0:	fe843783          	ld	a5,-24(s0)
+    70001fb4:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/malloc.c:26
+            return &mh[1];
+    70001fb6:	fe043783          	ld	a5,-32(s0)
+    70001fba:	07c1                	addi	a5,a5,16
+    70001fbc:	a841                	j	7000204c <malloc+0xd6>
+/embryos/chapter12/apps/malloc.c:23 (discriminator 2)
+    for (struct m_hdr **pmh = &free_list; (mh = *pmh); pmh = &mh->next)
+    70001fbe:	fe043783          	ld	a5,-32(s0)
+    70001fc2:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/malloc.c:23 (discriminator 1)
+    70001fc6:	fe843783          	ld	a5,-24(s0)
+    70001fca:	639c                	ld	a5,0(a5)
+    70001fcc:	fef43023          	sd	a5,-32(s0)
+    70001fd0:	fe043783          	ld	a5,-32(s0)
+    70001fd4:	f7e1                	bnez	a5,70001f9c <malloc+0x26>
+/embryos/chapter12/apps/malloc.c:28
+        }
+    if (!brk) brk = (struct m_hdr *) ROUNDUP(&__bss_end[1]) - 1;
+    70001fd6:	00000797          	auipc	a5,0x0
+    70001fda:	5ea78793          	addi	a5,a5,1514 # 700025c0 <brk>
+    70001fde:	639c                	ld	a5,0(a5)
+    70001fe0:	ef91                	bnez	a5,70001ffc <malloc+0x86>
+/embryos/chapter12/apps/malloc.c:28 (discriminator 1)
+    70001fe2:	00000797          	auipc	a5,0x0
+    70001fe6:	5f678793          	addi	a5,a5,1526 # 700025d8 <__bss_end+0x10>
+    70001fea:	07bd                	addi	a5,a5,15
+    70001fec:	9bc1                	andi	a5,a5,-16
+    70001fee:	17c1                	addi	a5,a5,-16
+    70001ff0:	873e                	mv	a4,a5
+    70001ff2:	00000797          	auipc	a5,0x0
+    70001ff6:	5ce78793          	addi	a5,a5,1486 # 700025c0 <brk>
+    70001ffa:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/malloc.c:29
+    char *next = (char *) brk + size;
+    70001ffc:	00000797          	auipc	a5,0x0
+    70002000:	5c478793          	addi	a5,a5,1476 # 700025c0 <brk>
+    70002004:	6398                	ld	a4,0(a5)
+    70002006:	fc843783          	ld	a5,-56(s0)
+    7000200a:	97ba                	add	a5,a5,a4
+    7000200c:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/malloc.c:30
+    if (next > (char *) VM_END) return 0;
+    70002010:	fd843703          	ld	a4,-40(s0)
+    70002014:	702007b7          	lui	a5,0x70200
+    70002018:	00e7f463          	bgeu	a5,a4,70002020 <malloc+0xaa>
+/embryos/chapter12/apps/malloc.c:30 (discriminator 1)
+    7000201c:	4781                	li	a5,0
+/embryos/chapter12/apps/malloc.c:30
+    7000201e:	a03d                	j	7000204c <malloc+0xd6>
+/embryos/chapter12/apps/malloc.c:31
+    mh = brk;
+    70002020:	00000797          	auipc	a5,0x0
+    70002024:	5a078793          	addi	a5,a5,1440 # 700025c0 <brk>
+    70002028:	639c                	ld	a5,0(a5)
+    7000202a:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/malloc.c:32
+    mh->size = size;
+    7000202e:	fe043783          	ld	a5,-32(s0)
+    70002032:	fc843703          	ld	a4,-56(s0)
+    70002036:	e798                	sd	a4,8(a5)
+/embryos/chapter12/apps/malloc.c:33
+    brk = (struct m_hdr *) next;
+    70002038:	00000797          	auipc	a5,0x0
+    7000203c:	58878793          	addi	a5,a5,1416 # 700025c0 <brk>
+    70002040:	fd843703          	ld	a4,-40(s0)
+    70002044:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/malloc.c:34
+    return &mh[1];
+    70002046:	fe043783          	ld	a5,-32(s0)
+    7000204a:	07c1                	addi	a5,a5,16
+/embryos/chapter12/apps/malloc.c:35
+}
+    7000204c:	853e                	mv	a0,a5
+    7000204e:	70e2                	ld	ra,56(sp)
+    70002050:	7442                	ld	s0,48(sp)
+    70002052:	6121                	addi	sp,sp,64
+    70002054:	8082                	ret
+
+0000000070002056 <calloc>:
+calloc():
+/embryos/chapter12/apps/malloc.c:37
+
+void *calloc(size_t nitems, size_t size) {
+    70002056:	7179                	addi	sp,sp,-48
+    70002058:	f406                	sd	ra,40(sp)
+    7000205a:	f022                	sd	s0,32(sp)
+    7000205c:	1800                	addi	s0,sp,48
+    7000205e:	fca43c23          	sd	a0,-40(s0)
+    70002062:	fcb43823          	sd	a1,-48(s0)
+/embryos/chapter12/apps/malloc.c:38
+    size *= nitems;
+    70002066:	fd043703          	ld	a4,-48(s0)
+    7000206a:	fd843783          	ld	a5,-40(s0)
+    7000206e:	02f707b3          	mul	a5,a4,a5
+    70002072:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter12/apps/malloc.c:39
+    void *p = malloc(size);
+    70002076:	fd043503          	ld	a0,-48(s0)
+    7000207a:	00000097          	auipc	ra,0x0
+    7000207e:	efc080e7          	jalr	-260(ra) # 70001f76 <malloc>
+    70002082:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/malloc.c:40
+    if (p != 0) memset(p, 0, size);
+    70002086:	fe843783          	ld	a5,-24(s0)
+    7000208a:	cb91                	beqz	a5,7000209e <calloc+0x48>
+/embryos/chapter12/apps/malloc.c:40 (discriminator 1)
+    7000208c:	fd043603          	ld	a2,-48(s0)
+    70002090:	4581                	li	a1,0
+    70002092:	fe843503          	ld	a0,-24(s0)
+    70002096:	ffffe097          	auipc	ra,0xffffe
+    7000209a:	53a080e7          	jalr	1338(ra) # 700005d0 <memset>
+/embryos/chapter12/apps/malloc.c:41
+    return p;
+    7000209e:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/malloc.c:42
+}
+    700020a2:	853e                	mv	a0,a5
+    700020a4:	70a2                	ld	ra,40(sp)
+    700020a6:	7402                	ld	s0,32(sp)
+    700020a8:	6145                	addi	sp,sp,48
+    700020aa:	8082                	ret
+
+00000000700020ac <realloc>:
+realloc():
+/embryos/chapter12/apps/malloc.c:44
+
+void *realloc(void *ptr, size_t size) {
+    700020ac:	7179                	addi	sp,sp,-48
+    700020ae:	f406                	sd	ra,40(sp)
+    700020b0:	f022                	sd	s0,32(sp)
+    700020b2:	1800                	addi	s0,sp,48
+    700020b4:	fca43c23          	sd	a0,-40(s0)
+    700020b8:	fcb43823          	sd	a1,-48(s0)
+/embryos/chapter12/apps/malloc.c:45
+    if (ptr == 0) return malloc(size);
+    700020bc:	fd843783          	ld	a5,-40(s0)
+    700020c0:	eb89                	bnez	a5,700020d2 <realloc+0x26>
+/embryos/chapter12/apps/malloc.c:45 (discriminator 1)
+    700020c2:	fd043503          	ld	a0,-48(s0)
+    700020c6:	00000097          	auipc	ra,0x0
+    700020ca:	eb0080e7          	jalr	-336(ra) # 70001f76 <malloc>
+    700020ce:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/malloc.c:45
+    700020d0:	a895                	j	70002144 <realloc+0x98>
+/embryos/chapter12/apps/malloc.c:46
+    struct m_hdr *mh = (struct m_hdr *) ptr - 1;
+    700020d2:	fd843783          	ld	a5,-40(s0)
+    700020d6:	17c1                	addi	a5,a5,-16
+    700020d8:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/malloc.c:47
+    size = ROUNDUP(sizeof(*mh) + size);
+    700020dc:	fd043783          	ld	a5,-48(s0)
+    700020e0:	07fd                	addi	a5,a5,31
+    700020e2:	9bc1                	andi	a5,a5,-16
+    700020e4:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter12/apps/malloc.c:48
+    if (size <= mh->size) return ptr;
+    700020e8:	fe843783          	ld	a5,-24(s0)
+    700020ec:	679c                	ld	a5,8(a5)
+    700020ee:	fd043703          	ld	a4,-48(s0)
+    700020f2:	00e7e563          	bltu	a5,a4,700020fc <realloc+0x50>
+/embryos/chapter12/apps/malloc.c:48 (discriminator 1)
+    700020f6:	fd843783          	ld	a5,-40(s0)
+/embryos/chapter12/apps/malloc.c:48
+    700020fa:	a0a9                	j	70002144 <realloc+0x98>
+/embryos/chapter12/apps/malloc.c:49
+    void *newp = malloc(size - sizeof(*mh));
+    700020fc:	fd043783          	ld	a5,-48(s0)
+    70002100:	17c1                	addi	a5,a5,-16
+    70002102:	853e                	mv	a0,a5
+    70002104:	00000097          	auipc	ra,0x0
+    70002108:	e72080e7          	jalr	-398(ra) # 70001f76 <malloc>
+    7000210c:	fea43023          	sd	a0,-32(s0)
+/embryos/chapter12/apps/malloc.c:50
+    if (newp == 0) return 0;
+    70002110:	fe043783          	ld	a5,-32(s0)
+    70002114:	e399                	bnez	a5,7000211a <realloc+0x6e>
+/embryos/chapter12/apps/malloc.c:50 (discriminator 1)
+    70002116:	4781                	li	a5,0
+/embryos/chapter12/apps/malloc.c:50
+    70002118:	a035                	j	70002144 <realloc+0x98>
+/embryos/chapter12/apps/malloc.c:51
+    memcpy(newp, ptr, mh->size - sizeof(*mh));
+    7000211a:	fe843783          	ld	a5,-24(s0)
+    7000211e:	679c                	ld	a5,8(a5)
+    70002120:	17c1                	addi	a5,a5,-16
+    70002122:	863e                	mv	a2,a5
+    70002124:	fd843583          	ld	a1,-40(s0)
+    70002128:	fe043503          	ld	a0,-32(s0)
+    7000212c:	ffffe097          	auipc	ra,0xffffe
+    70002130:	470080e7          	jalr	1136(ra) # 7000059c <memcpy>
+/embryos/chapter12/apps/malloc.c:52
+    free(ptr);
+    70002134:	fd843503          	ld	a0,-40(s0)
+    70002138:	00000097          	auipc	ra,0x0
+    7000213c:	016080e7          	jalr	22(ra) # 7000214e <free>
+/embryos/chapter12/apps/malloc.c:53
+    return newp;
+    70002140:	fe043783          	ld	a5,-32(s0)
+/embryos/chapter12/apps/malloc.c:54
+}
+    70002144:	853e                	mv	a0,a5
+    70002146:	70a2                	ld	ra,40(sp)
+    70002148:	7402                	ld	s0,32(sp)
+    7000214a:	6145                	addi	sp,sp,48
+    7000214c:	8082                	ret
+
+000000007000214e <free>:
+free():
+/embryos/chapter12/apps/malloc.c:56
+
+void free(void *ptr) {
+    7000214e:	7179                	addi	sp,sp,-48
+    70002150:	f406                	sd	ra,40(sp)
+    70002152:	f022                	sd	s0,32(sp)
+    70002154:	1800                	addi	s0,sp,48
+    70002156:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/malloc.c:57
+    if (ptr == 0) return;
+    7000215a:	fd843783          	ld	a5,-40(s0)
+    7000215e:	c795                	beqz	a5,7000218a <free+0x3c>
+/embryos/chapter12/apps/malloc.c:58
+    struct m_hdr *mh = (struct m_hdr *) ptr - 1;
+    70002160:	fd843783          	ld	a5,-40(s0)
+    70002164:	17c1                	addi	a5,a5,-16
+    70002166:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/malloc.c:59
+    mh->next = free_list;
+    7000216a:	00000797          	auipc	a5,0x0
+    7000216e:	44e78793          	addi	a5,a5,1102 # 700025b8 <free_list>
+    70002172:	6398                	ld	a4,0(a5)
+    70002174:	fe843783          	ld	a5,-24(s0)
+    70002178:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/malloc.c:60
+    free_list = mh;
+    7000217a:	00000797          	auipc	a5,0x0
+    7000217e:	43e78793          	addi	a5,a5,1086 # 700025b8 <free_list>
+    70002182:	fe843703          	ld	a4,-24(s0)
+    70002186:	e398                	sd	a4,0(a5)
+    70002188:	a011                	j	7000218c <free+0x3e>
+/embryos/chapter12/apps/malloc.c:57
+    if (ptr == 0) return;
+    7000218a:	0001                	nop
+/embryos/chapter12/apps/malloc.c:61
+}
+    7000218c:	70a2                	ld	ra,40(sp)
+    7000218e:	7402                	ld	s0,32(sp)
+    70002190:	6145                	addi	sp,sp,48
+    70002192:	8082                	ret
+
+0000000070002194 <main>:
+main():
+/embryos/chapter12/apps/init.c:4
+#include "syslib.h"
+#include "dir.h"
+
+void main(void) {
+    70002194:	1141                	addi	sp,sp,-16
+    70002196:	e406                	sd	ra,8(sp)
+    70002198:	e022                	sd	s0,0(sp)
+    7000219a:	0800                	addi	s0,sp,16
+/embryos/chapter12/apps/init.c:5
+    user_spawn(dir_lookup("shell"),   0,  0, 39, 11, 0, 0);
+    7000219c:	00000517          	auipc	a0,0x0
+    700021a0:	06450513          	addi	a0,a0,100 # 70002200 <main+0x6c>
+    700021a4:	fffff097          	auipc	ra,0xfffff
+    700021a8:	cea080e7          	jalr	-790(ra) # 70000e8e <dir_lookup>
+    700021ac:	87aa                	mv	a5,a0
+    700021ae:	853e                	mv	a0,a5
+/embryos/chapter12/apps/init.c:5 (discriminator 1)
+    700021b0:	4801                	li	a6,0
+    700021b2:	4781                	li	a5,0
+    700021b4:	472d                	li	a4,11
+    700021b6:	02700693          	li	a3,39
+    700021ba:	4601                	li	a2,0
+    700021bc:	4581                	li	a1,0
+    700021be:	ffffe097          	auipc	ra,0xffffe
+    700021c2:	e66080e7          	jalr	-410(ra) # 70000024 <user_spawn>
+/embryos/chapter12/apps/init.c:6
+    user_spawn(dir_lookup("splash"), 40,  0, 39, 11, 0, 0);
+    700021c6:	00000517          	auipc	a0,0x0
+    700021ca:	04250513          	addi	a0,a0,66 # 70002208 <main+0x74>
+    700021ce:	fffff097          	auipc	ra,0xfffff
+    700021d2:	cc0080e7          	jalr	-832(ra) # 70000e8e <dir_lookup>
+    700021d6:	87aa                	mv	a5,a0
+    700021d8:	853e                	mv	a0,a5
+/embryos/chapter12/apps/init.c:6 (discriminator 1)
+    700021da:	4801                	li	a6,0
+    700021dc:	4781                	li	a5,0
+    700021de:	472d                	li	a4,11
+    700021e0:	02700693          	li	a3,39
+    700021e4:	4601                	li	a2,0
+    700021e6:	02800593          	li	a1,40
+    700021ea:	ffffe097          	auipc	ra,0xffffe
+    700021ee:	e3a080e7          	jalr	-454(ra) # 70000024 <user_spawn>
+/embryos/chapter12/apps/init.c:7
+}
+    700021f2:	0001                	nop
+    700021f4:	60a2                	ld	ra,8(sp)
+    700021f6:	6402                	ld	s0,0(sp)
+    700021f8:	0141                	addi	sp,sp,16
+    700021fa:	8082                	ret
+    700021fc:	0000                	unimp
+    700021fe:	0000                	unimp
+    70002200:	6c656873          	csrrsi	a6,0x6c6,10
+    70002204:	006c                	addi	a1,sp,12
+    70002206:	0000                	unimp
+    70002208:	616c7073          	csrci	0x616,24
+    7000220c:	006873 	.3byte	0x006873
