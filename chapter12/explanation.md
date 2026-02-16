@@ -1,0 +1,8 @@
+For the representation of the sleeping processes we 
+stored the sleep state in pcb-> sleep_deadline. 
+When it is 0 that means  process isn't asleep and when it is nonzero that means that is the sleep deadline which means the process should be running by then.
+The sleep queue structure is a circular list. It is a circular list because it has O(1) insertion with a tail pointer and is consistent with the queues already implemented in circular single linked lists like the proc_enqueue and proc_dequeue. If sleep_queue is 0 that means the queue is empty and if it only has one process we know that node->next = node.
+
+We know there is no busy waiting in user space because user_delay calls user_sleep which will block the process in the kernel. Sleeping processes are removed from runnable queues and are checked during timer interrupts in sched_wake_sleeping(). In sched2.c sched_idle() calls trap_wfi that makes the core have low activity until an interrupt arrives so cpu isn't busy waiting. 
+
+To test this we put a long user delay in stopwatch and saw if it paused the stopwatch application UI correctly and it did. The stowpatch incremented forward by around 5 seconds each time the UI updated. Then we did concurrent app tests with splash, life, and stopwatch that all called user_delay which uses sleep and they all functioned normally. We checked the cpu by typing docker stats in the terminal and checking the CPU usage. For only running a stopwatch when the stopwatch was stopped for five seconds because of user_delay the cpu usage went down to 2% and when the UI updated the cpu went up to 4% this means the process was blocked during sleep rather than busy-waiting.
