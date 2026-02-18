@@ -6,30 +6,30 @@ EXEC_P, HAS_SYMS, D_PAGED
 start address 0x0000000070000000
 
 Program Header:
-0x70000003 off    0x00000000000041ba vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+0x70000003 off    0x00000000000041ca vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
          filesz 0x0000000000000063 memsz 0x0000000000000000 flags r--
     LOAD off    0x0000000000001000 vaddr 0x0000000070000000 paddr 0x0000000000001000 align 2**12
-         filesz 0x0000000000002a90 memsz 0x0000000000002a90 flags r-x
-    LOAD off    0x0000000000003a90 vaddr 0x0000000070002a90 paddr 0x0000000000003a90 align 2**12
-         filesz 0x000000000000072a memsz 0x000000000000072a flags rw-
+         filesz 0x0000000000002aa8 memsz 0x0000000000002aa8 flags r-x
+    LOAD off    0x0000000000003aa8 vaddr 0x0000000070002aa8 paddr 0x0000000000003aa8 align 2**12
+         filesz 0x0000000000000722 memsz 0x0000000000000722 flags rw-
 
 Sections:
 Idx Name              Size      VMA               LMA               File off  Algn  Flags
-  0 .text             00002a90  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data             0000072a  0000000070002a90  0000000000003a90  00003a90  2**3  CONTENTS, ALLOC, LOAD, DATA
-  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000041ba  2**0  CONTENTS, READONLY
-  3 .comment          00000034  0000000000000000  0000000000000000  0000421d  2**0  CONTENTS, READONLY
-  4 .debug_line       00002593  0000000000000000  0000000000000000  00004251  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  5 .debug_line_str   00000163  0000000000000000  0000000000000000  000067e4  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_info       000026c9  0000000000000000  0000000000000000  00006947  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  7 .debug_abbrev     00000f15  0000000000000000  0000000000000000  00009010  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .debug_aranges    00000270  0000000000000000  0000000000000000  00009f30  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_str        0000065a  0000000000000000  0000000000000000  0000a1a0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_frame      00000bf8  0000000000000000  0000000000000000  0000a800  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_rnglists   00000017  0000000000000000  0000000000000000  0000b3f8  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  0 .text             00002aa8  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data             00000722  0000000070002aa8  0000000000003aa8  00003aa8  2**3  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000041ca  2**0  CONTENTS, READONLY
+  3 .comment          00000034  0000000000000000  0000000000000000  0000422d  2**0  CONTENTS, READONLY
+  4 .debug_line       000025af  0000000000000000  0000000000000000  00004261  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_line_str   00000163  0000000000000000  0000000000000000  00006810  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_info       000026d8  0000000000000000  0000000000000000  00006973  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev     00000f15  0000000000000000  0000000000000000  0000904b  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges    00000270  0000000000000000  0000000000000000  00009f60  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str        0000065f  0000000000000000  0000000000000000  0000a1d0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_frame      00000bf8  0000000000000000  0000000000000000  0000a830  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_rnglists   00000017  0000000000000000  0000000000000000  0000b428  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 0000000070000000 l    d  .text	0000000000000000 .text
-0000000070002a90 l    d  .data	0000000000000000 .data
+0000000070002aa8 l    d  .data	0000000000000000 .data
 0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
 0000000000000000 l    d  .comment	0000000000000000 .comment
 0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
@@ -40,13 +40,13 @@ SYMBOL TABLE:
 0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
 0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
 0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
-0000000000000000 l    df *ABS*	0000000000000000 ccwiiUWn.o
-0000000000000000 l    df *ABS*	0000000000000000 ccLS3LI7.o
+0000000000000000 l    df *ABS*	0000000000000000 ccTenBbr.o
+0000000000000000 l    df *ABS*	0000000000000000 ccpP76Hh.o
 0000000000000000 l    df *ABS*	0000000000000000 crt1.c
 0000000000000000 l    df *ABS*	0000000000000000 string.c
 0000000000000000 l    df *ABS*	0000000000000000 string2.c
 0000000000000000 l    df *ABS*	0000000000000000 stdio.c
-0000000070002ab0 l     O .data	0000000000000018 dev
+0000000070002ac0 l     O .data	0000000000000018 dev
 0000000070000712 l     F .text	00000000000000c2 print_unsigned
 0000000000000000 l    df *ABS*	0000000000000000 dir.c
 0000000000000000 l    df *ABS*	0000000000000000 blockpixel.c
@@ -55,23 +55,23 @@ SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 window1.c
 0000000000000000 l    df *ABS*	0000000000000000 window2.c
 0000000000000000 l    df *ABS*	0000000000000000 putchar.c
-0000000070002ac8 l     O .data	0000000000000368 window
-0000000070002e30 l     O .data	0000000000000004 initialized
+0000000070002ad8 l     O .data	0000000000000368 window
+0000000070002e40 l     O .data	0000000000000004 initialized
 0000000070001eb6 l     F .text	000000000000004a init
 0000000000000000 l    df *ABS*	0000000000000000 malloc.c
-0000000070002e38 l     O .data	0000000000000008 free_list
-0000000070002e40 l     O .data	0000000000000008 brk
+0000000070002e48 l     O .data	0000000000000008 free_list
+0000000070002e50 l     O .data	0000000000000008 brk
 0000000000000000 l    df *ABS*	0000000000000000 stopwatch.c
 0000000070002194 l     F .text	0000000000000056 user_delay
-0000000070002e48 l     O .data	0000000000000018 bp
-0000000070002e60 l     O .data	000000000000035a bp_buffer
+0000000070002e58 l     O .data	0000000000000018 bp
+0000000070002e70 l     O .data	000000000000035a bp_buffer
 00000000700021ea l     F .text	000000000000003c sw_init
 0000000070002226 l     F .text	000000000000005a sw_toggle
 0000000070002280 l     F .text	0000000000000038 sw_reset
 00000000700022b8 l     F .text	0000000000000044 sw_current_elapsed
 00000000700022fc l     F .text	0000000000000078 clear_screen
 0000000070002374 l     F .text	00000000000000aa draw_rect
-0000000070002a28 l     O .text	0000000000000032 digit3x5
+0000000070002a40 l     O .text	0000000000000032 digit3x5
 000000007000241e l     F .text	00000000000000e0 draw_digit
 00000000700024fe l     F .text	0000000000000074 draw_colon
 0000000070002572 l     F .text	00000000000002f4 sw_render
@@ -80,7 +80,7 @@ SYMBOL TABLE:
 0000000070000156 g     F .text	000000000000004e strcpy
 0000000070000b82 g     F .text	000000000000005a printf
 0000000070000800 g       *ABS*	0000000000000000 __global_pointer$
-0000000070002a98 g     O .data	0000000000000008 stdout
+0000000070002ab0 g     O .data	0000000000000008 stdout
 0000000070001754 g     F .text	0000000000000096 window_init
 00000000700004c4 g     F .text	00000000000000d8 memmove
 0000000070000024 g       .text	0000000000000000 user_spawn
@@ -97,7 +97,7 @@ SYMBOL TABLE:
 0000000070000e2c g     F .text	0000000000000016 fflush
 0000000000001000 g       *ABS*	0000000000000000 flat_file_off
 0000000070000f22 g     F .text	0000000000000100 dir_create
-00000000700031ba g       .data	0000000000000000 __bss_end
+00000000700031ca g       .data	0000000000000000 __bss_end
 0000000070000054 g       .text	0000000000000000 user_size
 000000007000038e g     F .text	000000000000004a strnlen
 000000007000031c g     F .text	0000000000000072 strrchr
@@ -109,7 +109,7 @@ SYMBOL TABLE:
 0000000070000014 g       .text	0000000000000000 user_exit
 0000000070001248 g     F .text	00000000000000a2 bp_init
 000000007000045e g     F .text	0000000000000066 memchr
-0000000070002a90 g     O .data	0000000000000008 stdin
+0000000070002aa8 g     O .data	0000000000000008 stdin
 0000000070000000 g       .text	0000000000000000 _start
 0000000070000274 g     F .text	00000000000000a8 strstr
 0000000070000000 g       .text	0000000000000000 _image_start
@@ -119,29 +119,29 @@ SYMBOL TABLE:
 00000000700003d8 g     F .text	0000000000000086 memcmp
 000000007000006c g       .text	0000000000000000 user_sleep
 0000000070000bdc g     F .text	00000000000000fe fopen
-0000000070002ab0 g       .data	0000000000000000 __bss_start
+0000000070002ac0 g       .data	0000000000000000 __bss_start
 00000000700005d0 g     F .text	0000000000000054 memset
-0000000070002910 g     F .text	0000000000000114 main
+0000000070002910 g     F .text	0000000000000130 main
 0000000070000034 g       .text	0000000000000000 user_get
 0000000070000e42 g     F .text	000000000000001e clearerr
 0000000070000e60 g     F .text	000000000000002e fclose
 00000000700000ae g     F .text	00000000000000a8 strcmp
 000000007000001c g       .text	0000000000000000 user_yield
 0000000070000b0c g     F .text	0000000000000076 sprintf
-0000000070002aa0 g     O .data	0000000000000008 stderr
+0000000070002ab8 g     O .data	0000000000000008 stderr
 0000000070000074 g     F .text	000000000000003a _crt_init
 0000000070000044 g       .text	0000000000000000 user_read
 0000000070000624 g     F .text	00000000000000a6 fputc
 000000007000005c g       .text	0000000000000000 user_delete
 000000007000003c g       .text	0000000000000000 user_create
-00000000700031ba g       .data	0000000000000000 _image_end
+00000000700031ca g       .data	0000000000000000 _image_end
 0000000070000e8e g     F .text	0000000000000094 dir_lookup
 0000000070001876 g     F .text	00000000000000e0 window_scroll
 0000000070000064 g       .text	0000000000000000 user_gettime
 0000000070000234 g     F .text	0000000000000040 strlen
 00000000700010f6 g     F .text	000000000000008c dir_list
 00000000700006ca g     F .text	0000000000000048 fputs
-0000000000003a90 g       *ABS*	0000000000000000 text_file_end
+0000000000003aa8 g       *ABS*	0000000000000000 text_file_end
 0000000070000cda g     F .text	00000000000000ca freadline
 00000000700007d4 g     F .text	00000000000002e4 vfprintf
 000000007000214e g     F .text	0000000000000046 free
@@ -1731,7 +1731,7 @@ void printf(const char *fmt, ...) {
 /embryos/chapter12/apps/stdio.c:91
     vfprintf(stdout, fmt, ap);
     70000bb4:	00002797          	auipc	a5,0x2
-    70000bb8:	ee478793          	addi	a5,a5,-284 # 70002a98 <stdout>
+    70000bb8:	efc78793          	addi	a5,a5,-260 # 70002ab0 <stdout>
     70000bbc:	639c                	ld	a5,0(a5)
     70000bbe:	fe843703          	ld	a4,-24(s0)
     70000bc2:	863a                	mv	a2,a4
@@ -2917,7 +2917,7 @@ void bp_put(struct bp *bp, int px, int py, uint8_t color, enum bp_mode mode) {
     700014e2:	6b98                	ld	a4,16(a5)
     700014e4:	fd442783          	lw	a5,-44(s0)
     700014e8:	97ba                	add	a5,a5,a4
-    700014ea:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0x570>
+    700014ea:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0x558>
     700014ee:	fb843783          	ld	a5,-72(s0)
     700014f2:	6b94                	ld	a3,16(a5)
     700014f4:	fd442783          	lw	a5,-44(s0)
@@ -3113,7 +3113,7 @@ void bp_flush(struct bp *bp) {
     700016bc:	6b98                	ld	a4,16(a5)
     700016be:	fe442783          	lw	a5,-28(s0)
     700016c2:	97ba                	add	a5,a5,a4
-    700016c4:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0x570>
+    700016c4:	0007c703          	lbu	a4,0(a5) # 4000 <text_file_end+0x558>
     700016c8:	fc843783          	ld	a5,-56(s0)
     700016cc:	6b94                	ld	a3,16(a5)
     700016ce:	fe442783          	lw	a5,-28(s0)
@@ -3990,25 +3990,25 @@ static void init(){
 /embryos/chapter12/apps/putchar.c:9
     if (!initialized) {
     70001ebe:	00001797          	auipc	a5,0x1
-    70001ec2:	f7278793          	addi	a5,a5,-142 # 70002e30 <initialized>
+    70001ec2:	f8278793          	addi	a5,a5,-126 # 70002e40 <initialized>
     70001ec6:	439c                	lw	a5,0(a5)
     70001ec8:	e79d                	bnez	a5,70001ef6 <init+0x40>
 /embryos/chapter12/apps/putchar.c:10
         window_init(&window);
     70001eca:	00001517          	auipc	a0,0x1
-    70001ece:	bfe50513          	addi	a0,a0,-1026 # 70002ac8 <window>
+    70001ece:	c0e50513          	addi	a0,a0,-1010 # 70002ad8 <window>
     70001ed2:	00000097          	auipc	ra,0x0
     70001ed6:	882080e7          	jalr	-1918(ra) # 70001754 <window_init>
 /embryos/chapter12/apps/putchar.c:11
         window_sync(&window);
     70001eda:	00001517          	auipc	a0,0x1
-    70001ede:	bee50513          	addi	a0,a0,-1042 # 70002ac8 <window>
+    70001ede:	bfe50513          	addi	a0,a0,-1026 # 70002ad8 <window>
     70001ee2:	00000097          	auipc	ra,0x0
     70001ee6:	908080e7          	jalr	-1784(ra) # 700017ea <window_sync>
 /embryos/chapter12/apps/putchar.c:12
         initialized = 1;
     70001eea:	00001797          	auipc	a5,0x1
-    70001eee:	f4678793          	addi	a5,a5,-186 # 70002e30 <initialized>
+    70001eee:	f5678793          	addi	a5,a5,-170 # 70002e40 <initialized>
     70001ef2:	4705                	li	a4,1
     70001ef4:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/putchar.c:14
@@ -4040,7 +4040,7 @@ void putchar(char c) {
     70001f16:	fef44783          	lbu	a5,-17(s0)
     70001f1a:	85be                	mv	a1,a5
     70001f1c:	00001517          	auipc	a0,0x1
-    70001f20:	bac50513          	addi	a0,a0,-1108 # 70002ac8 <window>
+    70001f20:	bbc50513          	addi	a0,a0,-1092 # 70002ad8 <window>
     70001f24:	00000097          	auipc	ra,0x0
     70001f28:	a32080e7          	jalr	-1486(ra) # 70001956 <window_putchar>
 /embryos/chapter12/apps/putchar.c:19
@@ -4073,7 +4073,7 @@ int readline(char *line, int size) {
     70001f54:	863e                	mv	a2,a5
     70001f56:	fe843583          	ld	a1,-24(s0)
     70001f5a:	00001517          	auipc	a0,0x1
-    70001f5e:	b6e50513          	addi	a0,a0,-1170 # 70002ac8 <window>
+    70001f5e:	b7e50513          	addi	a0,a0,-1154 # 70002ad8 <window>
     70001f62:	00000097          	auipc	ra,0x0
     70001f66:	bbe080e7          	jalr	-1090(ra) # 70001b20 <window_readline>
     70001f6a:	87aa                	mv	a5,a0
@@ -4109,7 +4109,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:23
     for (struct m_hdr **pmh = &free_list; (mh = *pmh); pmh = &mh->next)
     70001f8e:	00001797          	auipc	a5,0x1
-    70001f92:	eaa78793          	addi	a5,a5,-342 # 70002e38 <free_list>
+    70001f92:	eba78793          	addi	a5,a5,-326 # 70002e48 <free_list>
     70001f96:	fef43423          	sd	a5,-24(s0)
     70001f9a:	a035                	j	70001fc6 <malloc+0x50>
 /embryos/chapter12/apps/malloc.c:24
@@ -4143,23 +4143,23 @@ void *malloc(size_t size) {
         }
     if (!brk) brk = (struct m_hdr *) ROUNDUP(&__bss_end[1]) - 1;
     70001fd6:	00001797          	auipc	a5,0x1
-    70001fda:	e6a78793          	addi	a5,a5,-406 # 70002e40 <brk>
+    70001fda:	e7a78793          	addi	a5,a5,-390 # 70002e50 <brk>
     70001fde:	639c                	ld	a5,0(a5)
     70001fe0:	ef91                	bnez	a5,70001ffc <malloc+0x86>
 /embryos/chapter12/apps/malloc.c:28 (discriminator 1)
     70001fe2:	00001797          	auipc	a5,0x1
-    70001fe6:	1e878793          	addi	a5,a5,488 # 700031ca <__bss_end+0x10>
+    70001fe6:	1f878793          	addi	a5,a5,504 # 700031da <__bss_end+0x10>
     70001fea:	07bd                	addi	a5,a5,15
     70001fec:	9bc1                	andi	a5,a5,-16
     70001fee:	17c1                	addi	a5,a5,-16
     70001ff0:	873e                	mv	a4,a5
     70001ff2:	00001797          	auipc	a5,0x1
-    70001ff6:	e4e78793          	addi	a5,a5,-434 # 70002e40 <brk>
+    70001ff6:	e5e78793          	addi	a5,a5,-418 # 70002e50 <brk>
     70001ffa:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:29
     char *next = (char *) brk + size;
     70001ffc:	00001797          	auipc	a5,0x1
-    70002000:	e4478793          	addi	a5,a5,-444 # 70002e40 <brk>
+    70002000:	e5478793          	addi	a5,a5,-428 # 70002e50 <brk>
     70002004:	6398                	ld	a4,0(a5)
     70002006:	fc843783          	ld	a5,-56(s0)
     7000200a:	97ba                	add	a5,a5,a4
@@ -4176,7 +4176,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:31
     mh = brk;
     70002020:	00001797          	auipc	a5,0x1
-    70002024:	e2078793          	addi	a5,a5,-480 # 70002e40 <brk>
+    70002024:	e3078793          	addi	a5,a5,-464 # 70002e50 <brk>
     70002028:	639c                	ld	a5,0(a5)
     7000202a:	fef43023          	sd	a5,-32(s0)
 /embryos/chapter12/apps/malloc.c:32
@@ -4187,7 +4187,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:33
     brk = (struct m_hdr *) next;
     70002038:	00001797          	auipc	a5,0x1
-    7000203c:	e0878793          	addi	a5,a5,-504 # 70002e40 <brk>
+    7000203c:	e1878793          	addi	a5,a5,-488 # 70002e50 <brk>
     70002040:	fd843703          	ld	a4,-40(s0)
     70002044:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:34
@@ -4353,14 +4353,14 @@ void free(void *ptr) {
 /embryos/chapter12/apps/malloc.c:59
     mh->next = free_list;
     7000216a:	00001797          	auipc	a5,0x1
-    7000216e:	cce78793          	addi	a5,a5,-818 # 70002e38 <free_list>
+    7000216e:	cde78793          	addi	a5,a5,-802 # 70002e48 <free_list>
     70002172:	6398                	ld	a4,0(a5)
     70002174:	fe843783          	ld	a5,-24(s0)
     70002178:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:60
     free_list = mh;
     7000217a:	00001797          	auipc	a5,0x1
-    7000217e:	cbe78793          	addi	a5,a5,-834 # 70002e38 <free_list>
+    7000217e:	cce78793          	addi	a5,a5,-818 # 70002e48 <free_list>
     70002182:	fe843703          	ld	a4,-24(s0)
     70002186:	e398                	sd	a4,0(a5)
     70002188:	a011                	j	7000218c <free+0x3e>
@@ -4403,7 +4403,7 @@ static inline void user_delay(int delay_ms) {  // pseudo system call
     uint64_t deadline = now + (uint64_t) delay_ms * 1000000ULL; // convert ms to ns
     700021b8:	fdc42703          	lw	a4,-36(s0)
     700021bc:	000f47b7          	lui	a5,0xf4
-    700021c0:	24078793          	addi	a5,a5,576 # f4240 <text_file_end+0xf07b0>
+    700021c0:	24078793          	addi	a5,a5,576 # f4240 <text_file_end+0xf0798>
     700021c4:	02f707b3          	mul	a5,a4,a5
     700021c8:	fe843703          	ld	a4,-24(s0)
     700021cc:	97ba                	add	a5,a5,a4
@@ -4622,7 +4622,7 @@ static void clear_screen(uint8_t color) {
     70002322:	4705                	li	a4,1
     70002324:	85be                	mv	a1,a5
     70002326:	00001517          	auipc	a0,0x1
-    7000232a:	b2250513          	addi	a0,a0,-1246 # 70002e48 <bp>
+    7000232a:	b3250513          	addi	a0,a0,-1230 # 70002e58 <bp>
     7000232e:	fffff097          	auipc	ra,0xfffff
     70002332:	fbc080e7          	jalr	-68(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:59 (discriminator 3)
@@ -4692,7 +4692,7 @@ static void draw_rect(int x0, int y0, int w, int h, uint8_t color) {
     700023ba:	4705                	li	a4,1
     700023bc:	85be                	mv	a1,a5
     700023be:	00001517          	auipc	a0,0x1
-    700023c2:	a8a50513          	addi	a0,a0,-1398 # 70002e48 <bp>
+    700023c2:	a9a50513          	addi	a0,a0,-1382 # 70002e58 <bp>
     700023c6:	fffff097          	auipc	ra,0xfffff
     700023ca:	f24080e7          	jalr	-220(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:66 (discriminator 3)
@@ -4761,7 +4761,7 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
 /embryos/chapter12/apps/stopwatch.c:87
         uint8_t bits = digit3x5[d][row];
     70002446:	00000617          	auipc	a2,0x0
-    7000244a:	5e260613          	addi	a2,a2,1506 # 70002a28 <digit3x5>
+    7000244a:	5fa60613          	addi	a2,a2,1530 # 70002a40 <digit3x5>
     7000244e:	fec42683          	lw	a3,-20(s0)
     70002452:	fd442703          	lw	a4,-44(s0)
     70002456:	87ba                	mv	a5,a4
@@ -4804,7 +4804,7 @@ static void draw_digit(int x, int y, int d, uint8_t color) {
     700024ae:	4705                	li	a4,1
     700024b0:	85be                	mv	a1,a5
     700024b2:	00001517          	auipc	a0,0x1
-    700024b6:	99650513          	addi	a0,a0,-1642 # 70002e48 <bp>
+    700024b6:	9a650513          	addi	a0,a0,-1626 # 70002e58 <bp>
     700024ba:	fffff097          	auipc	ra,0xfffff
     700024be:	e30080e7          	jalr	-464(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:88 (discriminator 2)
@@ -4867,7 +4867,7 @@ static void draw_colon(int x, int y, uint8_t color) {
     7000252e:	4705                	li	a4,1
     70002530:	85be                	mv	a1,a5
     70002532:	00001517          	auipc	a0,0x1
-    70002536:	91650513          	addi	a0,a0,-1770 # 70002e48 <bp>
+    70002536:	92650513          	addi	a0,a0,-1754 # 70002e58 <bp>
     7000253a:	fffff097          	auipc	ra,0xfffff
     7000253e:	db0080e7          	jalr	-592(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:99
@@ -4880,7 +4880,7 @@ static void draw_colon(int x, int y, uint8_t color) {
     70002554:	4705                	li	a4,1
     70002556:	85be                	mv	a1,a5
     70002558:	00001517          	auipc	a0,0x1
-    7000255c:	8f050513          	addi	a0,a0,-1808 # 70002e48 <bp>
+    7000255c:	90050513          	addi	a0,a0,-1792 # 70002e58 <bp>
     70002560:	fffff097          	auipc	ra,0xfffff
     70002564:	d8a080e7          	jalr	-630(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:100
@@ -4914,7 +4914,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     uint64_t ms = elapsed / 1000000ULL;
     70002596:	fe043703          	ld	a4,-32(s0)
     7000259a:	00000797          	auipc	a5,0x0
-    7000259e:	4c678793          	addi	a5,a5,1222 # 70002a60 <digit3x5+0x38>
+    7000259e:	4de78793          	addi	a5,a5,1246 # 70002a78 <digit3x5+0x38>
     700025a2:	639c                	ld	a5,0(a5)
     700025a4:	02f737b3          	mulhu	a5,a4,a5
     700025a8:	83c9                	srli	a5,a5,0x12
@@ -4924,12 +4924,12 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700025ae:	fd843783          	ld	a5,-40(s0)
     700025b2:	0057d713          	srli	a4,a5,0x5
     700025b6:	00000797          	auipc	a5,0x0
-    700025ba:	4b278793          	addi	a5,a5,1202 # 70002a68 <digit3x5+0x40>
+    700025ba:	4ca78793          	addi	a5,a5,1226 # 70002a80 <digit3x5+0x40>
     700025be:	639c                	ld	a5,0(a5)
     700025c0:	02f737b3          	mulhu	a5,a4,a5
     700025c4:	0057d693          	srli	a3,a5,0x5
     700025c8:	00000797          	auipc	a5,0x0
-    700025cc:	4a878793          	addi	a5,a5,1192 # 70002a70 <digit3x5+0x48>
+    700025cc:	4c078793          	addi	a5,a5,1216 # 70002a88 <digit3x5+0x48>
     700025d0:	639c                	ld	a5,0(a5)
     700025d2:	02f6b7b3          	mulhu	a5,a3,a5
     700025d6:	0057d713          	srli	a4,a5,0x5
@@ -4944,12 +4944,12 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700025ea:	fd843783          	ld	a5,-40(s0)
     700025ee:	0037d713          	srli	a4,a5,0x3
     700025f2:	00000797          	auipc	a5,0x0
-    700025f6:	48678793          	addi	a5,a5,1158 # 70002a78 <digit3x5+0x50>
+    700025f6:	49e78793          	addi	a5,a5,1182 # 70002a90 <digit3x5+0x50>
     700025fa:	639c                	ld	a5,0(a5)
     700025fc:	02f737b3          	mulhu	a5,a4,a5
     70002600:	0047d693          	srli	a3,a5,0x4
     70002604:	00000797          	auipc	a5,0x0
-    70002608:	46c78793          	addi	a5,a5,1132 # 70002a70 <digit3x5+0x48>
+    70002608:	48478793          	addi	a5,a5,1156 # 70002a88 <digit3x5+0x48>
     7000260c:	639c                	ld	a5,0(a5)
     7000260e:	02f6b7b3          	mulhu	a5,a3,a5
     70002612:	0057d713          	srli	a4,a5,0x5
@@ -4964,12 +4964,12 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002626:	fd843783          	ld	a5,-40(s0)
     7000262a:	0027d713          	srli	a4,a5,0x2
     7000262e:	00000797          	auipc	a5,0x0
-    70002632:	45278793          	addi	a5,a5,1106 # 70002a80 <digit3x5+0x58>
+    70002632:	46a78793          	addi	a5,a5,1130 # 70002a98 <digit3x5+0x58>
     70002636:	639c                	ld	a5,0(a5)
     70002638:	02f737b3          	mulhu	a5,a4,a5
     7000263c:	0027d693          	srli	a3,a5,0x2
     70002640:	00000797          	auipc	a5,0x0
-    70002644:	44878793          	addi	a5,a5,1096 # 70002a88 <digit3x5+0x60>
+    70002644:	46078793          	addi	a5,a5,1120 # 70002aa0 <digit3x5+0x60>
     70002648:	639c                	ld	a5,0(a5)
     7000264a:	02f6b7b3          	mulhu	a5,a3,a5
     7000264e:	0037d713          	srli	a4,a5,0x3
@@ -5032,7 +5032,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700026bc:	86be                	mv	a3,a5
     700026be:	0006871b          	sext.w	a4,a3
     700026c2:	666667b7          	lui	a5,0x66666
-    700026c6:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bd7>
+    700026c6:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bbf>
     700026ca:	02f707b3          	mul	a5,a4,a5
     700026ce:	9381                	srli	a5,a5,0x20
     700026d0:	4027d79b          	sraiw	a5,a5,0x2
@@ -5053,7 +5053,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700026fc:	873e                	mv	a4,a5
     700026fe:	0007069b          	sext.w	a3,a4
     70002702:	666667b7          	lui	a5,0x66666
-    70002706:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bd7>
+    70002706:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bbf>
     7000270a:	02f687b3          	mul	a5,a3,a5
     7000270e:	9381                	srli	a5,a5,0x20
     70002710:	4027d79b          	sraiw	a5,a5,0x2
@@ -5088,7 +5088,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     70002760:	86be                	mv	a3,a5
     70002762:	0006871b          	sext.w	a4,a3
     70002766:	666667b7          	lui	a5,0x66666
-    7000276a:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bd7>
+    7000276a:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bbf>
     7000276e:	02f707b3          	mul	a5,a4,a5
     70002772:	9381                	srli	a5,a5,0x20
     70002774:	4027d79b          	sraiw	a5,a5,0x2
@@ -5109,7 +5109,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700027a0:	873e                	mv	a4,a5
     700027a2:	0007069b          	sext.w	a3,a4
     700027a6:	666667b7          	lui	a5,0x66666
-    700027aa:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bd7>
+    700027aa:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66662bbf>
     700027ae:	02f687b3          	mul	a5,a3,a5
     700027b2:	9381                	srli	a5,a5,0x20
     700027b4:	4027d79b          	sraiw	a5,a5,0x2
@@ -5140,7 +5140,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
     700027fa:	863e                	mv	a2,a5
     700027fc:	45dd                	li	a1,23
     700027fe:	00000517          	auipc	a0,0x0
-    70002802:	64a50513          	addi	a0,a0,1610 # 70002e48 <bp>
+    70002802:	65a50513          	addi	a0,a0,1626 # 70002e58 <bp>
     70002806:	fffff097          	auipc	ra,0xfffff
     7000280a:	ae4080e7          	jalr	-1308(ra) # 700012ea <bp_put>
 /embryos/chapter12/apps/stopwatch.c:124
@@ -5178,7 +5178,7 @@ static void sw_render(struct stopwatch *sw, uint64_t now) {
 
     bp_flush(&bp);
     7000284c:	00000517          	auipc	a0,0x0
-    70002850:	5fc50513          	addi	a0,a0,1532 # 70002e48 <bp>
+    70002850:	60c50513          	addi	a0,a0,1548 # 70002e58 <bp>
     70002854:	fffff097          	auipc	ra,0xfffff
     70002858:	cee080e7          	jalr	-786(ra) # 70001542 <bp_flush>
 /embryos/chapter12/apps/stopwatch.c:130
@@ -5296,13 +5296,13 @@ int main(void) {
     struct stopwatch sw;
     bp_init(&bp, 0, 0, WIDTH, HEIGHT, bp_buffer);
     70002918:	00000797          	auipc	a5,0x0
-    7000291c:	54878793          	addi	a5,a5,1352 # 70002e60 <bp_buffer>
+    7000291c:	55878793          	addi	a5,a5,1368 # 70002e70 <bp_buffer>
     70002920:	4759                	li	a4,22
     70002922:	02700693          	li	a3,39
     70002926:	4601                	li	a2,0
     70002928:	4581                	li	a1,0
     7000292a:	00000517          	auipc	a0,0x0
-    7000292e:	51e50513          	addi	a0,a0,1310 # 70002e48 <bp>
+    7000292e:	52e50513          	addi	a0,a0,1326 # 70002e58 <bp>
     70002932:	fffff097          	auipc	ra,0xfffff
     70002936:	916080e7          	jalr	-1770(ra) # 70001248 <bp_init>
 /embryos/chapter12/apps/stopwatch.c:160
@@ -5313,116 +5313,130 @@ int main(void) {
     70002942:	fea43423          	sd	a0,-24(s0)
 /embryos/chapter12/apps/stopwatch.c:161
     sw_init(&sw, now);
-    70002946:	fc840793          	addi	a5,s0,-56
+    70002946:	fc040793          	addi	a5,s0,-64
     7000294a:	fe843583          	ld	a1,-24(s0)
     7000294e:	853e                	mv	a0,a5
     70002950:	00000097          	auipc	ra,0x0
     70002954:	89a080e7          	jalr	-1894(ra) # 700021ea <sw_init>
 /embryos/chapter12/apps/stopwatch.c:164
+
+    
+    uint64_t past = user_gettime() - 1;
+    70002958:	ffffd097          	auipc	ra,0xffffd
+    7000295c:	70c080e7          	jalr	1804(ra) # 70000064 <user_gettime>
+    70002960:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/stopwatch.c:164 (discriminator 1)
+    70002962:	17fd                	addi	a5,a5,-1
+    70002964:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/stopwatch.c:165
+    user_sleep(past);
+    70002968:	fe043503          	ld	a0,-32(s0)
+    7000296c:	ffffd097          	auipc	ra,0xffffd
+    70002970:	700080e7          	jalr	1792(ra) # 7000006c <user_sleep>
+/embryos/chapter12/apps/stopwatch.c:169
+
     
 
     sw_render(&sw, now);
-    70002958:	fc840793          	addi	a5,s0,-56
-    7000295c:	fe843583          	ld	a1,-24(s0)
-    70002960:	853e                	mv	a0,a5
-    70002962:	00000097          	auipc	ra,0x0
-    70002966:	c10080e7          	jalr	-1008(ra) # 70002572 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:169
+    70002974:	fc040793          	addi	a5,s0,-64
+    70002978:	fe843583          	ld	a1,-24(s0)
+    7000297c:	853e                	mv	a0,a5
+    7000297e:	00000097          	auipc	ra,0x0
+    70002982:	bf4080e7          	jalr	-1036(ra) # 70002572 <sw_render>
+/embryos/chapter12/apps/stopwatch.c:174
 
     // loop that handles events and updates display
     for (;;) {
         int ev;
         if (sw.state == SW_RUNNING) {
-    7000296a:	fc842703          	lw	a4,-56(s0)
-    7000296e:	4785                	li	a5,1
-    70002970:	06f71663          	bne	a4,a5,700029dc <main+0xcc>
-/embryos/chapter12/apps/stopwatch.c:170
-            ev = user_get(0);
-    70002974:	4501                	li	a0,0
-    70002976:	ffffd097          	auipc	ra,0xffffd
-    7000297a:	6be080e7          	jalr	1726(ra) # 70000034 <user_get>
-    7000297e:	87aa                	mv	a5,a0
-    70002980:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/stopwatch.c:171
-            now = user_gettime();
-    70002984:	ffffd097          	auipc	ra,0xffffd
-    70002988:	6e0080e7          	jalr	1760(ra) # 70000064 <user_gettime>
-    7000298c:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:172
-            if (ev != USER_GET_NO_INPUT)
-    70002990:	fe442783          	lw	a5,-28(s0)
-    70002994:	2781                	sext.w	a5,a5
-    70002996:	cf89                	beqz	a5,700029b0 <main+0xa0>
-/embryos/chapter12/apps/stopwatch.c:173
-                handle_event(&sw, ev, now);
-    70002998:	fe442703          	lw	a4,-28(s0)
-    7000299c:	fc840793          	addi	a5,s0,-56
-    700029a0:	fe843603          	ld	a2,-24(s0)
-    700029a4:	85ba                	mv	a1,a4
-    700029a6:	853e                	mv	a0,a5
-    700029a8:	00000097          	auipc	ra,0x0
-    700029ac:	ebe080e7          	jalr	-322(ra) # 70002866 <handle_event>
+    70002986:	fc042703          	lw	a4,-64(s0)
+    7000298a:	4785                	li	a5,1
+    7000298c:	06f71663          	bne	a4,a5,700029f8 <main+0xe8>
 /embryos/chapter12/apps/stopwatch.c:175
+            ev = user_get(0);
+    70002990:	4501                	li	a0,0
+    70002992:	ffffd097          	auipc	ra,0xffffd
+    70002996:	6a2080e7          	jalr	1698(ra) # 70000034 <user_get>
+    7000299a:	87aa                	mv	a5,a0
+    7000299c:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/stopwatch.c:176
+            now = user_gettime();
+    700029a0:	ffffd097          	auipc	ra,0xffffd
+    700029a4:	6c4080e7          	jalr	1732(ra) # 70000064 <user_gettime>
+    700029a8:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/stopwatch.c:177
+            if (ev != USER_GET_NO_INPUT)
+    700029ac:	fdc42783          	lw	a5,-36(s0)
+    700029b0:	2781                	sext.w	a5,a5
+    700029b2:	cf89                	beqz	a5,700029cc <main+0xbc>
+/embryos/chapter12/apps/stopwatch.c:178
+                handle_event(&sw, ev, now);
+    700029b4:	fdc42703          	lw	a4,-36(s0)
+    700029b8:	fc040793          	addi	a5,s0,-64
+    700029bc:	fe843603          	ld	a2,-24(s0)
+    700029c0:	85ba                	mv	a1,a4
+    700029c2:	853e                	mv	a0,a5
+    700029c4:	00000097          	auipc	ra,0x0
+    700029c8:	ea2080e7          	jalr	-350(ra) # 70002866 <handle_event>
+/embryos/chapter12/apps/stopwatch.c:180
             // test for sleep by adding delay to make sure it doesn't affect timekeeping accuracy
             user_delay(5000);
-    700029b0:	6785                	lui	a5,0x1
-    700029b2:	38878513          	addi	a0,a5,904 # 1388 <flat_file_off+0x388>
-    700029b6:	fffff097          	auipc	ra,0xfffff
-    700029ba:	7de080e7          	jalr	2014(ra) # 70002194 <user_delay>
-/embryos/chapter12/apps/stopwatch.c:177
-
-            sw_render(&sw, now);
-    700029be:	fc840793          	addi	a5,s0,-56
-    700029c2:	fe843583          	ld	a1,-24(s0)
-    700029c6:	853e                	mv	a0,a5
-    700029c8:	00000097          	auipc	ra,0x0
-    700029cc:	baa080e7          	jalr	-1110(ra) # 70002572 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:178
-            user_delay(10);
-    700029d0:	4529                	li	a0,10
+    700029cc:	6785                	lui	a5,0x1
+    700029ce:	38878513          	addi	a0,a5,904 # 1388 <flat_file_off+0x388>
     700029d2:	fffff097          	auipc	ra,0xfffff
     700029d6:	7c2080e7          	jalr	1986(ra) # 70002194 <user_delay>
-    700029da:	bf41                	j	7000296a <main+0x5a>
-/embryos/chapter12/apps/stopwatch.c:180
+/embryos/chapter12/apps/stopwatch.c:182
+
+            sw_render(&sw, now);
+    700029da:	fc040793          	addi	a5,s0,-64
+    700029de:	fe843583          	ld	a1,-24(s0)
+    700029e2:	853e                	mv	a0,a5
+    700029e4:	00000097          	auipc	ra,0x0
+    700029e8:	b8e080e7          	jalr	-1138(ra) # 70002572 <sw_render>
+/embryos/chapter12/apps/stopwatch.c:183
+            user_delay(10);
+    700029ec:	4529                	li	a0,10
+    700029ee:	fffff097          	auipc	ra,0xfffff
+    700029f2:	7a6080e7          	jalr	1958(ra) # 70002194 <user_delay>
+    700029f6:	bf41                	j	70002986 <main+0x76>
+/embryos/chapter12/apps/stopwatch.c:185
         } else {
             ev = user_get(1);
-    700029dc:	4505                	li	a0,1
-    700029de:	ffffd097          	auipc	ra,0xffffd
-    700029e2:	656080e7          	jalr	1622(ra) # 70000034 <user_get>
-    700029e6:	87aa                	mv	a5,a0
-    700029e8:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/stopwatch.c:181
+    700029f8:	4505                	li	a0,1
+    700029fa:	ffffd097          	auipc	ra,0xffffd
+    700029fe:	63a080e7          	jalr	1594(ra) # 70000034 <user_get>
+    70002a02:	87aa                	mv	a5,a0
+    70002a04:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/stopwatch.c:186
             now = user_gettime();
-    700029ec:	ffffd097          	auipc	ra,0xffffd
-    700029f0:	678080e7          	jalr	1656(ra) # 70000064 <user_gettime>
-    700029f4:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/stopwatch.c:182
+    70002a08:	ffffd097          	auipc	ra,0xffffd
+    70002a0c:	65c080e7          	jalr	1628(ra) # 70000064 <user_gettime>
+    70002a10:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/stopwatch.c:187
             handle_event(&sw, ev, now);
-    700029f8:	fe442703          	lw	a4,-28(s0)
-    700029fc:	fc840793          	addi	a5,s0,-56
-    70002a00:	fe843603          	ld	a2,-24(s0)
-    70002a04:	85ba                	mv	a1,a4
-    70002a06:	853e                	mv	a0,a5
-    70002a08:	00000097          	auipc	ra,0x0
-    70002a0c:	e5e080e7          	jalr	-418(ra) # 70002866 <handle_event>
-/embryos/chapter12/apps/stopwatch.c:183
+    70002a14:	fdc42703          	lw	a4,-36(s0)
+    70002a18:	fc040793          	addi	a5,s0,-64
+    70002a1c:	fe843603          	ld	a2,-24(s0)
+    70002a20:	85ba                	mv	a1,a4
+    70002a22:	853e                	mv	a0,a5
+    70002a24:	00000097          	auipc	ra,0x0
+    70002a28:	e42080e7          	jalr	-446(ra) # 70002866 <handle_event>
+/embryos/chapter12/apps/stopwatch.c:188
             sw_render(&sw, now);
-    70002a10:	fc840793          	addi	a5,s0,-56
-    70002a14:	fe843583          	ld	a1,-24(s0)
-    70002a18:	853e                	mv	a0,a5
-    70002a1a:	00000097          	auipc	ra,0x0
-    70002a1e:	b58080e7          	jalr	-1192(ra) # 70002572 <sw_render>
-/embryos/chapter12/apps/stopwatch.c:167
+    70002a2c:	fc040793          	addi	a5,s0,-64
+    70002a30:	fe843583          	ld	a1,-24(s0)
+    70002a34:	853e                	mv	a0,a5
+    70002a36:	00000097          	auipc	ra,0x0
+    70002a3a:	b3c080e7          	jalr	-1220(ra) # 70002572 <sw_render>
+/embryos/chapter12/apps/stopwatch.c:172
     for (;;) {
-    70002a22:	b7a1                	j	7000296a <main+0x5a>
-    70002a24:	0000                	unimp
-	...
+    70002a3e:	b7a1                	j	70002986 <main+0x76>
 
-0000000070002a28 <digit3x5>:
-    70002a28:	0507 0505 0207 0206 0702 0107 0407 0707     ................
-    70002a38:	0701 0701 0505 0107 0701 0704 0701 0407     ................
-    70002a48:	0507 0707 0101 0101 0507 0507 0707 0705     ................
-    70002a58:	0701 0000 0000 0000 34db d7b6 de82 431b     .........4.....C
-    70002a68:	8771 2f60 7b27 045e 8889 8888 8888 8888     q.`/'{^.........
-    70002a78:	f7cf e353 9ba5 20c4 f5c3 5c28 c28f 28f5     ..S.... ..(\...(
-    70002a88:	cccd cccc cccc cccc                         ........
+0000000070002a40 <digit3x5>:
+    70002a40:	0507 0505 0207 0206 0702 0107 0407 0707     ................
+    70002a50:	0701 0701 0505 0107 0701 0704 0701 0407     ................
+    70002a60:	0507 0707 0101 0101 0507 0507 0707 0705     ................
+    70002a70:	0701 0000 0000 0000 34db d7b6 de82 431b     .........4.....C
+    70002a80:	8771 2f60 7b27 045e 8889 8888 8888 8888     q.`/'{^.........
+    70002a90:	f7cf e353 9ba5 20c4 f5c3 5c28 c28f 28f5     ..S.... ..(\...(
+    70002aa0:	cccd cccc cccc cccc                         ........
