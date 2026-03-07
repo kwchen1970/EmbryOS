@@ -25,7 +25,7 @@ In addition to the library itself, you will build an **animated application** th
   * calls `thread_sleep()`
   * blocks in `thread_get()`
   * blocks in `sema_dec()`
-  * exits
+  * exits (i.e., calls `thread_exit()` or returns from its main function)
 * Context switches are explicit and use provided assembly helpers
 
 ---
@@ -99,6 +99,7 @@ extern void ctx_start(void **save_sp, void *new_sp);
 thread_create(f, arg, stack_size);
 ```
 
+* Calls `f(arg)` as a thread
 * Allocates a stack of at least `stack_size` bytes, aligned at 16 bytes)
     (using `malloc`, which already aligns at 16 bytes)
 
@@ -114,6 +115,7 @@ void thread_exit();
 * Eventually frees associated resources (stack, control block)
 * Switches to another runnable thread
 * Recall that a thread cannot clean itself up (with no stack, the code would not be able to call `ctx_switch`)
+* A thread that returns from its main function should call this function implicitly
 
 ---
 
@@ -165,19 +167,6 @@ There is **no non-blocking variant**.
   * Deliver the input event to that thread
 * Input events must **not be lost**
 
-## Scheduler Requirements
-
-Your scheduler must support blocking for **four distinct reasons**:
-
-1. Runnable
-2. Sleeping (`thread_sleep`)
-3. Waiting for input (`thread_get`)
-4. Waiting on a semaphore (`sema_dec`)
-
-Blocked threads must never appear in the runnable queue until their blocking condition is resolved.
-
----
-
 ## Semaphores
 
 You must implement **counting semaphores**.
@@ -216,6 +205,19 @@ void sema_release(struct sema *sema);
 
 ---
 
+## Scheduler Requirements
+
+Your scheduler must support blocking for **four distinct reasons**:
+
+1. Runnable
+2. Sleeping (`thread_sleep`)
+3. Waiting for input (`thread_get`)
+4. Waiting on a semaphore (`sema_dec`)
+
+Blocked threads must never appear in the runnable queue until their blocking condition is resolved.
+
+---
+
 ## Animated Demo Application
 
 You must build an animated application that:
@@ -240,22 +242,34 @@ The demo must clearly show that:
 
 ---
 
+## Files
+
+This project directory contains the following two files:
+
+* `thread.h`: thread interface
+* `t_pong.c`: multi-threaded version of the `pong` game as an example
+
 ## Deliverables
 
-```
-threads/
-├── README.md        # Design explanation
-├── thread.c         # Threading implementation
-├── thread.h         # Interface
-└── (optional files)
-```
+Implement your code within `chapter12/apps`.
+There should be at least the following three files:
 
-Your README must briefly explain:
+* `thread.h`: thread interface (which you can just copy from this directory)
+* `thread.c`: thread interface implementation
+* `game.c`: your game
+
+Submit a tar file of this
+directory, which you can create by running the following command in
+the `chapter12/apps` directory: `make clean; tar cf ../threading.tar .`
+
+In `chapter12/apps`, include a file called "explanation.md" which explains:
 
 * Thread control block design
 * Run-queue organization
 * Input multiplexing approach
 * Semaphore blocking and wake-up logic
+* Instructions on how to play the game
+* How you used AI, if at all
 
 ---
 
@@ -275,4 +289,4 @@ This project implements a **complete user-level runtime system**:
 * Blocking I/O
 * Synchronization primitives
 
-Correctness depends on careful scheduling, clean separation of concerns, and precise handling of blocking conditions. This is one of the most conceptually important projects in EmbryOS—design it carefully before you code.
+Correctness depends on careful scheduling, clean separation of concerns, and precise handling of blocking conditions. This is one of the most conceptually important projects in EmbryOS.  Design it carefully before you code.
