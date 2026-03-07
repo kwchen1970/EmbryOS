@@ -1,10 +1,16 @@
 #include "thread.h"
 #include <string.h>
+#include <stdint.h>
+#include <stddef.h>
+
+void *malloc(size_t size);
+void free(void *ptr);
 
 // Define these external functions from syscall interface
 extern int user_get(int block);
 extern uint64_t user_gettime(void);
 extern void user_put(int col, int row, uint16_t cell);
+extern void user_exit();
 
 // Import context switching primitives
 extern void ctx_switch(void **old_sp, void *new_sp);
@@ -177,7 +183,7 @@ static void schedule(void) {
     if (!next) {
         // Program should exit - all remaining threads are blocked
         user_put(0, 0, 0);  // Dummy operation to keep process alive briefly
-        exit(0);
+        user_exit();
     }
     
     if (next == current_thread) {
@@ -198,7 +204,7 @@ static void schedule(void) {
 }
 
 // Called when a new thread starts (must be called from thread context)
-static void exec_user(void) {
+void exec_user(void) {
     // This is called via ctx_start when a thread starts
     // The thread function and argument are already on the stack
     // This is a placeholder - actual thread functions handle their own logic
@@ -218,7 +224,7 @@ void thread_init(void) {
     // Create and switch to main thread (becomes first thread)
     // We'll do this by creating a thread for the current execution context
     thread_t *main_thread = malloc(sizeof(thread_t));
-    if (!main_thread) exit(1);
+    if (!main_thread) user_exit();
     
     main_thread->tid = next_tid++;
     main_thread->stack_base = NULL;  // Main thread uses existing stack
@@ -236,13 +242,13 @@ void thread_init(void) {
 void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
     // Allocate stack - malloc aligns at 16 bytes
     unsigned char *stack = (unsigned char *)malloc(stack_size);
-    if (!stack) exit(1);
+    if (!stack) user_exit();
     
     // Allocate thread control block
     thread_t *t = (thread_t *)malloc(sizeof(thread_t));
     if (!t) {
         free(stack);
-        exit(1);
+        user_exit();
     }
     
     // Initialize thread control block
@@ -340,13 +346,13 @@ void thread_exit(void) {
     schedule();
     
     // Should never reach here
-    exit(0);
+    user_exit();
 }
 
 // Create a semaphore
 struct sema *sema_create(unsigned int count) {
     struct sema *s = (struct sema *)malloc(sizeof(struct sema));
-    if (!s) exit(1);
+    if (!s) user_exit;
     
     s->count = count;
     s->waiting_list = NULL;
