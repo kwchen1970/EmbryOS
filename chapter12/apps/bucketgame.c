@@ -21,6 +21,10 @@ void print_score(int x, int score) {
 #define BUCKET_W 7
 #define MAX_DOTS 16
 
+// Game area starts at row 1 (row 0 is reserved for the score HUD)
+#define GAME_Y_OFFSET 1
+#define GAME_H (SCREEN_H - GAME_Y_OFFSET)
+
 enum DotType { DOT_GREEN, DOT_GOLD, DOT_RED };
 
 typedef struct {
@@ -35,11 +39,11 @@ static int game_over = 0;
 static Dot dots[MAX_DOTS];
 static struct sema *sem_state;
 static struct bp bp;
-static uint8_t bp_buffer[SCREEN_W * SCREEN_H];
+static uint8_t bp_buffer[SCREEN_W * GAME_H];
 
 void draw_bucket() {
 	for (int i = 0; i < BUCKET_W; i++) {
-		bp_put(&bp, bucket_x + i, SCREEN_H - 2, 7, BP_LAZY);
+		bp_put(&bp, bucket_x + i, GAME_H - 2, 7, BP_LAZY);
 	}
 }
 
@@ -56,6 +60,10 @@ void draw_dots() {
 }
 
 void draw_score() {
+	// Clear the entire score row first to prevent leftover digits/colors
+	for (int i = 0; i < SCREEN_W; i++) {
+		user_put(i, 0, CELL(' ', 7, 0));
+	}
 	const char *label = "SCORE:";
 	for (int i = 0; label[i] != '\0'; i++) {
 		user_put(i, 0, CELL(label[i], 7, 0));
@@ -65,7 +73,7 @@ void draw_score() {
 
 void clear_screen() {
 	for (int x = 0; x < SCREEN_W; x++) {
-		for (int y = 0; y < SCREEN_H; y++) {
+		for (int y = 0; y < GAME_H; y++) {
 			bp_put(&bp, x, y, 0, BP_LAZY);
 		}
 	}
@@ -100,25 +108,26 @@ void falling_thread(void *arg) {
 
 				dots[i].y++;
 
-				if (dots[i].y == SCREEN_H - 2 &&
+				// Catch at bucket row (GAME_H - 2)
+				if (dots[i].y == GAME_H - 2 &&
 				    dots[i].x >= bucket_x &&
 				    dots[i].x < bucket_x + BUCKET_W) {
 					if (dots[i].type == DOT_GREEN) score += 1;
 					else if (dots[i].type == DOT_GOLD) score += 10;
 					else if (dots[i].type == DOT_RED) game_over = 1;
 					dots[i].active = 0;
-				} else if (dots[i].y >= SCREEN_H - 1) {
+				} else if (dots[i].y >= GAME_H - 1) {
 					dots[i].active = 0;
 				}
 			}
 		}
 
-		// Spawn new balls a bit less often
+		// Spawn new balls
 		if (tick % 30 == 0) {
 			for (int i = 0; i < MAX_DOTS; i++) {
 				if (!dots[i].active) {
 					dots[i].x = (int)((user_gettime() * 17ULL + i * 13ULL) % SCREEN_W);
-					dots[i].y = 2;
+					dots[i].y = 1;
 
 					int r = (int)((user_gettime() * 23ULL + i * 7ULL) % 100);
 					if (r < 80) dots[i].type = DOT_GREEN;
@@ -144,8 +153,9 @@ void background_thread(void *arg) {
 
 	while (!game_over) {
 		sema_dec(sem_state);
+		// Start from row 1 to leave a clean gap under the score HUD
 		for (int x = 0; x < SCREEN_W; x++) {
-			bp_put(&bp, x, 0, phase % 8, BP_LAZY);
+			bp_put(&bp, x, 1, phase % 8, BP_LAZY);
 		}
 		sema_inc(sem_state);
 
@@ -159,8 +169,13 @@ void main(void) {
 	thread_init();
 
 	sem_state = sema_create(1);
-	bp_init(&bp, 0, 0, SCREEN_W, SCREEN_H, bp_buffer);
+
+	// bp buffer covers only the game area: rows 1..(SCREEN_H-1) on screen
+	bp_init(&bp, 0, GAME_Y_OFFSET, SCREEN_W, GAME_H, bp_buffer);
 	clear_screen();
+
+	// Draw the score HUD once before threads start so row 0 is never blank
+	draw_score();
 
 	thread_create(bucket_thread, 0, 4096);
 	thread_create(falling_thread, 0, 4096);
@@ -172,7 +187,8 @@ void main(void) {
 		draw_dots();
 		draw_bucket();
 		bp_flush(&bp);
-		draw_score();   // draw text after flush so it stays visible
+		// draw_score uses user_put directly to row 0 — bp_flush never touches it
+		draw_score();
 		sema_inc(sem_state);
 
 		thread_sleep(user_gettime() + 20000000ULL);
@@ -186,7 +202,8 @@ void main(void) {
 	const char *msg = "GAME OVER";
 	int msglen = 9;
 	int x0 = (SCREEN_W - msglen) / 2;
-	int y0 = SCREEN_H / 2;
+	// Center in the game area (offset by GAME_Y_OFFSET)
+	int y0 = GAME_Y_OFFSET + GAME_H / 2;
 	for (int i = 0; i < msglen; i++) {
 		user_put(x0 + i, y0, CELL(msg[i], 4, 0));
 	}
