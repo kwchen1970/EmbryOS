@@ -9,12 +9,19 @@ void free(void *ptr);
 // Define these external functions from syscall interface
 extern int user_get(int block);
 extern uint64_t user_gettime(void);
-extern void user_put(int col, int row, uint16_t cell);
+extern void user_sleep(uint64_t deadline);
+extern void user_put(int row, int col, uint16_t cell);
 extern void user_exit();
 
 // Import context switching primitives
 extern void ctx_switch(void **old_sp, void *new_sp);
 extern void ctx_start(void **save_sp, void *new_sp);
+
+#define INPUT_Q_CAP 64
+static int input_q[INPUT_Q_CAP];
+static unsigned int input_q_head = 0;
+static unsigned int input_q_tail = 0;
+static unsigned int input_q_count = 0;
 
 // Thread state enum
 typedef enum {
@@ -40,6 +47,13 @@ typedef struct thread {
     
     // Linked list pointers
     struct thread *next;
+
+    void (*start_fn)(void *);
+    void *start_arg;
+    int started;
+
+    int input_event; 
+
 } thread_t;
 
 // Semaphore structure
@@ -53,13 +67,16 @@ static thread_t *runnable_queue = NULL;
 static thread_t *sleeping_queue = NULL;
 static thread_t *waiting_input = NULL;
 static thread_t *current_thread = NULL;
+static thread_t *zombie_list = NULL;
 static int next_tid = 0;
-static int input_buffer = -1;  // -1 means empty
 
 // Forward declarations
 static void schedule(void);
 static void wakeup_sleeping_threads(void);
-static int try_wakeup_input(void);
+static void try_wakeup_input(void);
+static int input_q_push(int ev);
+static int input_q_pop(int *ev);
+static void reap_zombies(void);
 
 // Add thread to runnable queue
 static void enqueue_runnable(thread_t *t) {
@@ -137,19 +154,41 @@ static void wakeup_sleeping_threads(void) {
     }
 }
 
-// Try to wake up input waiter if input available
-static int try_wakeup_input(void) {
-    if (!waiting_input || input_buffer == -1) {
-        return 0;
+// Deliver one pending input event to one waiting thread.
+static void try_wakeup_input(void) {
+    int ev;
+    while (waiting_input && input_q_pop(&ev)) {
+        thread_t *w = waiting_input;
+        waiting_input = w->next;
+        w->next = NULL;
+        w->input_event = ev;
+        enqueue_runnable(w);
     }
-    
-    int result = input_buffer;
-    input_buffer = -1;
-    thread_t *waiter = waiting_input;
-    waiting_input = waiter->next;
-    waiter->next = NULL;
-    enqueue_runnable(waiter);
-    return result;
+}
+
+static int input_q_push(int ev) {
+    if (input_q_count >= INPUT_Q_CAP) return 0;
+    input_q[input_q_tail] = ev;
+    input_q_tail = (input_q_tail + 1) % INPUT_Q_CAP;
+    input_q_count++;
+    return 1;
+}
+
+static int input_q_pop(int *ev) {
+    if (input_q_count == 0) return 0;
+    *ev = input_q[input_q_head];
+    input_q_head = (input_q_head + 1) % INPUT_Q_CAP;
+    input_q_count--;
+    return 1;
+}
+
+static void reap_zombies(void) {
+    while (zombie_list) {
+        thread_t *z = zombie_list;
+        zombie_list = z->next;
+        if (z->stack_base) free(z->stack_base);
+        free(z);
+    }
 }
 
 // Pick next runnable thread
@@ -162,53 +201,70 @@ static thread_t *next_runnable(void) {
 
 // Main scheduler - chooses next thread to run
 static void schedule(void) {
-    thread_t *next = next_runnable();
-    
-    // If no threads are runnable, try to get input to wake waiters
-    while (!next && waiting_input) {
-        int c = user_get(1);  // Blocking call
-        if (c >= -2 && c <= 255) {
-            input_buffer = c;
-            next = next_runnable();
-            if (!next && waiting_input) {
-                // Still no runnable threads, but input arrived
-                // Deliver it and try again
-                continue;
-            }
+    while (1) {
+        // Don't reap when called from thread_exit() before switching away:
+        // in that case current_thread is NULL and we are still on the exiting stack.
+        if (current_thread) {
+            reap_zombies();
         }
-        if (!next) break;
-    }
-    
-    // If still no runnable threads, all threads are blocked on semaphores
-    if (!next) {
-        // Program should exit - all remaining threads are blocked
-        user_put(0, 0, 0);  // Dummy operation to keep process alive briefly
+
+        thread_t *next = next_runnable();
+
+        if (next) {
+            if (next == current_thread) return;
+
+            thread_t *prev = current_thread;
+            current_thread = next;
+
+            if (!prev) {
+                static void *dummy_sp;
+                if (!next->started) {
+                    next->started = 1;
+                    ctx_start(&dummy_sp, next->sp);
+                } else {
+                    ctx_switch(&dummy_sp, next->sp);
+                }
+            } else if (!next->started) {
+                next->started = 1;
+                ctx_start(&prev->sp, next->sp);
+            } else {
+                ctx_switch(&prev->sp, next->sp);
+            }
+            return;
+        }
+
+        // No runnable thread: if input waiters exist, block for one input event.
+        if (waiting_input) {
+            int ev = user_get(1);
+            // If queue is full, deliver directly to one waiting thread.
+            if (!input_q_push(ev) && waiting_input) {
+                thread_t *w = waiting_input;
+                waiting_input = w->next;
+                w->next = NULL;
+                w->input_event = ev;
+                enqueue_runnable(w);
+            }
+            try_wakeup_input();
+            continue;
+        }
+
+        // No runnable and no input waiters: sleep until nearest wake deadline.
+        if (sleeping_queue) {
+            user_sleep(sleeping_queue->wake_time);
+            continue;
+        }
+
+        // No runnable/sleeping/input-waiting thread left => process can end.
         user_exit();
-    }
-    
-    if (next == current_thread) {
-        // Continue running current thread
-        return;
-    }
-    
-    thread_t *prev = current_thread;
-    current_thread = next;
-    
-    if (prev) {
-        // Switch from previous thread to next thread
-        ctx_switch(&prev->sp, next->sp);
-    } else {
-        // This is the first time we're switching to a thread
-        ctx_start(&next->sp, next->sp);
     }
 }
 
 // Called when a new thread starts (must be called from thread context)
 void exec_user(void) {
-    // This is called via ctx_start when a thread starts
-    // The thread function and argument are already on the stack
-    // This is a placeholder - actual thread functions handle their own logic
+    current_thread->start_fn(current_thread->start_arg);
+    thread_exit();   // must not return
 }
+
 
 // Initialize the threading system
 void thread_init(void) {
@@ -218,7 +274,8 @@ void thread_init(void) {
     runnable_queue = NULL;
     sleeping_queue = NULL;
     waiting_input = NULL;
-    input_buffer = -1;
+    zombie_list = NULL;
+    input_q_head = input_q_tail = input_q_count = 0;
     next_tid = 0;
     
     // Create and switch to main thread (becomes first thread)
@@ -234,6 +291,10 @@ void thread_init(void) {
     main_thread->wake_time = 0;
     main_thread->waiting_sema = NULL;
     main_thread->next = NULL;
+    main_thread->started = 1;
+    main_thread->start_fn = NULL;
+    main_thread->start_arg = NULL;
+    main_thread->input_event = 0;
     
     current_thread = main_thread;
 }
@@ -241,6 +302,7 @@ void thread_init(void) {
 // Create and start a new thread
 void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
     // Allocate stack - malloc aligns at 16 bytes
+
     unsigned char *stack = (unsigned char *)malloc(stack_size);
     if (!stack) user_exit();
     
@@ -258,6 +320,15 @@ void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
     t->state = THREAD_RUNNABLE;
     t->wake_time = 0;
     t->waiting_sema = NULL;
+
+    t->start_fn = f;
+    t->start_arg = arg;
+    t->started = 0;
+
+    t->input_event = 0;
+
+
+
     
     // Set up stack with return address and argument
     // Stack grows downward; sp points to top(lowest address)
@@ -265,16 +336,6 @@ void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
     
     // Align stack to 16 bytes (required for many ABIs)
     sp = (unsigned char *)((unsigned long)sp & ~15UL);
-    
-    // Push thread function and argument for thread wrapper
-    sp -= sizeof(void *);  // Space for return address
-    *(void **)sp = (void *)&thread_exit;  // Return address
-    
-    sp -= sizeof(void *);
-    *(void **)sp = arg;
-    
-    sp -= sizeof(void *);
-    *(void **)sp = (void *)f;
     
     t->sp = sp;
     
@@ -285,7 +346,7 @@ void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
 // Yield control to next thread
 void thread_yield(void) {
     thread_t *prev = current_thread;
-    current_thread = NULL;
+  
     
     // Add current thread back to runnable queue
     if (prev) {
@@ -299,7 +360,7 @@ void thread_yield(void) {
 // Sleep until deadline (in nanoseconds)
 void thread_sleep(uint64_t deadline) {
     thread_t *prev = current_thread;
-    current_thread = NULL;
+
     
     if (prev) {
         enqueue_sleeping(prev, deadline);
@@ -308,30 +369,21 @@ void thread_sleep(uint64_t deadline) {
     schedule();
 }
 
-// Blocking input - returns character or focus change event
 int thread_get(void) {
-    // Check if input is already available
-    if (input_buffer != -1) {
-        int result = input_buffer;
-        input_buffer = -1;
-        return result;
+    int ev;
+    if (input_q_pop(&ev)) {
+        return ev;
     }
-    
-    // Block current thread waiting for input
-    thread_t *prev = current_thread;
-    current_thread = NULL;
-    
-    if (prev) {
-        prev->state = THREAD_WAITING_INPUT;
-        prev->next = waiting_input;
-        waiting_input = prev;
-    }
-    
+
+    thread_t *self = current_thread;
+    self->state = THREAD_WAITING_INPUT;
+    self->next = waiting_input;
+    waiting_input = self;
+
     schedule();
-    
-    // When we resume, input should be in input_buffer
-    return input_buffer;
+    return current_thread->input_event;
 }
+
 
 // Exit current thread
 void thread_exit(void) {
@@ -340,6 +392,8 @@ void thread_exit(void) {
     
     if (prev) {
         prev->state = THREAD_DEAD;
+        prev->next = zombie_list;
+        zombie_list = prev;
     }
     
     // Schedule next thread (and never return)
@@ -352,7 +406,7 @@ void thread_exit(void) {
 // Create a semaphore
 struct sema *sema_create(unsigned int count) {
     struct sema *s = (struct sema *)malloc(sizeof(struct sema));
-    if (!s) user_exit;
+    if (!s) user_exit();
     
     s->count = count;
     s->waiting_list = NULL;
@@ -388,7 +442,7 @@ void sema_dec(struct sema *sema) {
     
     // Block current thread waiting on semaphore
     thread_t *prev = current_thread;
-    current_thread = NULL;
+
     
     if (prev) {
         prev->state = THREAD_WAITING_SEMA;

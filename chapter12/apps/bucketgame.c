@@ -129,6 +129,8 @@ void background_thread(void *arg) {
 }
 
 void main(void) {
+	thread_init();
+
 	sem_state = sema_create(1);
 	bp_init(&bp, 0, 0, SCREEN_W, SCREEN_H, bp_buffer);
 	clear_screen();
@@ -155,4 +157,6 @@ void main(void) {
 		user_put(x0 + i, y0, CELL(msg[i], 4, 0));
 	}
 	thread_sleep(user_gettime() + 200000000ULL); // 200ms
+	thread_exit();
+
 }
