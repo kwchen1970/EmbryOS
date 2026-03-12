@@ -1,35 +1,35 @@
 
-bucketgame:     file format elf64-littleriscv
-bucketgame
+game:     file format elf64-littleriscv
+game
 architecture: riscv:rv64, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x0000000070000000
 
 Program Header:
-0x70000003 off    0x00000000000051cd vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+0x70000003 off    0x0000000000005655 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
          filesz 0x0000000000000063 memsz 0x0000000000000000 flags r--
     LOAD off    0x0000000000001000 vaddr 0x0000000070000000 paddr 0x0000000000001000 align 2**12
-         filesz 0x00000000000038b8 memsz 0x00000000000038b8 flags r-x
-    LOAD off    0x00000000000048b8 vaddr 0x00000000700038b8 paddr 0x00000000000048b8 align 2**12
-         filesz 0x0000000000000915 memsz 0x0000000000000915 flags rw-
+         filesz 0x0000000000003cd0 memsz 0x0000000000003cd0 flags r-x
+    LOAD off    0x0000000000004cd0 vaddr 0x0000000070003cd0 paddr 0x0000000000004cd0 align 2**12
+         filesz 0x0000000000000985 memsz 0x0000000000000985 flags rw-
 
 Sections:
 Idx Name              Size      VMA               LMA               File off  Algn  Flags
-  0 .text             000038b8  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data             00000915  00000000700038b8  00000000000048b8  000048b8  2**3  CONTENTS, ALLOC, LOAD, DATA
-  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000051cd  2**0  CONTENTS, READONLY
-  3 .comment          00000034  0000000000000000  0000000000000000  00005230  2**0  CONTENTS, READONLY
-  4 .debug_line       000033fd  0000000000000000  0000000000000000  00005264  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  5 .debug_line_str   0000017c  0000000000000000  0000000000000000  00008661  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_info       00002f48  0000000000000000  0000000000000000  000087dd  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  7 .debug_abbrev     00001196  0000000000000000  0000000000000000  0000b725  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .debug_aranges    000002d0  0000000000000000  0000000000000000  0000c8c0  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_str        000008ca  0000000000000000  0000000000000000  0000cb90  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_frame      00000f40  0000000000000000  0000000000000000  0000d460  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_rnglists   00000044  0000000000000000  0000000000000000  0000e3a0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  0 .text             00003cd0  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data             00000985  0000000070003cd0  0000000000004cd0  00004cd0  2**3  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  00005655  2**0  CONTENTS, READONLY
+  3 .comment          00000034  0000000000000000  0000000000000000  000056b8  2**0  CONTENTS, READONLY
+  4 .debug_line       0000363d  0000000000000000  0000000000000000  000056ec  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_line_str   00000176  0000000000000000  0000000000000000  00008d29  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_info       000030c5  0000000000000000  0000000000000000  00008e9f  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev     00001198  0000000000000000  0000000000000000  0000bf64  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges    000002d0  0000000000000000  0000000000000000  0000d100  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str        000008d6  0000000000000000  0000000000000000  0000d3d0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_frame      00000f70  0000000000000000  0000000000000000  0000dca8  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_rnglists   00000044  0000000000000000  0000000000000000  0000ec18  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 0000000070000000 l    d  .text	0000000000000000 .text
-00000000700038b8 l    d  .data	0000000000000000 .data
+0000000070003cd0 l    d  .data	0000000000000000 .data
 0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
 0000000000000000 l    d  .comment	0000000000000000 .comment
 0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
@@ -40,14 +40,14 @@ SYMBOL TABLE:
 0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
 0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
 0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
-0000000000000000 l    df *ABS*	0000000000000000 ccSzqcKf.o
-0000000000000000 l    df *ABS*	0000000000000000 ccLf6FJ8.o
-0000000000000000 l    df *ABS*	0000000000000000 ccV1zXpL.o
+0000000000000000 l    df *ABS*	0000000000000000 ccIN9jWu.o
+0000000000000000 l    df *ABS*	0000000000000000 ccNt5Kbl.o
+0000000000000000 l    df *ABS*	0000000000000000 cc9RiGlS.o
 0000000000000000 l    df *ABS*	0000000000000000 crt1.c
 0000000000000000 l    df *ABS*	0000000000000000 string.c
 0000000000000000 l    df *ABS*	0000000000000000 string2.c
 0000000000000000 l    df *ABS*	0000000000000000 stdio.c
-00000000700038e0 l     O .data	0000000000000018 dev
+0000000070003cf0 l     O .data	0000000000000018 dev
 000000007000077e l     F .text	00000000000000c2 print_unsigned
 0000000000000000 l    df *ABS*	0000000000000000 dir.c
 0000000000000000 l    df *ABS*	0000000000000000 blockpixel.c
@@ -56,23 +56,23 @@ SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 window1.c
 0000000000000000 l    df *ABS*	0000000000000000 window2.c
 0000000000000000 l    df *ABS*	0000000000000000 putchar.c
-00000000700038f8 l     O .data	0000000000000368 window
-0000000070003c60 l     O .data	0000000000000004 initialized
+0000000070003d08 l     O .data	0000000000000368 window
+0000000070004070 l     O .data	0000000000000004 initialized
 0000000070001f22 l     F .text	000000000000004a init
 0000000000000000 l    df *ABS*	0000000000000000 malloc.c
-0000000070003c68 l     O .data	0000000000000008 free_list
-0000000070003c70 l     O .data	0000000000000008 brk
+0000000070004078 l     O .data	0000000000000008 free_list
+0000000070004080 l     O .data	0000000000000008 brk
 0000000000000000 l    df *ABS*	0000000000000000 thread.c
-0000000070003c78 l     O .data	0000000000000100 input_q
-0000000070003d78 l     O .data	0000000000000004 input_q_head
-0000000070003d7c l     O .data	0000000000000004 input_q_tail
-0000000070003d80 l     O .data	0000000000000004 input_q_count
-0000000070003d88 l     O .data	0000000000000008 runnable_queue
-0000000070003d90 l     O .data	0000000000000008 sleeping_queue
-0000000070003d98 l     O .data	0000000000000008 waiting_input
-0000000070003da0 l     O .data	0000000000000008 current_thread
-0000000070003da8 l     O .data	0000000000000008 zombie_list
-0000000070003db0 l     O .data	0000000000000004 next_tid
+0000000070004088 l     O .data	0000000000000100 input_q
+0000000070004188 l     O .data	0000000000000004 input_q_head
+000000007000418c l     O .data	0000000000000004 input_q_tail
+0000000070004190 l     O .data	0000000000000004 input_q_count
+0000000070004198 l     O .data	0000000000000008 runnable_queue
+00000000700041a0 l     O .data	0000000000000008 sleeping_queue
+00000000700041a8 l     O .data	0000000000000008 waiting_input
+00000000700041b0 l     O .data	0000000000000008 current_thread
+00000000700041b8 l     O .data	0000000000000008 zombie_list
+00000000700041c0 l     O .data	0000000000000004 next_tid
 0000000070002200 l     F .text	0000000000000076 enqueue_runnable
 0000000070002276 l     F .text	0000000000000042 dequeue_runnable
 00000000700022b8 l     F .text	00000000000000cc enqueue_sleeping
@@ -82,21 +82,24 @@ SYMBOL TABLE:
 0000000070002464 l     F .text	000000000000008a input_q_push
 0000000070002572 l     F .text	0000000000000064 reap_zombies
 00000000700025d6 l     F .text	0000000000000232 schedule
-0000000070003db8 l     O .data	0000000000000008 dummy_sp.0
-0000000000000000 l    df *ABS*	0000000000000000 bucketgame.c
-00000000700038d0 l     O .data	0000000000000004 bucket_x
-0000000070003dc0 l     O .data	0000000000000004 score
-0000000070003dc4 l     O .data	0000000000000004 game_over
-0000000070003dc8 l     O .data	0000000000000100 dots
-0000000070003ec8 l     O .data	0000000000000008 sem_state
-0000000070003ed0 l     O .data	0000000000000018 bp
-0000000070003ee8 l     O .data	00000000000002e5 bp_buffer
+00000000700041c8 l     O .data	0000000000000008 dummy_sp.0
+0000000000000000 l    df *ABS*	0000000000000000 game.c
+0000000070003ce8 l     O .data	0000000000000004 bucket_x
+00000000700041d0 l     O .data	0000000000000004 score
+00000000700041d4 l     O .data	0000000000000004 game_over
+00000000700041d8 l     O .data	0000000000000100 dots
+00000000700042d8 l     O .data	0000000000000078 bursts
+0000000070004350 l     O .data	0000000000000008 sem_state
+0000000070004358 l     O .data	0000000000000018 bp
+0000000070004370 l     O .data	00000000000002e5 bp_buffer
+0000000070003c70 l     O .text	0000000000000020 dx.1
+0000000070003c90 l     O .text	0000000000000020 dy.0
 0000000070001f6c g     F .text	0000000000000036 putchar
 0000000070002bd4 g     F .text	000000000000004a sema_create
 00000000700001c2 g     F .text	000000000000004e strcpy
 0000000070000bee g     F .text	000000000000005a printf
 0000000070000800 g       *ABS*	0000000000000000 __global_pointer$
-00000000700038c0 g     O .data	0000000000000008 stdout
+0000000070003cd8 g     O .data	0000000000000008 stdout
 0000000070002b6c g     F .text	0000000000000068 thread_exit
 00000000700017c0 g     F .text	0000000000000096 window_init
 0000000070000530 g     F .text	00000000000000d8 memmove
@@ -105,20 +108,20 @@ SYMBOL TABLE:
 0000000070000608 g     F .text	0000000000000034 memcpy
 000000007000108e g     F .text	00000000000000d4 dir_delete
 0000000070001fa2 g     F .text	0000000000000040 readline
-00000000700030bc g     F .text	00000000000000f2 bucket_thread
+000000007000326a g     F .text	00000000000000f2 bucket_thread
 0000000070000074 g       .text	0000000000000000 ctx_switch
 000000007000002c g       .text	0000000000000000 user_put
 0000000070000000 g       *ABS*	0000000000000000 flat_vaddr
 0000000070000e7c g     F .text	000000000000001c feof
 0000000070001fe2 g     F .text	00000000000000e0 malloc
 00000000700019c2 g     F .text	00000000000001ca window_putchar
-0000000070002f8a g     F .text	00000000000000c2 draw_score
+0000000070003138 g     F .text	00000000000000c2 draw_score
 000000007000004c g       .text	0000000000000000 user_write
 0000000070000e98 g     F .text	0000000000000016 fflush
 0000000000001000 g       *ABS*	0000000000000000 flat_file_off
 000000007000283e g     F .text	0000000000000134 thread_init
 0000000070000f8e g     F .text	0000000000000100 dir_create
-00000000700041cd g       .data	0000000000000000 __bss_end
+0000000070004655 g       .data	0000000000000000 __bss_end
 0000000070000054 g       .text	0000000000000000 user_size
 0000000070002b00 g     F .text	000000000000006c thread_get
 0000000070002c1e g     F .text	000000000000006c sema_inc
@@ -126,6 +129,7 @@ SYMBOL TABLE:
 0000000070000388 g     F .text	0000000000000072 strrchr
 00000000700020c2 g     F .text	0000000000000056 calloc
 0000000070001b8c g     F .text	0000000000000396 window_readline
+0000000070002f8a g     F .text	00000000000001ae draw_bursts
 0000000070000b24 g     F .text	0000000000000054 fprintf
 0000000070001356 g     F .text	0000000000000258 bp_put
 00000000700015ae g     F .text	0000000000000212 bp_flush
@@ -133,7 +137,7 @@ SYMBOL TABLE:
 0000000070000014 g       .text	0000000000000000 user_exit
 00000000700012b4 g     F .text	00000000000000a2 bp_init
 00000000700004ca g     F .text	0000000000000066 memchr
-00000000700038b8 g     O .data	0000000000000008 stdin
+0000000070003cd0 g     O .data	0000000000000008 stdin
 0000000070000000 g       .text	0000000000000000 _start
 00000000700002e0 g     F .text	00000000000000a8 strstr
 0000000070000000 g       .text	0000000000000000 _image_start
@@ -146,10 +150,10 @@ SYMBOL TABLE:
 0000000070002c8a g     F .text	000000000000007e sema_dec
 000000007000006c g       .text	0000000000000000 user_sleep
 0000000070000c48 g     F .text	00000000000000fe fopen
-00000000700038e0 g       .data	0000000000000000 __bss_start
+0000000070003cf0 g       .data	0000000000000000 __bss_start
 0000000070002808 g     F .text	0000000000000036 exec_user
 000000007000063c g     F .text	0000000000000054 memset
-000000007000365e g     F .text	000000000000022e main
+0000000070003a22 g     F .text	0000000000000236 main
 0000000070000034 g       .text	0000000000000000 user_get
 00000000700000b4 g       .text	0000000000000000 ctx_start
 0000000070000eae g     F .text	000000000000001e clearerr
@@ -158,16 +162,16 @@ SYMBOL TABLE:
 000000007000011a g     F .text	00000000000000a8 strcmp
 000000007000001c g       .text	0000000000000000 user_yield
 0000000070000b78 g     F .text	0000000000000076 sprintf
-00000000700031ae g     F .text	00000000000003da falling_thread
-00000000700038c8 g     O .data	0000000000000008 stderr
+000000007000335c g     F .text	00000000000003da falling_thread
+0000000070003ce0 g     O .data	0000000000000008 stderr
 00000000700000e0 g     F .text	000000000000003a _crt_init
 0000000070002a84 g     F .text	000000000000003a thread_yield
 0000000070000044 g       .text	0000000000000000 user_read
 0000000070000690 g     F .text	00000000000000a6 fputc
 000000007000005c g       .text	0000000000000000 user_delete
-0000000070003588 g     F .text	00000000000000d6 background_thread
+0000000070003736 g     F .text	00000000000002ec background_thread
 000000007000003c g       .text	0000000000000000 user_create
-00000000700041cd g       .data	0000000000000000 _image_end
+0000000070004655 g       .data	0000000000000000 _image_end
 0000000070002d08 g     F .text	0000000000000066 sema_release
 0000000070000efa g     F .text	0000000000000094 dir_lookup
 00000000700018e2 g     F .text	00000000000000e0 window_scroll
@@ -176,8 +180,8 @@ SYMBOL TABLE:
 0000000070001162 g     F .text	000000000000008c dir_list
 0000000070002972 g     F .text	0000000000000112 thread_create
 0000000070000736 g     F .text	0000000000000048 fputs
-00000000000048b8 g       *ABS*	0000000000000000 text_file_end
-000000007000304c g     F .text	0000000000000070 clear_screen
+0000000000004cd0 g       *ABS*	0000000000000000 text_file_end
+00000000700031fa g     F .text	0000000000000070 clear_screen
 0000000070000d46 g     F .text	00000000000000ca freadline
 0000000070000840 g     F .text	00000000000002e4 vfprintf
 00000000700021ba g     F .text	0000000000000046 free
@@ -579,8 +583,8 @@ void _crt_init(char **argv) {
     700000fa:	07a1                	addi	a5,a5,8
     700000fc:	85be                	mv	a1,a5
     700000fe:	853a                	mv	a0,a4
-    70000100:	00003097          	auipc	ra,0x3
-    70000104:	55e080e7          	jalr	1374(ra) # 7000365e <main>
+    70000100:	00004097          	auipc	ra,0x4
+    70000104:	922080e7          	jalr	-1758(ra) # 70003a22 <main>
 /embryos/chapter12/apps/crt1.c:7
     user_exit();
     70000108:	00000097          	auipc	ra,0x0
@@ -1936,7 +1940,7 @@ void printf(const char *fmt, ...) {
 /embryos/chapter12/apps/stdio.c:91
     vfprintf(stdout, fmt, ap);
     70000c20:	00003797          	auipc	a5,0x3
-    70000c24:	ca078793          	addi	a5,a5,-864 # 700038c0 <stdout>
+    70000c24:	0b878793          	addi	a5,a5,184 # 70003cd8 <stdout>
     70000c28:	639c                	ld	a5,0(a5)
     70000c2a:	fe843703          	ld	a4,-24(s0)
     70000c2e:	863a                	mv	a2,a4
@@ -4195,25 +4199,25 @@ static void init(){
 /embryos/chapter12/apps/putchar.c:9
     if (!initialized) {
     70001f2a:	00002797          	auipc	a5,0x2
-    70001f2e:	d3678793          	addi	a5,a5,-714 # 70003c60 <initialized>
+    70001f2e:	14678793          	addi	a5,a5,326 # 70004070 <initialized>
     70001f32:	439c                	lw	a5,0(a5)
     70001f34:	e79d                	bnez	a5,70001f62 <init+0x40>
 /embryos/chapter12/apps/putchar.c:10
         window_init(&window);
     70001f36:	00002517          	auipc	a0,0x2
-    70001f3a:	9c250513          	addi	a0,a0,-1598 # 700038f8 <window>
+    70001f3a:	dd250513          	addi	a0,a0,-558 # 70003d08 <window>
     70001f3e:	00000097          	auipc	ra,0x0
     70001f42:	882080e7          	jalr	-1918(ra) # 700017c0 <window_init>
 /embryos/chapter12/apps/putchar.c:11
         window_sync(&window);
     70001f46:	00002517          	auipc	a0,0x2
-    70001f4a:	9b250513          	addi	a0,a0,-1614 # 700038f8 <window>
+    70001f4a:	dc250513          	addi	a0,a0,-574 # 70003d08 <window>
     70001f4e:	00000097          	auipc	ra,0x0
     70001f52:	908080e7          	jalr	-1784(ra) # 70001856 <window_sync>
 /embryos/chapter12/apps/putchar.c:12
         initialized = 1;
     70001f56:	00002797          	auipc	a5,0x2
-    70001f5a:	d0a78793          	addi	a5,a5,-758 # 70003c60 <initialized>
+    70001f5a:	11a78793          	addi	a5,a5,282 # 70004070 <initialized>
     70001f5e:	4705                	li	a4,1
     70001f60:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/putchar.c:14
@@ -4245,7 +4249,7 @@ void putchar(char c) {
     70001f82:	fef44783          	lbu	a5,-17(s0)
     70001f86:	85be                	mv	a1,a5
     70001f88:	00002517          	auipc	a0,0x2
-    70001f8c:	97050513          	addi	a0,a0,-1680 # 700038f8 <window>
+    70001f8c:	d8050513          	addi	a0,a0,-640 # 70003d08 <window>
     70001f90:	00000097          	auipc	ra,0x0
     70001f94:	a32080e7          	jalr	-1486(ra) # 700019c2 <window_putchar>
 /embryos/chapter12/apps/putchar.c:19
@@ -4278,7 +4282,7 @@ int readline(char *line, int size) {
     70001fc0:	863e                	mv	a2,a5
     70001fc2:	fe843583          	ld	a1,-24(s0)
     70001fc6:	00002517          	auipc	a0,0x2
-    70001fca:	93250513          	addi	a0,a0,-1742 # 700038f8 <window>
+    70001fca:	d4250513          	addi	a0,a0,-702 # 70003d08 <window>
     70001fce:	00000097          	auipc	ra,0x0
     70001fd2:	bbe080e7          	jalr	-1090(ra) # 70001b8c <window_readline>
     70001fd6:	87aa                	mv	a5,a0
@@ -4314,7 +4318,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:23
     for (struct m_hdr **pmh = &free_list; (mh = *pmh); pmh = &mh->next)
     70001ffa:	00002797          	auipc	a5,0x2
-    70001ffe:	c6e78793          	addi	a5,a5,-914 # 70003c68 <free_list>
+    70001ffe:	07e78793          	addi	a5,a5,126 # 70004078 <free_list>
     70002002:	fef43423          	sd	a5,-24(s0)
     70002006:	a035                	j	70002032 <malloc+0x50>
 /embryos/chapter12/apps/malloc.c:24
@@ -4348,23 +4352,23 @@ void *malloc(size_t size) {
         }
     if (!brk) brk = (struct m_hdr *) ROUNDUP(&__bss_end[1]) - 1;
     70002042:	00002797          	auipc	a5,0x2
-    70002046:	c2e78793          	addi	a5,a5,-978 # 70003c70 <brk>
+    70002046:	03e78793          	addi	a5,a5,62 # 70004080 <brk>
     7000204a:	639c                	ld	a5,0(a5)
     7000204c:	ef91                	bnez	a5,70002068 <malloc+0x86>
 /embryos/chapter12/apps/malloc.c:28 (discriminator 1)
     7000204e:	00002797          	auipc	a5,0x2
-    70002052:	18f78793          	addi	a5,a5,399 # 700041dd <__bss_end+0x10>
+    70002052:	61778793          	addi	a5,a5,1559 # 70004665 <__bss_end+0x10>
     70002056:	07bd                	addi	a5,a5,15
     70002058:	9bc1                	andi	a5,a5,-16
     7000205a:	17c1                	addi	a5,a5,-16
     7000205c:	873e                	mv	a4,a5
     7000205e:	00002797          	auipc	a5,0x2
-    70002062:	c1278793          	addi	a5,a5,-1006 # 70003c70 <brk>
+    70002062:	02278793          	addi	a5,a5,34 # 70004080 <brk>
     70002066:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:29
     char *next = (char *) brk + size;
     70002068:	00002797          	auipc	a5,0x2
-    7000206c:	c0878793          	addi	a5,a5,-1016 # 70003c70 <brk>
+    7000206c:	01878793          	addi	a5,a5,24 # 70004080 <brk>
     70002070:	6398                	ld	a4,0(a5)
     70002072:	fc843783          	ld	a5,-56(s0)
     70002076:	97ba                	add	a5,a5,a4
@@ -4381,7 +4385,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:31
     mh = brk;
     7000208c:	00002797          	auipc	a5,0x2
-    70002090:	be478793          	addi	a5,a5,-1052 # 70003c70 <brk>
+    70002090:	ff478793          	addi	a5,a5,-12 # 70004080 <brk>
     70002094:	639c                	ld	a5,0(a5)
     70002096:	fef43023          	sd	a5,-32(s0)
 /embryos/chapter12/apps/malloc.c:32
@@ -4392,7 +4396,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:33
     brk = (struct m_hdr *) next;
     700020a4:	00002797          	auipc	a5,0x2
-    700020a8:	bcc78793          	addi	a5,a5,-1076 # 70003c70 <brk>
+    700020a8:	fdc78793          	addi	a5,a5,-36 # 70004080 <brk>
     700020ac:	fd843703          	ld	a4,-40(s0)
     700020b0:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:34
@@ -4558,14 +4562,14 @@ void free(void *ptr) {
 /embryos/chapter12/apps/malloc.c:59
     mh->next = free_list;
     700021d6:	00002797          	auipc	a5,0x2
-    700021da:	a9278793          	addi	a5,a5,-1390 # 70003c68 <free_list>
+    700021da:	ea278793          	addi	a5,a5,-350 # 70004078 <free_list>
     700021de:	6398                	ld	a4,0(a5)
     700021e0:	fe843783          	ld	a5,-24(s0)
     700021e4:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:60
     free_list = mh;
     700021e6:	00002797          	auipc	a5,0x2
-    700021ea:	a8278793          	addi	a5,a5,-1406 # 70003c68 <free_list>
+    700021ea:	e9278793          	addi	a5,a5,-366 # 70004078 <free_list>
     700021ee:	fe843703          	ld	a4,-24(s0)
     700021f2:	e398                	sd	a4,0(a5)
     700021f4:	a011                	j	700021f8 <free+0x3e>
@@ -4609,13 +4613,13 @@ static void enqueue_runnable(thread_t *t) {
 
     if (!runnable_queue) {
     70002222:	00002797          	auipc	a5,0x2
-    70002226:	b6678793          	addi	a5,a5,-1178 # 70003d88 <runnable_queue>
+    70002226:	f7678793          	addi	a5,a5,-138 # 70004198 <runnable_queue>
     7000222a:	639c                	ld	a5,0(a5)
     7000222c:	eb89                	bnez	a5,7000223e <enqueue_runnable+0x3e>
 /embryos/chapter12/apps/thread.c:85
         runnable_queue = t;
     7000222e:	00002797          	auipc	a5,0x2
-    70002232:	b5a78793          	addi	a5,a5,-1190 # 70003d88 <runnable_queue>
+    70002232:	f6a78793          	addi	a5,a5,-150 # 70004198 <runnable_queue>
     70002236:	fd843703          	ld	a4,-40(s0)
     7000223a:	e398                	sd	a4,0(a5)
     7000223c:	a80d                	j	7000226e <enqueue_runnable+0x6e>
@@ -4623,7 +4627,7 @@ static void enqueue_runnable(thread_t *t) {
     } else {
         thread_t *iter = runnable_queue;
     7000223e:	00002797          	auipc	a5,0x2
-    70002242:	b4a78793          	addi	a5,a5,-1206 # 70003d88 <runnable_queue>
+    70002242:	f5a78793          	addi	a5,a5,-166 # 70004198 <runnable_queue>
     70002246:	639c                	ld	a5,0(a5)
     70002248:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:88
@@ -4667,7 +4671,7 @@ static thread_t *dequeue_runnable(void) {
 /embryos/chapter12/apps/thread.c:95
     thread_t *t = runnable_queue;
     7000227e:	00002797          	auipc	a5,0x2
-    70002282:	b0a78793          	addi	a5,a5,-1270 # 70003d88 <runnable_queue>
+    70002282:	f1a78793          	addi	a5,a5,-230 # 70004198 <runnable_queue>
     70002286:	639c                	ld	a5,0(a5)
     70002288:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:96
@@ -4679,7 +4683,7 @@ static thread_t *dequeue_runnable(void) {
     70002292:	fe843783          	ld	a5,-24(s0)
     70002296:	7f98                	ld	a4,56(a5)
     70002298:	00002797          	auipc	a5,0x2
-    7000229c:	af078793          	addi	a5,a5,-1296 # 70003d88 <runnable_queue>
+    7000229c:	f0078793          	addi	a5,a5,-256 # 70004198 <runnable_queue>
     700022a0:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:98
         t->next = NULL;
@@ -4727,13 +4731,13 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
 
     if (!sleeping_queue) {
     700022e2:	00002797          	auipc	a5,0x2
-    700022e6:	aae78793          	addi	a5,a5,-1362 # 70003d90 <sleeping_queue>
+    700022e6:	ebe78793          	addi	a5,a5,-322 # 700041a0 <sleeping_queue>
     700022ea:	639c                	ld	a5,0(a5)
     700022ec:	eb89                	bnez	a5,700022fe <enqueue_sleeping+0x46>
 /embryos/chapter12/apps/thread.c:110
         sleeping_queue = t;
     700022ee:	00002797          	auipc	a5,0x2
-    700022f2:	aa278793          	addi	a5,a5,-1374 # 70003d90 <sleeping_queue>
+    700022f2:	eb278793          	addi	a5,a5,-334 # 700041a0 <sleeping_queue>
     700022f6:	fd843703          	ld	a4,-40(s0)
     700022fa:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:122
@@ -4747,7 +4751,7 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
 /embryos/chapter12/apps/thread.c:111
     } else if (wake_time < sleeping_queue->wake_time) {
     700022fe:	00002797          	auipc	a5,0x2
-    70002302:	a9278793          	addi	a5,a5,-1390 # 70003d90 <sleeping_queue>
+    70002302:	ea278793          	addi	a5,a5,-350 # 700041a0 <sleeping_queue>
     70002306:	639c                	ld	a5,0(a5)
     70002308:	779c                	ld	a5,40(a5)
     7000230a:	fd043703          	ld	a4,-48(s0)
@@ -4755,14 +4759,14 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
 /embryos/chapter12/apps/thread.c:112
         t->next = sleeping_queue;
     70002312:	00002797          	auipc	a5,0x2
-    70002316:	a7e78793          	addi	a5,a5,-1410 # 70003d90 <sleeping_queue>
+    70002316:	e8e78793          	addi	a5,a5,-370 # 700041a0 <sleeping_queue>
     7000231a:	6398                	ld	a4,0(a5)
     7000231c:	fd843783          	ld	a5,-40(s0)
     70002320:	ff98                	sd	a4,56(a5)
 /embryos/chapter12/apps/thread.c:113
         sleeping_queue = t;
     70002322:	00002797          	auipc	a5,0x2
-    70002326:	a6e78793          	addi	a5,a5,-1426 # 70003d90 <sleeping_queue>
+    70002326:	e7e78793          	addi	a5,a5,-386 # 700041a0 <sleeping_queue>
     7000232a:	fd843703          	ld	a4,-40(s0)
     7000232e:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:122
@@ -4771,7 +4775,7 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
 /embryos/chapter12/apps/thread.c:115
         thread_t *iter = sleeping_queue;
     70002332:	00002797          	auipc	a5,0x2
-    70002336:	a5e78793          	addi	a5,a5,-1442 # 70003d90 <sleeping_queue>
+    70002336:	e6e78793          	addi	a5,a5,-402 # 700041a0 <sleeping_queue>
     7000233a:	639c                	ld	a5,0(a5)
     7000233c:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:116
@@ -4834,7 +4838,7 @@ static void wakeup_sleeping_threads(void) {
 /embryos/chapter12/apps/thread.c:129
         thread_t *t = sleeping_queue;
     7000239a:	00002797          	auipc	a5,0x2
-    7000239e:	9f678793          	addi	a5,a5,-1546 # 70003d90 <sleeping_queue>
+    7000239e:	e0678793          	addi	a5,a5,-506 # 700041a0 <sleeping_queue>
     700023a2:	639c                	ld	a5,0(a5)
     700023a4:	fef43023          	sd	a5,-32(s0)
 /embryos/chapter12/apps/thread.c:130
@@ -4842,7 +4846,7 @@ static void wakeup_sleeping_threads(void) {
     700023a8:	fe043783          	ld	a5,-32(s0)
     700023ac:	7f98                	ld	a4,56(a5)
     700023ae:	00002797          	auipc	a5,0x2
-    700023b2:	9e278793          	addi	a5,a5,-1566 # 70003d90 <sleeping_queue>
+    700023b2:	df278793          	addi	a5,a5,-526 # 700041a0 <sleeping_queue>
     700023b6:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:131
         t->next = NULL;
@@ -4856,12 +4860,12 @@ static void wakeup_sleeping_threads(void) {
 /embryos/chapter12/apps/thread.c:128
     while (sleeping_queue && sleeping_queue->wake_time <= now) {
     700023cc:	00002797          	auipc	a5,0x2
-    700023d0:	9c478793          	addi	a5,a5,-1596 # 70003d90 <sleeping_queue>
+    700023d0:	dd478793          	addi	a5,a5,-556 # 700041a0 <sleeping_queue>
     700023d4:	639c                	ld	a5,0(a5)
     700023d6:	cb99                	beqz	a5,700023ec <wakeup_sleeping_threads+0x68>
 /embryos/chapter12/apps/thread.c:128 (discriminator 1)
     700023d8:	00002797          	auipc	a5,0x2
-    700023dc:	9b878793          	addi	a5,a5,-1608 # 70003d90 <sleeping_queue>
+    700023dc:	dc878793          	addi	a5,a5,-568 # 700041a0 <sleeping_queue>
     700023e0:	639c                	ld	a5,0(a5)
     700023e2:	779c                	ld	a5,40(a5)
     700023e4:	fe843703          	ld	a4,-24(s0)
@@ -4892,7 +4896,7 @@ static void try_wakeup_input(void) {
 /embryos/chapter12/apps/thread.c:140
         thread_t *w = waiting_input;
     70002400:	00002797          	auipc	a5,0x2
-    70002404:	99878793          	addi	a5,a5,-1640 # 70003d98 <waiting_input>
+    70002404:	da878793          	addi	a5,a5,-600 # 700041a8 <waiting_input>
     70002408:	639c                	ld	a5,0(a5)
     7000240a:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:141
@@ -4900,7 +4904,7 @@ static void try_wakeup_input(void) {
     7000240e:	fe843783          	ld	a5,-24(s0)
     70002412:	7f98                	ld	a4,56(a5)
     70002414:	00002797          	auipc	a5,0x2
-    70002418:	98478793          	addi	a5,a5,-1660 # 70003d98 <waiting_input>
+    70002418:	d9478793          	addi	a5,a5,-620 # 700041a8 <waiting_input>
     7000241c:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:142
         w->next = NULL;
@@ -4919,7 +4923,7 @@ static void try_wakeup_input(void) {
 /embryos/chapter12/apps/thread.c:139
     while (waiting_input && input_q_pop(&ev)) {
     7000243c:	00002797          	auipc	a5,0x2
-    70002440:	95c78793          	addi	a5,a5,-1700 # 70003d98 <waiting_input>
+    70002440:	d6c78793          	addi	a5,a5,-660 # 700041a8 <waiting_input>
     70002444:	639c                	ld	a5,0(a5)
     70002446:	cb91                	beqz	a5,7000245a <try_wakeup_input+0x64>
 /embryos/chapter12/apps/thread.c:139 (discriminator 1)
@@ -4953,7 +4957,7 @@ static int input_q_push(int ev) {
 /embryos/chapter12/apps/thread.c:149
     if (input_q_count >= INPUT_Q_CAP) return 0;
     70002472:	00002797          	auipc	a5,0x2
-    70002476:	90e78793          	addi	a5,a5,-1778 # 70003d80 <input_q_count>
+    70002476:	d1e78793          	addi	a5,a5,-738 # 70004190 <input_q_count>
     7000247a:	4398                	lw	a4,0(a5)
     7000247c:	03f00793          	li	a5,63
     70002480:	00e7f463          	bgeu	a5,a4,70002488 <input_q_push+0x24>
@@ -4964,10 +4968,10 @@ static int input_q_push(int ev) {
 /embryos/chapter12/apps/thread.c:150
     input_q[input_q_tail] = ev;
     70002488:	00002797          	auipc	a5,0x2
-    7000248c:	8f478793          	addi	a5,a5,-1804 # 70003d7c <input_q_tail>
+    7000248c:	d0478793          	addi	a5,a5,-764 # 7000418c <input_q_tail>
     70002490:	439c                	lw	a5,0(a5)
-    70002492:	00001717          	auipc	a4,0x1
-    70002496:	7e670713          	addi	a4,a4,2022 # 70003c78 <input_q>
+    70002492:	00002717          	auipc	a4,0x2
+    70002496:	bf670713          	addi	a4,a4,-1034 # 70004088 <input_q>
     7000249a:	1782                	slli	a5,a5,0x20
     7000249c:	9381                	srli	a5,a5,0x20
     7000249e:	078a                	slli	a5,a5,0x2
@@ -4977,24 +4981,24 @@ static int input_q_push(int ev) {
 /embryos/chapter12/apps/thread.c:151
     input_q_tail = (input_q_tail + 1) % INPUT_Q_CAP;
     700024a8:	00002797          	auipc	a5,0x2
-    700024ac:	8d478793          	addi	a5,a5,-1836 # 70003d7c <input_q_tail>
+    700024ac:	ce478793          	addi	a5,a5,-796 # 7000418c <input_q_tail>
     700024b0:	439c                	lw	a5,0(a5)
     700024b2:	2785                	addiw	a5,a5,1
     700024b4:	2781                	sext.w	a5,a5
     700024b6:	03f7f793          	andi	a5,a5,63
     700024ba:	0007871b          	sext.w	a4,a5
     700024be:	00002797          	auipc	a5,0x2
-    700024c2:	8be78793          	addi	a5,a5,-1858 # 70003d7c <input_q_tail>
+    700024c2:	cce78793          	addi	a5,a5,-818 # 7000418c <input_q_tail>
     700024c6:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/thread.c:152
     input_q_count++;
     700024c8:	00002797          	auipc	a5,0x2
-    700024cc:	8b878793          	addi	a5,a5,-1864 # 70003d80 <input_q_count>
+    700024cc:	cc878793          	addi	a5,a5,-824 # 70004190 <input_q_count>
     700024d0:	439c                	lw	a5,0(a5)
     700024d2:	2785                	addiw	a5,a5,1
     700024d4:	0007871b          	sext.w	a4,a5
     700024d8:	00002797          	auipc	a5,0x2
-    700024dc:	8a878793          	addi	a5,a5,-1880 # 70003d80 <input_q_count>
+    700024dc:	cb878793          	addi	a5,a5,-840 # 70004190 <input_q_count>
     700024e0:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/thread.c:153
     return 1;
@@ -5020,7 +5024,7 @@ static int input_q_pop(int *ev) {
 /embryos/chapter12/apps/thread.c:157
     if (input_q_count == 0) return 0;
     700024fa:	00002797          	auipc	a5,0x2
-    700024fe:	88678793          	addi	a5,a5,-1914 # 70003d80 <input_q_count>
+    700024fe:	c9678793          	addi	a5,a5,-874 # 70004190 <input_q_count>
     70002502:	439c                	lw	a5,0(a5)
     70002504:	e399                	bnez	a5,7000250a <input_q_pop+0x1c>
 /embryos/chapter12/apps/thread.c:157 (discriminator 1)
@@ -5030,10 +5034,10 @@ static int input_q_pop(int *ev) {
 /embryos/chapter12/apps/thread.c:158
     *ev = input_q[input_q_head];
     7000250a:	00002797          	auipc	a5,0x2
-    7000250e:	86e78793          	addi	a5,a5,-1938 # 70003d78 <input_q_head>
+    7000250e:	c7e78793          	addi	a5,a5,-898 # 70004188 <input_q_head>
     70002512:	439c                	lw	a5,0(a5)
-    70002514:	00001717          	auipc	a4,0x1
-    70002518:	76470713          	addi	a4,a4,1892 # 70003c78 <input_q>
+    70002514:	00002717          	auipc	a4,0x2
+    70002518:	b7470713          	addi	a4,a4,-1164 # 70004088 <input_q>
     7000251c:	1782                	slli	a5,a5,0x20
     7000251e:	9381                	srli	a5,a5,0x20
     70002520:	078a                	slli	a5,a5,0x2
@@ -5044,24 +5048,24 @@ static int input_q_pop(int *ev) {
 /embryos/chapter12/apps/thread.c:159
     input_q_head = (input_q_head + 1) % INPUT_Q_CAP;
     7000252c:	00002797          	auipc	a5,0x2
-    70002530:	84c78793          	addi	a5,a5,-1972 # 70003d78 <input_q_head>
+    70002530:	c5c78793          	addi	a5,a5,-932 # 70004188 <input_q_head>
     70002534:	439c                	lw	a5,0(a5)
     70002536:	2785                	addiw	a5,a5,1
     70002538:	2781                	sext.w	a5,a5
     7000253a:	03f7f793          	andi	a5,a5,63
     7000253e:	0007871b          	sext.w	a4,a5
     70002542:	00002797          	auipc	a5,0x2
-    70002546:	83678793          	addi	a5,a5,-1994 # 70003d78 <input_q_head>
+    70002546:	c4678793          	addi	a5,a5,-954 # 70004188 <input_q_head>
     7000254a:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/thread.c:160
     input_q_count--;
     7000254c:	00002797          	auipc	a5,0x2
-    70002550:	83478793          	addi	a5,a5,-1996 # 70003d80 <input_q_count>
+    70002550:	c4478793          	addi	a5,a5,-956 # 70004190 <input_q_count>
     70002554:	439c                	lw	a5,0(a5)
     70002556:	37fd                	addiw	a5,a5,-1
     70002558:	0007871b          	sext.w	a4,a5
     7000255c:	00002797          	auipc	a5,0x2
-    70002560:	82478793          	addi	a5,a5,-2012 # 70003d80 <input_q_count>
+    70002560:	c3478793          	addi	a5,a5,-972 # 70004190 <input_q_count>
     70002564:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/thread.c:161
     return 1;
@@ -5089,7 +5093,7 @@ static void reap_zombies(void) {
 /embryos/chapter12/apps/thread.c:166
         thread_t *z = zombie_list;
     7000257c:	00002797          	auipc	a5,0x2
-    70002580:	82c78793          	addi	a5,a5,-2004 # 70003da8 <zombie_list>
+    70002580:	c3c78793          	addi	a5,a5,-964 # 700041b8 <zombie_list>
     70002584:	639c                	ld	a5,0(a5)
     70002586:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:167
@@ -5097,7 +5101,7 @@ static void reap_zombies(void) {
     7000258a:	fe843783          	ld	a5,-24(s0)
     7000258e:	7f98                	ld	a4,56(a5)
     70002590:	00002797          	auipc	a5,0x2
-    70002594:	81878793          	addi	a5,a5,-2024 # 70003da8 <zombie_list>
+    70002594:	c2878793          	addi	a5,a5,-984 # 700041b8 <zombie_list>
     70002598:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:168
         if (z->stack_base) free(z->stack_base);
@@ -5117,8 +5121,8 @@ static void reap_zombies(void) {
     700025ba:	c04080e7          	jalr	-1020(ra) # 700021ba <free>
 /embryos/chapter12/apps/thread.c:165
     while (zombie_list) {
-    700025be:	00001797          	auipc	a5,0x1
-    700025c2:	7ea78793          	addi	a5,a5,2026 # 70003da8 <zombie_list>
+    700025be:	00002797          	auipc	a5,0x2
+    700025c2:	bfa78793          	addi	a5,a5,-1030 # 700041b8 <zombie_list>
     700025c6:	639c                	ld	a5,0(a5)
     700025c8:	fbd5                	bnez	a5,7000257c <reap_zombies+0xa>
 /embryos/chapter12/apps/thread.c:171
@@ -5145,8 +5149,8 @@ static void schedule(void) {
     while (1) {
         // Only reap if we're not currently still executing on a dying thread's stack
         if (current_thread) {
-    700025de:	00001797          	auipc	a5,0x1
-    700025e2:	7c278793          	addi	a5,a5,1986 # 70003da0 <current_thread>
+    700025de:	00002797          	auipc	a5,0x2
+    700025e2:	bd278793          	addi	a5,a5,-1070 # 700041b0 <current_thread>
     700025e6:	639c                	ld	a5,0(a5)
     700025e8:	c789                	beqz	a5,700025f2 <schedule+0x1c>
 /embryos/chapter12/apps/thread.c:178
@@ -5177,22 +5181,22 @@ static void schedule(void) {
     70002612:	c3e9                	beqz	a5,700026d4 <schedule+0xfe>
 /embryos/chapter12/apps/thread.c:188
             if (next == current_thread) return;
-    70002614:	00001797          	auipc	a5,0x1
-    70002618:	78c78793          	addi	a5,a5,1932 # 70003da0 <current_thread>
+    70002614:	00002797          	auipc	a5,0x2
+    70002618:	b9c78793          	addi	a5,a5,-1124 # 700041b0 <current_thread>
     7000261c:	639c                	ld	a5,0(a5)
     7000261e:	fe843703          	ld	a4,-24(s0)
     70002622:	1cf70e63          	beq	a4,a5,700027fe <schedule+0x228>
 /embryos/chapter12/apps/thread.c:190
 
             thread_t *prev = current_thread;
-    70002626:	00001797          	auipc	a5,0x1
-    7000262a:	77a78793          	addi	a5,a5,1914 # 70003da0 <current_thread>
+    70002626:	00002797          	auipc	a5,0x2
+    7000262a:	b8a78793          	addi	a5,a5,-1142 # 700041b0 <current_thread>
     7000262e:	639c                	ld	a5,0(a5)
     70002630:	fcf43423          	sd	a5,-56(s0)
 /embryos/chapter12/apps/thread.c:191
             current_thread = next;
-    70002634:	00001797          	auipc	a5,0x1
-    70002638:	76c78793          	addi	a5,a5,1900 # 70003da0 <current_thread>
+    70002634:	00002797          	auipc	a5,0x2
+    70002638:	b7c78793          	addi	a5,a5,-1156 # 700041b0 <current_thread>
     7000263c:	fe843703          	ld	a4,-24(s0)
     70002640:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:193
@@ -5216,8 +5220,8 @@ static void schedule(void) {
     70002658:	fe843783          	ld	a5,-24(s0)
     7000265c:	6f9c                	ld	a5,24(a5)
     7000265e:	85be                	mv	a1,a5
-    70002660:	00001517          	auipc	a0,0x1
-    70002664:	75850513          	addi	a0,a0,1880 # 70003db8 <dummy_sp.0>
+    70002660:	00002517          	auipc	a0,0x2
+    70002664:	b6850513          	addi	a0,a0,-1176 # 700041c8 <dummy_sp.0>
     70002668:	ffffe097          	auipc	ra,0xffffe
     7000266c:	a4c080e7          	jalr	-1460(ra) # 700000b4 <ctx_start>
 /embryos/chapter12/apps/thread.c:207
@@ -5233,8 +5237,8 @@ static void schedule(void) {
     70002672:	fe843783          	ld	a5,-24(s0)
     70002676:	6f9c                	ld	a5,24(a5)
     70002678:	85be                	mv	a1,a5
-    7000267a:	00001517          	auipc	a0,0x1
-    7000267e:	73e50513          	addi	a0,a0,1854 # 70003db8 <dummy_sp.0>
+    7000267a:	00002517          	auipc	a0,0x2
+    7000267e:	b4e50513          	addi	a0,a0,-1202 # 700041c8 <dummy_sp.0>
     70002682:	ffffe097          	auipc	ra,0xffffe
     70002686:	9f2080e7          	jalr	-1550(ra) # 70000074 <ctx_switch>
 /embryos/chapter12/apps/thread.c:207
@@ -5302,22 +5306,22 @@ static void schedule(void) {
 /embryos/chapter12/apps/thread.c:214 (discriminator 1)
     700026fc:	e7a9                	bnez	a5,70002746 <schedule+0x170>
 /embryos/chapter12/apps/thread.c:214 (discriminator 2)
-    700026fe:	00001797          	auipc	a5,0x1
-    70002702:	69a78793          	addi	a5,a5,1690 # 70003d98 <waiting_input>
+    700026fe:	00002797          	auipc	a5,0x2
+    70002702:	aaa78793          	addi	a5,a5,-1366 # 700041a8 <waiting_input>
     70002706:	639c                	ld	a5,0(a5)
     70002708:	cf9d                	beqz	a5,70002746 <schedule+0x170>
 /embryos/chapter12/apps/thread.c:215
                     thread_t *w = waiting_input;
-    7000270a:	00001797          	auipc	a5,0x1
-    7000270e:	68e78793          	addi	a5,a5,1678 # 70003d98 <waiting_input>
+    7000270a:	00002797          	auipc	a5,0x2
+    7000270e:	a9e78793          	addi	a5,a5,-1378 # 700041a8 <waiting_input>
     70002712:	639c                	ld	a5,0(a5)
     70002714:	fcf43823          	sd	a5,-48(s0)
 /embryos/chapter12/apps/thread.c:216
                     waiting_input = w->next;
     70002718:	fd043783          	ld	a5,-48(s0)
     7000271c:	7f98                	ld	a4,56(a5)
-    7000271e:	00001797          	auipc	a5,0x1
-    70002722:	67a78793          	addi	a5,a5,1658 # 70003d98 <waiting_input>
+    7000271e:	00002797          	auipc	a5,0x2
+    70002722:	a8a78793          	addi	a5,a5,-1398 # 700041a8 <waiting_input>
     70002726:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:217
                     w->next = NULL;
@@ -5347,14 +5351,14 @@ static void schedule(void) {
 
         // If some thread is sleeping, wait until the earliest wakeup
         if (sleeping_queue) {
-    70002750:	00001797          	auipc	a5,0x1
-    70002754:	64078793          	addi	a5,a5,1600 # 70003d90 <sleeping_queue>
+    70002750:	00002797          	auipc	a5,0x2
+    70002754:	a5078793          	addi	a5,a5,-1456 # 700041a0 <sleeping_queue>
     70002758:	639c                	ld	a5,0(a5)
     7000275a:	cf89                	beqz	a5,70002774 <schedule+0x19e>
 /embryos/chapter12/apps/thread.c:228
             user_sleep(sleeping_queue->wake_time);
-    7000275c:	00001797          	auipc	a5,0x1
-    70002760:	63478793          	addi	a5,a5,1588 # 70003d90 <sleeping_queue>
+    7000275c:	00002797          	auipc	a5,0x2
+    70002760:	a4478793          	addi	a5,a5,-1468 # 700041a0 <sleeping_queue>
     70002764:	639c                	ld	a5,0(a5)
     70002766:	779c                	ld	a5,40(a5)
     70002768:	853e                	mv	a0,a5
@@ -5368,8 +5372,8 @@ static void schedule(void) {
 
         // Only if there are no sleeping threads left should we block for input
         if (waiting_input) {
-    70002774:	00001797          	auipc	a5,0x1
-    70002778:	62478793          	addi	a5,a5,1572 # 70003d98 <waiting_input>
+    70002774:	00002797          	auipc	a5,0x2
+    70002778:	a3478793          	addi	a5,a5,-1484 # 700041a8 <waiting_input>
     7000277c:	639c                	ld	a5,0(a5)
     7000277e:	cbbd                	beqz	a5,700027f4 <schedule+0x21e>
 /embryos/chapter12/apps/thread.c:234
@@ -5389,22 +5393,22 @@ static void schedule(void) {
 /embryos/chapter12/apps/thread.c:235 (discriminator 1)
     700027a0:	e7a9                	bnez	a5,700027ea <schedule+0x214>
 /embryos/chapter12/apps/thread.c:235 (discriminator 2)
-    700027a2:	00001797          	auipc	a5,0x1
-    700027a6:	5f678793          	addi	a5,a5,1526 # 70003d98 <waiting_input>
+    700027a2:	00002797          	auipc	a5,0x2
+    700027a6:	a0678793          	addi	a5,a5,-1530 # 700041a8 <waiting_input>
     700027aa:	639c                	ld	a5,0(a5)
     700027ac:	cf9d                	beqz	a5,700027ea <schedule+0x214>
 /embryos/chapter12/apps/thread.c:236
                 thread_t *w = waiting_input;
-    700027ae:	00001797          	auipc	a5,0x1
-    700027b2:	5ea78793          	addi	a5,a5,1514 # 70003d98 <waiting_input>
+    700027ae:	00002797          	auipc	a5,0x2
+    700027b2:	9fa78793          	addi	a5,a5,-1542 # 700041a8 <waiting_input>
     700027b6:	639c                	ld	a5,0(a5)
     700027b8:	fcf43c23          	sd	a5,-40(s0)
 /embryos/chapter12/apps/thread.c:237
                 waiting_input = w->next;
     700027bc:	fd843783          	ld	a5,-40(s0)
     700027c0:	7f98                	ld	a4,56(a5)
-    700027c2:	00001797          	auipc	a5,0x1
-    700027c6:	5d678793          	addi	a5,a5,1494 # 70003d98 <waiting_input>
+    700027c2:	00002797          	auipc	a5,0x2
+    700027c6:	9e678793          	addi	a5,a5,-1562 # 700041a8 <waiting_input>
     700027ca:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:238
                 w->next = NULL;
@@ -5461,12 +5465,12 @@ void exec_user(void) {
     7000280e:	0800                	addi	s0,sp,16
 /embryos/chapter12/apps/thread.c:253
     current_thread->start_fn(current_thread->start_arg);
-    70002810:	00001797          	auipc	a5,0x1
-    70002814:	59078793          	addi	a5,a5,1424 # 70003da0 <current_thread>
+    70002810:	00002797          	auipc	a5,0x2
+    70002814:	9a078793          	addi	a5,a5,-1632 # 700041b0 <current_thread>
     70002818:	639c                	ld	a5,0(a5)
     7000281a:	63bc                	ld	a5,64(a5)
-    7000281c:	00001717          	auipc	a4,0x1
-    70002820:	58470713          	addi	a4,a4,1412 # 70003da0 <current_thread>
+    7000281c:	00002717          	auipc	a4,0x2
+    70002820:	99470713          	addi	a4,a4,-1644 # 700041b0 <current_thread>
     70002824:	6318                	ld	a4,0(a4)
     70002826:	6738                	ld	a4,72(a4)
     70002828:	853a                	mv	a0,a4
@@ -5495,50 +5499,50 @@ void thread_init(void) {
     70002844:	1000                	addi	s0,sp,32
 /embryos/chapter12/apps/thread.c:259
     current_thread = NULL;
-    70002846:	00001797          	auipc	a5,0x1
-    7000284a:	55a78793          	addi	a5,a5,1370 # 70003da0 <current_thread>
+    70002846:	00002797          	auipc	a5,0x2
+    7000284a:	96a78793          	addi	a5,a5,-1686 # 700041b0 <current_thread>
     7000284e:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:260
     runnable_queue = NULL;
-    70002852:	00001797          	auipc	a5,0x1
-    70002856:	53678793          	addi	a5,a5,1334 # 70003d88 <runnable_queue>
+    70002852:	00002797          	auipc	a5,0x2
+    70002856:	94678793          	addi	a5,a5,-1722 # 70004198 <runnable_queue>
     7000285a:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:261
     sleeping_queue = NULL;
-    7000285e:	00001797          	auipc	a5,0x1
-    70002862:	53278793          	addi	a5,a5,1330 # 70003d90 <sleeping_queue>
+    7000285e:	00002797          	auipc	a5,0x2
+    70002862:	94278793          	addi	a5,a5,-1726 # 700041a0 <sleeping_queue>
     70002866:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:262
     waiting_input = NULL;
-    7000286a:	00001797          	auipc	a5,0x1
-    7000286e:	52e78793          	addi	a5,a5,1326 # 70003d98 <waiting_input>
+    7000286a:	00002797          	auipc	a5,0x2
+    7000286e:	93e78793          	addi	a5,a5,-1730 # 700041a8 <waiting_input>
     70002872:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:263
     zombie_list = NULL;
-    70002876:	00001797          	auipc	a5,0x1
-    7000287a:	53278793          	addi	a5,a5,1330 # 70003da8 <zombie_list>
+    70002876:	00002797          	auipc	a5,0x2
+    7000287a:	94278793          	addi	a5,a5,-1726 # 700041b8 <zombie_list>
     7000287e:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:264
     input_q_head = input_q_tail = input_q_count = 0;
-    70002882:	00001797          	auipc	a5,0x1
-    70002886:	4fe78793          	addi	a5,a5,1278 # 70003d80 <input_q_count>
+    70002882:	00002797          	auipc	a5,0x2
+    70002886:	90e78793          	addi	a5,a5,-1778 # 70004190 <input_q_count>
     7000288a:	0007a023          	sw	zero,0(a5)
-    7000288e:	00001797          	auipc	a5,0x1
-    70002892:	4f278793          	addi	a5,a5,1266 # 70003d80 <input_q_count>
+    7000288e:	00002797          	auipc	a5,0x2
+    70002892:	90278793          	addi	a5,a5,-1790 # 70004190 <input_q_count>
     70002896:	4398                	lw	a4,0(a5)
-    70002898:	00001797          	auipc	a5,0x1
-    7000289c:	4e478793          	addi	a5,a5,1252 # 70003d7c <input_q_tail>
+    70002898:	00002797          	auipc	a5,0x2
+    7000289c:	8f478793          	addi	a5,a5,-1804 # 7000418c <input_q_tail>
     700028a0:	c398                	sw	a4,0(a5)
-    700028a2:	00001797          	auipc	a5,0x1
-    700028a6:	4da78793          	addi	a5,a5,1242 # 70003d7c <input_q_tail>
+    700028a2:	00002797          	auipc	a5,0x2
+    700028a6:	8ea78793          	addi	a5,a5,-1814 # 7000418c <input_q_tail>
     700028aa:	4398                	lw	a4,0(a5)
-    700028ac:	00001797          	auipc	a5,0x1
-    700028b0:	4cc78793          	addi	a5,a5,1228 # 70003d78 <input_q_head>
+    700028ac:	00002797          	auipc	a5,0x2
+    700028b0:	8dc78793          	addi	a5,a5,-1828 # 70004188 <input_q_head>
     700028b4:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/thread.c:265
     next_tid = 0;
-    700028b6:	00001797          	auipc	a5,0x1
-    700028ba:	4fa78793          	addi	a5,a5,1274 # 70003db0 <next_tid>
+    700028b6:	00002797          	auipc	a5,0x2
+    700028ba:	90a78793          	addi	a5,a5,-1782 # 700041c0 <next_tid>
     700028be:	0007a023          	sw	zero,0(a5)
 /embryos/chapter12/apps/thread.c:267
 
@@ -5557,13 +5561,13 @@ void thread_init(void) {
 /embryos/chapter12/apps/thread.c:270
 
     main_thread->tid = next_tid++;
-    700028e0:	00001797          	auipc	a5,0x1
-    700028e4:	4d078793          	addi	a5,a5,1232 # 70003db0 <next_tid>
+    700028e0:	00002797          	auipc	a5,0x2
+    700028e4:	8e078793          	addi	a5,a5,-1824 # 700041c0 <next_tid>
     700028e8:	439c                	lw	a5,0(a5)
     700028ea:	0017871b          	addiw	a4,a5,1
     700028ee:	0007069b          	sext.w	a3,a4
-    700028f2:	00001717          	auipc	a4,0x1
-    700028f6:	4be70713          	addi	a4,a4,1214 # 70003db0 <next_tid>
+    700028f2:	00002717          	auipc	a4,0x2
+    700028f6:	8ce70713          	addi	a4,a4,-1842 # 700041c0 <next_tid>
     700028fa:	c314                	sw	a3,0(a4)
     700028fc:	fe843703          	ld	a4,-24(s0)
     70002900:	c31c                	sw	a5,0(a4)
@@ -5615,8 +5619,8 @@ void thread_init(void) {
 /embryos/chapter12/apps/thread.c:283
 
     current_thread = main_thread;
-    7000295a:	00001797          	auipc	a5,0x1
-    7000295e:	44678793          	addi	a5,a5,1094 # 70003da0 <current_thread>
+    7000295a:	00002797          	auipc	a5,0x2
+    7000295e:	85678793          	addi	a5,a5,-1962 # 700041b0 <current_thread>
     70002962:	fe843703          	ld	a4,-24(s0)
     70002966:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:284
@@ -5680,12 +5684,12 @@ void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
 
     t->tid = next_tid++;
     700029d2:	00001797          	auipc	a5,0x1
-    700029d6:	3de78793          	addi	a5,a5,990 # 70003db0 <next_tid>
+    700029d6:	7ee78793          	addi	a5,a5,2030 # 700041c0 <next_tid>
     700029da:	439c                	lw	a5,0(a5)
     700029dc:	0017871b          	addiw	a4,a5,1
     700029e0:	0007069b          	sext.w	a3,a4
     700029e4:	00001717          	auipc	a4,0x1
-    700029e8:	3cc70713          	addi	a4,a4,972 # 70003db0 <next_tid>
+    700029e8:	7dc70713          	addi	a4,a4,2012 # 700041c0 <next_tid>
     700029ec:	c314                	sw	a3,0(a4)
     700029ee:	fe043703          	ld	a4,-32(s0)
     700029f2:	c31c                	sw	a5,0(a4)
@@ -5777,7 +5781,7 @@ void thread_yield(void) {
 /embryos/chapter12/apps/thread.c:318
     thread_t *prev = current_thread;
     70002a8c:	00001797          	auipc	a5,0x1
-    70002a90:	31478793          	addi	a5,a5,788 # 70003da0 <current_thread>
+    70002a90:	72478793          	addi	a5,a5,1828 # 700041b0 <current_thread>
     70002a94:	639c                	ld	a5,0(a5)
     70002a96:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:319
@@ -5816,7 +5820,7 @@ void thread_sleep(uint64_t deadline) {
 /embryos/chapter12/apps/thread.c:327
     thread_t *prev = current_thread;
     70002aca:	00001797          	auipc	a5,0x1
-    70002ace:	2d678793          	addi	a5,a5,726 # 70003da0 <current_thread>
+    70002ace:	6e678793          	addi	a5,a5,1766 # 700041b0 <current_thread>
     70002ad2:	639c                	ld	a5,0(a5)
     70002ad4:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:328
@@ -5871,7 +5875,7 @@ int thread_get(void) {
 
     thread_t *self = current_thread;
     70002b20:	00001797          	auipc	a5,0x1
-    70002b24:	28078793          	addi	a5,a5,640 # 70003da0 <current_thread>
+    70002b24:	69078793          	addi	a5,a5,1680 # 700041b0 <current_thread>
     70002b28:	639c                	ld	a5,0(a5)
     70002b2a:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:342
@@ -5882,14 +5886,14 @@ int thread_get(void) {
 /embryos/chapter12/apps/thread.c:343
     self->next = waiting_input;
     70002b36:	00001797          	auipc	a5,0x1
-    70002b3a:	26278793          	addi	a5,a5,610 # 70003d98 <waiting_input>
+    70002b3a:	67278793          	addi	a5,a5,1650 # 700041a8 <waiting_input>
     70002b3e:	6398                	ld	a4,0(a5)
     70002b40:	fe843783          	ld	a5,-24(s0)
     70002b44:	ff98                	sd	a4,56(a5)
 /embryos/chapter12/apps/thread.c:344
     waiting_input = self;
     70002b46:	00001797          	auipc	a5,0x1
-    70002b4a:	25278793          	addi	a5,a5,594 # 70003d98 <waiting_input>
+    70002b4a:	66278793          	addi	a5,a5,1634 # 700041a8 <waiting_input>
     70002b4e:	fe843703          	ld	a4,-24(s0)
     70002b52:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:346
@@ -5922,13 +5926,13 @@ void thread_exit(void) {
 /embryos/chapter12/apps/thread.c:352
     thread_t *prev = current_thread;
     70002b74:	00001797          	auipc	a5,0x1
-    70002b78:	22c78793          	addi	a5,a5,556 # 70003da0 <current_thread>
+    70002b78:	63c78793          	addi	a5,a5,1596 # 700041b0 <current_thread>
     70002b7c:	639c                	ld	a5,0(a5)
     70002b7e:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:353
     current_thread = NULL;
     70002b82:	00001797          	auipc	a5,0x1
-    70002b86:	21e78793          	addi	a5,a5,542 # 70003da0 <current_thread>
+    70002b86:	62e78793          	addi	a5,a5,1582 # 700041b0 <current_thread>
     70002b8a:	0007b023          	sd	zero,0(a5)
 /embryos/chapter12/apps/thread.c:355
 
@@ -5943,14 +5947,14 @@ void thread_exit(void) {
 /embryos/chapter12/apps/thread.c:357
         prev->next = zombie_list;
     70002b9c:	00001797          	auipc	a5,0x1
-    70002ba0:	20c78793          	addi	a5,a5,524 # 70003da8 <zombie_list>
+    70002ba0:	61c78793          	addi	a5,a5,1564 # 700041b8 <zombie_list>
     70002ba4:	6398                	ld	a4,0(a5)
     70002ba6:	fe843783          	ld	a5,-24(s0)
     70002baa:	ff98                	sd	a4,56(a5)
 /embryos/chapter12/apps/thread.c:358
         zombie_list = prev;
     70002bac:	00001797          	auipc	a5,0x1
-    70002bb0:	1fc78793          	addi	a5,a5,508 # 70003da8 <zombie_list>
+    70002bb0:	60c78793          	addi	a5,a5,1548 # 700041b8 <zombie_list>
     70002bb4:	fe843703          	ld	a4,-24(s0)
     70002bb8:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/thread.c:361
@@ -6121,7 +6125,7 @@ void sema_dec(struct sema *sema) {
 
     thread_t *prev = current_thread;
     70002cb8:	00001797          	auipc	a5,0x1
-    70002cbc:	0e878793          	addi	a5,a5,232 # 70003da0 <current_thread>
+    70002cbc:	4f878793          	addi	a5,a5,1272 # 700041b0 <current_thread>
     70002cc0:	639c                	ld	a5,0(a5)
     70002cc2:	fef43423          	sd	a5,-24(s0)
 /embryos/chapter12/apps/thread.c:400
@@ -6233,7 +6237,7 @@ void sema_release(struct sema *sema) {
 
 0000000070002d6e <print_score>:
 print_score():
-/embryos/chapter12/apps/bucketgame.c:7
+/embryos/chapter12/apps/game.c:7
 #include "syslib.h"
 #include "blockpixel.h"
 #include <stdint.h>
@@ -6249,12 +6253,12 @@ void print_score(int x, int score) {
     70002d7a:	fef42623          	sw	a5,-20(s0)
     70002d7e:	87ba                	mv	a5,a4
     70002d80:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:8
+/embryos/chapter12/apps/game.c:8
 	if (score == 0) {
     70002d84:	fe842783          	lw	a5,-24(s0)
     70002d88:	2781                	sext.w	a5,a5
     70002d8a:	e7e9                	bnez	a5,70002e54 <print_score+0xe6>
-/embryos/chapter12/apps/bucketgame.c:9
+/embryos/chapter12/apps/game.c:9
 		user_put(x, 0, CELL('0', 7, 0));
     70002d8c:	fec42783          	lw	a5,-20(s0)
     70002d90:	73000613          	li	a2,1840
@@ -6262,10 +6266,10 @@ void print_score(int x, int score) {
     70002d96:	853e                	mv	a0,a5
     70002d98:	ffffd097          	auipc	ra,0xffffd
     70002d9c:	294080e7          	jalr	660(ra) # 7000002c <user_put>
-/embryos/chapter12/apps/bucketgame.c:10
+/embryos/chapter12/apps/game.c:10
 		return;
     70002da0:	a875                	j	70002e5c <print_score+0xee>
-/embryos/chapter12/apps/bucketgame.c:13
+/embryos/chapter12/apps/game.c:13
 	}
 	while (score != 0) {
 		user_put(x, 0, CELL('0' + score % 10, 7, 0));
@@ -6273,7 +6277,7 @@ void print_score(int x, int score) {
     70002da6:	873e                	mv	a4,a5
     70002da8:	0007069b          	sext.w	a3,a4
     70002dac:	666667b7          	lui	a5,0x66666
-    70002db0:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66661daf>
+    70002db0:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66661997>
     70002db4:	02f687b3          	mul	a5,a3,a5
     70002db8:	9381                	srli	a5,a5,0x20
     70002dba:	4027d79b          	sraiw	a5,a5,0x2
@@ -6308,13 +6312,13 @@ void print_score(int x, int score) {
     70002e16:	853e                	mv	a0,a5
     70002e18:	ffffd097          	auipc	ra,0xffffd
     70002e1c:	214080e7          	jalr	532(ra) # 7000002c <user_put>
-/embryos/chapter12/apps/bucketgame.c:14
+/embryos/chapter12/apps/game.c:14
 		score /= 10;
     70002e20:	fe842783          	lw	a5,-24(s0)
     70002e24:	86be                	mv	a3,a5
     70002e26:	0006871b          	sext.w	a4,a3
     70002e2a:	666667b7          	lui	a5,0x66666
-    70002e2e:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66661daf>
+    70002e2e:	66778793          	addi	a5,a5,1639 # 66666667 <text_file_end+0x66661997>
     70002e32:	02f707b3          	mul	a5,a4,a5
     70002e36:	9381                	srli	a5,a5,0x20
     70002e38:	4027d79b          	sraiw	a5,a5,0x2
@@ -6322,17 +6326,17 @@ void print_score(int x, int score) {
     70002e3e:	41f6d79b          	sraiw	a5,a3,0x1f
     70002e42:	40f707bb          	subw	a5,a4,a5
     70002e46:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:15
+/embryos/chapter12/apps/game.c:15
 		x--;
     70002e4a:	fec42783          	lw	a5,-20(s0)
     70002e4e:	37fd                	addiw	a5,a5,-1
     70002e50:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:12
+/embryos/chapter12/apps/game.c:12
 	while (score != 0) {
     70002e54:	fe842783          	lw	a5,-24(s0)
     70002e58:	2781                	sext.w	a5,a5
     70002e5a:	f7a1                	bnez	a5,70002da2 <print_score+0x34>
-/embryos/chapter12/apps/bucketgame.c:17
+/embryos/chapter12/apps/game.c:17
 	}
 }
     70002e5c:	60e2                	ld	ra,24(sp)
@@ -6342,8 +6346,8 @@ void print_score(int x, int score) {
 
 0000000070002e64 <draw_bucket>:
 draw_bucket():
-/embryos/chapter12/apps/bucketgame.c:44
-static Dot dots[MAX_DOTS];
+/embryos/chapter12/apps/game.c:53
+static Burst bursts[MAX_BURSTS];
 static struct sema *sem_state;
 static struct bp bp;
 static uint8_t bp_buffer[SCREEN_W * GAME_H];
@@ -6353,14 +6357,14 @@ void draw_bucket() {
     70002e66:	ec06                	sd	ra,24(sp)
     70002e68:	e822                	sd	s0,16(sp)
     70002e6a:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/bucketgame.c:45
+/embryos/chapter12/apps/game.c:54
 	for (int i = 0; i < BUCKET_W; i++) {
     70002e6c:	fe042623          	sw	zero,-20(s0)
     70002e70:	a81d                	j	70002ea6 <draw_bucket+0x42>
-/embryos/chapter12/apps/bucketgame.c:46
+/embryos/chapter12/apps/game.c:55
 		bp_put(&bp, bucket_x + i, GAME_H - 2, 7, BP_LAZY);
     70002e72:	00001797          	auipc	a5,0x1
-    70002e76:	a5e78793          	addi	a5,a5,-1442 # 700038d0 <bucket_x>
+    70002e76:	e7678793          	addi	a5,a5,-394 # 70003ce8 <bucket_x>
     70002e7a:	439c                	lw	a5,0(a5)
     70002e7c:	fec42703          	lw	a4,-20(s0)
     70002e80:	9fb9                	addw	a5,a5,a4
@@ -6370,20 +6374,20 @@ void draw_bucket() {
     70002e88:	4645                	li	a2,17
     70002e8a:	85be                	mv	a1,a5
     70002e8c:	00001517          	auipc	a0,0x1
-    70002e90:	04450513          	addi	a0,a0,68 # 70003ed0 <bp>
+    70002e90:	4cc50513          	addi	a0,a0,1228 # 70004358 <bp>
     70002e94:	ffffe097          	auipc	ra,0xffffe
     70002e98:	4c2080e7          	jalr	1218(ra) # 70001356 <bp_put>
-/embryos/chapter12/apps/bucketgame.c:45 (discriminator 3)
+/embryos/chapter12/apps/game.c:54 (discriminator 3)
 	for (int i = 0; i < BUCKET_W; i++) {
     70002e9c:	fec42783          	lw	a5,-20(s0)
     70002ea0:	2785                	addiw	a5,a5,1
     70002ea2:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:45 (discriminator 1)
+/embryos/chapter12/apps/game.c:54 (discriminator 1)
     70002ea6:	fec42783          	lw	a5,-20(s0)
     70002eaa:	0007871b          	sext.w	a4,a5
     70002eae:	4799                	li	a5,6
     70002eb0:	fce7d1e3          	bge	a5,a4,70002e72 <draw_bucket+0xe>
-/embryos/chapter12/apps/bucketgame.c:48
+/embryos/chapter12/apps/game.c:57
 	}
 }
     70002eb4:	0001                	nop
@@ -6395,69 +6399,69 @@ void draw_bucket() {
 
 0000000070002ec0 <draw_dots>:
 draw_dots():
-/embryos/chapter12/apps/bucketgame.c:50
+/embryos/chapter12/apps/game.c:59
 
 void draw_dots() {
     70002ec0:	1101                	addi	sp,sp,-32
     70002ec2:	ec06                	sd	ra,24(sp)
     70002ec4:	e822                	sd	s0,16(sp)
     70002ec6:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/bucketgame.c:51
+/embryos/chapter12/apps/game.c:60
 	for (int i = 0; i < MAX_DOTS; i++) {
     70002ec8:	fe042623          	sw	zero,-20(s0)
     70002ecc:	a055                	j	70002f70 <draw_dots+0xb0>
-/embryos/chapter12/apps/bucketgame.c:52
+/embryos/chapter12/apps/game.c:61
 		if (!dots[i].active) continue;
     70002ece:	00001717          	auipc	a4,0x1
-    70002ed2:	efa70713          	addi	a4,a4,-262 # 70003dc8 <dots>
+    70002ed2:	30a70713          	addi	a4,a4,778 # 700041d8 <dots>
     70002ed6:	fec42783          	lw	a5,-20(s0)
     70002eda:	0792                	slli	a5,a5,0x4
     70002edc:	97ba                	add	a5,a5,a4
     70002ede:	47dc                	lw	a5,12(a5)
     70002ee0:	c3d1                	beqz	a5,70002f64 <draw_dots+0xa4>
-/embryos/chapter12/apps/bucketgame.c:54
+/embryos/chapter12/apps/game.c:63
 
 		uint8_t color = 2;
     70002ee2:	4789                	li	a5,2
     70002ee4:	fef405a3          	sb	a5,-21(s0)
-/embryos/chapter12/apps/bucketgame.c:55
+/embryos/chapter12/apps/game.c:64
 		if (dots[i].type == DOT_GOLD) color = 6;
     70002ee8:	00001717          	auipc	a4,0x1
-    70002eec:	ee070713          	addi	a4,a4,-288 # 70003dc8 <dots>
+    70002eec:	2f070713          	addi	a4,a4,752 # 700041d8 <dots>
     70002ef0:	fec42783          	lw	a5,-20(s0)
     70002ef4:	0792                	slli	a5,a5,0x4
     70002ef6:	97ba                	add	a5,a5,a4
     70002ef8:	4798                	lw	a4,8(a5)
     70002efa:	4785                	li	a5,1
     70002efc:	00f71663          	bne	a4,a5,70002f08 <draw_dots+0x48>
-/embryos/chapter12/apps/bucketgame.c:55 (discriminator 1)
+/embryos/chapter12/apps/game.c:64 (discriminator 1)
     70002f00:	4799                	li	a5,6
     70002f02:	fef405a3          	sb	a5,-21(s0)
     70002f06:	a005                	j	70002f26 <draw_dots+0x66>
-/embryos/chapter12/apps/bucketgame.c:56
+/embryos/chapter12/apps/game.c:65
 		else if (dots[i].type == DOT_RED) color = 4;
     70002f08:	00001717          	auipc	a4,0x1
-    70002f0c:	ec070713          	addi	a4,a4,-320 # 70003dc8 <dots>
+    70002f0c:	2d070713          	addi	a4,a4,720 # 700041d8 <dots>
     70002f10:	fec42783          	lw	a5,-20(s0)
     70002f14:	0792                	slli	a5,a5,0x4
     70002f16:	97ba                	add	a5,a5,a4
     70002f18:	4798                	lw	a4,8(a5)
     70002f1a:	4789                	li	a5,2
     70002f1c:	00f71563          	bne	a4,a5,70002f26 <draw_dots+0x66>
-/embryos/chapter12/apps/bucketgame.c:56 (discriminator 1)
+/embryos/chapter12/apps/game.c:65 (discriminator 1)
     70002f20:	4791                	li	a5,4
     70002f22:	fef405a3          	sb	a5,-21(s0)
-/embryos/chapter12/apps/bucketgame.c:58
+/embryos/chapter12/apps/game.c:67
 
 		bp_put(&bp, dots[i].x, dots[i].y, color, BP_LAZY);
     70002f26:	00001717          	auipc	a4,0x1
-    70002f2a:	ea270713          	addi	a4,a4,-350 # 70003dc8 <dots>
+    70002f2a:	2b270713          	addi	a4,a4,690 # 700041d8 <dots>
     70002f2e:	fec42783          	lw	a5,-20(s0)
     70002f32:	0792                	slli	a5,a5,0x4
     70002f34:	97ba                	add	a5,a5,a4
     70002f36:	438c                	lw	a1,0(a5)
     70002f38:	00001717          	auipc	a4,0x1
-    70002f3c:	e9070713          	addi	a4,a4,-368 # 70003dc8 <dots>
+    70002f3c:	2a070713          	addi	a4,a4,672 # 700041d8 <dots>
     70002f40:	fec42783          	lw	a5,-20(s0)
     70002f44:	0792                	slli	a5,a5,0x4
     70002f46:	97ba                	add	a5,a5,a4
@@ -6466,24 +6470,24 @@ void draw_dots() {
     70002f4e:	4705                	li	a4,1
     70002f50:	863e                	mv	a2,a5
     70002f52:	00001517          	auipc	a0,0x1
-    70002f56:	f7e50513          	addi	a0,a0,-130 # 70003ed0 <bp>
+    70002f56:	40650513          	addi	a0,a0,1030 # 70004358 <bp>
     70002f5a:	ffffe097          	auipc	ra,0xffffe
     70002f5e:	3fc080e7          	jalr	1020(ra) # 70001356 <bp_put>
     70002f62:	a011                	j	70002f66 <draw_dots+0xa6>
-/embryos/chapter12/apps/bucketgame.c:52
+/embryos/chapter12/apps/game.c:61
 		if (!dots[i].active) continue;
     70002f64:	0001                	nop
-/embryos/chapter12/apps/bucketgame.c:51 (discriminator 2)
+/embryos/chapter12/apps/game.c:60 (discriminator 2)
 	for (int i = 0; i < MAX_DOTS; i++) {
     70002f66:	fec42783          	lw	a5,-20(s0)
     70002f6a:	2785                	addiw	a5,a5,1
     70002f6c:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:51 (discriminator 1)
+/embryos/chapter12/apps/game.c:60 (discriminator 1)
     70002f70:	fec42783          	lw	a5,-20(s0)
     70002f74:	0007871b          	sext.w	a4,a5
     70002f78:	47bd                	li	a5,15
     70002f7a:	f4e7dae3          	bge	a5,a4,70002ece <draw_dots+0xe>
-/embryos/chapter12/apps/bucketgame.c:60
+/embryos/chapter12/apps/game.c:69
 	}
 }
     70002f7e:	0001                	nop
@@ -6493,1074 +6497,1495 @@ void draw_dots() {
     70002f86:	6105                	addi	sp,sp,32
     70002f88:	8082                	ret
 
-0000000070002f8a <draw_score>:
-draw_score():
-/embryos/chapter12/apps/bucketgame.c:62
+0000000070002f8a <draw_bursts>:
+draw_bursts():
+/embryos/chapter12/apps/game.c:71
 
-void draw_score() {
+void draw_bursts() {
     70002f8a:	1101                	addi	sp,sp,-32
     70002f8c:	ec06                	sd	ra,24(sp)
     70002f8e:	e822                	sd	s0,16(sp)
     70002f90:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/bucketgame.c:64
-	// Clear the entire score row first to prevent leftover digits/colors
-	for (int i = 0; i < SCREEN_W; i++) {
+/embryos/chapter12/apps/game.c:75
+	static const int dx[8] = { 1, -1, 0, 0, 1, 1, -1, -1 };
+	static const int dy[8] = { 0, 0, 1, -1, 1, -1, 1, -1 };
+
+	for (int i = 0; i < MAX_BURSTS; i++) {
     70002f92:	fe042623          	sw	zero,-20(s0)
-    70002f96:	a005                	j	70002fb6 <draw_score+0x2c>
-/embryos/chapter12/apps/bucketgame.c:65
-		user_put(i, 0, CELL(' ', 7, 0));
-    70002f98:	fec42783          	lw	a5,-20(s0)
-    70002f9c:	72000613          	li	a2,1824
-    70002fa0:	4581                	li	a1,0
-    70002fa2:	853e                	mv	a0,a5
-    70002fa4:	ffffd097          	auipc	ra,0xffffd
-    70002fa8:	088080e7          	jalr	136(ra) # 7000002c <user_put>
-/embryos/chapter12/apps/bucketgame.c:64 (discriminator 3)
-	for (int i = 0; i < SCREEN_W; i++) {
-    70002fac:	fec42783          	lw	a5,-20(s0)
-    70002fb0:	2785                	addiw	a5,a5,1
-    70002fb2:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:64 (discriminator 1)
-    70002fb6:	fec42783          	lw	a5,-20(s0)
-    70002fba:	0007871b          	sext.w	a4,a5
-    70002fbe:	02600793          	li	a5,38
-    70002fc2:	fce7dbe3          	bge	a5,a4,70002f98 <draw_score+0xe>
-/embryos/chapter12/apps/bucketgame.c:67
-	}
-	const char *label = "SCORE:";
-    70002fc6:	00001797          	auipc	a5,0x1
-    70002fca:	8ca78793          	addi	a5,a5,-1846 # 70003890 <main+0x232>
-    70002fce:	fef43023          	sd	a5,-32(s0)
-/embryos/chapter12/apps/bucketgame.c:68
-	for (int i = 0; label[i] != '\0'; i++) {
-    70002fd2:	fe042423          	sw	zero,-24(s0)
-    70002fd6:	a099                	j	7000301c <draw_score+0x92>
-/embryos/chapter12/apps/bucketgame.c:69
-		user_put(i, 0, CELL(label[i], 7, 0));
-    70002fd8:	fe842783          	lw	a5,-24(s0)
-    70002fdc:	fe043703          	ld	a4,-32(s0)
+    70002f96:	a261                	j	7000311e <draw_bursts+0x194>
+/embryos/chapter12/apps/game.c:76
+		if (!bursts[i].active) continue;
+    70002f98:	00001697          	auipc	a3,0x1
+    70002f9c:	34068693          	addi	a3,a3,832 # 700042d8 <bursts>
+    70002fa0:	fec42703          	lw	a4,-20(s0)
+    70002fa4:	87ba                	mv	a5,a4
+    70002fa6:	078a                	slli	a5,a5,0x2
+    70002fa8:	97ba                	add	a5,a5,a4
+    70002faa:	078a                	slli	a5,a5,0x2
+    70002fac:	97b6                	add	a5,a5,a3
+    70002fae:	4b9c                	lw	a5,16(a5)
+    70002fb0:	16078163          	beqz	a5,70003112 <draw_bursts+0x188>
+/embryos/chapter12/apps/game.c:78
+
+		for (int d = 0; d < 8; d++) {
+    70002fb4:	fe042423          	sw	zero,-24(s0)
+    70002fb8:	a2a9                	j	70003102 <draw_bursts+0x178>
+/embryos/chapter12/apps/game.c:79
+			int px = bursts[i].x + dx[d] * bursts[i].age;
+    70002fba:	00001697          	auipc	a3,0x1
+    70002fbe:	31e68693          	addi	a3,a3,798 # 700042d8 <bursts>
+    70002fc2:	fec42703          	lw	a4,-20(s0)
+    70002fc6:	87ba                	mv	a5,a4
+    70002fc8:	078a                	slli	a5,a5,0x2
+    70002fca:	97ba                	add	a5,a5,a4
+    70002fcc:	078a                	slli	a5,a5,0x2
+    70002fce:	97b6                	add	a5,a5,a3
+    70002fd0:	4394                	lw	a3,0(a5)
+    70002fd2:	00001717          	auipc	a4,0x1
+    70002fd6:	c9e70713          	addi	a4,a4,-866 # 70003c70 <dx.1>
+    70002fda:	fe842783          	lw	a5,-24(s0)
+    70002fde:	078a                	slli	a5,a5,0x2
     70002fe0:	97ba                	add	a5,a5,a4
-    70002fe2:	0007c783          	lbu	a5,0(a5)
-    70002fe6:	0107979b          	slliw	a5,a5,0x10
-    70002fea:	4107d79b          	sraiw	a5,a5,0x10
-    70002fee:	7007e793          	ori	a5,a5,1792
-    70002ff2:	0107979b          	slliw	a5,a5,0x10
-    70002ff6:	4107d79b          	sraiw	a5,a5,0x10
-    70002ffa:	03079713          	slli	a4,a5,0x30
-    70002ffe:	9341                	srli	a4,a4,0x30
-    70003000:	fe842783          	lw	a5,-24(s0)
-    70003004:	863a                	mv	a2,a4
-    70003006:	4581                	li	a1,0
-    70003008:	853e                	mv	a0,a5
-    7000300a:	ffffd097          	auipc	ra,0xffffd
-    7000300e:	022080e7          	jalr	34(ra) # 7000002c <user_put>
-/embryos/chapter12/apps/bucketgame.c:68 (discriminator 3)
-	for (int i = 0; label[i] != '\0'; i++) {
-    70003012:	fe842783          	lw	a5,-24(s0)
-    70003016:	2785                	addiw	a5,a5,1
-    70003018:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:68 (discriminator 1)
-    7000301c:	fe842783          	lw	a5,-24(s0)
-    70003020:	fe043703          	ld	a4,-32(s0)
-    70003024:	97ba                	add	a5,a5,a4
-    70003026:	0007c783          	lbu	a5,0(a5)
-    7000302a:	f7dd                	bnez	a5,70002fd8 <draw_score+0x4e>
-/embryos/chapter12/apps/bucketgame.c:71
-	}
-	print_score(10, score);
-    7000302c:	00001797          	auipc	a5,0x1
-    70003030:	d9478793          	addi	a5,a5,-620 # 70003dc0 <score>
-    70003034:	439c                	lw	a5,0(a5)
-    70003036:	85be                	mv	a1,a5
-    70003038:	4529                	li	a0,10
-    7000303a:	00000097          	auipc	ra,0x0
-    7000303e:	d34080e7          	jalr	-716(ra) # 70002d6e <print_score>
-/embryos/chapter12/apps/bucketgame.c:72
-}
-    70003042:	0001                	nop
-    70003044:	60e2                	ld	ra,24(sp)
-    70003046:	6442                	ld	s0,16(sp)
-    70003048:	6105                	addi	sp,sp,32
-    7000304a:	8082                	ret
-
-000000007000304c <clear_screen>:
-clear_screen():
-/embryos/chapter12/apps/bucketgame.c:74
-
-void clear_screen() {
-    7000304c:	1101                	addi	sp,sp,-32
-    7000304e:	ec06                	sd	ra,24(sp)
-    70003050:	e822                	sd	s0,16(sp)
-    70003052:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/bucketgame.c:75
-	for (int x = 0; x < SCREEN_W; x++) {
-    70003054:	fe042623          	sw	zero,-20(s0)
-    70003058:	a0a1                	j	700030a0 <clear_screen+0x54>
-/embryos/chapter12/apps/bucketgame.c:76
-		for (int y = 0; y < GAME_H; y++) {
-    7000305a:	fe042423          	sw	zero,-24(s0)
-    7000305e:	a02d                	j	70003088 <clear_screen+0x3c>
-/embryos/chapter12/apps/bucketgame.c:77
-			bp_put(&bp, x, y, 0, BP_LAZY);
-    70003060:	fe842603          	lw	a2,-24(s0)
-    70003064:	fec42783          	lw	a5,-20(s0)
-    70003068:	4705                	li	a4,1
-    7000306a:	4681                	li	a3,0
-    7000306c:	85be                	mv	a1,a5
-    7000306e:	00001517          	auipc	a0,0x1
-    70003072:	e6250513          	addi	a0,a0,-414 # 70003ed0 <bp>
-    70003076:	ffffe097          	auipc	ra,0xffffe
-    7000307a:	2e0080e7          	jalr	736(ra) # 70001356 <bp_put>
-/embryos/chapter12/apps/bucketgame.c:76 (discriminator 3)
-		for (int y = 0; y < GAME_H; y++) {
-    7000307e:	fe842783          	lw	a5,-24(s0)
-    70003082:	2785                	addiw	a5,a5,1
-    70003084:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:76 (discriminator 1)
-    70003088:	fe842783          	lw	a5,-24(s0)
-    7000308c:	0007871b          	sext.w	a4,a5
-    70003090:	47c9                	li	a5,18
-    70003092:	fce7d7e3          	bge	a5,a4,70003060 <clear_screen+0x14>
-/embryos/chapter12/apps/bucketgame.c:75 (discriminator 2)
-	for (int x = 0; x < SCREEN_W; x++) {
-    70003096:	fec42783          	lw	a5,-20(s0)
-    7000309a:	2785                	addiw	a5,a5,1
-    7000309c:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:75 (discriminator 1)
-    700030a0:	fec42783          	lw	a5,-20(s0)
-    700030a4:	0007871b          	sext.w	a4,a5
-    700030a8:	02600793          	li	a5,38
-    700030ac:	fae7d7e3          	bge	a5,a4,7000305a <clear_screen+0xe>
-/embryos/chapter12/apps/bucketgame.c:80
+    70002fe2:	4390                	lw	a2,0(a5)
+    70002fe4:	00001597          	auipc	a1,0x1
+    70002fe8:	2f458593          	addi	a1,a1,756 # 700042d8 <bursts>
+    70002fec:	fec42703          	lw	a4,-20(s0)
+    70002ff0:	87ba                	mv	a5,a4
+    70002ff2:	078a                	slli	a5,a5,0x2
+    70002ff4:	97ba                	add	a5,a5,a4
+    70002ff6:	078a                	slli	a5,a5,0x2
+    70002ff8:	97ae                	add	a5,a5,a1
+    70002ffa:	479c                	lw	a5,8(a5)
+    70002ffc:	02f607bb          	mulw	a5,a2,a5
+    70003000:	2781                	sext.w	a5,a5
+    70003002:	9fb5                	addw	a5,a5,a3
+    70003004:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/game.c:80
+			int py = bursts[i].y + dy[d] * bursts[i].age;
+    70003008:	00001697          	auipc	a3,0x1
+    7000300c:	2d068693          	addi	a3,a3,720 # 700042d8 <bursts>
+    70003010:	fec42703          	lw	a4,-20(s0)
+    70003014:	87ba                	mv	a5,a4
+    70003016:	078a                	slli	a5,a5,0x2
+    70003018:	97ba                	add	a5,a5,a4
+    7000301a:	078a                	slli	a5,a5,0x2
+    7000301c:	97b6                	add	a5,a5,a3
+    7000301e:	43d4                	lw	a3,4(a5)
+    70003020:	00001717          	auipc	a4,0x1
+    70003024:	c7070713          	addi	a4,a4,-912 # 70003c90 <dy.0>
+    70003028:	fe842783          	lw	a5,-24(s0)
+    7000302c:	078a                	slli	a5,a5,0x2
+    7000302e:	97ba                	add	a5,a5,a4
+    70003030:	4390                	lw	a2,0(a5)
+    70003032:	00001597          	auipc	a1,0x1
+    70003036:	2a658593          	addi	a1,a1,678 # 700042d8 <bursts>
+    7000303a:	fec42703          	lw	a4,-20(s0)
+    7000303e:	87ba                	mv	a5,a4
+    70003040:	078a                	slli	a5,a5,0x2
+    70003042:	97ba                	add	a5,a5,a4
+    70003044:	078a                	slli	a5,a5,0x2
+    70003046:	97ae                	add	a5,a5,a1
+    70003048:	479c                	lw	a5,8(a5)
+    7000304a:	02f607bb          	mulw	a5,a2,a5
+    7000304e:	2781                	sext.w	a5,a5
+    70003050:	9fb5                	addw	a5,a5,a3
+    70003052:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter12/apps/game.c:81
+			if (px >= 0 && px < SCREEN_W && py >= 1 && py < GAME_H - 2) {
+    70003056:	fe442783          	lw	a5,-28(s0)
+    7000305a:	2781                	sext.w	a5,a5
+    7000305c:	0807ce63          	bltz	a5,700030f8 <draw_bursts+0x16e>
+/embryos/chapter12/apps/game.c:81 (discriminator 1)
+    70003060:	fe442783          	lw	a5,-28(s0)
+    70003064:	0007871b          	sext.w	a4,a5
+    70003068:	02600793          	li	a5,38
+    7000306c:	08e7c663          	blt	a5,a4,700030f8 <draw_bursts+0x16e>
+/embryos/chapter12/apps/game.c:81 (discriminator 2)
+    70003070:	fe042783          	lw	a5,-32(s0)
+    70003074:	2781                	sext.w	a5,a5
+    70003076:	08f05163          	blez	a5,700030f8 <draw_bursts+0x16e>
+/embryos/chapter12/apps/game.c:81 (discriminator 3)
+    7000307a:	fe042783          	lw	a5,-32(s0)
+    7000307e:	0007871b          	sext.w	a4,a5
+    70003082:	47c1                	li	a5,16
+    70003084:	06e7ca63          	blt	a5,a4,700030f8 <draw_bursts+0x16e>
+/embryos/chapter12/apps/game.c:82
+				bp_put(&bp, px, py, (bursts[i].color + bursts[i].age + d) % 8, BP_LAZY);
+    70003088:	00001697          	auipc	a3,0x1
+    7000308c:	25068693          	addi	a3,a3,592 # 700042d8 <bursts>
+    70003090:	fec42703          	lw	a4,-20(s0)
+    70003094:	87ba                	mv	a5,a4
+    70003096:	078a                	slli	a5,a5,0x2
+    70003098:	97ba                	add	a5,a5,a4
+    7000309a:	078a                	slli	a5,a5,0x2
+    7000309c:	97b6                	add	a5,a5,a3
+    7000309e:	47d4                	lw	a3,12(a5)
+    700030a0:	00001617          	auipc	a2,0x1
+    700030a4:	23860613          	addi	a2,a2,568 # 700042d8 <bursts>
+    700030a8:	fec42703          	lw	a4,-20(s0)
+    700030ac:	87ba                	mv	a5,a4
+    700030ae:	078a                	slli	a5,a5,0x2
+    700030b0:	97ba                	add	a5,a5,a4
+    700030b2:	078a                	slli	a5,a5,0x2
+    700030b4:	97b2                	add	a5,a5,a2
+    700030b6:	479c                	lw	a5,8(a5)
+    700030b8:	9fb5                	addw	a5,a5,a3
+    700030ba:	2781                	sext.w	a5,a5
+    700030bc:	fe842703          	lw	a4,-24(s0)
+    700030c0:	9fb9                	addw	a5,a5,a4
+    700030c2:	2781                	sext.w	a5,a5
+    700030c4:	873e                	mv	a4,a5
+    700030c6:	41f7579b          	sraiw	a5,a4,0x1f
+    700030ca:	01d7d79b          	srliw	a5,a5,0x1d
+    700030ce:	9f3d                	addw	a4,a4,a5
+    700030d0:	8b1d                	andi	a4,a4,7
+    700030d2:	40f707bb          	subw	a5,a4,a5
+    700030d6:	2781                	sext.w	a5,a5
+    700030d8:	0ff7f693          	zext.b	a3,a5
+    700030dc:	fe042603          	lw	a2,-32(s0)
+    700030e0:	fe442783          	lw	a5,-28(s0)
+    700030e4:	4705                	li	a4,1
+    700030e6:	85be                	mv	a1,a5
+    700030e8:	00001517          	auipc	a0,0x1
+    700030ec:	27050513          	addi	a0,a0,624 # 70004358 <bp>
+    700030f0:	ffffe097          	auipc	ra,0xffffe
+    700030f4:	266080e7          	jalr	614(ra) # 70001356 <bp_put>
+/embryos/chapter12/apps/game.c:78 (discriminator 2)
+		for (int d = 0; d < 8; d++) {
+    700030f8:	fe842783          	lw	a5,-24(s0)
+    700030fc:	2785                	addiw	a5,a5,1
+    700030fe:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/game.c:78 (discriminator 1)
+    70003102:	fe842783          	lw	a5,-24(s0)
+    70003106:	0007871b          	sext.w	a4,a5
+    7000310a:	479d                	li	a5,7
+    7000310c:	eae7d7e3          	bge	a5,a4,70002fba <draw_bursts+0x30>
+    70003110:	a011                	j	70003114 <draw_bursts+0x18a>
+/embryos/chapter12/apps/game.c:76
+		if (!bursts[i].active) continue;
+    70003112:	0001                	nop
+/embryos/chapter12/apps/game.c:75 (discriminator 2)
+	for (int i = 0; i < MAX_BURSTS; i++) {
+    70003114:	fec42783          	lw	a5,-20(s0)
+    70003118:	2785                	addiw	a5,a5,1
+    7000311a:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:75 (discriminator 1)
+    7000311e:	fec42783          	lw	a5,-20(s0)
+    70003122:	0007871b          	sext.w	a4,a5
+    70003126:	4795                	li	a5,5
+    70003128:	e6e7d8e3          	bge	a5,a4,70002f98 <draw_bursts+0xe>
+/embryos/chapter12/apps/game.c:86
+			}
 		}
 	}
 }
-    700030b0:	0001                	nop
-    700030b2:	0001                	nop
-    700030b4:	60e2                	ld	ra,24(sp)
-    700030b6:	6442                	ld	s0,16(sp)
-    700030b8:	6105                	addi	sp,sp,32
-    700030ba:	8082                	ret
+    7000312c:	0001                	nop
+    7000312e:	0001                	nop
+    70003130:	60e2                	ld	ra,24(sp)
+    70003132:	6442                	ld	s0,16(sp)
+    70003134:	6105                	addi	sp,sp,32
+    70003136:	8082                	ret
 
-00000000700030bc <bucket_thread>:
+0000000070003138 <draw_score>:
+draw_score():
+/embryos/chapter12/apps/game.c:88
+
+void draw_score() {
+    70003138:	1101                	addi	sp,sp,-32
+    7000313a:	ec06                	sd	ra,24(sp)
+    7000313c:	e822                	sd	s0,16(sp)
+    7000313e:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/game.c:90
+	// Clear the entire score row first to prevent leftover digits/colors
+	for (int i = 0; i < SCREEN_W; i++) {
+    70003140:	fe042623          	sw	zero,-20(s0)
+    70003144:	a005                	j	70003164 <draw_score+0x2c>
+/embryos/chapter12/apps/game.c:91
+		user_put(i, 0, CELL(' ', 7, 0));
+    70003146:	fec42783          	lw	a5,-20(s0)
+    7000314a:	72000613          	li	a2,1824
+    7000314e:	4581                	li	a1,0
+    70003150:	853e                	mv	a0,a5
+    70003152:	ffffd097          	auipc	ra,0xffffd
+    70003156:	eda080e7          	jalr	-294(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/game.c:90 (discriminator 3)
+	for (int i = 0; i < SCREEN_W; i++) {
+    7000315a:	fec42783          	lw	a5,-20(s0)
+    7000315e:	2785                	addiw	a5,a5,1
+    70003160:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:90 (discriminator 1)
+    70003164:	fec42783          	lw	a5,-20(s0)
+    70003168:	0007871b          	sext.w	a4,a5
+    7000316c:	02600793          	li	a5,38
+    70003170:	fce7dbe3          	bge	a5,a4,70003146 <draw_score+0xe>
+/embryos/chapter12/apps/game.c:93
+	}
+	const char *label = "SCORE:";
+    70003174:	00001797          	auipc	a5,0x1
+    70003178:	ae478793          	addi	a5,a5,-1308 # 70003c58 <main+0x236>
+    7000317c:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/game.c:94
+	for (int i = 0; label[i] != '\0'; i++) {
+    70003180:	fe042423          	sw	zero,-24(s0)
+    70003184:	a099                	j	700031ca <draw_score+0x92>
+/embryos/chapter12/apps/game.c:95
+		user_put(i, 0, CELL(label[i], 7, 0));
+    70003186:	fe842783          	lw	a5,-24(s0)
+    7000318a:	fe043703          	ld	a4,-32(s0)
+    7000318e:	97ba                	add	a5,a5,a4
+    70003190:	0007c783          	lbu	a5,0(a5)
+    70003194:	0107979b          	slliw	a5,a5,0x10
+    70003198:	4107d79b          	sraiw	a5,a5,0x10
+    7000319c:	7007e793          	ori	a5,a5,1792
+    700031a0:	0107979b          	slliw	a5,a5,0x10
+    700031a4:	4107d79b          	sraiw	a5,a5,0x10
+    700031a8:	03079713          	slli	a4,a5,0x30
+    700031ac:	9341                	srli	a4,a4,0x30
+    700031ae:	fe842783          	lw	a5,-24(s0)
+    700031b2:	863a                	mv	a2,a4
+    700031b4:	4581                	li	a1,0
+    700031b6:	853e                	mv	a0,a5
+    700031b8:	ffffd097          	auipc	ra,0xffffd
+    700031bc:	e74080e7          	jalr	-396(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/game.c:94 (discriminator 3)
+	for (int i = 0; label[i] != '\0'; i++) {
+    700031c0:	fe842783          	lw	a5,-24(s0)
+    700031c4:	2785                	addiw	a5,a5,1
+    700031c6:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/game.c:94 (discriminator 1)
+    700031ca:	fe842783          	lw	a5,-24(s0)
+    700031ce:	fe043703          	ld	a4,-32(s0)
+    700031d2:	97ba                	add	a5,a5,a4
+    700031d4:	0007c783          	lbu	a5,0(a5)
+    700031d8:	f7dd                	bnez	a5,70003186 <draw_score+0x4e>
+/embryos/chapter12/apps/game.c:97
+	}
+	print_score(10, score);
+    700031da:	00001797          	auipc	a5,0x1
+    700031de:	ff678793          	addi	a5,a5,-10 # 700041d0 <score>
+    700031e2:	439c                	lw	a5,0(a5)
+    700031e4:	85be                	mv	a1,a5
+    700031e6:	4529                	li	a0,10
+    700031e8:	00000097          	auipc	ra,0x0
+    700031ec:	b86080e7          	jalr	-1146(ra) # 70002d6e <print_score>
+/embryos/chapter12/apps/game.c:98
+}
+    700031f0:	0001                	nop
+    700031f2:	60e2                	ld	ra,24(sp)
+    700031f4:	6442                	ld	s0,16(sp)
+    700031f6:	6105                	addi	sp,sp,32
+    700031f8:	8082                	ret
+
+00000000700031fa <clear_screen>:
+clear_screen():
+/embryos/chapter12/apps/game.c:100
+
+void clear_screen() {
+    700031fa:	1101                	addi	sp,sp,-32
+    700031fc:	ec06                	sd	ra,24(sp)
+    700031fe:	e822                	sd	s0,16(sp)
+    70003200:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/game.c:101
+	for (int x = 0; x < SCREEN_W; x++) {
+    70003202:	fe042623          	sw	zero,-20(s0)
+    70003206:	a0a1                	j	7000324e <clear_screen+0x54>
+/embryos/chapter12/apps/game.c:102
+		for (int y = 0; y < GAME_H; y++) {
+    70003208:	fe042423          	sw	zero,-24(s0)
+    7000320c:	a02d                	j	70003236 <clear_screen+0x3c>
+/embryos/chapter12/apps/game.c:103
+			bp_put(&bp, x, y, 0, BP_LAZY);
+    7000320e:	fe842603          	lw	a2,-24(s0)
+    70003212:	fec42783          	lw	a5,-20(s0)
+    70003216:	4705                	li	a4,1
+    70003218:	4681                	li	a3,0
+    7000321a:	85be                	mv	a1,a5
+    7000321c:	00001517          	auipc	a0,0x1
+    70003220:	13c50513          	addi	a0,a0,316 # 70004358 <bp>
+    70003224:	ffffe097          	auipc	ra,0xffffe
+    70003228:	132080e7          	jalr	306(ra) # 70001356 <bp_put>
+/embryos/chapter12/apps/game.c:102 (discriminator 3)
+		for (int y = 0; y < GAME_H; y++) {
+    7000322c:	fe842783          	lw	a5,-24(s0)
+    70003230:	2785                	addiw	a5,a5,1
+    70003232:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/game.c:102 (discriminator 1)
+    70003236:	fe842783          	lw	a5,-24(s0)
+    7000323a:	0007871b          	sext.w	a4,a5
+    7000323e:	47c9                	li	a5,18
+    70003240:	fce7d7e3          	bge	a5,a4,7000320e <clear_screen+0x14>
+/embryos/chapter12/apps/game.c:101 (discriminator 2)
+	for (int x = 0; x < SCREEN_W; x++) {
+    70003244:	fec42783          	lw	a5,-20(s0)
+    70003248:	2785                	addiw	a5,a5,1
+    7000324a:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:101 (discriminator 1)
+    7000324e:	fec42783          	lw	a5,-20(s0)
+    70003252:	0007871b          	sext.w	a4,a5
+    70003256:	02600793          	li	a5,38
+    7000325a:	fae7d7e3          	bge	a5,a4,70003208 <clear_screen+0xe>
+/embryos/chapter12/apps/game.c:106
+		}
+	}
+}
+    7000325e:	0001                	nop
+    70003260:	0001                	nop
+    70003262:	60e2                	ld	ra,24(sp)
+    70003264:	6442                	ld	s0,16(sp)
+    70003266:	6105                	addi	sp,sp,32
+    70003268:	8082                	ret
+
+000000007000326a <bucket_thread>:
 bucket_thread():
-/embryos/chapter12/apps/bucketgame.c:82
+/embryos/chapter12/apps/game.c:108
 
 void bucket_thread(void *arg) {
-    700030bc:	7179                	addi	sp,sp,-48
-    700030be:	f406                	sd	ra,40(sp)
-    700030c0:	f022                	sd	s0,32(sp)
-    700030c2:	1800                	addi	s0,sp,48
-    700030c4:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/bucketgame.c:84
+    7000326a:	7179                	addi	sp,sp,-48
+    7000326c:	f406                	sd	ra,40(sp)
+    7000326e:	f022                	sd	s0,32(sp)
+    70003270:	1800                	addi	s0,sp,48
+    70003272:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/game.c:110
 	(void)arg;
 	while (!game_over) {
-    700030c8:	a0e1                	j	70003190 <bucket_thread+0xd4>
-/embryos/chapter12/apps/bucketgame.c:85
+    70003276:	a0e1                	j	7000333e <bucket_thread+0xd4>
+/embryos/chapter12/apps/game.c:111
 		int c = thread_get();
-    700030ca:	00000097          	auipc	ra,0x0
-    700030ce:	a36080e7          	jalr	-1482(ra) # 70002b00 <thread_get>
-    700030d2:	87aa                	mv	a5,a0
-    700030d4:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:87
+    70003278:	00000097          	auipc	ra,0x0
+    7000327c:	888080e7          	jalr	-1912(ra) # 70002b00 <thread_get>
+    70003280:	87aa                	mv	a5,a0
+    70003282:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:113
 
 		sema_dec(sem_state);
-    700030d8:	00001797          	auipc	a5,0x1
-    700030dc:	df078793          	addi	a5,a5,-528 # 70003ec8 <sem_state>
-    700030e0:	639c                	ld	a5,0(a5)
-    700030e2:	853e                	mv	a0,a5
-    700030e4:	00000097          	auipc	ra,0x0
-    700030e8:	ba6080e7          	jalr	-1114(ra) # 70002c8a <sema_dec>
-/embryos/chapter12/apps/bucketgame.c:88
+    70003286:	00001797          	auipc	a5,0x1
+    7000328a:	0ca78793          	addi	a5,a5,202 # 70004350 <sem_state>
+    7000328e:	639c                	ld	a5,0(a5)
+    70003290:	853e                	mv	a0,a5
+    70003292:	00000097          	auipc	ra,0x0
+    70003296:	9f8080e7          	jalr	-1544(ra) # 70002c8a <sema_dec>
+/embryos/chapter12/apps/game.c:114
 		if (c == 'a' && bucket_x > 0) bucket_x--;
-    700030ec:	fec42783          	lw	a5,-20(s0)
-    700030f0:	0007871b          	sext.w	a4,a5
-    700030f4:	06100793          	li	a5,97
-    700030f8:	02f71663          	bne	a4,a5,70003124 <bucket_thread+0x68>
-/embryos/chapter12/apps/bucketgame.c:88 (discriminator 1)
-    700030fc:	00000797          	auipc	a5,0x0
-    70003100:	7d478793          	addi	a5,a5,2004 # 700038d0 <bucket_x>
-    70003104:	439c                	lw	a5,0(a5)
-    70003106:	00f05f63          	blez	a5,70003124 <bucket_thread+0x68>
-/embryos/chapter12/apps/bucketgame.c:88 (discriminator 2)
-    7000310a:	00000797          	auipc	a5,0x0
-    7000310e:	7c678793          	addi	a5,a5,1990 # 700038d0 <bucket_x>
-    70003112:	439c                	lw	a5,0(a5)
-    70003114:	37fd                	addiw	a5,a5,-1
-    70003116:	0007871b          	sext.w	a4,a5
-    7000311a:	00000797          	auipc	a5,0x0
-    7000311e:	7b678793          	addi	a5,a5,1974 # 700038d0 <bucket_x>
-    70003122:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/bucketgame.c:89
+    7000329a:	fec42783          	lw	a5,-20(s0)
+    7000329e:	0007871b          	sext.w	a4,a5
+    700032a2:	06100793          	li	a5,97
+    700032a6:	02f71663          	bne	a4,a5,700032d2 <bucket_thread+0x68>
+/embryos/chapter12/apps/game.c:114 (discriminator 1)
+    700032aa:	00001797          	auipc	a5,0x1
+    700032ae:	a3e78793          	addi	a5,a5,-1474 # 70003ce8 <bucket_x>
+    700032b2:	439c                	lw	a5,0(a5)
+    700032b4:	00f05f63          	blez	a5,700032d2 <bucket_thread+0x68>
+/embryos/chapter12/apps/game.c:114 (discriminator 2)
+    700032b8:	00001797          	auipc	a5,0x1
+    700032bc:	a3078793          	addi	a5,a5,-1488 # 70003ce8 <bucket_x>
+    700032c0:	439c                	lw	a5,0(a5)
+    700032c2:	37fd                	addiw	a5,a5,-1
+    700032c4:	0007871b          	sext.w	a4,a5
+    700032c8:	00001797          	auipc	a5,0x1
+    700032cc:	a2078793          	addi	a5,a5,-1504 # 70003ce8 <bucket_x>
+    700032d0:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/game.c:115
 		if (c == 'd' && bucket_x < SCREEN_W - BUCKET_W) bucket_x++;
-    70003124:	fec42783          	lw	a5,-20(s0)
-    70003128:	0007871b          	sext.w	a4,a5
-    7000312c:	06400793          	li	a5,100
-    70003130:	02f71763          	bne	a4,a5,7000315e <bucket_thread+0xa2>
-/embryos/chapter12/apps/bucketgame.c:89 (discriminator 1)
-    70003134:	00000797          	auipc	a5,0x0
-    70003138:	79c78793          	addi	a5,a5,1948 # 700038d0 <bucket_x>
-    7000313c:	4398                	lw	a4,0(a5)
-    7000313e:	47fd                	li	a5,31
-    70003140:	00e7cf63          	blt	a5,a4,7000315e <bucket_thread+0xa2>
-/embryos/chapter12/apps/bucketgame.c:89 (discriminator 2)
-    70003144:	00000797          	auipc	a5,0x0
-    70003148:	78c78793          	addi	a5,a5,1932 # 700038d0 <bucket_x>
-    7000314c:	439c                	lw	a5,0(a5)
-    7000314e:	2785                	addiw	a5,a5,1
-    70003150:	0007871b          	sext.w	a4,a5
-    70003154:	00000797          	auipc	a5,0x0
-    70003158:	77c78793          	addi	a5,a5,1916 # 700038d0 <bucket_x>
-    7000315c:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/bucketgame.c:90
+    700032d2:	fec42783          	lw	a5,-20(s0)
+    700032d6:	0007871b          	sext.w	a4,a5
+    700032da:	06400793          	li	a5,100
+    700032de:	02f71763          	bne	a4,a5,7000330c <bucket_thread+0xa2>
+/embryos/chapter12/apps/game.c:115 (discriminator 1)
+    700032e2:	00001797          	auipc	a5,0x1
+    700032e6:	a0678793          	addi	a5,a5,-1530 # 70003ce8 <bucket_x>
+    700032ea:	4398                	lw	a4,0(a5)
+    700032ec:	47fd                	li	a5,31
+    700032ee:	00e7cf63          	blt	a5,a4,7000330c <bucket_thread+0xa2>
+/embryos/chapter12/apps/game.c:115 (discriminator 2)
+    700032f2:	00001797          	auipc	a5,0x1
+    700032f6:	9f678793          	addi	a5,a5,-1546 # 70003ce8 <bucket_x>
+    700032fa:	439c                	lw	a5,0(a5)
+    700032fc:	2785                	addiw	a5,a5,1
+    700032fe:	0007871b          	sext.w	a4,a5
+    70003302:	00001797          	auipc	a5,0x1
+    70003306:	9e678793          	addi	a5,a5,-1562 # 70003ce8 <bucket_x>
+    7000330a:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/game.c:116
 		sema_inc(sem_state);
-    7000315e:	00001797          	auipc	a5,0x1
-    70003162:	d6a78793          	addi	a5,a5,-662 # 70003ec8 <sem_state>
-    70003166:	639c                	ld	a5,0(a5)
-    70003168:	853e                	mv	a0,a5
-    7000316a:	00000097          	auipc	ra,0x0
-    7000316e:	ab4080e7          	jalr	-1356(ra) # 70002c1e <sema_inc>
-/embryos/chapter12/apps/bucketgame.c:92
+    7000330c:	00001797          	auipc	a5,0x1
+    70003310:	04478793          	addi	a5,a5,68 # 70004350 <sem_state>
+    70003314:	639c                	ld	a5,0(a5)
+    70003316:	853e                	mv	a0,a5
+    70003318:	00000097          	auipc	ra,0x0
+    7000331c:	906080e7          	jalr	-1786(ra) # 70002c1e <sema_inc>
+/embryos/chapter12/apps/game.c:118
 
 		thread_sleep(user_gettime() + 30000000ULL);
-    70003172:	ffffd097          	auipc	ra,0xffffd
-    70003176:	ef2080e7          	jalr	-270(ra) # 70000064 <user_gettime>
-    7000317a:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:92 (discriminator 1)
-    7000317c:	01c9c7b7          	lui	a5,0x1c9c
-    70003180:	38078793          	addi	a5,a5,896 # 1c9c380 <text_file_end+0x1c97ac8>
-    70003184:	97ba                	add	a5,a5,a4
-    70003186:	853e                	mv	a0,a5
-    70003188:	00000097          	auipc	ra,0x0
-    7000318c:	936080e7          	jalr	-1738(ra) # 70002abe <thread_sleep>
-/embryos/chapter12/apps/bucketgame.c:84
+    70003320:	ffffd097          	auipc	ra,0xffffd
+    70003324:	d44080e7          	jalr	-700(ra) # 70000064 <user_gettime>
+    70003328:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:118 (discriminator 1)
+    7000332a:	01c9c7b7          	lui	a5,0x1c9c
+    7000332e:	38078793          	addi	a5,a5,896 # 1c9c380 <text_file_end+0x1c976b0>
+    70003332:	97ba                	add	a5,a5,a4
+    70003334:	853e                	mv	a0,a5
+    70003336:	fffff097          	auipc	ra,0xfffff
+    7000333a:	788080e7          	jalr	1928(ra) # 70002abe <thread_sleep>
+/embryos/chapter12/apps/game.c:110
 	while (!game_over) {
-    70003190:	00001797          	auipc	a5,0x1
-    70003194:	c3478793          	addi	a5,a5,-972 # 70003dc4 <game_over>
-    70003198:	439c                	lw	a5,0(a5)
-    7000319a:	db85                	beqz	a5,700030ca <bucket_thread+0xe>
-/embryos/chapter12/apps/bucketgame.c:94
+    7000333e:	00001797          	auipc	a5,0x1
+    70003342:	e9678793          	addi	a5,a5,-362 # 700041d4 <game_over>
+    70003346:	439c                	lw	a5,0(a5)
+    70003348:	db85                	beqz	a5,70003278 <bucket_thread+0xe>
+/embryos/chapter12/apps/game.c:120
 	}
 	thread_exit();
-    7000319c:	00000097          	auipc	ra,0x0
-    700031a0:	9d0080e7          	jalr	-1584(ra) # 70002b6c <thread_exit>
-/embryos/chapter12/apps/bucketgame.c:95
+    7000334a:	00000097          	auipc	ra,0x0
+    7000334e:	822080e7          	jalr	-2014(ra) # 70002b6c <thread_exit>
+/embryos/chapter12/apps/game.c:121
 }
-    700031a4:	0001                	nop
-    700031a6:	70a2                	ld	ra,40(sp)
-    700031a8:	7402                	ld	s0,32(sp)
-    700031aa:	6145                	addi	sp,sp,48
-    700031ac:	8082                	ret
+    70003352:	0001                	nop
+    70003354:	70a2                	ld	ra,40(sp)
+    70003356:	7402                	ld	s0,32(sp)
+    70003358:	6145                	addi	sp,sp,48
+    7000335a:	8082                	ret
 
-00000000700031ae <falling_thread>:
+000000007000335c <falling_thread>:
 falling_thread():
-/embryos/chapter12/apps/bucketgame.c:97
+/embryos/chapter12/apps/game.c:123
 
 void falling_thread(void *arg) {
-    700031ae:	7179                	addi	sp,sp,-48
-    700031b0:	f406                	sd	ra,40(sp)
-    700031b2:	f022                	sd	s0,32(sp)
-    700031b4:	1800                	addi	s0,sp,48
-    700031b6:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/bucketgame.c:99
+    7000335c:	7179                	addi	sp,sp,-48
+    7000335e:	f406                	sd	ra,40(sp)
+    70003360:	f022                	sd	s0,32(sp)
+    70003362:	1800                	addi	s0,sp,48
+    70003364:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/game.c:125
 	(void)arg;
 	int tick = 0;
-    700031ba:	fe042623          	sw	zero,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:101
+    70003368:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter12/apps/game.c:127
 
 	while (!game_over) {
-    700031be:	a66d                	j	70003568 <falling_thread+0x3ba>
-/embryos/chapter12/apps/bucketgame.c:102
+    7000336c:	a66d                	j	70003716 <falling_thread+0x3ba>
+/embryos/chapter12/apps/game.c:128
 		sema_dec(sem_state);
-    700031c0:	00001797          	auipc	a5,0x1
-    700031c4:	d0878793          	addi	a5,a5,-760 # 70003ec8 <sem_state>
-    700031c8:	639c                	ld	a5,0(a5)
-    700031ca:	853e                	mv	a0,a5
-    700031cc:	00000097          	auipc	ra,0x0
-    700031d0:	abe080e7          	jalr	-1346(ra) # 70002c8a <sema_dec>
-/embryos/chapter12/apps/bucketgame.c:105
+    7000336e:	00001797          	auipc	a5,0x1
+    70003372:	fe278793          	addi	a5,a5,-30 # 70004350 <sem_state>
+    70003376:	639c                	ld	a5,0(a5)
+    70003378:	853e                	mv	a0,a5
+    7000337a:	00000097          	auipc	ra,0x0
+    7000337e:	910080e7          	jalr	-1776(ra) # 70002c8a <sema_dec>
+/embryos/chapter12/apps/game.c:131
 
 		// Move balls more slowly: only every 3 ticks
 		if (tick % 3 == 0) {
-    700031d4:	fec42783          	lw	a5,-20(s0)
-    700031d8:	0007869b          	sext.w	a3,a5
-    700031dc:	55555737          	lui	a4,0x55555
-    700031e0:	55670713          	addi	a4,a4,1366 # 55555556 <text_file_end+0x55550c9e>
-    700031e4:	02e68733          	mul	a4,a3,a4
-    700031e8:	9301                	srli	a4,a4,0x20
-    700031ea:	41f7d69b          	sraiw	a3,a5,0x1f
-    700031ee:	9f15                	subw	a4,a4,a3
-    700031f0:	86ba                	mv	a3,a4
-    700031f2:	8736                	mv	a4,a3
-    700031f4:	0017171b          	slliw	a4,a4,0x1
-    700031f8:	9f35                	addw	a4,a4,a3
-    700031fa:	9f99                	subw	a5,a5,a4
-    700031fc:	2781                	sext.w	a5,a5
-    700031fe:	18079763          	bnez	a5,7000338c <falling_thread+0x1de>
-/embryos/chapter12/apps/bucketgame.c:106
+    70003382:	fec42783          	lw	a5,-20(s0)
+    70003386:	0007869b          	sext.w	a3,a5
+    7000338a:	55555737          	lui	a4,0x55555
+    7000338e:	55670713          	addi	a4,a4,1366 # 55555556 <text_file_end+0x55550886>
+    70003392:	02e68733          	mul	a4,a3,a4
+    70003396:	9301                	srli	a4,a4,0x20
+    70003398:	41f7d69b          	sraiw	a3,a5,0x1f
+    7000339c:	9f15                	subw	a4,a4,a3
+    7000339e:	86ba                	mv	a3,a4
+    700033a0:	8736                	mv	a4,a3
+    700033a2:	0017171b          	slliw	a4,a4,0x1
+    700033a6:	9f35                	addw	a4,a4,a3
+    700033a8:	9f99                	subw	a5,a5,a4
+    700033aa:	2781                	sext.w	a5,a5
+    700033ac:	18079763          	bnez	a5,7000353a <falling_thread+0x1de>
+/embryos/chapter12/apps/game.c:132
 			for (int i = 0; i < MAX_DOTS; i++) {
-    70003202:	fe042423          	sw	zero,-24(s0)
-    70003206:	aaa5                	j	7000337e <falling_thread+0x1d0>
-/embryos/chapter12/apps/bucketgame.c:107
+    700033b0:	fe042423          	sw	zero,-24(s0)
+    700033b4:	aaa5                	j	7000352c <falling_thread+0x1d0>
+/embryos/chapter12/apps/game.c:133
 				if (!dots[i].active) continue;
-    70003208:	00001717          	auipc	a4,0x1
-    7000320c:	bc070713          	addi	a4,a4,-1088 # 70003dc8 <dots>
-    70003210:	fe842783          	lw	a5,-24(s0)
-    70003214:	0792                	slli	a5,a5,0x4
-    70003216:	97ba                	add	a5,a5,a4
-    70003218:	47dc                	lw	a5,12(a5)
-    7000321a:	14078c63          	beqz	a5,70003372 <falling_thread+0x1c4>
-/embryos/chapter12/apps/bucketgame.c:109
+    700033b6:	00001717          	auipc	a4,0x1
+    700033ba:	e2270713          	addi	a4,a4,-478 # 700041d8 <dots>
+    700033be:	fe842783          	lw	a5,-24(s0)
+    700033c2:	0792                	slli	a5,a5,0x4
+    700033c4:	97ba                	add	a5,a5,a4
+    700033c6:	47dc                	lw	a5,12(a5)
+    700033c8:	14078c63          	beqz	a5,70003520 <falling_thread+0x1c4>
+/embryos/chapter12/apps/game.c:135
 
 				dots[i].y++;
-    7000321e:	00001717          	auipc	a4,0x1
-    70003222:	baa70713          	addi	a4,a4,-1110 # 70003dc8 <dots>
-    70003226:	fe842783          	lw	a5,-24(s0)
-    7000322a:	0792                	slli	a5,a5,0x4
-    7000322c:	97ba                	add	a5,a5,a4
-    7000322e:	43dc                	lw	a5,4(a5)
-    70003230:	2785                	addiw	a5,a5,1
-    70003232:	0007871b          	sext.w	a4,a5
-    70003236:	00001697          	auipc	a3,0x1
-    7000323a:	b9268693          	addi	a3,a3,-1134 # 70003dc8 <dots>
-    7000323e:	fe842783          	lw	a5,-24(s0)
-    70003242:	0792                	slli	a5,a5,0x4
-    70003244:	97b6                	add	a5,a5,a3
-    70003246:	c3d8                	sw	a4,4(a5)
-/embryos/chapter12/apps/bucketgame.c:112
+    700033cc:	00001717          	auipc	a4,0x1
+    700033d0:	e0c70713          	addi	a4,a4,-500 # 700041d8 <dots>
+    700033d4:	fe842783          	lw	a5,-24(s0)
+    700033d8:	0792                	slli	a5,a5,0x4
+    700033da:	97ba                	add	a5,a5,a4
+    700033dc:	43dc                	lw	a5,4(a5)
+    700033de:	2785                	addiw	a5,a5,1
+    700033e0:	0007871b          	sext.w	a4,a5
+    700033e4:	00001697          	auipc	a3,0x1
+    700033e8:	df468693          	addi	a3,a3,-524 # 700041d8 <dots>
+    700033ec:	fe842783          	lw	a5,-24(s0)
+    700033f0:	0792                	slli	a5,a5,0x4
+    700033f2:	97b6                	add	a5,a5,a3
+    700033f4:	c3d8                	sw	a4,4(a5)
+/embryos/chapter12/apps/game.c:138
 
 				// Catch at bucket row (GAME_H - 2)
 				if (dots[i].y == GAME_H - 2 &&
-    70003248:	00001717          	auipc	a4,0x1
-    7000324c:	b8070713          	addi	a4,a4,-1152 # 70003dc8 <dots>
-    70003250:	fe842783          	lw	a5,-24(s0)
-    70003254:	0792                	slli	a5,a5,0x4
-    70003256:	97ba                	add	a5,a5,a4
-    70003258:	43d8                	lw	a4,4(a5)
-    7000325a:	47c5                	li	a5,17
-    7000325c:	0ef71463          	bne	a4,a5,70003344 <falling_thread+0x196>
-/embryos/chapter12/apps/bucketgame.c:113
+    700033f6:	00001717          	auipc	a4,0x1
+    700033fa:	de270713          	addi	a4,a4,-542 # 700041d8 <dots>
+    700033fe:	fe842783          	lw	a5,-24(s0)
+    70003402:	0792                	slli	a5,a5,0x4
+    70003404:	97ba                	add	a5,a5,a4
+    70003406:	43d8                	lw	a4,4(a5)
+    70003408:	47c5                	li	a5,17
+    7000340a:	0ef71463          	bne	a4,a5,700034f2 <falling_thread+0x196>
+/embryos/chapter12/apps/game.c:139
 				    dots[i].x >= bucket_x &&
-    70003260:	00001717          	auipc	a4,0x1
-    70003264:	b6870713          	addi	a4,a4,-1176 # 70003dc8 <dots>
-    70003268:	fe842783          	lw	a5,-24(s0)
-    7000326c:	0792                	slli	a5,a5,0x4
-    7000326e:	97ba                	add	a5,a5,a4
-    70003270:	4398                	lw	a4,0(a5)
-    70003272:	00000797          	auipc	a5,0x0
-    70003276:	65e78793          	addi	a5,a5,1630 # 700038d0 <bucket_x>
-    7000327a:	439c                	lw	a5,0(a5)
-/embryos/chapter12/apps/bucketgame.c:112 (discriminator 1)
+    7000340e:	00001717          	auipc	a4,0x1
+    70003412:	dca70713          	addi	a4,a4,-566 # 700041d8 <dots>
+    70003416:	fe842783          	lw	a5,-24(s0)
+    7000341a:	0792                	slli	a5,a5,0x4
+    7000341c:	97ba                	add	a5,a5,a4
+    7000341e:	4398                	lw	a4,0(a5)
+    70003420:	00001797          	auipc	a5,0x1
+    70003424:	8c878793          	addi	a5,a5,-1848 # 70003ce8 <bucket_x>
+    70003428:	439c                	lw	a5,0(a5)
+/embryos/chapter12/apps/game.c:138 (discriminator 1)
 				if (dots[i].y == GAME_H - 2 &&
-    7000327c:	0cf74463          	blt	a4,a5,70003344 <falling_thread+0x196>
-/embryos/chapter12/apps/bucketgame.c:114
+    7000342a:	0cf74463          	blt	a4,a5,700034f2 <falling_thread+0x196>
+/embryos/chapter12/apps/game.c:140
 				    dots[i].x < bucket_x + BUCKET_W) {
-    70003280:	00000797          	auipc	a5,0x0
-    70003284:	65078793          	addi	a5,a5,1616 # 700038d0 <bucket_x>
-    70003288:	439c                	lw	a5,0(a5)
-    7000328a:	2799                	addiw	a5,a5,6
-    7000328c:	0007871b          	sext.w	a4,a5
-    70003290:	00001697          	auipc	a3,0x1
-    70003294:	b3868693          	addi	a3,a3,-1224 # 70003dc8 <dots>
-    70003298:	fe842783          	lw	a5,-24(s0)
-    7000329c:	0792                	slli	a5,a5,0x4
-    7000329e:	97b6                	add	a5,a5,a3
-    700032a0:	439c                	lw	a5,0(a5)
-/embryos/chapter12/apps/bucketgame.c:113
+    7000342e:	00001797          	auipc	a5,0x1
+    70003432:	8ba78793          	addi	a5,a5,-1862 # 70003ce8 <bucket_x>
+    70003436:	439c                	lw	a5,0(a5)
+    70003438:	2799                	addiw	a5,a5,6
+    7000343a:	0007871b          	sext.w	a4,a5
+    7000343e:	00001697          	auipc	a3,0x1
+    70003442:	d9a68693          	addi	a3,a3,-614 # 700041d8 <dots>
+    70003446:	fe842783          	lw	a5,-24(s0)
+    7000344a:	0792                	slli	a5,a5,0x4
+    7000344c:	97b6                	add	a5,a5,a3
+    7000344e:	439c                	lw	a5,0(a5)
+/embryos/chapter12/apps/game.c:139
 				    dots[i].x >= bucket_x &&
-    700032a2:	0af74163          	blt	a4,a5,70003344 <falling_thread+0x196>
-/embryos/chapter12/apps/bucketgame.c:115
+    70003450:	0af74163          	blt	a4,a5,700034f2 <falling_thread+0x196>
+/embryos/chapter12/apps/game.c:141
 					if (dots[i].type == DOT_GREEN) score += 1;
-    700032a6:	00001717          	auipc	a4,0x1
-    700032aa:	b2270713          	addi	a4,a4,-1246 # 70003dc8 <dots>
-    700032ae:	fe842783          	lw	a5,-24(s0)
-    700032b2:	0792                	slli	a5,a5,0x4
-    700032b4:	97ba                	add	a5,a5,a4
-    700032b6:	479c                	lw	a5,8(a5)
-    700032b8:	ef99                	bnez	a5,700032d6 <falling_thread+0x128>
-/embryos/chapter12/apps/bucketgame.c:115 (discriminator 1)
-    700032ba:	00001797          	auipc	a5,0x1
-    700032be:	b0678793          	addi	a5,a5,-1274 # 70003dc0 <score>
-    700032c2:	439c                	lw	a5,0(a5)
-    700032c4:	2785                	addiw	a5,a5,1
-    700032c6:	0007871b          	sext.w	a4,a5
-    700032ca:	00001797          	auipc	a5,0x1
-    700032ce:	af678793          	addi	a5,a5,-1290 # 70003dc0 <score>
-    700032d2:	c398                	sw	a4,0(a5)
-    700032d4:	a8a9                	j	7000332e <falling_thread+0x180>
-/embryos/chapter12/apps/bucketgame.c:116
+    70003454:	00001717          	auipc	a4,0x1
+    70003458:	d8470713          	addi	a4,a4,-636 # 700041d8 <dots>
+    7000345c:	fe842783          	lw	a5,-24(s0)
+    70003460:	0792                	slli	a5,a5,0x4
+    70003462:	97ba                	add	a5,a5,a4
+    70003464:	479c                	lw	a5,8(a5)
+    70003466:	ef99                	bnez	a5,70003484 <falling_thread+0x128>
+/embryos/chapter12/apps/game.c:141 (discriminator 1)
+    70003468:	00001797          	auipc	a5,0x1
+    7000346c:	d6878793          	addi	a5,a5,-664 # 700041d0 <score>
+    70003470:	439c                	lw	a5,0(a5)
+    70003472:	2785                	addiw	a5,a5,1
+    70003474:	0007871b          	sext.w	a4,a5
+    70003478:	00001797          	auipc	a5,0x1
+    7000347c:	d5878793          	addi	a5,a5,-680 # 700041d0 <score>
+    70003480:	c398                	sw	a4,0(a5)
+    70003482:	a8a9                	j	700034dc <falling_thread+0x180>
+/embryos/chapter12/apps/game.c:142
 					else if (dots[i].type == DOT_GOLD) score += 10;
-    700032d6:	00001717          	auipc	a4,0x1
-    700032da:	af270713          	addi	a4,a4,-1294 # 70003dc8 <dots>
-    700032de:	fe842783          	lw	a5,-24(s0)
-    700032e2:	0792                	slli	a5,a5,0x4
-    700032e4:	97ba                	add	a5,a5,a4
-    700032e6:	4798                	lw	a4,8(a5)
-    700032e8:	4785                	li	a5,1
-    700032ea:	02f71063          	bne	a4,a5,7000330a <falling_thread+0x15c>
-/embryos/chapter12/apps/bucketgame.c:116 (discriminator 1)
-    700032ee:	00001797          	auipc	a5,0x1
-    700032f2:	ad278793          	addi	a5,a5,-1326 # 70003dc0 <score>
-    700032f6:	439c                	lw	a5,0(a5)
-    700032f8:	27a9                	addiw	a5,a5,10
-    700032fa:	0007871b          	sext.w	a4,a5
-    700032fe:	00001797          	auipc	a5,0x1
-    70003302:	ac278793          	addi	a5,a5,-1342 # 70003dc0 <score>
-    70003306:	c398                	sw	a4,0(a5)
-    70003308:	a01d                	j	7000332e <falling_thread+0x180>
-/embryos/chapter12/apps/bucketgame.c:117
+    70003484:	00001717          	auipc	a4,0x1
+    70003488:	d5470713          	addi	a4,a4,-684 # 700041d8 <dots>
+    7000348c:	fe842783          	lw	a5,-24(s0)
+    70003490:	0792                	slli	a5,a5,0x4
+    70003492:	97ba                	add	a5,a5,a4
+    70003494:	4798                	lw	a4,8(a5)
+    70003496:	4785                	li	a5,1
+    70003498:	02f71063          	bne	a4,a5,700034b8 <falling_thread+0x15c>
+/embryos/chapter12/apps/game.c:142 (discriminator 1)
+    7000349c:	00001797          	auipc	a5,0x1
+    700034a0:	d3478793          	addi	a5,a5,-716 # 700041d0 <score>
+    700034a4:	439c                	lw	a5,0(a5)
+    700034a6:	27a9                	addiw	a5,a5,10
+    700034a8:	0007871b          	sext.w	a4,a5
+    700034ac:	00001797          	auipc	a5,0x1
+    700034b0:	d2478793          	addi	a5,a5,-732 # 700041d0 <score>
+    700034b4:	c398                	sw	a4,0(a5)
+    700034b6:	a01d                	j	700034dc <falling_thread+0x180>
+/embryos/chapter12/apps/game.c:143
 					else if (dots[i].type == DOT_RED) game_over = 1;
-    7000330a:	00001717          	auipc	a4,0x1
-    7000330e:	abe70713          	addi	a4,a4,-1346 # 70003dc8 <dots>
-    70003312:	fe842783          	lw	a5,-24(s0)
-    70003316:	0792                	slli	a5,a5,0x4
-    70003318:	97ba                	add	a5,a5,a4
-    7000331a:	4798                	lw	a4,8(a5)
-    7000331c:	4789                	li	a5,2
-    7000331e:	00f71863          	bne	a4,a5,7000332e <falling_thread+0x180>
-/embryos/chapter12/apps/bucketgame.c:117 (discriminator 1)
-    70003322:	00001797          	auipc	a5,0x1
-    70003326:	aa278793          	addi	a5,a5,-1374 # 70003dc4 <game_over>
-    7000332a:	4705                	li	a4,1
-    7000332c:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/bucketgame.c:118
+    700034b8:	00001717          	auipc	a4,0x1
+    700034bc:	d2070713          	addi	a4,a4,-736 # 700041d8 <dots>
+    700034c0:	fe842783          	lw	a5,-24(s0)
+    700034c4:	0792                	slli	a5,a5,0x4
+    700034c6:	97ba                	add	a5,a5,a4
+    700034c8:	4798                	lw	a4,8(a5)
+    700034ca:	4789                	li	a5,2
+    700034cc:	00f71863          	bne	a4,a5,700034dc <falling_thread+0x180>
+/embryos/chapter12/apps/game.c:143 (discriminator 1)
+    700034d0:	00001797          	auipc	a5,0x1
+    700034d4:	d0478793          	addi	a5,a5,-764 # 700041d4 <game_over>
+    700034d8:	4705                	li	a4,1
+    700034da:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/game.c:144
 					dots[i].active = 0;
-    7000332e:	00001717          	auipc	a4,0x1
-    70003332:	a9a70713          	addi	a4,a4,-1382 # 70003dc8 <dots>
-    70003336:	fe842783          	lw	a5,-24(s0)
-    7000333a:	0792                	slli	a5,a5,0x4
-    7000333c:	97ba                	add	a5,a5,a4
-    7000333e:	0007a623          	sw	zero,12(a5)
-    70003342:	a80d                	j	70003374 <falling_thread+0x1c6>
-/embryos/chapter12/apps/bucketgame.c:119
+    700034dc:	00001717          	auipc	a4,0x1
+    700034e0:	cfc70713          	addi	a4,a4,-772 # 700041d8 <dots>
+    700034e4:	fe842783          	lw	a5,-24(s0)
+    700034e8:	0792                	slli	a5,a5,0x4
+    700034ea:	97ba                	add	a5,a5,a4
+    700034ec:	0007a623          	sw	zero,12(a5)
+    700034f0:	a80d                	j	70003522 <falling_thread+0x1c6>
+/embryos/chapter12/apps/game.c:145
 				} else if (dots[i].y >= GAME_H - 1) {
-    70003344:	00001717          	auipc	a4,0x1
-    70003348:	a8470713          	addi	a4,a4,-1404 # 70003dc8 <dots>
-    7000334c:	fe842783          	lw	a5,-24(s0)
-    70003350:	0792                	slli	a5,a5,0x4
-    70003352:	97ba                	add	a5,a5,a4
-    70003354:	43d8                	lw	a4,4(a5)
-    70003356:	47c5                	li	a5,17
-    70003358:	00e7de63          	bge	a5,a4,70003374 <falling_thread+0x1c6>
-/embryos/chapter12/apps/bucketgame.c:120
+    700034f2:	00001717          	auipc	a4,0x1
+    700034f6:	ce670713          	addi	a4,a4,-794 # 700041d8 <dots>
+    700034fa:	fe842783          	lw	a5,-24(s0)
+    700034fe:	0792                	slli	a5,a5,0x4
+    70003500:	97ba                	add	a5,a5,a4
+    70003502:	43d8                	lw	a4,4(a5)
+    70003504:	47c5                	li	a5,17
+    70003506:	00e7de63          	bge	a5,a4,70003522 <falling_thread+0x1c6>
+/embryos/chapter12/apps/game.c:146
 					dots[i].active = 0;
-    7000335c:	00001717          	auipc	a4,0x1
-    70003360:	a6c70713          	addi	a4,a4,-1428 # 70003dc8 <dots>
-    70003364:	fe842783          	lw	a5,-24(s0)
-    70003368:	0792                	slli	a5,a5,0x4
-    7000336a:	97ba                	add	a5,a5,a4
-    7000336c:	0007a623          	sw	zero,12(a5)
-    70003370:	a011                	j	70003374 <falling_thread+0x1c6>
-/embryos/chapter12/apps/bucketgame.c:107
+    7000350a:	00001717          	auipc	a4,0x1
+    7000350e:	cce70713          	addi	a4,a4,-818 # 700041d8 <dots>
+    70003512:	fe842783          	lw	a5,-24(s0)
+    70003516:	0792                	slli	a5,a5,0x4
+    70003518:	97ba                	add	a5,a5,a4
+    7000351a:	0007a623          	sw	zero,12(a5)
+    7000351e:	a011                	j	70003522 <falling_thread+0x1c6>
+/embryos/chapter12/apps/game.c:133
 				if (!dots[i].active) continue;
-    70003372:	0001                	nop
-/embryos/chapter12/apps/bucketgame.c:106 (discriminator 2)
+    70003520:	0001                	nop
+/embryos/chapter12/apps/game.c:132 (discriminator 2)
 			for (int i = 0; i < MAX_DOTS; i++) {
-    70003374:	fe842783          	lw	a5,-24(s0)
-    70003378:	2785                	addiw	a5,a5,1
-    7000337a:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:106 (discriminator 1)
-    7000337e:	fe842783          	lw	a5,-24(s0)
-    70003382:	0007871b          	sext.w	a4,a5
-    70003386:	47bd                	li	a5,15
-    70003388:	e8e7d0e3          	bge	a5,a4,70003208 <falling_thread+0x5a>
-/embryos/chapter12/apps/bucketgame.c:126
+    70003522:	fe842783          	lw	a5,-24(s0)
+    70003526:	2785                	addiw	a5,a5,1
+    70003528:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/game.c:132 (discriminator 1)
+    7000352c:	fe842783          	lw	a5,-24(s0)
+    70003530:	0007871b          	sext.w	a4,a5
+    70003534:	47bd                	li	a5,15
+    70003536:	e8e7d0e3          	bge	a5,a4,700033b6 <falling_thread+0x5a>
+/embryos/chapter12/apps/game.c:152
 				}
 			}
 		}
 
 		// Spawn new balls
 		if (tick % 30 == 0) {
-    7000338c:	fec42783          	lw	a5,-20(s0)
-    70003390:	0007869b          	sext.w	a3,a5
-    70003394:	88889737          	lui	a4,0x88889
-    70003398:	88970713          	addi	a4,a4,-1911 # ffffffff88888889 <__bss_end+0xffffffff188846bc>
-    7000339c:	02e68733          	mul	a4,a3,a4
-    700033a0:	9301                	srli	a4,a4,0x20
-    700033a2:	9f3d                	addw	a4,a4,a5
-    700033a4:	4047571b          	sraiw	a4,a4,0x4
-    700033a8:	86ba                	mv	a3,a4
-    700033aa:	41f7d71b          	sraiw	a4,a5,0x1f
-    700033ae:	40e6873b          	subw	a4,a3,a4
-    700033b2:	86ba                	mv	a3,a4
-    700033b4:	8736                	mv	a4,a3
-    700033b6:	0047171b          	slliw	a4,a4,0x4
-    700033ba:	9f15                	subw	a4,a4,a3
-    700033bc:	0017171b          	slliw	a4,a4,0x1
-    700033c0:	9f99                	subw	a5,a5,a4
-    700033c2:	2781                	sext.w	a5,a5
-    700033c4:	16079463          	bnez	a5,7000352c <falling_thread+0x37e>
-/embryos/chapter12/apps/bucketgame.c:127
+    7000353a:	fec42783          	lw	a5,-20(s0)
+    7000353e:	0007869b          	sext.w	a3,a5
+    70003542:	88889737          	lui	a4,0x88889
+    70003546:	88970713          	addi	a4,a4,-1911 # ffffffff88888889 <__bss_end+0xffffffff18884234>
+    7000354a:	02e68733          	mul	a4,a3,a4
+    7000354e:	9301                	srli	a4,a4,0x20
+    70003550:	9f3d                	addw	a4,a4,a5
+    70003552:	4047571b          	sraiw	a4,a4,0x4
+    70003556:	86ba                	mv	a3,a4
+    70003558:	41f7d71b          	sraiw	a4,a5,0x1f
+    7000355c:	40e6873b          	subw	a4,a3,a4
+    70003560:	86ba                	mv	a3,a4
+    70003562:	8736                	mv	a4,a3
+    70003564:	0047171b          	slliw	a4,a4,0x4
+    70003568:	9f15                	subw	a4,a4,a3
+    7000356a:	0017171b          	slliw	a4,a4,0x1
+    7000356e:	9f99                	subw	a5,a5,a4
+    70003570:	2781                	sext.w	a5,a5
+    70003572:	16079463          	bnez	a5,700036da <falling_thread+0x37e>
+/embryos/chapter12/apps/game.c:153
 			for (int i = 0; i < MAX_DOTS; i++) {
-    700033c8:	fe042223          	sw	zero,-28(s0)
-    700033cc:	aa89                	j	7000351e <falling_thread+0x370>
-/embryos/chapter12/apps/bucketgame.c:128
+    70003576:	fe042223          	sw	zero,-28(s0)
+    7000357a:	aa89                	j	700036cc <falling_thread+0x370>
+/embryos/chapter12/apps/game.c:154
 				if (!dots[i].active) {
-    700033ce:	00001717          	auipc	a4,0x1
-    700033d2:	9fa70713          	addi	a4,a4,-1542 # 70003dc8 <dots>
-    700033d6:	fe442783          	lw	a5,-28(s0)
-    700033da:	0792                	slli	a5,a5,0x4
-    700033dc:	97ba                	add	a5,a5,a4
-    700033de:	47dc                	lw	a5,12(a5)
-    700033e0:	12079a63          	bnez	a5,70003514 <falling_thread+0x366>
-/embryos/chapter12/apps/bucketgame.c:129
+    7000357c:	00001717          	auipc	a4,0x1
+    70003580:	c5c70713          	addi	a4,a4,-932 # 700041d8 <dots>
+    70003584:	fe442783          	lw	a5,-28(s0)
+    70003588:	0792                	slli	a5,a5,0x4
+    7000358a:	97ba                	add	a5,a5,a4
+    7000358c:	47dc                	lw	a5,12(a5)
+    7000358e:	12079a63          	bnez	a5,700036c2 <falling_thread+0x366>
+/embryos/chapter12/apps/game.c:155
 					dots[i].x = (int)((user_gettime() * 17ULL + i * 13ULL) % SCREEN_W);
-    700033e4:	ffffd097          	auipc	ra,0xffffd
-    700033e8:	c80080e7          	jalr	-896(ra) # 70000064 <user_gettime>
-    700033ec:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:129 (discriminator 1)
-    700033ee:	87ba                	mv	a5,a4
-    700033f0:	0792                	slli	a5,a5,0x4
-    700033f2:	00e786b3          	add	a3,a5,a4
-    700033f6:	fe442703          	lw	a4,-28(s0)
-    700033fa:	87ba                	mv	a5,a4
-    700033fc:	0786                	slli	a5,a5,0x1
-    700033fe:	97ba                	add	a5,a5,a4
-    70003400:	078a                	slli	a5,a5,0x2
-    70003402:	97ba                	add	a5,a5,a4
-    70003404:	96be                	add	a3,a3,a5
-    70003406:	00000797          	auipc	a5,0x0
-    7000340a:	4a278793          	addi	a5,a5,1186 # 700038a8 <main+0x24a>
-    7000340e:	639c                	ld	a5,0(a5)
-    70003410:	02f6b7b3          	mulhu	a5,a3,a5
-    70003414:	40f68733          	sub	a4,a3,a5
-    70003418:	8305                	srli	a4,a4,0x1
-    7000341a:	97ba                	add	a5,a5,a4
-    7000341c:	0057d713          	srli	a4,a5,0x5
-    70003420:	87ba                	mv	a5,a4
-    70003422:	078a                	slli	a5,a5,0x2
-    70003424:	97ba                	add	a5,a5,a4
-    70003426:	078e                	slli	a5,a5,0x3
-    70003428:	8f99                	sub	a5,a5,a4
-    7000342a:	40f68733          	sub	a4,a3,a5
-    7000342e:	2701                	sext.w	a4,a4
-    70003430:	00001697          	auipc	a3,0x1
-    70003434:	99868693          	addi	a3,a3,-1640 # 70003dc8 <dots>
-    70003438:	fe442783          	lw	a5,-28(s0)
-    7000343c:	0792                	slli	a5,a5,0x4
-    7000343e:	97b6                	add	a5,a5,a3
-    70003440:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/bucketgame.c:130
+    70003592:	ffffd097          	auipc	ra,0xffffd
+    70003596:	ad2080e7          	jalr	-1326(ra) # 70000064 <user_gettime>
+    7000359a:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:155 (discriminator 1)
+    7000359c:	87ba                	mv	a5,a4
+    7000359e:	0792                	slli	a5,a5,0x4
+    700035a0:	00e786b3          	add	a3,a5,a4
+    700035a4:	fe442703          	lw	a4,-28(s0)
+    700035a8:	87ba                	mv	a5,a4
+    700035aa:	0786                	slli	a5,a5,0x1
+    700035ac:	97ba                	add	a5,a5,a4
+    700035ae:	078a                	slli	a5,a5,0x2
+    700035b0:	97ba                	add	a5,a5,a4
+    700035b2:	96be                	add	a3,a3,a5
+    700035b4:	00000797          	auipc	a5,0x0
+    700035b8:	6fc78793          	addi	a5,a5,1788 # 70003cb0 <dy.0+0x20>
+    700035bc:	639c                	ld	a5,0(a5)
+    700035be:	02f6b7b3          	mulhu	a5,a3,a5
+    700035c2:	40f68733          	sub	a4,a3,a5
+    700035c6:	8305                	srli	a4,a4,0x1
+    700035c8:	97ba                	add	a5,a5,a4
+    700035ca:	0057d713          	srli	a4,a5,0x5
+    700035ce:	87ba                	mv	a5,a4
+    700035d0:	078a                	slli	a5,a5,0x2
+    700035d2:	97ba                	add	a5,a5,a4
+    700035d4:	078e                	slli	a5,a5,0x3
+    700035d6:	8f99                	sub	a5,a5,a4
+    700035d8:	40f68733          	sub	a4,a3,a5
+    700035dc:	2701                	sext.w	a4,a4
+    700035de:	00001697          	auipc	a3,0x1
+    700035e2:	bfa68693          	addi	a3,a3,-1030 # 700041d8 <dots>
+    700035e6:	fe442783          	lw	a5,-28(s0)
+    700035ea:	0792                	slli	a5,a5,0x4
+    700035ec:	97b6                	add	a5,a5,a3
+    700035ee:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/game.c:156
 					dots[i].y = 1;
-    70003442:	00001717          	auipc	a4,0x1
-    70003446:	98670713          	addi	a4,a4,-1658 # 70003dc8 <dots>
-    7000344a:	fe442783          	lw	a5,-28(s0)
-    7000344e:	0792                	slli	a5,a5,0x4
-    70003450:	97ba                	add	a5,a5,a4
-    70003452:	4705                	li	a4,1
-    70003454:	c3d8                	sw	a4,4(a5)
-/embryos/chapter12/apps/bucketgame.c:132
+    700035f0:	00001717          	auipc	a4,0x1
+    700035f4:	be870713          	addi	a4,a4,-1048 # 700041d8 <dots>
+    700035f8:	fe442783          	lw	a5,-28(s0)
+    700035fc:	0792                	slli	a5,a5,0x4
+    700035fe:	97ba                	add	a5,a5,a4
+    70003600:	4705                	li	a4,1
+    70003602:	c3d8                	sw	a4,4(a5)
+/embryos/chapter12/apps/game.c:158
 
 					int r = (int)((user_gettime() * 23ULL + i * 7ULL) % 100);
-    70003456:	ffffd097          	auipc	ra,0xffffd
-    7000345a:	c0e080e7          	jalr	-1010(ra) # 70000064 <user_gettime>
-    7000345e:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:132 (discriminator 1)
-    70003460:	87ba                	mv	a5,a4
-    70003462:	0786                	slli	a5,a5,0x1
-    70003464:	97ba                	add	a5,a5,a4
-    70003466:	078e                	slli	a5,a5,0x3
-    70003468:	40e786b3          	sub	a3,a5,a4
-    7000346c:	fe442703          	lw	a4,-28(s0)
-    70003470:	87ba                	mv	a5,a4
-    70003472:	078e                	slli	a5,a5,0x3
-    70003474:	8f99                	sub	a5,a5,a4
-    70003476:	00f68733          	add	a4,a3,a5
-    7000347a:	00275693          	srli	a3,a4,0x2
-    7000347e:	00000797          	auipc	a5,0x0
-    70003482:	43278793          	addi	a5,a5,1074 # 700038b0 <main+0x252>
-    70003486:	639c                	ld	a5,0(a5)
-    70003488:	02f6b7b3          	mulhu	a5,a3,a5
-    7000348c:	8389                	srli	a5,a5,0x2
-    7000348e:	06400693          	li	a3,100
-    70003492:	02d787b3          	mul	a5,a5,a3
-    70003496:	40f707b3          	sub	a5,a4,a5
-    7000349a:	fef42023          	sw	a5,-32(s0)
-/embryos/chapter12/apps/bucketgame.c:133
+    70003604:	ffffd097          	auipc	ra,0xffffd
+    70003608:	a60080e7          	jalr	-1440(ra) # 70000064 <user_gettime>
+    7000360c:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:158 (discriminator 1)
+    7000360e:	87ba                	mv	a5,a4
+    70003610:	0786                	slli	a5,a5,0x1
+    70003612:	97ba                	add	a5,a5,a4
+    70003614:	078e                	slli	a5,a5,0x3
+    70003616:	40e786b3          	sub	a3,a5,a4
+    7000361a:	fe442703          	lw	a4,-28(s0)
+    7000361e:	87ba                	mv	a5,a4
+    70003620:	078e                	slli	a5,a5,0x3
+    70003622:	8f99                	sub	a5,a5,a4
+    70003624:	00f68733          	add	a4,a3,a5
+    70003628:	00275693          	srli	a3,a4,0x2
+    7000362c:	00000797          	auipc	a5,0x0
+    70003630:	68c78793          	addi	a5,a5,1676 # 70003cb8 <dy.0+0x28>
+    70003634:	639c                	ld	a5,0(a5)
+    70003636:	02f6b7b3          	mulhu	a5,a3,a5
+    7000363a:	8389                	srli	a5,a5,0x2
+    7000363c:	06400693          	li	a3,100
+    70003640:	02d787b3          	mul	a5,a5,a3
+    70003644:	40f707b3          	sub	a5,a4,a5
+    70003648:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter12/apps/game.c:159
 					if (r < 80) dots[i].type = DOT_GREEN;
-    7000349e:	fe042783          	lw	a5,-32(s0)
-    700034a2:	0007871b          	sext.w	a4,a5
-    700034a6:	04f00793          	li	a5,79
-    700034aa:	00e7cd63          	blt	a5,a4,700034c4 <falling_thread+0x316>
-/embryos/chapter12/apps/bucketgame.c:133 (discriminator 1)
-    700034ae:	00001717          	auipc	a4,0x1
-    700034b2:	91a70713          	addi	a4,a4,-1766 # 70003dc8 <dots>
-    700034b6:	fe442783          	lw	a5,-28(s0)
-    700034ba:	0792                	slli	a5,a5,0x4
-    700034bc:	97ba                	add	a5,a5,a4
-    700034be:	0007a423          	sw	zero,8(a5)
-    700034c2:	a835                	j	700034fe <falling_thread+0x350>
-/embryos/chapter12/apps/bucketgame.c:134
+    7000364c:	fe042783          	lw	a5,-32(s0)
+    70003650:	0007871b          	sext.w	a4,a5
+    70003654:	04f00793          	li	a5,79
+    70003658:	00e7cd63          	blt	a5,a4,70003672 <falling_thread+0x316>
+/embryos/chapter12/apps/game.c:159 (discriminator 1)
+    7000365c:	00001717          	auipc	a4,0x1
+    70003660:	b7c70713          	addi	a4,a4,-1156 # 700041d8 <dots>
+    70003664:	fe442783          	lw	a5,-28(s0)
+    70003668:	0792                	slli	a5,a5,0x4
+    7000366a:	97ba                	add	a5,a5,a4
+    7000366c:	0007a423          	sw	zero,8(a5)
+    70003670:	a835                	j	700036ac <falling_thread+0x350>
+/embryos/chapter12/apps/game.c:160
 					else if (r < 95) dots[i].type = DOT_RED;
-    700034c4:	fe042783          	lw	a5,-32(s0)
-    700034c8:	0007871b          	sext.w	a4,a5
-    700034cc:	05e00793          	li	a5,94
-    700034d0:	00e7cd63          	blt	a5,a4,700034ea <falling_thread+0x33c>
-/embryos/chapter12/apps/bucketgame.c:134 (discriminator 1)
-    700034d4:	00001717          	auipc	a4,0x1
-    700034d8:	8f470713          	addi	a4,a4,-1804 # 70003dc8 <dots>
-    700034dc:	fe442783          	lw	a5,-28(s0)
-    700034e0:	0792                	slli	a5,a5,0x4
-    700034e2:	97ba                	add	a5,a5,a4
-    700034e4:	4709                	li	a4,2
-    700034e6:	c798                	sw	a4,8(a5)
-    700034e8:	a819                	j	700034fe <falling_thread+0x350>
-/embryos/chapter12/apps/bucketgame.c:135
+    70003672:	fe042783          	lw	a5,-32(s0)
+    70003676:	0007871b          	sext.w	a4,a5
+    7000367a:	05e00793          	li	a5,94
+    7000367e:	00e7cd63          	blt	a5,a4,70003698 <falling_thread+0x33c>
+/embryos/chapter12/apps/game.c:160 (discriminator 1)
+    70003682:	00001717          	auipc	a4,0x1
+    70003686:	b5670713          	addi	a4,a4,-1194 # 700041d8 <dots>
+    7000368a:	fe442783          	lw	a5,-28(s0)
+    7000368e:	0792                	slli	a5,a5,0x4
+    70003690:	97ba                	add	a5,a5,a4
+    70003692:	4709                	li	a4,2
+    70003694:	c798                	sw	a4,8(a5)
+    70003696:	a819                	j	700036ac <falling_thread+0x350>
+/embryos/chapter12/apps/game.c:161
 					else dots[i].type = DOT_GOLD;
-    700034ea:	00001717          	auipc	a4,0x1
-    700034ee:	8de70713          	addi	a4,a4,-1826 # 70003dc8 <dots>
-    700034f2:	fe442783          	lw	a5,-28(s0)
-    700034f6:	0792                	slli	a5,a5,0x4
-    700034f8:	97ba                	add	a5,a5,a4
-    700034fa:	4705                	li	a4,1
-    700034fc:	c798                	sw	a4,8(a5)
-/embryos/chapter12/apps/bucketgame.c:137
+    70003698:	00001717          	auipc	a4,0x1
+    7000369c:	b4070713          	addi	a4,a4,-1216 # 700041d8 <dots>
+    700036a0:	fe442783          	lw	a5,-28(s0)
+    700036a4:	0792                	slli	a5,a5,0x4
+    700036a6:	97ba                	add	a5,a5,a4
+    700036a8:	4705                	li	a4,1
+    700036aa:	c798                	sw	a4,8(a5)
+/embryos/chapter12/apps/game.c:163
 
 					dots[i].active = 1;
-    700034fe:	00001717          	auipc	a4,0x1
-    70003502:	8ca70713          	addi	a4,a4,-1846 # 70003dc8 <dots>
-    70003506:	fe442783          	lw	a5,-28(s0)
-    7000350a:	0792                	slli	a5,a5,0x4
-    7000350c:	97ba                	add	a5,a5,a4
-    7000350e:	4705                	li	a4,1
-    70003510:	c7d8                	sw	a4,12(a5)
-/embryos/chapter12/apps/bucketgame.c:138
+    700036ac:	00001717          	auipc	a4,0x1
+    700036b0:	b2c70713          	addi	a4,a4,-1236 # 700041d8 <dots>
+    700036b4:	fe442783          	lw	a5,-28(s0)
+    700036b8:	0792                	slli	a5,a5,0x4
+    700036ba:	97ba                	add	a5,a5,a4
+    700036bc:	4705                	li	a4,1
+    700036be:	c7d8                	sw	a4,12(a5)
+/embryos/chapter12/apps/game.c:164
 					break;
-    70003512:	a829                	j	7000352c <falling_thread+0x37e>
-/embryos/chapter12/apps/bucketgame.c:127 (discriminator 2)
+    700036c0:	a829                	j	700036da <falling_thread+0x37e>
+/embryos/chapter12/apps/game.c:153 (discriminator 2)
 			for (int i = 0; i < MAX_DOTS; i++) {
-    70003514:	fe442783          	lw	a5,-28(s0)
-    70003518:	2785                	addiw	a5,a5,1
-    7000351a:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/bucketgame.c:127 (discriminator 1)
-    7000351e:	fe442783          	lw	a5,-28(s0)
-    70003522:	0007871b          	sext.w	a4,a5
-    70003526:	47bd                	li	a5,15
-    70003528:	eae7d3e3          	bge	a5,a4,700033ce <falling_thread+0x220>
-/embryos/chapter12/apps/bucketgame.c:143
+    700036c2:	fe442783          	lw	a5,-28(s0)
+    700036c6:	2785                	addiw	a5,a5,1
+    700036c8:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/game.c:153 (discriminator 1)
+    700036cc:	fe442783          	lw	a5,-28(s0)
+    700036d0:	0007871b          	sext.w	a4,a5
+    700036d4:	47bd                	li	a5,15
+    700036d6:	eae7d3e3          	bge	a5,a4,7000357c <falling_thread+0x220>
+/embryos/chapter12/apps/game.c:169
 				}
 			}
 		}
 
 		sema_inc(sem_state);
-    7000352c:	00001797          	auipc	a5,0x1
-    70003530:	99c78793          	addi	a5,a5,-1636 # 70003ec8 <sem_state>
-    70003534:	639c                	ld	a5,0(a5)
-    70003536:	853e                	mv	a0,a5
-    70003538:	fffff097          	auipc	ra,0xfffff
-    7000353c:	6e6080e7          	jalr	1766(ra) # 70002c1e <sema_inc>
-/embryos/chapter12/apps/bucketgame.c:144
+    700036da:	00001797          	auipc	a5,0x1
+    700036de:	c7678793          	addi	a5,a5,-906 # 70004350 <sem_state>
+    700036e2:	639c                	ld	a5,0(a5)
+    700036e4:	853e                	mv	a0,a5
+    700036e6:	fffff097          	auipc	ra,0xfffff
+    700036ea:	538080e7          	jalr	1336(ra) # 70002c1e <sema_inc>
+/embryos/chapter12/apps/game.c:170
 		tick++;
-    70003540:	fec42783          	lw	a5,-20(s0)
-    70003544:	2785                	addiw	a5,a5,1
-    70003546:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:145
+    700036ee:	fec42783          	lw	a5,-20(s0)
+    700036f2:	2785                	addiw	a5,a5,1
+    700036f4:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:171
 		thread_sleep(user_gettime() + 40000000ULL);
-    7000354a:	ffffd097          	auipc	ra,0xffffd
-    7000354e:	b1a080e7          	jalr	-1254(ra) # 70000064 <user_gettime>
-    70003552:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:145 (discriminator 1)
-    70003554:	026267b7          	lui	a5,0x2626
-    70003558:	a0078793          	addi	a5,a5,-1536 # 2625a00 <text_file_end+0x2621148>
-    7000355c:	97ba                	add	a5,a5,a4
-    7000355e:	853e                	mv	a0,a5
-    70003560:	fffff097          	auipc	ra,0xfffff
-    70003564:	55e080e7          	jalr	1374(ra) # 70002abe <thread_sleep>
-/embryos/chapter12/apps/bucketgame.c:101
+    700036f8:	ffffd097          	auipc	ra,0xffffd
+    700036fc:	96c080e7          	jalr	-1684(ra) # 70000064 <user_gettime>
+    70003700:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:171 (discriminator 1)
+    70003702:	026267b7          	lui	a5,0x2626
+    70003706:	a0078793          	addi	a5,a5,-1536 # 2625a00 <text_file_end+0x2620d30>
+    7000370a:	97ba                	add	a5,a5,a4
+    7000370c:	853e                	mv	a0,a5
+    7000370e:	fffff097          	auipc	ra,0xfffff
+    70003712:	3b0080e7          	jalr	944(ra) # 70002abe <thread_sleep>
+/embryos/chapter12/apps/game.c:127
 	while (!game_over) {
-    70003568:	00001797          	auipc	a5,0x1
-    7000356c:	85c78793          	addi	a5,a5,-1956 # 70003dc4 <game_over>
-    70003570:	439c                	lw	a5,0(a5)
-    70003572:	c40787e3          	beqz	a5,700031c0 <falling_thread+0x12>
-/embryos/chapter12/apps/bucketgame.c:147
+    70003716:	00001797          	auipc	a5,0x1
+    7000371a:	abe78793          	addi	a5,a5,-1346 # 700041d4 <game_over>
+    7000371e:	439c                	lw	a5,0(a5)
+    70003720:	c40787e3          	beqz	a5,7000336e <falling_thread+0x12>
+/embryos/chapter12/apps/game.c:173
 	}
 	thread_exit();
-    70003576:	fffff097          	auipc	ra,0xfffff
-    7000357a:	5f6080e7          	jalr	1526(ra) # 70002b6c <thread_exit>
-/embryos/chapter12/apps/bucketgame.c:148
+    70003724:	fffff097          	auipc	ra,0xfffff
+    70003728:	448080e7          	jalr	1096(ra) # 70002b6c <thread_exit>
+/embryos/chapter12/apps/game.c:174
 }
-    7000357e:	0001                	nop
-    70003580:	70a2                	ld	ra,40(sp)
-    70003582:	7402                	ld	s0,32(sp)
-    70003584:	6145                	addi	sp,sp,48
-    70003586:	8082                	ret
+    7000372c:	0001                	nop
+    7000372e:	70a2                	ld	ra,40(sp)
+    70003730:	7402                	ld	s0,32(sp)
+    70003732:	6145                	addi	sp,sp,48
+    70003734:	8082                	ret
 
-0000000070003588 <background_thread>:
+0000000070003736 <background_thread>:
 background_thread():
-/embryos/chapter12/apps/bucketgame.c:150
+/embryos/chapter12/apps/game.c:176
 
 void background_thread(void *arg) {
-    70003588:	7179                	addi	sp,sp,-48
-    7000358a:	f406                	sd	ra,40(sp)
-    7000358c:	f022                	sd	s0,32(sp)
-    7000358e:	1800                	addi	s0,sp,48
-    70003590:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/bucketgame.c:152
+    70003736:	7139                	addi	sp,sp,-64
+    70003738:	fc06                	sd	ra,56(sp)
+    7000373a:	f822                	sd	s0,48(sp)
+    7000373c:	0080                	addi	s0,sp,64
+    7000373e:	fca43423          	sd	a0,-56(s0)
+/embryos/chapter12/apps/game.c:178
 	(void)arg;
-	int phase = 0;
-    70003594:	fe042623          	sw	zero,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:154
+	int tick = 0;
+    70003742:	fe042623          	sw	zero,-20(s0)
+/embryos/chapter12/apps/game.c:180
 
 	while (!game_over) {
-    70003598:	a065                	j	70003640 <background_thread+0xb8>
-/embryos/chapter12/apps/bucketgame.c:155
+    70003746:	ac75                	j	70003a02 <background_thread+0x2cc>
+/embryos/chapter12/apps/game.c:181
 		sema_dec(sem_state);
-    7000359a:	00001797          	auipc	a5,0x1
-    7000359e:	92e78793          	addi	a5,a5,-1746 # 70003ec8 <sem_state>
-    700035a2:	639c                	ld	a5,0(a5)
-    700035a4:	853e                	mv	a0,a5
-    700035a6:	fffff097          	auipc	ra,0xfffff
-    700035aa:	6e4080e7          	jalr	1764(ra) # 70002c8a <sema_dec>
-/embryos/chapter12/apps/bucketgame.c:157
-		// Start from row 1 to leave a clean gap under the score HUD
-		for (int x = 0; x < SCREEN_W; x++) {
-    700035ae:	fe042423          	sw	zero,-24(s0)
-    700035b2:	a089                	j	700035f4 <background_thread+0x6c>
-/embryos/chapter12/apps/bucketgame.c:158
-			bp_put(&bp, x, 1, phase % 8, BP_LAZY);
-    700035b4:	fec42783          	lw	a5,-20(s0)
-    700035b8:	873e                	mv	a4,a5
-    700035ba:	41f7579b          	sraiw	a5,a4,0x1f
-    700035be:	01d7d79b          	srliw	a5,a5,0x1d
-    700035c2:	9f3d                	addw	a4,a4,a5
-    700035c4:	8b1d                	andi	a4,a4,7
-    700035c6:	40f707bb          	subw	a5,a4,a5
-    700035ca:	2781                	sext.w	a5,a5
-    700035cc:	0ff7f693          	zext.b	a3,a5
-    700035d0:	fe842783          	lw	a5,-24(s0)
-    700035d4:	4705                	li	a4,1
-    700035d6:	4605                	li	a2,1
-    700035d8:	85be                	mv	a1,a5
-    700035da:	00001517          	auipc	a0,0x1
-    700035de:	8f650513          	addi	a0,a0,-1802 # 70003ed0 <bp>
-    700035e2:	ffffe097          	auipc	ra,0xffffe
-    700035e6:	d74080e7          	jalr	-652(ra) # 70001356 <bp_put>
-/embryos/chapter12/apps/bucketgame.c:157 (discriminator 3)
-		for (int x = 0; x < SCREEN_W; x++) {
-    700035ea:	fe842783          	lw	a5,-24(s0)
-    700035ee:	2785                	addiw	a5,a5,1
-    700035f0:	fef42423          	sw	a5,-24(s0)
-/embryos/chapter12/apps/bucketgame.c:157 (discriminator 1)
-    700035f4:	fe842783          	lw	a5,-24(s0)
-    700035f8:	0007871b          	sext.w	a4,a5
-    700035fc:	02600793          	li	a5,38
-    70003600:	fae7dae3          	bge	a5,a4,700035b4 <background_thread+0x2c>
-/embryos/chapter12/apps/bucketgame.c:160
+    70003748:	00001797          	auipc	a5,0x1
+    7000374c:	c0878793          	addi	a5,a5,-1016 # 70004350 <sem_state>
+    70003750:	639c                	ld	a5,0(a5)
+    70003752:	853e                	mv	a0,a5
+    70003754:	fffff097          	auipc	ra,0xfffff
+    70003758:	536080e7          	jalr	1334(ra) # 70002c8a <sema_dec>
+/embryos/chapter12/apps/game.c:183
+
+		if (tick % 12 == 0) {
+    7000375c:	fec42783          	lw	a5,-20(s0)
+    70003760:	873e                	mv	a4,a5
+    70003762:	0007069b          	sext.w	a3,a4
+    70003766:	2aaab7b7          	lui	a5,0x2aaab
+    7000376a:	aab78793          	addi	a5,a5,-1365 # 2aaaaaab <text_file_end+0x2aaa5ddb>
+    7000376e:	02f687b3          	mul	a5,a3,a5
+    70003772:	9381                	srli	a5,a5,0x20
+    70003774:	4017d79b          	sraiw	a5,a5,0x1
+    70003778:	86be                	mv	a3,a5
+    7000377a:	41f7579b          	sraiw	a5,a4,0x1f
+    7000377e:	40f687bb          	subw	a5,a3,a5
+    70003782:	86be                	mv	a3,a5
+    70003784:	87b6                	mv	a5,a3
+    70003786:	0017979b          	slliw	a5,a5,0x1
+    7000378a:	9fb5                	addw	a5,a5,a3
+    7000378c:	0027979b          	slliw	a5,a5,0x2
+    70003790:	40f707bb          	subw	a5,a4,a5
+    70003794:	2781                	sext.w	a5,a5
+    70003796:	18079363          	bnez	a5,7000391c <background_thread+0x1e6>
+/embryos/chapter12/apps/game.c:184
+			for (int i = 0; i < MAX_BURSTS; i++) {
+    7000379a:	fe042423          	sw	zero,-24(s0)
+    7000379e:	aa85                	j	7000390e <background_thread+0x1d8>
+/embryos/chapter12/apps/game.c:185
+				if (!bursts[i].active) {
+    700037a0:	00001697          	auipc	a3,0x1
+    700037a4:	b3868693          	addi	a3,a3,-1224 # 700042d8 <bursts>
+    700037a8:	fe842703          	lw	a4,-24(s0)
+    700037ac:	87ba                	mv	a5,a4
+    700037ae:	078a                	slli	a5,a5,0x2
+    700037b0:	97ba                	add	a5,a5,a4
+    700037b2:	078a                	slli	a5,a5,0x2
+    700037b4:	97b6                	add	a5,a5,a3
+    700037b6:	4b9c                	lw	a5,16(a5)
+    700037b8:	14079663          	bnez	a5,70003904 <background_thread+0x1ce>
+/embryos/chapter12/apps/game.c:186
+					uint64_t now = user_gettime();
+    700037bc:	ffffd097          	auipc	ra,0xffffd
+    700037c0:	8a8080e7          	jalr	-1880(ra) # 70000064 <user_gettime>
+    700037c4:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/game.c:187
+					bursts[i].x = (int)((now / 1000000ULL + i * 11ULL) % SCREEN_W);
+    700037c8:	fd843703          	ld	a4,-40(s0)
+    700037cc:	00000797          	auipc	a5,0x0
+    700037d0:	4f478793          	addi	a5,a5,1268 # 70003cc0 <dy.0+0x30>
+    700037d4:	639c                	ld	a5,0(a5)
+    700037d6:	02f737b3          	mulhu	a5,a4,a5
+    700037da:	0127d693          	srli	a3,a5,0x12
+    700037de:	fe842703          	lw	a4,-24(s0)
+    700037e2:	87ba                	mv	a5,a4
+    700037e4:	0786                	slli	a5,a5,0x1
+    700037e6:	97ba                	add	a5,a5,a4
+    700037e8:	078a                	slli	a5,a5,0x2
+    700037ea:	8f99                	sub	a5,a5,a4
+    700037ec:	96be                	add	a3,a3,a5
+    700037ee:	00000797          	auipc	a5,0x0
+    700037f2:	4c278793          	addi	a5,a5,1218 # 70003cb0 <dy.0+0x20>
+    700037f6:	639c                	ld	a5,0(a5)
+    700037f8:	02f6b7b3          	mulhu	a5,a3,a5
+    700037fc:	40f68733          	sub	a4,a3,a5
+    70003800:	8305                	srli	a4,a4,0x1
+    70003802:	97ba                	add	a5,a5,a4
+    70003804:	0057d713          	srli	a4,a5,0x5
+    70003808:	87ba                	mv	a5,a4
+    7000380a:	078a                	slli	a5,a5,0x2
+    7000380c:	97ba                	add	a5,a5,a4
+    7000380e:	078e                	slli	a5,a5,0x3
+    70003810:	8f99                	sub	a5,a5,a4
+    70003812:	40f68733          	sub	a4,a3,a5
+    70003816:	0007069b          	sext.w	a3,a4
+    7000381a:	00001617          	auipc	a2,0x1
+    7000381e:	abe60613          	addi	a2,a2,-1346 # 700042d8 <bursts>
+    70003822:	fe842703          	lw	a4,-24(s0)
+    70003826:	87ba                	mv	a5,a4
+    70003828:	078a                	slli	a5,a5,0x2
+    7000382a:	97ba                	add	a5,a5,a4
+    7000382c:	078a                	slli	a5,a5,0x2
+    7000382e:	97b2                	add	a5,a5,a2
+    70003830:	c394                	sw	a3,0(a5)
+/embryos/chapter12/apps/game.c:188
+					bursts[i].y = 2 + (int)((now / 2000000ULL + i * 7ULL) % (GAME_H / 2));
+    70003832:	fd843703          	ld	a4,-40(s0)
+    70003836:	00000797          	auipc	a5,0x0
+    7000383a:	48a78793          	addi	a5,a5,1162 # 70003cc0 <dy.0+0x30>
+    7000383e:	639c                	ld	a5,0(a5)
+    70003840:	02f737b3          	mulhu	a5,a4,a5
+    70003844:	0137d693          	srli	a3,a5,0x13
+    70003848:	fe842703          	lw	a4,-24(s0)
+    7000384c:	87ba                	mv	a5,a4
+    7000384e:	078e                	slli	a5,a5,0x3
+    70003850:	8f99                	sub	a5,a5,a4
+    70003852:	96be                	add	a3,a3,a5
+    70003854:	00000797          	auipc	a5,0x0
+    70003858:	47478793          	addi	a5,a5,1140 # 70003cc8 <dy.0+0x38>
+    7000385c:	639c                	ld	a5,0(a5)
+    7000385e:	02f6b7b3          	mulhu	a5,a3,a5
+    70003862:	0037d713          	srli	a4,a5,0x3
+    70003866:	87ba                	mv	a5,a4
+    70003868:	078e                	slli	a5,a5,0x3
+    7000386a:	97ba                	add	a5,a5,a4
+    7000386c:	40f68733          	sub	a4,a3,a5
+    70003870:	0007079b          	sext.w	a5,a4
+    70003874:	2789                	addiw	a5,a5,2
+    70003876:	0007869b          	sext.w	a3,a5
+    7000387a:	00001617          	auipc	a2,0x1
+    7000387e:	a5e60613          	addi	a2,a2,-1442 # 700042d8 <bursts>
+    70003882:	fe842703          	lw	a4,-24(s0)
+    70003886:	87ba                	mv	a5,a4
+    70003888:	078a                	slli	a5,a5,0x2
+    7000388a:	97ba                	add	a5,a5,a4
+    7000388c:	078a                	slli	a5,a5,0x2
+    7000388e:	97b2                	add	a5,a5,a2
+    70003890:	c3d4                	sw	a3,4(a5)
+/embryos/chapter12/apps/game.c:189
+					bursts[i].age = 1;
+    70003892:	00001697          	auipc	a3,0x1
+    70003896:	a4668693          	addi	a3,a3,-1466 # 700042d8 <bursts>
+    7000389a:	fe842703          	lw	a4,-24(s0)
+    7000389e:	87ba                	mv	a5,a4
+    700038a0:	078a                	slli	a5,a5,0x2
+    700038a2:	97ba                	add	a5,a5,a4
+    700038a4:	078a                	slli	a5,a5,0x2
+    700038a6:	97b6                	add	a5,a5,a3
+    700038a8:	4705                	li	a4,1
+    700038aa:	c798                	sw	a4,8(a5)
+/embryos/chapter12/apps/game.c:190
+					bursts[i].color = (tick + i) % 8;
+    700038ac:	fec42783          	lw	a5,-20(s0)
+    700038b0:	873e                	mv	a4,a5
+    700038b2:	fe842783          	lw	a5,-24(s0)
+    700038b6:	9fb9                	addw	a5,a5,a4
+    700038b8:	2781                	sext.w	a5,a5
+    700038ba:	873e                	mv	a4,a5
+    700038bc:	41f7579b          	sraiw	a5,a4,0x1f
+    700038c0:	01d7d79b          	srliw	a5,a5,0x1d
+    700038c4:	9f3d                	addw	a4,a4,a5
+    700038c6:	8b1d                	andi	a4,a4,7
+    700038c8:	40f707bb          	subw	a5,a4,a5
+    700038cc:	0007869b          	sext.w	a3,a5
+    700038d0:	00001617          	auipc	a2,0x1
+    700038d4:	a0860613          	addi	a2,a2,-1528 # 700042d8 <bursts>
+    700038d8:	fe842703          	lw	a4,-24(s0)
+    700038dc:	87ba                	mv	a5,a4
+    700038de:	078a                	slli	a5,a5,0x2
+    700038e0:	97ba                	add	a5,a5,a4
+    700038e2:	078a                	slli	a5,a5,0x2
+    700038e4:	97b2                	add	a5,a5,a2
+    700038e6:	c7d4                	sw	a3,12(a5)
+/embryos/chapter12/apps/game.c:191
+					bursts[i].active = 1;
+    700038e8:	00001697          	auipc	a3,0x1
+    700038ec:	9f068693          	addi	a3,a3,-1552 # 700042d8 <bursts>
+    700038f0:	fe842703          	lw	a4,-24(s0)
+    700038f4:	87ba                	mv	a5,a4
+    700038f6:	078a                	slli	a5,a5,0x2
+    700038f8:	97ba                	add	a5,a5,a4
+    700038fa:	078a                	slli	a5,a5,0x2
+    700038fc:	97b6                	add	a5,a5,a3
+    700038fe:	4705                	li	a4,1
+    70003900:	cb98                	sw	a4,16(a5)
+/embryos/chapter12/apps/game.c:192
+					break;
+    70003902:	a829                	j	7000391c <background_thread+0x1e6>
+/embryos/chapter12/apps/game.c:184 (discriminator 2)
+			for (int i = 0; i < MAX_BURSTS; i++) {
+    70003904:	fe842783          	lw	a5,-24(s0)
+    70003908:	2785                	addiw	a5,a5,1
+    7000390a:	fef42423          	sw	a5,-24(s0)
+/embryos/chapter12/apps/game.c:184 (discriminator 1)
+    7000390e:	fe842783          	lw	a5,-24(s0)
+    70003912:	0007871b          	sext.w	a4,a5
+    70003916:	4795                	li	a5,5
+    70003918:	e8e7d4e3          	bge	a5,a4,700037a0 <background_thread+0x6a>
+/embryos/chapter12/apps/game.c:197
+				}
+			}
+		}
+
+		for (int i = 0; i < MAX_BURSTS; i++) {
+    7000391c:	fe042223          	sw	zero,-28(s0)
+    70003920:	a861                	j	700039b8 <background_thread+0x282>
+/embryos/chapter12/apps/game.c:198
+			if (!bursts[i].active) continue;
+    70003922:	00001697          	auipc	a3,0x1
+    70003926:	9b668693          	addi	a3,a3,-1610 # 700042d8 <bursts>
+    7000392a:	fe442703          	lw	a4,-28(s0)
+    7000392e:	87ba                	mv	a5,a4
+    70003930:	078a                	slli	a5,a5,0x2
+    70003932:	97ba                	add	a5,a5,a4
+    70003934:	078a                	slli	a5,a5,0x2
+    70003936:	97b6                	add	a5,a5,a3
+    70003938:	4b9c                	lw	a5,16(a5)
+    7000393a:	cbad                	beqz	a5,700039ac <background_thread+0x276>
+/embryos/chapter12/apps/game.c:199
+			bursts[i].age++;
+    7000393c:	00001697          	auipc	a3,0x1
+    70003940:	99c68693          	addi	a3,a3,-1636 # 700042d8 <bursts>
+    70003944:	fe442703          	lw	a4,-28(s0)
+    70003948:	87ba                	mv	a5,a4
+    7000394a:	078a                	slli	a5,a5,0x2
+    7000394c:	97ba                	add	a5,a5,a4
+    7000394e:	078a                	slli	a5,a5,0x2
+    70003950:	97b6                	add	a5,a5,a3
+    70003952:	479c                	lw	a5,8(a5)
+    70003954:	2785                	addiw	a5,a5,1
+    70003956:	0007869b          	sext.w	a3,a5
+    7000395a:	00001617          	auipc	a2,0x1
+    7000395e:	97e60613          	addi	a2,a2,-1666 # 700042d8 <bursts>
+    70003962:	fe442703          	lw	a4,-28(s0)
+    70003966:	87ba                	mv	a5,a4
+    70003968:	078a                	slli	a5,a5,0x2
+    7000396a:	97ba                	add	a5,a5,a4
+    7000396c:	078a                	slli	a5,a5,0x2
+    7000396e:	97b2                	add	a5,a5,a2
+    70003970:	c794                	sw	a3,8(a5)
+/embryos/chapter12/apps/game.c:200
+			if (bursts[i].age > 4) {
+    70003972:	00001697          	auipc	a3,0x1
+    70003976:	96668693          	addi	a3,a3,-1690 # 700042d8 <bursts>
+    7000397a:	fe442703          	lw	a4,-28(s0)
+    7000397e:	87ba                	mv	a5,a4
+    70003980:	078a                	slli	a5,a5,0x2
+    70003982:	97ba                	add	a5,a5,a4
+    70003984:	078a                	slli	a5,a5,0x2
+    70003986:	97b6                	add	a5,a5,a3
+    70003988:	4798                	lw	a4,8(a5)
+    7000398a:	4791                	li	a5,4
+    7000398c:	02e7d163          	bge	a5,a4,700039ae <background_thread+0x278>
+/embryos/chapter12/apps/game.c:201
+				bursts[i].active = 0;
+    70003990:	00001697          	auipc	a3,0x1
+    70003994:	94868693          	addi	a3,a3,-1720 # 700042d8 <bursts>
+    70003998:	fe442703          	lw	a4,-28(s0)
+    7000399c:	87ba                	mv	a5,a4
+    7000399e:	078a                	slli	a5,a5,0x2
+    700039a0:	97ba                	add	a5,a5,a4
+    700039a2:	078a                	slli	a5,a5,0x2
+    700039a4:	97b6                	add	a5,a5,a3
+    700039a6:	0007a823          	sw	zero,16(a5)
+    700039aa:	a011                	j	700039ae <background_thread+0x278>
+/embryos/chapter12/apps/game.c:198
+			if (!bursts[i].active) continue;
+    700039ac:	0001                	nop
+/embryos/chapter12/apps/game.c:197 (discriminator 2)
+		for (int i = 0; i < MAX_BURSTS; i++) {
+    700039ae:	fe442783          	lw	a5,-28(s0)
+    700039b2:	2785                	addiw	a5,a5,1
+    700039b4:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/game.c:197 (discriminator 1)
+    700039b8:	fe442783          	lw	a5,-28(s0)
+    700039bc:	0007871b          	sext.w	a4,a5
+    700039c0:	4795                	li	a5,5
+    700039c2:	f6e7d0e3          	bge	a5,a4,70003922 <background_thread+0x1ec>
+/embryos/chapter12/apps/game.c:204
+			}
 		}
 		sema_inc(sem_state);
-    70003604:	00001797          	auipc	a5,0x1
-    70003608:	8c478793          	addi	a5,a5,-1852 # 70003ec8 <sem_state>
-    7000360c:	639c                	ld	a5,0(a5)
-    7000360e:	853e                	mv	a0,a5
-    70003610:	fffff097          	auipc	ra,0xfffff
-    70003614:	60e080e7          	jalr	1550(ra) # 70002c1e <sema_inc>
-/embryos/chapter12/apps/bucketgame.c:162
+    700039c6:	00001797          	auipc	a5,0x1
+    700039ca:	98a78793          	addi	a5,a5,-1654 # 70004350 <sem_state>
+    700039ce:	639c                	ld	a5,0(a5)
+    700039d0:	853e                	mv	a0,a5
+    700039d2:	fffff097          	auipc	ra,0xfffff
+    700039d6:	24c080e7          	jalr	588(ra) # 70002c1e <sema_inc>
+/embryos/chapter12/apps/game.c:206
 
-		phase++;
-    70003618:	fec42783          	lw	a5,-20(s0)
-    7000361c:	2785                	addiw	a5,a5,1
-    7000361e:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:163
+		tick++;
+    700039da:	fec42783          	lw	a5,-20(s0)
+    700039de:	2785                	addiw	a5,a5,1
+    700039e0:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:207
 		thread_sleep(user_gettime() + 50000000ULL);
-    70003622:	ffffd097          	auipc	ra,0xffffd
-    70003626:	a42080e7          	jalr	-1470(ra) # 70000064 <user_gettime>
-    7000362a:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:163 (discriminator 1)
-    7000362c:	02faf7b7          	lui	a5,0x2faf
-    70003630:	08078793          	addi	a5,a5,128 # 2faf080 <text_file_end+0x2faa7c8>
-    70003634:	97ba                	add	a5,a5,a4
-    70003636:	853e                	mv	a0,a5
-    70003638:	fffff097          	auipc	ra,0xfffff
-    7000363c:	486080e7          	jalr	1158(ra) # 70002abe <thread_sleep>
-/embryos/chapter12/apps/bucketgame.c:154
+    700039e4:	ffffc097          	auipc	ra,0xffffc
+    700039e8:	680080e7          	jalr	1664(ra) # 70000064 <user_gettime>
+    700039ec:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:207 (discriminator 1)
+    700039ee:	02faf7b7          	lui	a5,0x2faf
+    700039f2:	08078793          	addi	a5,a5,128 # 2faf080 <text_file_end+0x2faa3b0>
+    700039f6:	97ba                	add	a5,a5,a4
+    700039f8:	853e                	mv	a0,a5
+    700039fa:	fffff097          	auipc	ra,0xfffff
+    700039fe:	0c4080e7          	jalr	196(ra) # 70002abe <thread_sleep>
+/embryos/chapter12/apps/game.c:180
 	while (!game_over) {
-    70003640:	00000797          	auipc	a5,0x0
-    70003644:	78478793          	addi	a5,a5,1924 # 70003dc4 <game_over>
-    70003648:	439c                	lw	a5,0(a5)
-    7000364a:	dba1                	beqz	a5,7000359a <background_thread+0x12>
-/embryos/chapter12/apps/bucketgame.c:165
+    70003a02:	00000797          	auipc	a5,0x0
+    70003a06:	7d278793          	addi	a5,a5,2002 # 700041d4 <game_over>
+    70003a0a:	439c                	lw	a5,0(a5)
+    70003a0c:	d2078ee3          	beqz	a5,70003748 <background_thread+0x12>
+/embryos/chapter12/apps/game.c:209
 	}
 	thread_exit();
-    7000364c:	fffff097          	auipc	ra,0xfffff
-    70003650:	520080e7          	jalr	1312(ra) # 70002b6c <thread_exit>
-/embryos/chapter12/apps/bucketgame.c:166
+    70003a10:	fffff097          	auipc	ra,0xfffff
+    70003a14:	15c080e7          	jalr	348(ra) # 70002b6c <thread_exit>
+/embryos/chapter12/apps/game.c:210
 }
-    70003654:	0001                	nop
-    70003656:	70a2                	ld	ra,40(sp)
-    70003658:	7402                	ld	s0,32(sp)
-    7000365a:	6145                	addi	sp,sp,48
-    7000365c:	8082                	ret
+    70003a18:	0001                	nop
+    70003a1a:	70e2                	ld	ra,56(sp)
+    70003a1c:	7442                	ld	s0,48(sp)
+    70003a1e:	6121                	addi	sp,sp,64
+    70003a20:	8082                	ret
 
-000000007000365e <main>:
+0000000070003a22 <main>:
 main():
-/embryos/chapter12/apps/bucketgame.c:168
+/embryos/chapter12/apps/game.c:212
 
 void main(void) {
-    7000365e:	7179                	addi	sp,sp,-48
-    70003660:	f406                	sd	ra,40(sp)
-    70003662:	f022                	sd	s0,32(sp)
-    70003664:	1800                	addi	s0,sp,48
-/embryos/chapter12/apps/bucketgame.c:169
+    70003a22:	7179                	addi	sp,sp,-48
+    70003a24:	f406                	sd	ra,40(sp)
+    70003a26:	f022                	sd	s0,32(sp)
+    70003a28:	1800                	addi	s0,sp,48
+/embryos/chapter12/apps/game.c:213
 	thread_init();
-    70003666:	fffff097          	auipc	ra,0xfffff
-    7000366a:	1d8080e7          	jalr	472(ra) # 7000283e <thread_init>
-/embryos/chapter12/apps/bucketgame.c:171
+    70003a2a:	fffff097          	auipc	ra,0xfffff
+    70003a2e:	e14080e7          	jalr	-492(ra) # 7000283e <thread_init>
+/embryos/chapter12/apps/game.c:215
 
 	sem_state = sema_create(1);
-    7000366e:	4505                	li	a0,1
-    70003670:	fffff097          	auipc	ra,0xfffff
-    70003674:	564080e7          	jalr	1380(ra) # 70002bd4 <sema_create>
-    70003678:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:171 (discriminator 1)
-    7000367a:	00001797          	auipc	a5,0x1
-    7000367e:	84e78793          	addi	a5,a5,-1970 # 70003ec8 <sem_state>
-    70003682:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/bucketgame.c:174
+    70003a32:	4505                	li	a0,1
+    70003a34:	fffff097          	auipc	ra,0xfffff
+    70003a38:	1a0080e7          	jalr	416(ra) # 70002bd4 <sema_create>
+    70003a3c:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:215 (discriminator 1)
+    70003a3e:	00001797          	auipc	a5,0x1
+    70003a42:	91278793          	addi	a5,a5,-1774 # 70004350 <sem_state>
+    70003a46:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/game.c:218
 
 	// bp buffer covers only the game area: rows 1..(SCREEN_H-1) on screen
 	bp_init(&bp, 0, GAME_Y_OFFSET, SCREEN_W, GAME_H, bp_buffer);
-    70003684:	00001797          	auipc	a5,0x1
-    70003688:	86478793          	addi	a5,a5,-1948 # 70003ee8 <bp_buffer>
-    7000368c:	474d                	li	a4,19
-    7000368e:	02700693          	li	a3,39
-    70003692:	4605                	li	a2,1
-    70003694:	4581                	li	a1,0
-    70003696:	00001517          	auipc	a0,0x1
-    7000369a:	83a50513          	addi	a0,a0,-1990 # 70003ed0 <bp>
-    7000369e:	ffffe097          	auipc	ra,0xffffe
-    700036a2:	c16080e7          	jalr	-1002(ra) # 700012b4 <bp_init>
-/embryos/chapter12/apps/bucketgame.c:175
+    70003a48:	00001797          	auipc	a5,0x1
+    70003a4c:	92878793          	addi	a5,a5,-1752 # 70004370 <bp_buffer>
+    70003a50:	474d                	li	a4,19
+    70003a52:	02700693          	li	a3,39
+    70003a56:	4605                	li	a2,1
+    70003a58:	4581                	li	a1,0
+    70003a5a:	00001517          	auipc	a0,0x1
+    70003a5e:	8fe50513          	addi	a0,a0,-1794 # 70004358 <bp>
+    70003a62:	ffffe097          	auipc	ra,0xffffe
+    70003a66:	852080e7          	jalr	-1966(ra) # 700012b4 <bp_init>
+/embryos/chapter12/apps/game.c:219
 	clear_screen();
-    700036a6:	00000097          	auipc	ra,0x0
-    700036aa:	9a6080e7          	jalr	-1626(ra) # 7000304c <clear_screen>
-/embryos/chapter12/apps/bucketgame.c:178
+    70003a6a:	fffff097          	auipc	ra,0xfffff
+    70003a6e:	790080e7          	jalr	1936(ra) # 700031fa <clear_screen>
+/embryos/chapter12/apps/game.c:222
 
 	// Draw the score HUD once before threads start so row 0 is never blank
 	draw_score();
-    700036ae:	00000097          	auipc	ra,0x0
-    700036b2:	8dc080e7          	jalr	-1828(ra) # 70002f8a <draw_score>
-/embryos/chapter12/apps/bucketgame.c:180
+    70003a72:	fffff097          	auipc	ra,0xfffff
+    70003a76:	6c6080e7          	jalr	1734(ra) # 70003138 <draw_score>
+/embryos/chapter12/apps/game.c:224
 
 	thread_create(bucket_thread, 0, 4096);
-    700036b6:	6605                	lui	a2,0x1
-    700036b8:	4581                	li	a1,0
-    700036ba:	00000517          	auipc	a0,0x0
-    700036be:	a0250513          	addi	a0,a0,-1534 # 700030bc <bucket_thread>
-    700036c2:	fffff097          	auipc	ra,0xfffff
-    700036c6:	2b0080e7          	jalr	688(ra) # 70002972 <thread_create>
-/embryos/chapter12/apps/bucketgame.c:181
+    70003a7a:	6605                	lui	a2,0x1
+    70003a7c:	4581                	li	a1,0
+    70003a7e:	fffff517          	auipc	a0,0xfffff
+    70003a82:	7ec50513          	addi	a0,a0,2028 # 7000326a <bucket_thread>
+    70003a86:	fffff097          	auipc	ra,0xfffff
+    70003a8a:	eec080e7          	jalr	-276(ra) # 70002972 <thread_create>
+/embryos/chapter12/apps/game.c:225
 	thread_create(falling_thread, 0, 4096);
-    700036ca:	6605                	lui	a2,0x1
-    700036cc:	4581                	li	a1,0
-    700036ce:	00000517          	auipc	a0,0x0
-    700036d2:	ae050513          	addi	a0,a0,-1312 # 700031ae <falling_thread>
-    700036d6:	fffff097          	auipc	ra,0xfffff
-    700036da:	29c080e7          	jalr	668(ra) # 70002972 <thread_create>
-/embryos/chapter12/apps/bucketgame.c:182
+    70003a8e:	6605                	lui	a2,0x1
+    70003a90:	4581                	li	a1,0
+    70003a92:	00000517          	auipc	a0,0x0
+    70003a96:	8ca50513          	addi	a0,a0,-1846 # 7000335c <falling_thread>
+    70003a9a:	fffff097          	auipc	ra,0xfffff
+    70003a9e:	ed8080e7          	jalr	-296(ra) # 70002972 <thread_create>
+/embryos/chapter12/apps/game.c:226
 	thread_create(background_thread, 0, 4096);
-    700036de:	6605                	lui	a2,0x1
-    700036e0:	4581                	li	a1,0
-    700036e2:	00000517          	auipc	a0,0x0
-    700036e6:	ea650513          	addi	a0,a0,-346 # 70003588 <background_thread>
-    700036ea:	fffff097          	auipc	ra,0xfffff
-    700036ee:	288080e7          	jalr	648(ra) # 70002972 <thread_create>
-/embryos/chapter12/apps/bucketgame.c:184
+    70003aa2:	6605                	lui	a2,0x1
+    70003aa4:	4581                	li	a1,0
+    70003aa6:	00000517          	auipc	a0,0x0
+    70003aaa:	c9050513          	addi	a0,a0,-880 # 70003736 <background_thread>
+    70003aae:	fffff097          	auipc	ra,0xfffff
+    70003ab2:	ec4080e7          	jalr	-316(ra) # 70002972 <thread_create>
+/embryos/chapter12/apps/game.c:228
 
 	while (!game_over) {
-    700036f2:	a8a5                	j	7000376a <main+0x10c>
-/embryos/chapter12/apps/bucketgame.c:185
+    70003ab6:	a041                	j	70003b36 <main+0x114>
+/embryos/chapter12/apps/game.c:229
 		sema_dec(sem_state);
-    700036f4:	00000797          	auipc	a5,0x0
-    700036f8:	7d478793          	addi	a5,a5,2004 # 70003ec8 <sem_state>
-    700036fc:	639c                	ld	a5,0(a5)
-    700036fe:	853e                	mv	a0,a5
-    70003700:	fffff097          	auipc	ra,0xfffff
-    70003704:	58a080e7          	jalr	1418(ra) # 70002c8a <sema_dec>
-/embryos/chapter12/apps/bucketgame.c:186
+    70003ab8:	00001797          	auipc	a5,0x1
+    70003abc:	89878793          	addi	a5,a5,-1896 # 70004350 <sem_state>
+    70003ac0:	639c                	ld	a5,0(a5)
+    70003ac2:	853e                	mv	a0,a5
+    70003ac4:	fffff097          	auipc	ra,0xfffff
+    70003ac8:	1c6080e7          	jalr	454(ra) # 70002c8a <sema_dec>
+/embryos/chapter12/apps/game.c:230
 		clear_screen();
-    70003708:	00000097          	auipc	ra,0x0
-    7000370c:	944080e7          	jalr	-1724(ra) # 7000304c <clear_screen>
-/embryos/chapter12/apps/bucketgame.c:187
+    70003acc:	fffff097          	auipc	ra,0xfffff
+    70003ad0:	72e080e7          	jalr	1838(ra) # 700031fa <clear_screen>
+/embryos/chapter12/apps/game.c:231
+		draw_bursts();
+    70003ad4:	fffff097          	auipc	ra,0xfffff
+    70003ad8:	4b6080e7          	jalr	1206(ra) # 70002f8a <draw_bursts>
+/embryos/chapter12/apps/game.c:232
 		draw_dots();
-    70003710:	fffff097          	auipc	ra,0xfffff
-    70003714:	7b0080e7          	jalr	1968(ra) # 70002ec0 <draw_dots>
-/embryos/chapter12/apps/bucketgame.c:188
+    70003adc:	fffff097          	auipc	ra,0xfffff
+    70003ae0:	3e4080e7          	jalr	996(ra) # 70002ec0 <draw_dots>
+/embryos/chapter12/apps/game.c:233
 		draw_bucket();
-    70003718:	fffff097          	auipc	ra,0xfffff
-    7000371c:	74c080e7          	jalr	1868(ra) # 70002e64 <draw_bucket>
-/embryos/chapter12/apps/bucketgame.c:189
+    70003ae4:	fffff097          	auipc	ra,0xfffff
+    70003ae8:	380080e7          	jalr	896(ra) # 70002e64 <draw_bucket>
+/embryos/chapter12/apps/game.c:234
 		bp_flush(&bp);
-    70003720:	00000517          	auipc	a0,0x0
-    70003724:	7b050513          	addi	a0,a0,1968 # 70003ed0 <bp>
-    70003728:	ffffe097          	auipc	ra,0xffffe
-    7000372c:	e86080e7          	jalr	-378(ra) # 700015ae <bp_flush>
-/embryos/chapter12/apps/bucketgame.c:191
+    70003aec:	00001517          	auipc	a0,0x1
+    70003af0:	86c50513          	addi	a0,a0,-1940 # 70004358 <bp>
+    70003af4:	ffffe097          	auipc	ra,0xffffe
+    70003af8:	aba080e7          	jalr	-1350(ra) # 700015ae <bp_flush>
+/embryos/chapter12/apps/game.c:236
 		// draw_score uses user_put directly to row 0 — bp_flush never touches it
 		draw_score();
-    70003730:	00000097          	auipc	ra,0x0
-    70003734:	85a080e7          	jalr	-1958(ra) # 70002f8a <draw_score>
-/embryos/chapter12/apps/bucketgame.c:192
+    70003afc:	fffff097          	auipc	ra,0xfffff
+    70003b00:	63c080e7          	jalr	1596(ra) # 70003138 <draw_score>
+/embryos/chapter12/apps/game.c:237
 		sema_inc(sem_state);
-    70003738:	00000797          	auipc	a5,0x0
-    7000373c:	79078793          	addi	a5,a5,1936 # 70003ec8 <sem_state>
-    70003740:	639c                	ld	a5,0(a5)
-    70003742:	853e                	mv	a0,a5
-    70003744:	fffff097          	auipc	ra,0xfffff
-    70003748:	4da080e7          	jalr	1242(ra) # 70002c1e <sema_inc>
-/embryos/chapter12/apps/bucketgame.c:194
+    70003b04:	00001797          	auipc	a5,0x1
+    70003b08:	84c78793          	addi	a5,a5,-1972 # 70004350 <sem_state>
+    70003b0c:	639c                	ld	a5,0(a5)
+    70003b0e:	853e                	mv	a0,a5
+    70003b10:	fffff097          	auipc	ra,0xfffff
+    70003b14:	10e080e7          	jalr	270(ra) # 70002c1e <sema_inc>
+/embryos/chapter12/apps/game.c:239
 
 		thread_sleep(user_gettime() + 20000000ULL);
-    7000374c:	ffffd097          	auipc	ra,0xffffd
-    70003750:	918080e7          	jalr	-1768(ra) # 70000064 <user_gettime>
-    70003754:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:194 (discriminator 1)
-    70003756:	013137b7          	lui	a5,0x1313
-    7000375a:	d0078793          	addi	a5,a5,-768 # 1312d00 <text_file_end+0x130e448>
-    7000375e:	97ba                	add	a5,a5,a4
-    70003760:	853e                	mv	a0,a5
-    70003762:	fffff097          	auipc	ra,0xfffff
-    70003766:	35c080e7          	jalr	860(ra) # 70002abe <thread_sleep>
-/embryos/chapter12/apps/bucketgame.c:184
+    70003b18:	ffffc097          	auipc	ra,0xffffc
+    70003b1c:	54c080e7          	jalr	1356(ra) # 70000064 <user_gettime>
+    70003b20:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:239 (discriminator 1)
+    70003b22:	013137b7          	lui	a5,0x1313
+    70003b26:	d0078793          	addi	a5,a5,-768 # 1312d00 <text_file_end+0x130e030>
+    70003b2a:	97ba                	add	a5,a5,a4
+    70003b2c:	853e                	mv	a0,a5
+    70003b2e:	fffff097          	auipc	ra,0xfffff
+    70003b32:	f90080e7          	jalr	-112(ra) # 70002abe <thread_sleep>
+/embryos/chapter12/apps/game.c:228
 	while (!game_over) {
-    7000376a:	00000797          	auipc	a5,0x0
-    7000376e:	65a78793          	addi	a5,a5,1626 # 70003dc4 <game_over>
-    70003772:	439c                	lw	a5,0(a5)
-    70003774:	d3c1                	beqz	a5,700036f4 <main+0x96>
-/embryos/chapter12/apps/bucketgame.c:197
+    70003b36:	00000797          	auipc	a5,0x0
+    70003b3a:	69e78793          	addi	a5,a5,1694 # 700041d4 <game_over>
+    70003b3e:	439c                	lw	a5,0(a5)
+    70003b40:	dfa5                	beqz	a5,70003ab8 <main+0x96>
+/embryos/chapter12/apps/game.c:242
 	}
 
 	sema_dec(sem_state);
-    70003776:	00000797          	auipc	a5,0x0
-    7000377a:	75278793          	addi	a5,a5,1874 # 70003ec8 <sem_state>
-    7000377e:	639c                	ld	a5,0(a5)
-    70003780:	853e                	mv	a0,a5
-    70003782:	fffff097          	auipc	ra,0xfffff
-    70003786:	508080e7          	jalr	1288(ra) # 70002c8a <sema_dec>
-/embryos/chapter12/apps/bucketgame.c:198
+    70003b42:	00001797          	auipc	a5,0x1
+    70003b46:	80e78793          	addi	a5,a5,-2034 # 70004350 <sem_state>
+    70003b4a:	639c                	ld	a5,0(a5)
+    70003b4c:	853e                	mv	a0,a5
+    70003b4e:	fffff097          	auipc	ra,0xfffff
+    70003b52:	13c080e7          	jalr	316(ra) # 70002c8a <sema_dec>
+/embryos/chapter12/apps/game.c:243
 	clear_screen();
-    7000378a:	00000097          	auipc	ra,0x0
-    7000378e:	8c2080e7          	jalr	-1854(ra) # 7000304c <clear_screen>
-/embryos/chapter12/apps/bucketgame.c:199
+    70003b56:	fffff097          	auipc	ra,0xfffff
+    70003b5a:	6a4080e7          	jalr	1700(ra) # 700031fa <clear_screen>
+/embryos/chapter12/apps/game.c:244
 	bp_flush(&bp);
-    70003792:	00000517          	auipc	a0,0x0
-    70003796:	73e50513          	addi	a0,a0,1854 # 70003ed0 <bp>
-    7000379a:	ffffe097          	auipc	ra,0xffffe
-    7000379e:	e14080e7          	jalr	-492(ra) # 700015ae <bp_flush>
-/embryos/chapter12/apps/bucketgame.c:200
+    70003b5e:	00000517          	auipc	a0,0x0
+    70003b62:	7fa50513          	addi	a0,a0,2042 # 70004358 <bp>
+    70003b66:	ffffe097          	auipc	ra,0xffffe
+    70003b6a:	a48080e7          	jalr	-1464(ra) # 700015ae <bp_flush>
+/embryos/chapter12/apps/game.c:245
 	draw_score();
-    700037a2:	fffff097          	auipc	ra,0xfffff
-    700037a6:	7e8080e7          	jalr	2024(ra) # 70002f8a <draw_score>
-/embryos/chapter12/apps/bucketgame.c:202
+    70003b6e:	fffff097          	auipc	ra,0xfffff
+    70003b72:	5ca080e7          	jalr	1482(ra) # 70003138 <draw_score>
+/embryos/chapter12/apps/game.c:247
 
 	const char *msg = "GAME OVER";
-    700037aa:	00000797          	auipc	a5,0x0
-    700037ae:	0ee78793          	addi	a5,a5,238 # 70003898 <main+0x23a>
-    700037b2:	fef43023          	sd	a5,-32(s0)
-/embryos/chapter12/apps/bucketgame.c:203
+    70003b76:	00000797          	auipc	a5,0x0
+    70003b7a:	0ea78793          	addi	a5,a5,234 # 70003c60 <main+0x23e>
+    70003b7e:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/game.c:248
 	int msglen = 9;
-    700037b6:	47a5                	li	a5,9
-    700037b8:	fcf42e23          	sw	a5,-36(s0)
-/embryos/chapter12/apps/bucketgame.c:204
+    70003b82:	47a5                	li	a5,9
+    70003b84:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/game.c:249
 	int x0 = (SCREEN_W - msglen) / 2;
-    700037bc:	02700793          	li	a5,39
-    700037c0:	fdc42703          	lw	a4,-36(s0)
-    700037c4:	9f99                	subw	a5,a5,a4
-    700037c6:	2781                	sext.w	a5,a5
-    700037c8:	01f7d71b          	srliw	a4,a5,0x1f
-    700037cc:	9fb9                	addw	a5,a5,a4
-    700037ce:	4017d79b          	sraiw	a5,a5,0x1
-    700037d2:	fcf42c23          	sw	a5,-40(s0)
-/embryos/chapter12/apps/bucketgame.c:206
+    70003b88:	02700793          	li	a5,39
+    70003b8c:	fdc42703          	lw	a4,-36(s0)
+    70003b90:	9f99                	subw	a5,a5,a4
+    70003b92:	2781                	sext.w	a5,a5
+    70003b94:	01f7d71b          	srliw	a4,a5,0x1f
+    70003b98:	9fb9                	addw	a5,a5,a4
+    70003b9a:	4017d79b          	sraiw	a5,a5,0x1
+    70003b9e:	fcf42c23          	sw	a5,-40(s0)
+/embryos/chapter12/apps/game.c:251
 	// Center in the game area (offset by GAME_Y_OFFSET)
 	int y0 = GAME_Y_OFFSET + GAME_H / 2;
-    700037d6:	47a9                	li	a5,10
-    700037d8:	fcf42a23          	sw	a5,-44(s0)
-/embryos/chapter12/apps/bucketgame.c:207
+    70003ba2:	47a9                	li	a5,10
+    70003ba4:	fcf42a23          	sw	a5,-44(s0)
+/embryos/chapter12/apps/game.c:252
 	for (int i = 0; i < msglen; i++) {
-    700037dc:	fe042623          	sw	zero,-20(s0)
-    700037e0:	a899                	j	70003836 <main+0x1d8>
-/embryos/chapter12/apps/bucketgame.c:208
+    70003ba8:	fe042623          	sw	zero,-20(s0)
+    70003bac:	a899                	j	70003c02 <main+0x1e0>
+/embryos/chapter12/apps/game.c:253
 		user_put(x0 + i, y0, CELL(msg[i], 4, 0));
-    700037e2:	fd842783          	lw	a5,-40(s0)
-    700037e6:	873e                	mv	a4,a5
-    700037e8:	fec42783          	lw	a5,-20(s0)
-    700037ec:	9fb9                	addw	a5,a5,a4
-    700037ee:	0007869b          	sext.w	a3,a5
-    700037f2:	fec42783          	lw	a5,-20(s0)
-    700037f6:	fe043703          	ld	a4,-32(s0)
-    700037fa:	97ba                	add	a5,a5,a4
-    700037fc:	0007c783          	lbu	a5,0(a5)
-    70003800:	0107979b          	slliw	a5,a5,0x10
-    70003804:	4107d79b          	sraiw	a5,a5,0x10
-    70003808:	4007e793          	ori	a5,a5,1024
-    7000380c:	0107979b          	slliw	a5,a5,0x10
-    70003810:	4107d79b          	sraiw	a5,a5,0x10
-    70003814:	03079713          	slli	a4,a5,0x30
-    70003818:	9341                	srli	a4,a4,0x30
-    7000381a:	fd442783          	lw	a5,-44(s0)
-    7000381e:	863a                	mv	a2,a4
-    70003820:	85be                	mv	a1,a5
-    70003822:	8536                	mv	a0,a3
-    70003824:	ffffd097          	auipc	ra,0xffffd
-    70003828:	808080e7          	jalr	-2040(ra) # 7000002c <user_put>
-/embryos/chapter12/apps/bucketgame.c:207 (discriminator 3)
+    70003bae:	fd842783          	lw	a5,-40(s0)
+    70003bb2:	873e                	mv	a4,a5
+    70003bb4:	fec42783          	lw	a5,-20(s0)
+    70003bb8:	9fb9                	addw	a5,a5,a4
+    70003bba:	0007869b          	sext.w	a3,a5
+    70003bbe:	fec42783          	lw	a5,-20(s0)
+    70003bc2:	fe043703          	ld	a4,-32(s0)
+    70003bc6:	97ba                	add	a5,a5,a4
+    70003bc8:	0007c783          	lbu	a5,0(a5)
+    70003bcc:	0107979b          	slliw	a5,a5,0x10
+    70003bd0:	4107d79b          	sraiw	a5,a5,0x10
+    70003bd4:	4007e793          	ori	a5,a5,1024
+    70003bd8:	0107979b          	slliw	a5,a5,0x10
+    70003bdc:	4107d79b          	sraiw	a5,a5,0x10
+    70003be0:	03079713          	slli	a4,a5,0x30
+    70003be4:	9341                	srli	a4,a4,0x30
+    70003be6:	fd442783          	lw	a5,-44(s0)
+    70003bea:	863a                	mv	a2,a4
+    70003bec:	85be                	mv	a1,a5
+    70003bee:	8536                	mv	a0,a3
+    70003bf0:	ffffc097          	auipc	ra,0xffffc
+    70003bf4:	43c080e7          	jalr	1084(ra) # 7000002c <user_put>
+/embryos/chapter12/apps/game.c:252 (discriminator 3)
 	for (int i = 0; i < msglen; i++) {
-    7000382c:	fec42783          	lw	a5,-20(s0)
-    70003830:	2785                	addiw	a5,a5,1
-    70003832:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/bucketgame.c:207 (discriminator 1)
-    70003836:	fec42783          	lw	a5,-20(s0)
-    7000383a:	873e                	mv	a4,a5
-    7000383c:	fdc42783          	lw	a5,-36(s0)
-    70003840:	2701                	sext.w	a4,a4
-    70003842:	2781                	sext.w	a5,a5
-    70003844:	f8f74fe3          	blt	a4,a5,700037e2 <main+0x184>
-/embryos/chapter12/apps/bucketgame.c:210
+    70003bf8:	fec42783          	lw	a5,-20(s0)
+    70003bfc:	2785                	addiw	a5,a5,1
+    70003bfe:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/game.c:252 (discriminator 1)
+    70003c02:	fec42783          	lw	a5,-20(s0)
+    70003c06:	873e                	mv	a4,a5
+    70003c08:	fdc42783          	lw	a5,-36(s0)
+    70003c0c:	2701                	sext.w	a4,a4
+    70003c0e:	2781                	sext.w	a5,a5
+    70003c10:	f8f74fe3          	blt	a4,a5,70003bae <main+0x18c>
+/embryos/chapter12/apps/game.c:255
 	}
 	sema_inc(sem_state);
-    70003848:	00000797          	auipc	a5,0x0
-    7000384c:	68078793          	addi	a5,a5,1664 # 70003ec8 <sem_state>
-    70003850:	639c                	ld	a5,0(a5)
-    70003852:	853e                	mv	a0,a5
-    70003854:	fffff097          	auipc	ra,0xfffff
-    70003858:	3ca080e7          	jalr	970(ra) # 70002c1e <sema_inc>
-/embryos/chapter12/apps/bucketgame.c:212
+    70003c14:	00000797          	auipc	a5,0x0
+    70003c18:	73c78793          	addi	a5,a5,1852 # 70004350 <sem_state>
+    70003c1c:	639c                	ld	a5,0(a5)
+    70003c1e:	853e                	mv	a0,a5
+    70003c20:	fffff097          	auipc	ra,0xfffff
+    70003c24:	ffe080e7          	jalr	-2(ra) # 70002c1e <sema_inc>
+/embryos/chapter12/apps/game.c:257
 
 	thread_sleep(user_gettime() + 200000000ULL);
-    7000385c:	ffffd097          	auipc	ra,0xffffd
-    70003860:	808080e7          	jalr	-2040(ra) # 70000064 <user_gettime>
-    70003864:	872a                	mv	a4,a0
-/embryos/chapter12/apps/bucketgame.c:212 (discriminator 1)
-    70003866:	0bebc7b7          	lui	a5,0xbebc
-    7000386a:	20078793          	addi	a5,a5,512 # bebc200 <text_file_end+0xbeb7948>
-    7000386e:	97ba                	add	a5,a5,a4
-    70003870:	853e                	mv	a0,a5
-    70003872:	fffff097          	auipc	ra,0xfffff
-    70003876:	24c080e7          	jalr	588(ra) # 70002abe <thread_sleep>
-/embryos/chapter12/apps/bucketgame.c:213
+    70003c28:	ffffc097          	auipc	ra,0xffffc
+    70003c2c:	43c080e7          	jalr	1084(ra) # 70000064 <user_gettime>
+    70003c30:	872a                	mv	a4,a0
+/embryos/chapter12/apps/game.c:257 (discriminator 1)
+    70003c32:	0bebc7b7          	lui	a5,0xbebc
+    70003c36:	20078793          	addi	a5,a5,512 # bebc200 <text_file_end+0xbeb7530>
+    70003c3a:	97ba                	add	a5,a5,a4
+    70003c3c:	853e                	mv	a0,a5
+    70003c3e:	fffff097          	auipc	ra,0xfffff
+    70003c42:	e80080e7          	jalr	-384(ra) # 70002abe <thread_sleep>
+/embryos/chapter12/apps/game.c:258
 	thread_exit();
-    7000387a:	fffff097          	auipc	ra,0xfffff
-    7000387e:	2f2080e7          	jalr	754(ra) # 70002b6c <thread_exit>
-/embryos/chapter12/apps/bucketgame.c:214
-    70003882:	0001                	nop
-    70003884:	70a2                	ld	ra,40(sp)
-    70003886:	7402                	ld	s0,32(sp)
-    70003888:	6145                	addi	sp,sp,48
-    7000388a:	8082                	ret
-    7000388c:	0000                	unimp
-    7000388e:	0000                	unimp
-    70003890:	524f4353          	.insn	4, 0x524f4353
-    70003894:	3a45                	addiw	s4,s4,-15
-    70003896:	0000                	unimp
-    70003898:	454d4147          	.insn	4, 0x454d4147
-    7000389c:	4f20                	lw	s0,88(a4)
-    7000389e:	4556                	lw	a0,84(sp)
-    700038a0:	0052                	c.slli	zero,0x14
-    700038a2:	0000                	unimp
-    700038a4:	0000                	unimp
-    700038a6:	0000                	unimp
-    700038a8:	1a41a41b          	.insn	4, 0x1a41a41b
-    700038ac:	41a4                	lw	s1,64(a1)
-    700038ae:	a41a                	.insn	2, 0xa41a
-    700038b0:	5c28f5c3          	.insn	4, 0x5c28f5c3
-    700038b4:	28f5c28f          	.insn	4, 0x28f5c28f
+    70003c46:	fffff097          	auipc	ra,0xfffff
+    70003c4a:	f26080e7          	jalr	-218(ra) # 70002b6c <thread_exit>
+/embryos/chapter12/apps/game.c:259
+}
+    70003c4e:	0001                	nop
+    70003c50:	70a2                	ld	ra,40(sp)
+    70003c52:	7402                	ld	s0,32(sp)
+    70003c54:	6145                	addi	sp,sp,48
+    70003c56:	8082                	ret
+    70003c58:	524f4353          	.insn	4, 0x524f4353
+    70003c5c:	3a45                	addiw	s4,s4,-15
+    70003c5e:	0000                	unimp
+    70003c60:	454d4147          	.insn	4, 0x454d4147
+    70003c64:	4f20                	lw	s0,88(a4)
+    70003c66:	4556                	lw	a0,84(sp)
+    70003c68:	0052                	c.slli	zero,0x14
+    70003c6a:	0000                	unimp
+    70003c6c:	0000                	unimp
+	...
+
+0000000070003c70 <dx.1>:
+    70003c70:	0001 0000 ffff ffff 0000 0000 0000 0000     ................
+    70003c80:	0001 0000 0001 0000 ffff ffff ffff ffff     ................
+
+0000000070003c90 <dy.0>:
+	...
+    70003c98:	0001 0000 ffff ffff 0001 0000 ffff ffff     ................
+    70003ca8:	0001 0000 ffff ffff a41b 1a41 41a4 a41a     ..........A..A..
+    70003cb8:	f5c3 5c28 c28f 28f5 34db d7b6 de82 431b     ..(\...(.4.....C
+    70003cc8:	e38f 8e38 38e3 e38e                         ..8..8..

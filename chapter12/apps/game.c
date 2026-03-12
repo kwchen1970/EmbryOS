@@ -20,6 +20,7 @@ void print_score(int x, int score) {
 #define SCREEN_H 20
 #define BUCKET_W 7
 #define MAX_DOTS 16
+#define MAX_BURSTS 6
 
 // Game area starts at row 1 (row 0 is reserved for the score HUD)
 #define GAME_Y_OFFSET 1
@@ -33,10 +34,18 @@ typedef struct {
 	int active;
 } Dot;
 
+typedef struct {
+	int x, y;
+	int age;
+	int color;
+	int active;
+} Burst;
+
 static int bucket_x = SCREEN_W / 2 - BUCKET_W / 2;
 static int score = 0;
 static int game_over = 0;
 static Dot dots[MAX_DOTS];
+static Burst bursts[MAX_BURSTS];
 static struct sema *sem_state;
 static struct bp bp;
 static uint8_t bp_buffer[SCREEN_W * GAME_H];
@@ -56,6 +65,23 @@ void draw_dots() {
 		else if (dots[i].type == DOT_RED) color = 4;
 
 		bp_put(&bp, dots[i].x, dots[i].y, color, BP_LAZY);
+	}
+}
+
+void draw_bursts() {
+	static const int dx[8] = { 1, -1, 0, 0, 1, 1, -1, -1 };
+	static const int dy[8] = { 0, 0, 1, -1, 1, -1, 1, -1 };
+
+	for (int i = 0; i < MAX_BURSTS; i++) {
+		if (!bursts[i].active) continue;
+
+		for (int d = 0; d < 8; d++) {
+			int px = bursts[i].x + dx[d] * bursts[i].age;
+			int py = bursts[i].y + dy[d] * bursts[i].age;
+			if (px >= 0 && px < SCREEN_W && py >= 1 && py < GAME_H - 2) {
+				bp_put(&bp, px, py, (bursts[i].color + bursts[i].age + d) % 8, BP_LAZY);
+			}
+		}
 	}
 }
 
@@ -149,17 +175,35 @@ void falling_thread(void *arg) {
 
 void background_thread(void *arg) {
 	(void)arg;
-	int phase = 0;
+	int tick = 0;
 
 	while (!game_over) {
 		sema_dec(sem_state);
-		// Start from row 1 to leave a clean gap under the score HUD
-		for (int x = 0; x < SCREEN_W; x++) {
-			bp_put(&bp, x, 1, phase % 8, BP_LAZY);
+
+		if (tick % 12 == 0) {
+			for (int i = 0; i < MAX_BURSTS; i++) {
+				if (!bursts[i].active) {
+					uint64_t now = user_gettime();
+					bursts[i].x = (int)((now / 1000000ULL + i * 11ULL) % SCREEN_W);
+					bursts[i].y = 2 + (int)((now / 2000000ULL + i * 7ULL) % (GAME_H / 2));
+					bursts[i].age = 1;
+					bursts[i].color = (tick + i) % 8;
+					bursts[i].active = 1;
+					break;
+				}
+			}
+		}
+
+		for (int i = 0; i < MAX_BURSTS; i++) {
+			if (!bursts[i].active) continue;
+			bursts[i].age++;
+			if (bursts[i].age > 4) {
+				bursts[i].active = 0;
+			}
 		}
 		sema_inc(sem_state);
 
-		phase++;
+		tick++;
 		thread_sleep(user_gettime() + 50000000ULL);
 	}
 	thread_exit();
@@ -184,6 +228,7 @@ void main(void) {
 	while (!game_over) {
 		sema_dec(sem_state);
 		clear_screen();
+		draw_bursts();
 		draw_dots();
 		draw_bucket();
 		bp_flush(&bp);
