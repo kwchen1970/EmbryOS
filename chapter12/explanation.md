@@ -9,7 +9,7 @@ For semaphore blocking and wake-up logic the semaphores are counting semaphores 
 
 The game is created using 4-threads. We have a main thread for rendering the bucket, game dots, etc. and keeping the game loop. We have a bucket thread that reads keyboard input and moves the bucket left and right accordingly. We have a falling thread that handles the dots falling downward and spawning new dots. Finally we have a firework thread that adds fireworks in the background for distraction. 
 
-To play the game first start out in the embryos terminal. Type in "game" and press enter then you will be in the game. Use the key "a" to make the grey bucket at the bottom go left and press "d" to go right. The goal is to catch the green balls as they fall and make your score in the corner go up. There are some distracting fireworks in the background to make the game harder. 
+To play the game first start out in the embryos terminal. Type in "game" and press enter then you will be in the game. Use the key "a" to make the grey bucket at the bottom go left and press "d" to go right. The goal is to catch the green balls as they fall and make your score in the corner go up. There are some distracting fireworks in the background to make the game harder. If you want to launch another application in embryos press tab to escape playing the game and go back to being able to type commands in the terminal.
 
 AI Tools Used: ChatGPT, Github Copilot
 Wrote up a detailed specification of the desired game ourselves (talking about the movement mechanics, bucket, balls, scoreboard, etc.), used AI to debug and implement the functionalities
