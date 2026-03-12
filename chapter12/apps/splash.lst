@@ -6,30 +6,30 @@ EXEC_P, HAS_SYMS, D_PAGED
 start address 0x0000000070000000
 
 Program Header:
-0x70000003 off    0x00000000000045f0 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
+0x70000003 off    0x00000000000045d0 vaddr 0x0000000000000000 paddr 0x0000000000000000 align 2**0
          filesz 0x0000000000000063 memsz 0x0000000000000000 flags r--
     LOAD off    0x0000000000001000 vaddr 0x0000000070000000 paddr 0x0000000000001000 align 2**12
-         filesz 0x00000000000030f7 memsz 0x00000000000030f7 flags r-x
-    LOAD off    0x00000000000040f8 vaddr 0x00000000700030f8 paddr 0x00000000000040f7 align 2**12
+         filesz 0x00000000000030d7 memsz 0x00000000000030d7 flags r-x
+    LOAD off    0x00000000000040d8 vaddr 0x00000000700030d8 paddr 0x00000000000040d7 align 2**12
          filesz 0x00000000000004f8 memsz 0x00000000000004f8 flags rw-
 
 Sections:
 Idx Name              Size      VMA               LMA               File off  Algn  Flags
-  0 .text             000030f7  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data             000004f8  00000000700030f8  00000000000040f7  000040f8  2**3  CONTENTS, ALLOC, LOAD, DATA
-  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000045f0  2**0  CONTENTS, READONLY
-  3 .comment          00000034  0000000000000000  0000000000000000  00004653  2**0  CONTENTS, READONLY
-  4 .debug_line       00002f64  0000000000000000  0000000000000000  00004687  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  5 .debug_line_str   00000169  0000000000000000  0000000000000000  000075eb  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_info       00002bc8  0000000000000000  0000000000000000  00007754  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  7 .debug_abbrev     000010ee  0000000000000000  0000000000000000  0000a31c  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .debug_aranges    000002a0  0000000000000000  0000000000000000  0000b410  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_str        00000857  0000000000000000  0000000000000000  0000b6b0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_frame      00000eb0  0000000000000000  0000000000000000  0000bf08  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_rnglists   00000044  0000000000000000  0000000000000000  0000cdb8  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  0 .text             000030d7  0000000070000000  0000000000001000  00001000  2**3  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data             000004f8  00000000700030d8  00000000000040d7  000040d8  2**3  CONTENTS, ALLOC, LOAD, DATA
+  2 .riscv.attributes 00000063  0000000000000000  0000000000000000  000045d0  2**0  CONTENTS, READONLY
+  3 .comment          00000034  0000000000000000  0000000000000000  00004633  2**0  CONTENTS, READONLY
+  4 .debug_line       00002f65  0000000000000000  0000000000000000  00004667  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  5 .debug_line_str   0000016f  0000000000000000  0000000000000000  000075cc  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  6 .debug_info       00002bdc  0000000000000000  0000000000000000  0000773b  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  7 .debug_abbrev     000010f2  0000000000000000  0000000000000000  0000a317  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_aranges    000002d0  0000000000000000  0000000000000000  0000b410  2**4  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_str        00000844  0000000000000000  0000000000000000  0000b6e0  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_frame      00000e50  0000000000000000  0000000000000000  0000bf28  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_rnglists   00000044  0000000000000000  0000000000000000  0000cd78  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 0000000070000000 l    d  .text	0000000000000000 .text
-00000000700030f8 l    d  .data	0000000000000000 .data
+00000000700030d8 l    d  .data	0000000000000000 .data
 0000000000000000 l    d  .riscv.attributes	0000000000000000 .riscv.attributes
 0000000000000000 l    d  .comment	0000000000000000 .comment
 0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
@@ -40,13 +40,14 @@ SYMBOL TABLE:
 0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
 0000000000000000 l    d  .debug_frame	0000000000000000 .debug_frame
 0000000000000000 l    d  .debug_rnglists	0000000000000000 .debug_rnglists
-0000000000000000 l    df *ABS*	0000000000000000 ccMc1fuR.o
-0000000000000000 l    df *ABS*	0000000000000000 cckO03Mj.o
+0000000000000000 l    df *ABS*	0000000000000000 ccRYWU4u.o
+0000000000000000 l    df *ABS*	0000000000000000 ccLd546z.o
+0000000000000000 l    df *ABS*	0000000000000000 cc5q0QFR.o
 0000000000000000 l    df *ABS*	0000000000000000 crt1.c
 0000000000000000 l    df *ABS*	0000000000000000 string.c
 0000000000000000 l    df *ABS*	0000000000000000 string2.c
 0000000000000000 l    df *ABS*	0000000000000000 stdio.c
-0000000070003110 l     O .data	0000000000000018 dev
+00000000700030f0 l     O .data	0000000000000018 dev
 000000007000077e l     F .text	00000000000000c2 print_unsigned
 0000000000000000 l    df *ABS*	0000000000000000 dir.c
 0000000000000000 l    df *ABS*	0000000000000000 blockpixel.c
@@ -55,46 +56,44 @@ SYMBOL TABLE:
 0000000000000000 l    df *ABS*	0000000000000000 window1.c
 0000000000000000 l    df *ABS*	0000000000000000 window2.c
 0000000000000000 l    df *ABS*	0000000000000000 putchar.c
-0000000070003128 l     O .data	0000000000000368 window
-0000000070003490 l     O .data	0000000000000004 initialized
+0000000070003108 l     O .data	0000000000000368 window
+0000000070003470 l     O .data	0000000000000004 initialized
 0000000070001f22 l     F .text	000000000000004a init
 0000000000000000 l    df *ABS*	0000000000000000 malloc.c
-0000000070003498 l     O .data	0000000000000008 free_list
-00000000700034a0 l     O .data	0000000000000008 brk
+0000000070003478 l     O .data	0000000000000008 free_list
+0000000070003480 l     O .data	0000000000000008 brk
 0000000000000000 l    df *ABS*	0000000000000000 thread.c
-00000000700034a8 l     O .data	0000000000000100 input_q
-00000000700035a8 l     O .data	0000000000000004 input_q_head
-00000000700035ac l     O .data	0000000000000004 input_q_tail
-00000000700035b0 l     O .data	0000000000000004 input_q_count
-00000000700035b8 l     O .data	0000000000000008 runnable_queue
-00000000700035c0 l     O .data	0000000000000008 sleeping_queue
-00000000700035c8 l     O .data	0000000000000008 waiting_input
-00000000700035d0 l     O .data	0000000000000008 current_thread
-00000000700035d8 l     O .data	0000000000000008 zombie_list
-00000000700035e0 l     O .data	0000000000000004 next_tid
+0000000070003488 l     O .data	0000000000000100 input_q
+0000000070003588 l     O .data	0000000000000004 input_q_head
+000000007000358c l     O .data	0000000000000004 input_q_tail
+0000000070003590 l     O .data	0000000000000004 input_q_count
+0000000070003598 l     O .data	0000000000000008 runnable_queue
+00000000700035a0 l     O .data	0000000000000008 sleeping_queue
+00000000700035a8 l     O .data	0000000000000008 waiting_input
+00000000700035b0 l     O .data	0000000000000008 current_thread
+00000000700035b8 l     O .data	0000000000000008 zombie_list
+00000000700035c0 l     O .data	0000000000000004 next_tid
 0000000070002200 l     F .text	0000000000000076 enqueue_runnable
 0000000070002276 l     F .text	0000000000000042 dequeue_runnable
 00000000700022b8 l     F .text	00000000000000cc enqueue_sleeping
-0000000070002384 l     F .text	000000000000008c remove_from_sleeping
-0000000070002410 l     F .text	000000000000006a wakeup_sleeping_threads
-000000007000247a l     F .text	000000000000006e try_wakeup_input
-0000000070002572 l     F .text	0000000000000084 input_q_pop
-00000000700024e8 l     F .text	000000000000008a input_q_push
-00000000700025f6 l     F .text	0000000000000064 reap_zombies
-000000007000265a l     F .text	000000000000002c next_runnable
-0000000070002686 l     F .text	00000000000001a6 schedule
-00000000700035e8 l     O .data	0000000000000008 dummy_sp.0
+0000000070002384 l     F .text	0000000000000072 wakeup_sleeping_threads
+00000000700023f6 l     F .text	000000000000006e try_wakeup_input
+00000000700024ee l     F .text	0000000000000084 input_q_pop
+0000000070002464 l     F .text	000000000000008a input_q_push
+0000000070002572 l     F .text	0000000000000064 reap_zombies
+00000000700025d6 l     F .text	0000000000000232 schedule
+00000000700035c8 l     O .data	0000000000000008 dummy_sp.0
 0000000000000000 l    df *ABS*	0000000000000000 splash.c
-0000000070002d90 l     F .text	0000000000000056 user_delay
-0000000070002de6 l     F .text	000000000000006a clear
-0000000070002e50 l     F .text	0000000000000102 put_centered
+0000000070002d6e l     F .text	0000000000000056 user_delay
+0000000070002dc4 l     F .text	000000000000006a clear
+0000000070002e2e l     F .text	0000000000000102 put_centered
 0000000070001f6c g     F .text	0000000000000036 putchar
-0000000070002bf6 g     F .text	000000000000004a sema_create
+0000000070002bd4 g     F .text	000000000000004a sema_create
 00000000700001c2 g     F .text	000000000000004e strcpy
 0000000070000bee g     F .text	000000000000005a printf
 0000000070000800 g       *ABS*	0000000000000000 __global_pointer$
-0000000070003100 g     O .data	0000000000000008 stdout
-0000000070002b8e g     F .text	0000000000000068 thread_exit
+00000000700030e0 g     O .data	0000000000000008 stdout
+0000000070002b6c g     F .text	0000000000000068 thread_exit
 00000000700017c0 g     F .text	0000000000000096 window_init
 0000000070000530 g     F .text	00000000000000d8 memmove
 0000000070000024 g       .text	0000000000000000 user_spawn
@@ -111,12 +110,12 @@ SYMBOL TABLE:
 000000007000004c g       .text	0000000000000000 user_write
 0000000070000e98 g     F .text	0000000000000016 fflush
 0000000000001000 g       *ABS*	0000000000000000 flat_file_off
-0000000070002862 g     F .text	0000000000000134 thread_init
+000000007000283e g     F .text	0000000000000134 thread_init
 0000000070000f8e g     F .text	0000000000000100 dir_create
-00000000700035f0 g       .data	0000000000000000 __bss_end
+00000000700035d0 g       .data	0000000000000000 __bss_end
 0000000070000054 g       .text	0000000000000000 user_size
-0000000070002b1c g     F .text	0000000000000072 thread_get
-0000000070002c40 g     F .text	000000000000006c sema_inc
+0000000070002b00 g     F .text	000000000000006c thread_get
+0000000070002c1e g     F .text	000000000000006c sema_inc
 00000000700003fa g     F .text	000000000000004a strnlen
 0000000070000388 g     F .text	0000000000000072 strrchr
 00000000700020c2 g     F .text	0000000000000056 calloc
@@ -124,11 +123,11 @@ SYMBOL TABLE:
 0000000070000b24 g     F .text	0000000000000054 fprintf
 0000000070001356 g     F .text	0000000000000258 bp_put
 00000000700015ae g     F .text	0000000000000212 bp_flush
-0000000070002ada g     F .text	0000000000000042 thread_sleep
+0000000070002abe g     F .text	0000000000000042 thread_sleep
 0000000070000014 g       .text	0000000000000000 user_exit
 00000000700012b4 g     F .text	00000000000000a2 bp_init
 00000000700004ca g     F .text	0000000000000066 memchr
-00000000700030f8 g     O .data	0000000000000008 stdin
+00000000700030d8 g     O .data	0000000000000008 stdin
 0000000070000000 g       .text	0000000000000000 _start
 00000000700002e0 g     F .text	00000000000000a8 strstr
 0000000070000000 g       .text	0000000000000000 _image_start
@@ -136,13 +135,13 @@ SYMBOL TABLE:
 0000000070002118 g     F .text	00000000000000a2 realloc
 0000000070001856 g     F .text	000000000000008c window_sync
 0000000070000444 g     F .text	0000000000000086 memcmp
-0000000070002cac g     F .text	000000000000007e sema_dec
+0000000070002c8a g     F .text	000000000000007e sema_dec
 000000007000006c g       .text	0000000000000000 user_sleep
 0000000070000c48 g     F .text	00000000000000fe fopen
-0000000070003110 g       .data	0000000000000000 __bss_start
-000000007000282c g     F .text	0000000000000036 exec_user
+00000000700030f0 g       .data	0000000000000000 __bss_start
+0000000070002808 g     F .text	0000000000000036 exec_user
 000000007000063c g     F .text	0000000000000054 memset
-0000000070002f52 g     F .text	000000000000018c main
+0000000070002f30 g     F .text	000000000000018c main
 0000000070000034 g       .text	0000000000000000 user_get
 00000000700000b4 g       .text	0000000000000000 ctx_start
 0000000070000eae g     F .text	000000000000001e clearerr
@@ -150,23 +149,23 @@ SYMBOL TABLE:
 000000007000011a g     F .text	00000000000000a8 strcmp
 000000007000001c g       .text	0000000000000000 user_yield
 0000000070000b78 g     F .text	0000000000000076 sprintf
-0000000070003108 g     O .data	0000000000000008 stderr
+00000000700030e8 g     O .data	0000000000000008 stderr
 00000000700000e0 g     F .text	000000000000003a _crt_init
-0000000070002aa0 g     F .text	000000000000003a thread_yield
+0000000070002a84 g     F .text	000000000000003a thread_yield
 0000000070000044 g       .text	0000000000000000 user_read
 0000000070000690 g     F .text	00000000000000a6 fputc
 000000007000005c g       .text	0000000000000000 user_delete
 000000007000003c g       .text	0000000000000000 user_create
-00000000700035f0 g       .data	0000000000000000 _image_end
-0000000070002d2a g     F .text	0000000000000066 sema_release
+00000000700035d0 g       .data	0000000000000000 _image_end
+0000000070002d08 g     F .text	0000000000000066 sema_release
 0000000070000efa g     F .text	0000000000000094 dir_lookup
 00000000700018e2 g     F .text	00000000000000e0 window_scroll
 0000000070000064 g       .text	0000000000000000 user_gettime
 00000000700002a0 g     F .text	0000000000000040 strlen
 0000000070001162 g     F .text	000000000000008c dir_list
-0000000070002996 g     F .text	000000000000010a thread_create
+0000000070002972 g     F .text	0000000000000112 thread_create
 0000000070000736 g     F .text	0000000000000048 fputs
-00000000000040f7 g       *ABS*	0000000000000000 text_file_end
+00000000000040d7 g       *ABS*	0000000000000000 text_file_end
 0000000070000d46 g     F .text	00000000000000ca freadline
 0000000070000840 g     F .text	00000000000002e4 vfprintf
 00000000700021ba g     F .text	0000000000000046 free
@@ -199,7 +198,7 @@ _start:
 0000000070000014 <user_exit>:
 user_exit():
 /embryos/chapter12/apps/syslib.S:13
-    .globl user_sleep, ctx_switch, ctx_start
+    .globl user_sleep
 
     # void user_exit(void);
 
@@ -379,170 +378,170 @@ user_sleep:
 
 0000000070000074 <ctx_switch>:
 ctx_switch():
-/embryos/chapter12/apps/syslib.S:95
-#endif
+/embryos/chapter12/apps/../shared/ctx.S:17
+    .globl ctx_switch, ctx_start
 
 # void ctx_switch(void **old_sp, void *new_sp)
 #   Saves current context into *old_sp, switches to new_sp, restores.
 ctx_switch:
     addi sp, sp, -(16*WORD_SIZE)
     70000074:	7119                	addi	sp,sp,-128
-/embryos/chapter12/apps/syslib.S:97
+/embryos/chapter12/apps/../shared/ctx.S:19
 
     REG_S s0,  1*WORD_SIZE(sp)
     70000076:	e422                	sd	s0,8(sp)
-/embryos/chapter12/apps/syslib.S:98
+/embryos/chapter12/apps/../shared/ctx.S:20
     REG_S s1,  2*WORD_SIZE(sp)
     70000078:	e826                	sd	s1,16(sp)
-/embryos/chapter12/apps/syslib.S:99
+/embryos/chapter12/apps/../shared/ctx.S:21
     REG_S s2,  3*WORD_SIZE(sp)
     7000007a:	ec4a                	sd	s2,24(sp)
-/embryos/chapter12/apps/syslib.S:100
+/embryos/chapter12/apps/../shared/ctx.S:22
     REG_S s3,  4*WORD_SIZE(sp)
     7000007c:	f04e                	sd	s3,32(sp)
-/embryos/chapter12/apps/syslib.S:101
+/embryos/chapter12/apps/../shared/ctx.S:23
     REG_S s4,  5*WORD_SIZE(sp)
     7000007e:	f452                	sd	s4,40(sp)
-/embryos/chapter12/apps/syslib.S:102
+/embryos/chapter12/apps/../shared/ctx.S:24
     REG_S s5,  6*WORD_SIZE(sp)
     70000080:	f856                	sd	s5,48(sp)
-/embryos/chapter12/apps/syslib.S:103
+/embryos/chapter12/apps/../shared/ctx.S:25
     REG_S s6,  7*WORD_SIZE(sp)
     70000082:	fc5a                	sd	s6,56(sp)
-/embryos/chapter12/apps/syslib.S:104
+/embryos/chapter12/apps/../shared/ctx.S:26
     REG_S s7,  8*WORD_SIZE(sp)
     70000084:	e0de                	sd	s7,64(sp)
-/embryos/chapter12/apps/syslib.S:105
+/embryos/chapter12/apps/../shared/ctx.S:27
     REG_S s8,  9*WORD_SIZE(sp)
     70000086:	e4e2                	sd	s8,72(sp)
-/embryos/chapter12/apps/syslib.S:106
+/embryos/chapter12/apps/../shared/ctx.S:28
     REG_S s9, 10*WORD_SIZE(sp)
     70000088:	e8e6                	sd	s9,80(sp)
-/embryos/chapter12/apps/syslib.S:107
+/embryos/chapter12/apps/../shared/ctx.S:29
     REG_S s10,11*WORD_SIZE(sp)
     7000008a:	ecea                	sd	s10,88(sp)
-/embryos/chapter12/apps/syslib.S:108
+/embryos/chapter12/apps/../shared/ctx.S:30
     REG_S s11,12*WORD_SIZE(sp)
     7000008c:	f0ee                	sd	s11,96(sp)
-/embryos/chapter12/apps/syslib.S:109
+/embryos/chapter12/apps/../shared/ctx.S:31
     REG_S ra,  0*WORD_SIZE(sp)
     7000008e:	e006                	sd	ra,0(sp)
-/embryos/chapter12/apps/syslib.S:111
+/embryos/chapter12/apps/../shared/ctx.S:33
 
     REG_S sp, 0(a0)          # *old_sp = current sp
     70000090:	00253023          	sd	sp,0(a0)
-/embryos/chapter12/apps/syslib.S:112
+/embryos/chapter12/apps/../shared/ctx.S:34
     mv sp, a1                # switch to new stack
     70000094:	812e                	mv	sp,a1
-/embryos/chapter12/apps/syslib.S:114
+/embryos/chapter12/apps/../shared/ctx.S:36
 
     REG_L ra,  0*WORD_SIZE(sp)
     70000096:	6082                	ld	ra,0(sp)
-/embryos/chapter12/apps/syslib.S:115
+/embryos/chapter12/apps/../shared/ctx.S:37
     REG_L s0,  1*WORD_SIZE(sp)
     70000098:	6422                	ld	s0,8(sp)
-/embryos/chapter12/apps/syslib.S:116
+/embryos/chapter12/apps/../shared/ctx.S:38
     REG_L s1,  2*WORD_SIZE(sp)
     7000009a:	64c2                	ld	s1,16(sp)
-/embryos/chapter12/apps/syslib.S:117
+/embryos/chapter12/apps/../shared/ctx.S:39
     REG_L s2,  3*WORD_SIZE(sp)
     7000009c:	6962                	ld	s2,24(sp)
-/embryos/chapter12/apps/syslib.S:118
+/embryos/chapter12/apps/../shared/ctx.S:40
     REG_L s3,  4*WORD_SIZE(sp)
     7000009e:	7982                	ld	s3,32(sp)
-/embryos/chapter12/apps/syslib.S:119
+/embryos/chapter12/apps/../shared/ctx.S:41
     REG_L s4,  5*WORD_SIZE(sp)
     700000a0:	7a22                	ld	s4,40(sp)
-/embryos/chapter12/apps/syslib.S:120
+/embryos/chapter12/apps/../shared/ctx.S:42
     REG_L s5,  6*WORD_SIZE(sp)
     700000a2:	7ac2                	ld	s5,48(sp)
-/embryos/chapter12/apps/syslib.S:121
+/embryos/chapter12/apps/../shared/ctx.S:43
     REG_L s6,  7*WORD_SIZE(sp)
     700000a4:	7b62                	ld	s6,56(sp)
-/embryos/chapter12/apps/syslib.S:122
+/embryos/chapter12/apps/../shared/ctx.S:44
     REG_L s7,  8*WORD_SIZE(sp)
     700000a6:	6b86                	ld	s7,64(sp)
-/embryos/chapter12/apps/syslib.S:123
+/embryos/chapter12/apps/../shared/ctx.S:45
     REG_L s8,  9*WORD_SIZE(sp)
     700000a8:	6c26                	ld	s8,72(sp)
-/embryos/chapter12/apps/syslib.S:124
+/embryos/chapter12/apps/../shared/ctx.S:46
     REG_L s9, 10*WORD_SIZE(sp)
     700000aa:	6cc6                	ld	s9,80(sp)
-/embryos/chapter12/apps/syslib.S:125
+/embryos/chapter12/apps/../shared/ctx.S:47
     REG_L s10,11*WORD_SIZE(sp)
     700000ac:	6d66                	ld	s10,88(sp)
-/embryos/chapter12/apps/syslib.S:126
+/embryos/chapter12/apps/../shared/ctx.S:48
     REG_L s11,12*WORD_SIZE(sp)
     700000ae:	7d86                	ld	s11,96(sp)
-/embryos/chapter12/apps/syslib.S:128
+/embryos/chapter12/apps/../shared/ctx.S:50
 
     addi sp, sp, (16*WORD_SIZE)
     700000b0:	6109                	addi	sp,sp,128
-/embryos/chapter12/apps/syslib.S:129
+/embryos/chapter12/apps/../shared/ctx.S:51
     ret
     700000b2:	8082                	ret
 
 00000000700000b4 <ctx_start>:
 ctx_start():
-/embryos/chapter12/apps/syslib.S:134
+/embryos/chapter12/apps/../shared/ctx.S:56
 
 # void ctx_start(void **save_sp, void *new_sp)
 #   Saves current sp, switches to new stack, and calls exec_user().
 ctx_start:
     addi sp, sp, -(16*WORD_SIZE)
     700000b4:	7119                	addi	sp,sp,-128
-/embryos/chapter12/apps/syslib.S:136
+/embryos/chapter12/apps/../shared/ctx.S:58
 
     REG_S s0,  1*WORD_SIZE(sp)
     700000b6:	e422                	sd	s0,8(sp)
-/embryos/chapter12/apps/syslib.S:137
+/embryos/chapter12/apps/../shared/ctx.S:59
     REG_S s1,  2*WORD_SIZE(sp)
     700000b8:	e826                	sd	s1,16(sp)
-/embryos/chapter12/apps/syslib.S:138
+/embryos/chapter12/apps/../shared/ctx.S:60
     REG_S s2,  3*WORD_SIZE(sp)
     700000ba:	ec4a                	sd	s2,24(sp)
-/embryos/chapter12/apps/syslib.S:139
+/embryos/chapter12/apps/../shared/ctx.S:61
     REG_S s3,  4*WORD_SIZE(sp)
     700000bc:	f04e                	sd	s3,32(sp)
-/embryos/chapter12/apps/syslib.S:140
+/embryos/chapter12/apps/../shared/ctx.S:62
     REG_S s4,  5*WORD_SIZE(sp)
     700000be:	f452                	sd	s4,40(sp)
-/embryos/chapter12/apps/syslib.S:141
+/embryos/chapter12/apps/../shared/ctx.S:63
     REG_S s5,  6*WORD_SIZE(sp)
     700000c0:	f856                	sd	s5,48(sp)
-/embryos/chapter12/apps/syslib.S:142
+/embryos/chapter12/apps/../shared/ctx.S:64
     REG_S s6,  7*WORD_SIZE(sp)
     700000c2:	fc5a                	sd	s6,56(sp)
-/embryos/chapter12/apps/syslib.S:143
+/embryos/chapter12/apps/../shared/ctx.S:65
     REG_S s7,  8*WORD_SIZE(sp)
     700000c4:	e0de                	sd	s7,64(sp)
-/embryos/chapter12/apps/syslib.S:144
+/embryos/chapter12/apps/../shared/ctx.S:66
     REG_S s8,  9*WORD_SIZE(sp)
     700000c6:	e4e2                	sd	s8,72(sp)
-/embryos/chapter12/apps/syslib.S:145
+/embryos/chapter12/apps/../shared/ctx.S:67
     REG_S s9, 10*WORD_SIZE(sp)
     700000c8:	e8e6                	sd	s9,80(sp)
-/embryos/chapter12/apps/syslib.S:146
+/embryos/chapter12/apps/../shared/ctx.S:68
     REG_S s10,11*WORD_SIZE(sp)
     700000ca:	ecea                	sd	s10,88(sp)
-/embryos/chapter12/apps/syslib.S:147
+/embryos/chapter12/apps/../shared/ctx.S:69
     REG_S s11,12*WORD_SIZE(sp)
     700000cc:	f0ee                	sd	s11,96(sp)
-/embryos/chapter12/apps/syslib.S:148
+/embryos/chapter12/apps/../shared/ctx.S:70
     REG_S ra,  0*WORD_SIZE(sp)
     700000ce:	e006                	sd	ra,0(sp)
-/embryos/chapter12/apps/syslib.S:150
+/embryos/chapter12/apps/../shared/ctx.S:72
 
     REG_S sp, 0(a0)          # *save_sp = current sp
     700000d0:	00253023          	sd	sp,0(a0)
-/embryos/chapter12/apps/syslib.S:151
+/embryos/chapter12/apps/../shared/ctx.S:73
     mv sp, a1                # switch to new stack
     700000d4:	812e                	mv	sp,a1
-/embryos/chapter12/apps/syslib.S:152
+/embryos/chapter12/apps/../shared/ctx.S:74
     la a0, exec_user
     700000d6:	00002517          	auipc	a0,0x2
-    700000da:	75650513          	addi	a0,a0,1878 # 7000282c <exec_user>
-/embryos/chapter12/apps/syslib.S:153
+    700000da:	73250513          	addi	a0,a0,1842 # 70002808 <exec_user>
+/embryos/chapter12/apps/../shared/ctx.S:75
     jalr a0                  # call exec_user() (doesn't return)
     700000de:	9502                	jalr	a0
 
@@ -569,7 +568,7 @@ void _crt_init(char **argv) {
     700000fc:	85be                	mv	a1,a5
     700000fe:	853a                	mv	a0,a4
     70000100:	00003097          	auipc	ra,0x3
-    70000104:	e52080e7          	jalr	-430(ra) # 70002f52 <main>
+    70000104:	e30080e7          	jalr	-464(ra) # 70002f30 <main>
 /embryos/chapter12/apps/crt1.c:7
     user_exit();
     70000108:	00000097          	auipc	ra,0x0
@@ -1925,7 +1924,7 @@ void printf(const char *fmt, ...) {
 /embryos/chapter12/apps/stdio.c:91
     vfprintf(stdout, fmt, ap);
     70000c20:	00002797          	auipc	a5,0x2
-    70000c24:	4e078793          	addi	a5,a5,1248 # 70003100 <stdout>
+    70000c24:	4c078793          	addi	a5,a5,1216 # 700030e0 <stdout>
     70000c28:	639c                	ld	a5,0(a5)
     70000c2a:	fe843703          	ld	a4,-24(s0)
     70000c2e:	863a                	mv	a2,a4
@@ -4184,25 +4183,25 @@ static void init(){
 /embryos/chapter12/apps/putchar.c:9
     if (!initialized) {
     70001f2a:	00001797          	auipc	a5,0x1
-    70001f2e:	56678793          	addi	a5,a5,1382 # 70003490 <initialized>
+    70001f2e:	54678793          	addi	a5,a5,1350 # 70003470 <initialized>
     70001f32:	439c                	lw	a5,0(a5)
     70001f34:	e79d                	bnez	a5,70001f62 <init+0x40>
 /embryos/chapter12/apps/putchar.c:10
         window_init(&window);
     70001f36:	00001517          	auipc	a0,0x1
-    70001f3a:	1f250513          	addi	a0,a0,498 # 70003128 <window>
+    70001f3a:	1d250513          	addi	a0,a0,466 # 70003108 <window>
     70001f3e:	00000097          	auipc	ra,0x0
     70001f42:	882080e7          	jalr	-1918(ra) # 700017c0 <window_init>
 /embryos/chapter12/apps/putchar.c:11
         window_sync(&window);
     70001f46:	00001517          	auipc	a0,0x1
-    70001f4a:	1e250513          	addi	a0,a0,482 # 70003128 <window>
+    70001f4a:	1c250513          	addi	a0,a0,450 # 70003108 <window>
     70001f4e:	00000097          	auipc	ra,0x0
     70001f52:	908080e7          	jalr	-1784(ra) # 70001856 <window_sync>
 /embryos/chapter12/apps/putchar.c:12
         initialized = 1;
     70001f56:	00001797          	auipc	a5,0x1
-    70001f5a:	53a78793          	addi	a5,a5,1338 # 70003490 <initialized>
+    70001f5a:	51a78793          	addi	a5,a5,1306 # 70003470 <initialized>
     70001f5e:	4705                	li	a4,1
     70001f60:	c398                	sw	a4,0(a5)
 /embryos/chapter12/apps/putchar.c:14
@@ -4234,7 +4233,7 @@ void putchar(char c) {
     70001f82:	fef44783          	lbu	a5,-17(s0)
     70001f86:	85be                	mv	a1,a5
     70001f88:	00001517          	auipc	a0,0x1
-    70001f8c:	1a050513          	addi	a0,a0,416 # 70003128 <window>
+    70001f8c:	18050513          	addi	a0,a0,384 # 70003108 <window>
     70001f90:	00000097          	auipc	ra,0x0
     70001f94:	a32080e7          	jalr	-1486(ra) # 700019c2 <window_putchar>
 /embryos/chapter12/apps/putchar.c:19
@@ -4267,7 +4266,7 @@ int readline(char *line, int size) {
     70001fc0:	863e                	mv	a2,a5
     70001fc2:	fe843583          	ld	a1,-24(s0)
     70001fc6:	00001517          	auipc	a0,0x1
-    70001fca:	16250513          	addi	a0,a0,354 # 70003128 <window>
+    70001fca:	14250513          	addi	a0,a0,322 # 70003108 <window>
     70001fce:	00000097          	auipc	ra,0x0
     70001fd2:	bbe080e7          	jalr	-1090(ra) # 70001b8c <window_readline>
     70001fd6:	87aa                	mv	a5,a0
@@ -4303,7 +4302,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:23
     for (struct m_hdr **pmh = &free_list; (mh = *pmh); pmh = &mh->next)
     70001ffa:	00001797          	auipc	a5,0x1
-    70001ffe:	49e78793          	addi	a5,a5,1182 # 70003498 <free_list>
+    70001ffe:	47e78793          	addi	a5,a5,1150 # 70003478 <free_list>
     70002002:	fef43423          	sd	a5,-24(s0)
     70002006:	a035                	j	70002032 <malloc+0x50>
 /embryos/chapter12/apps/malloc.c:24
@@ -4337,23 +4336,23 @@ void *malloc(size_t size) {
         }
     if (!brk) brk = (struct m_hdr *) ROUNDUP(&__bss_end[1]) - 1;
     70002042:	00001797          	auipc	a5,0x1
-    70002046:	45e78793          	addi	a5,a5,1118 # 700034a0 <brk>
+    70002046:	43e78793          	addi	a5,a5,1086 # 70003480 <brk>
     7000204a:	639c                	ld	a5,0(a5)
     7000204c:	ef91                	bnez	a5,70002068 <malloc+0x86>
 /embryos/chapter12/apps/malloc.c:28 (discriminator 1)
     7000204e:	00001797          	auipc	a5,0x1
-    70002052:	5b278793          	addi	a5,a5,1458 # 70003600 <__bss_end+0x10>
+    70002052:	59278793          	addi	a5,a5,1426 # 700035e0 <__bss_end+0x10>
     70002056:	07bd                	addi	a5,a5,15
     70002058:	9bc1                	andi	a5,a5,-16
     7000205a:	17c1                	addi	a5,a5,-16
     7000205c:	873e                	mv	a4,a5
     7000205e:	00001797          	auipc	a5,0x1
-    70002062:	44278793          	addi	a5,a5,1090 # 700034a0 <brk>
+    70002062:	42278793          	addi	a5,a5,1058 # 70003480 <brk>
     70002066:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:29
     char *next = (char *) brk + size;
     70002068:	00001797          	auipc	a5,0x1
-    7000206c:	43878793          	addi	a5,a5,1080 # 700034a0 <brk>
+    7000206c:	41878793          	addi	a5,a5,1048 # 70003480 <brk>
     70002070:	6398                	ld	a4,0(a5)
     70002072:	fc843783          	ld	a5,-56(s0)
     70002076:	97ba                	add	a5,a5,a4
@@ -4370,7 +4369,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:31
     mh = brk;
     7000208c:	00001797          	auipc	a5,0x1
-    70002090:	41478793          	addi	a5,a5,1044 # 700034a0 <brk>
+    70002090:	3f478793          	addi	a5,a5,1012 # 70003480 <brk>
     70002094:	639c                	ld	a5,0(a5)
     70002096:	fef43023          	sd	a5,-32(s0)
 /embryos/chapter12/apps/malloc.c:32
@@ -4381,7 +4380,7 @@ void *malloc(size_t size) {
 /embryos/chapter12/apps/malloc.c:33
     brk = (struct m_hdr *) next;
     700020a4:	00001797          	auipc	a5,0x1
-    700020a8:	3fc78793          	addi	a5,a5,1020 # 700034a0 <brk>
+    700020a8:	3dc78793          	addi	a5,a5,988 # 70003480 <brk>
     700020ac:	fd843703          	ld	a4,-40(s0)
     700020b0:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:34
@@ -4547,14 +4546,14 @@ void free(void *ptr) {
 /embryos/chapter12/apps/malloc.c:59
     mh->next = free_list;
     700021d6:	00001797          	auipc	a5,0x1
-    700021da:	2c278793          	addi	a5,a5,706 # 70003498 <free_list>
+    700021da:	2a278793          	addi	a5,a5,674 # 70003478 <free_list>
     700021de:	6398                	ld	a4,0(a5)
     700021e0:	fe843783          	ld	a5,-24(s0)
     700021e4:	e398                	sd	a4,0(a5)
 /embryos/chapter12/apps/malloc.c:60
     free_list = mh;
     700021e6:	00001797          	auipc	a5,0x1
-    700021ea:	2b278793          	addi	a5,a5,690 # 70003498 <free_list>
+    700021ea:	29278793          	addi	a5,a5,658 # 70003478 <free_list>
     700021ee:	fe843703          	ld	a4,-24(s0)
     700021f2:	e398                	sd	a4,0(a5)
     700021f4:	a011                	j	700021f8 <free+0x3e>
@@ -4570,7 +4569,7 @@ void free(void *ptr) {
 
 0000000070002200 <enqueue_runnable>:
 enqueue_runnable():
-/embryos/chapter12/apps/thread.c:82
+/embryos/chapter12/apps/thread.c:79
 static int input_q_push(int ev);
 static int input_q_pop(int *ev);
 static void reap_zombies(void);
@@ -4582,60 +4581,60 @@ static void enqueue_runnable(thread_t *t) {
     70002204:	f022                	sd	s0,32(sp)
     70002206:	1800                	addi	s0,sp,48
     70002208:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:83
+/embryos/chapter12/apps/thread.c:80
     if (!t) return;
     7000220c:	fd843783          	ld	a5,-40(s0)
     70002210:	cfb1                	beqz	a5,7000226c <enqueue_runnable+0x6c>
-/embryos/chapter12/apps/thread.c:84
+/embryos/chapter12/apps/thread.c:81
     t->state = THREAD_RUNNABLE;
     70002212:	fd843783          	ld	a5,-40(s0)
     70002216:	0207a023          	sw	zero,32(a5)
-/embryos/chapter12/apps/thread.c:85
+/embryos/chapter12/apps/thread.c:82
     t->next = NULL;
     7000221a:	fd843783          	ld	a5,-40(s0)
     7000221e:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:87
-    
+/embryos/chapter12/apps/thread.c:84
+
     if (!runnable_queue) {
     70002222:	00001797          	auipc	a5,0x1
-    70002226:	39678793          	addi	a5,a5,918 # 700035b8 <runnable_queue>
+    70002226:	37678793          	addi	a5,a5,886 # 70003598 <runnable_queue>
     7000222a:	639c                	ld	a5,0(a5)
     7000222c:	eb89                	bnez	a5,7000223e <enqueue_runnable+0x3e>
-/embryos/chapter12/apps/thread.c:88
+/embryos/chapter12/apps/thread.c:85
         runnable_queue = t;
     7000222e:	00001797          	auipc	a5,0x1
-    70002232:	38a78793          	addi	a5,a5,906 # 700035b8 <runnable_queue>
+    70002232:	36a78793          	addi	a5,a5,874 # 70003598 <runnable_queue>
     70002236:	fd843703          	ld	a4,-40(s0)
     7000223a:	e398                	sd	a4,0(a5)
     7000223c:	a80d                	j	7000226e <enqueue_runnable+0x6e>
-/embryos/chapter12/apps/thread.c:90
+/embryos/chapter12/apps/thread.c:87
     } else {
         thread_t *iter = runnable_queue;
     7000223e:	00001797          	auipc	a5,0x1
-    70002242:	37a78793          	addi	a5,a5,890 # 700035b8 <runnable_queue>
+    70002242:	35a78793          	addi	a5,a5,858 # 70003598 <runnable_queue>
     70002246:	639c                	ld	a5,0(a5)
     70002248:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:91
+/embryos/chapter12/apps/thread.c:88
         while (iter->next) iter = iter->next;
     7000224c:	a031                	j	70002258 <enqueue_runnable+0x58>
-/embryos/chapter12/apps/thread.c:91 (discriminator 2)
+/embryos/chapter12/apps/thread.c:88 (discriminator 2)
     7000224e:	fe843783          	ld	a5,-24(s0)
     70002252:	7f9c                	ld	a5,56(a5)
     70002254:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:91 (discriminator 1)
+/embryos/chapter12/apps/thread.c:88 (discriminator 1)
     70002258:	fe843783          	ld	a5,-24(s0)
     7000225c:	7f9c                	ld	a5,56(a5)
     7000225e:	fbe5                	bnez	a5,7000224e <enqueue_runnable+0x4e>
-/embryos/chapter12/apps/thread.c:92
+/embryos/chapter12/apps/thread.c:89
         iter->next = t;
     70002260:	fe843783          	ld	a5,-24(s0)
     70002264:	fd843703          	ld	a4,-40(s0)
     70002268:	ff98                	sd	a4,56(a5)
     7000226a:	a011                	j	7000226e <enqueue_runnable+0x6e>
-/embryos/chapter12/apps/thread.c:83
+/embryos/chapter12/apps/thread.c:80
     if (!t) return;
     7000226c:	0001                	nop
-/embryos/chapter12/apps/thread.c:94
+/embryos/chapter12/apps/thread.c:91
     }
 }
     7000226e:	70a2                	ld	ra,40(sp)
@@ -4645,40 +4644,40 @@ static void enqueue_runnable(thread_t *t) {
 
 0000000070002276 <dequeue_runnable>:
 dequeue_runnable():
-/embryos/chapter12/apps/thread.c:97
+/embryos/chapter12/apps/thread.c:94
 
-// Remove thread from runnable queue (only remove first occurrence)
+// Remove first runnable thread
 static thread_t *dequeue_runnable(void) {
     70002276:	1101                	addi	sp,sp,-32
     70002278:	ec06                	sd	ra,24(sp)
     7000227a:	e822                	sd	s0,16(sp)
     7000227c:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:98
+/embryos/chapter12/apps/thread.c:95
     thread_t *t = runnable_queue;
     7000227e:	00001797          	auipc	a5,0x1
-    70002282:	33a78793          	addi	a5,a5,826 # 700035b8 <runnable_queue>
+    70002282:	31a78793          	addi	a5,a5,794 # 70003598 <runnable_queue>
     70002286:	639c                	ld	a5,0(a5)
     70002288:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:99
+/embryos/chapter12/apps/thread.c:96
     if (t) {
     7000228c:	fe843783          	ld	a5,-24(s0)
     70002290:	cf89                	beqz	a5,700022aa <dequeue_runnable+0x34>
-/embryos/chapter12/apps/thread.c:100
+/embryos/chapter12/apps/thread.c:97
         runnable_queue = t->next;
     70002292:	fe843783          	ld	a5,-24(s0)
     70002296:	7f98                	ld	a4,56(a5)
     70002298:	00001797          	auipc	a5,0x1
-    7000229c:	32078793          	addi	a5,a5,800 # 700035b8 <runnable_queue>
+    7000229c:	30078793          	addi	a5,a5,768 # 70003598 <runnable_queue>
     700022a0:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:101
+/embryos/chapter12/apps/thread.c:98
         t->next = NULL;
     700022a2:	fe843783          	ld	a5,-24(s0)
     700022a6:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:103
+/embryos/chapter12/apps/thread.c:100
     }
     return t;
     700022aa:	fe843783          	ld	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:104
+/embryos/chapter12/apps/thread.c:101
 }
     700022ae:	853e                	mv	a0,a5
     700022b0:	60e2                	ld	ra,24(sp)
@@ -4688,9 +4687,9 @@ static thread_t *dequeue_runnable(void) {
 
 00000000700022b8 <enqueue_sleeping>:
 enqueue_sleeping():
-/embryos/chapter12/apps/thread.c:107
+/embryos/chapter12/apps/thread.c:104
 
-// Add thread to sleeping queue (keeping sorted by wake time)
+// Add thread to sleeping queue sorted by wake time
 static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
     700022b8:	7179                	addi	sp,sp,-48
     700022ba:	f406                	sd	ra,40(sp)
@@ -4698,34 +4697,34 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
     700022be:	1800                	addi	s0,sp,48
     700022c0:	fca43c23          	sd	a0,-40(s0)
     700022c4:	fcb43823          	sd	a1,-48(s0)
-/embryos/chapter12/apps/thread.c:108
+/embryos/chapter12/apps/thread.c:105
     t->state = THREAD_SLEEPING;
     700022c8:	fd843783          	ld	a5,-40(s0)
     700022cc:	4705                	li	a4,1
     700022ce:	d398                	sw	a4,32(a5)
-/embryos/chapter12/apps/thread.c:109
+/embryos/chapter12/apps/thread.c:106
     t->wake_time = wake_time;
     700022d0:	fd843783          	ld	a5,-40(s0)
     700022d4:	fd043703          	ld	a4,-48(s0)
     700022d8:	f798                	sd	a4,40(a5)
-/embryos/chapter12/apps/thread.c:110
+/embryos/chapter12/apps/thread.c:107
     t->next = NULL;
     700022da:	fd843783          	ld	a5,-40(s0)
     700022de:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:112
-    
+/embryos/chapter12/apps/thread.c:109
+
     if (!sleeping_queue) {
     700022e2:	00001797          	auipc	a5,0x1
-    700022e6:	2de78793          	addi	a5,a5,734 # 700035c0 <sleeping_queue>
+    700022e6:	2be78793          	addi	a5,a5,702 # 700035a0 <sleeping_queue>
     700022ea:	639c                	ld	a5,0(a5)
     700022ec:	eb89                	bnez	a5,700022fe <enqueue_sleeping+0x46>
-/embryos/chapter12/apps/thread.c:113
+/embryos/chapter12/apps/thread.c:110
         sleeping_queue = t;
     700022ee:	00001797          	auipc	a5,0x1
-    700022f2:	2d278793          	addi	a5,a5,722 # 700035c0 <sleeping_queue>
+    700022f2:	2b278793          	addi	a5,a5,690 # 700035a0 <sleeping_queue>
     700022f6:	fd843703          	ld	a4,-40(s0)
     700022fa:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:125
+/embryos/chapter12/apps/thread.c:122
             iter = iter->next;
         }
         t->next = iter->next;
@@ -4733,67 +4732,67 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
     }
 }
     700022fc:	a8bd                	j	7000237a <enqueue_sleeping+0xc2>
-/embryos/chapter12/apps/thread.c:114
+/embryos/chapter12/apps/thread.c:111
     } else if (wake_time < sleeping_queue->wake_time) {
     700022fe:	00001797          	auipc	a5,0x1
-    70002302:	2c278793          	addi	a5,a5,706 # 700035c0 <sleeping_queue>
+    70002302:	2a278793          	addi	a5,a5,674 # 700035a0 <sleeping_queue>
     70002306:	639c                	ld	a5,0(a5)
     70002308:	779c                	ld	a5,40(a5)
     7000230a:	fd043703          	ld	a4,-48(s0)
     7000230e:	02f77263          	bgeu	a4,a5,70002332 <enqueue_sleeping+0x7a>
-/embryos/chapter12/apps/thread.c:115
+/embryos/chapter12/apps/thread.c:112
         t->next = sleeping_queue;
     70002312:	00001797          	auipc	a5,0x1
-    70002316:	2ae78793          	addi	a5,a5,686 # 700035c0 <sleeping_queue>
+    70002316:	28e78793          	addi	a5,a5,654 # 700035a0 <sleeping_queue>
     7000231a:	6398                	ld	a4,0(a5)
     7000231c:	fd843783          	ld	a5,-40(s0)
     70002320:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:116
+/embryos/chapter12/apps/thread.c:113
         sleeping_queue = t;
     70002322:	00001797          	auipc	a5,0x1
-    70002326:	29e78793          	addi	a5,a5,670 # 700035c0 <sleeping_queue>
+    70002326:	27e78793          	addi	a5,a5,638 # 700035a0 <sleeping_queue>
     7000232a:	fd843703          	ld	a4,-40(s0)
     7000232e:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:125
+/embryos/chapter12/apps/thread.c:122
 }
     70002330:	a0a9                	j	7000237a <enqueue_sleeping+0xc2>
-/embryos/chapter12/apps/thread.c:118
+/embryos/chapter12/apps/thread.c:115
         thread_t *iter = sleeping_queue;
     70002332:	00001797          	auipc	a5,0x1
-    70002336:	28e78793          	addi	a5,a5,654 # 700035c0 <sleeping_queue>
+    70002336:	26e78793          	addi	a5,a5,622 # 700035a0 <sleeping_queue>
     7000233a:	639c                	ld	a5,0(a5)
     7000233c:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:119
+/embryos/chapter12/apps/thread.c:116
         while (iter->next && iter->next->wake_time <= wake_time) {
     70002340:	a031                	j	7000234c <enqueue_sleeping+0x94>
-/embryos/chapter12/apps/thread.c:120
+/embryos/chapter12/apps/thread.c:117
             iter = iter->next;
     70002342:	fe843783          	ld	a5,-24(s0)
     70002346:	7f9c                	ld	a5,56(a5)
     70002348:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:119
+/embryos/chapter12/apps/thread.c:116
         while (iter->next && iter->next->wake_time <= wake_time) {
     7000234c:	fe843783          	ld	a5,-24(s0)
     70002350:	7f9c                	ld	a5,56(a5)
     70002352:	cb89                	beqz	a5,70002364 <enqueue_sleeping+0xac>
-/embryos/chapter12/apps/thread.c:119 (discriminator 1)
+/embryos/chapter12/apps/thread.c:116 (discriminator 1)
     70002354:	fe843783          	ld	a5,-24(s0)
     70002358:	7f9c                	ld	a5,56(a5)
     7000235a:	779c                	ld	a5,40(a5)
     7000235c:	fd043703          	ld	a4,-48(s0)
     70002360:	fef771e3          	bgeu	a4,a5,70002342 <enqueue_sleeping+0x8a>
-/embryos/chapter12/apps/thread.c:122
+/embryos/chapter12/apps/thread.c:119
         t->next = iter->next;
     70002364:	fe843783          	ld	a5,-24(s0)
     70002368:	7f98                	ld	a4,56(a5)
     7000236a:	fd843783          	ld	a5,-40(s0)
     7000236e:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:123
+/embryos/chapter12/apps/thread.c:120
         iter->next = t;
     70002370:	fe843783          	ld	a5,-24(s0)
     70002374:	fd843703          	ld	a4,-40(s0)
     70002378:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:125
+/embryos/chapter12/apps/thread.c:122
 }
     7000237a:	0001                	nop
     7000237c:	70a2                	ld	ra,40(sp)
@@ -4801,277 +4800,261 @@ static void enqueue_sleeping(thread_t *t, uint64_t wake_time) {
     70002380:	6145                	addi	sp,sp,48
     70002382:	8082                	ret
 
-0000000070002384 <remove_from_sleeping>:
-remove_from_sleeping():
+0000000070002384 <wakeup_sleeping_threads>:
+wakeup_sleeping_threads():
+/embryos/chapter12/apps/thread.c:125
+
+// Wake sleeping threads whose deadline has passed
+static void wakeup_sleeping_threads(void) {
+    70002384:	1101                	addi	sp,sp,-32
+    70002386:	ec06                	sd	ra,24(sp)
+    70002388:	e822                	sd	s0,16(sp)
+    7000238a:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:126
+    uint64_t now = user_gettime();
+    7000238c:	ffffe097          	auipc	ra,0xffffe
+    70002390:	cd8080e7          	jalr	-808(ra) # 70000064 <user_gettime>
+    70002394:	fea43423          	sd	a0,-24(s0)
 /embryos/chapter12/apps/thread.c:128
 
-// Check if thread is in sleeping queue and remove it
-static void remove_from_sleeping(thread_t *t) {
-    70002384:	7179                	addi	sp,sp,-48
-    70002386:	f406                	sd	ra,40(sp)
-    70002388:	f022                	sd	s0,32(sp)
-    7000238a:	1800                	addi	s0,sp,48
-    7000238c:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:129
-    if (!sleeping_queue) return;
-    70002390:	00001797          	auipc	a5,0x1
-    70002394:	23078793          	addi	a5,a5,560 # 700035c0 <sleeping_queue>
-    70002398:	639c                	ld	a5,0(a5)
-    7000239a:	c7b5                	beqz	a5,70002406 <remove_from_sleeping+0x82>
-/embryos/chapter12/apps/thread.c:131
-    
-    if (sleeping_queue == t) {
-    7000239c:	00001797          	auipc	a5,0x1
-    700023a0:	22478793          	addi	a5,a5,548 # 700035c0 <sleeping_queue>
-    700023a4:	639c                	ld	a5,0(a5)
-    700023a6:	fd843703          	ld	a4,-40(s0)
-    700023aa:	00f71b63          	bne	a4,a5,700023c0 <remove_from_sleeping+0x3c>
-/embryos/chapter12/apps/thread.c:132
-        sleeping_queue = t->next;
-    700023ae:	fd843783          	ld	a5,-40(s0)
-    700023b2:	7f98                	ld	a4,56(a5)
-    700023b4:	00001797          	auipc	a5,0x1
-    700023b8:	20c78793          	addi	a5,a5,524 # 700035c0 <sleeping_queue>
-    700023bc:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:133
-        return;
-    700023be:	a0a9                	j	70002408 <remove_from_sleeping+0x84>
-/embryos/chapter12/apps/thread.c:136
-    }
-    
-    thread_t *iter = sleeping_queue;
-    700023c0:	00001797          	auipc	a5,0x1
-    700023c4:	20078793          	addi	a5,a5,512 # 700035c0 <sleeping_queue>
-    700023c8:	639c                	ld	a5,0(a5)
-    700023ca:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:137
-    while (iter && iter->next) {
-    700023ce:	a025                	j	700023f6 <remove_from_sleeping+0x72>
-/embryos/chapter12/apps/thread.c:138
-        if (iter->next == t) {
-    700023d0:	fe843783          	ld	a5,-24(s0)
-    700023d4:	7f9c                	ld	a5,56(a5)
-    700023d6:	fd843703          	ld	a4,-40(s0)
-    700023da:	00f71963          	bne	a4,a5,700023ec <remove_from_sleeping+0x68>
-/embryos/chapter12/apps/thread.c:139
-            iter->next = t->next;
-    700023de:	fd843783          	ld	a5,-40(s0)
-    700023e2:	7f98                	ld	a4,56(a5)
-    700023e4:	fe843783          	ld	a5,-24(s0)
-    700023e8:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:140
-            return;
-    700023ea:	a839                	j	70002408 <remove_from_sleeping+0x84>
-/embryos/chapter12/apps/thread.c:142
-        }
-        iter = iter->next;
-    700023ec:	fe843783          	ld	a5,-24(s0)
-    700023f0:	7f9c                	ld	a5,56(a5)
-    700023f2:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:137
-    while (iter && iter->next) {
-    700023f6:	fe843783          	ld	a5,-24(s0)
-    700023fa:	c799                	beqz	a5,70002408 <remove_from_sleeping+0x84>
-/embryos/chapter12/apps/thread.c:137 (discriminator 1)
-    700023fc:	fe843783          	ld	a5,-24(s0)
-    70002400:	7f9c                	ld	a5,56(a5)
-    70002402:	f7f9                	bnez	a5,700023d0 <remove_from_sleeping+0x4c>
-    70002404:	a011                	j	70002408 <remove_from_sleeping+0x84>
-/embryos/chapter12/apps/thread.c:129
-    if (!sleeping_queue) return;
-    70002406:	0001                	nop
-/embryos/chapter12/apps/thread.c:144
-    }
-}
-    70002408:	70a2                	ld	ra,40(sp)
-    7000240a:	7402                	ld	s0,32(sp)
-    7000240c:	6145                	addi	sp,sp,48
-    7000240e:	8082                	ret
-
-0000000070002410 <wakeup_sleeping_threads>:
-wakeup_sleeping_threads():
-/embryos/chapter12/apps/thread.c:147
-
-// Wake up all sleeping threads whose deadline has passed
-static void wakeup_sleeping_threads(void) {
-    70002410:	1101                	addi	sp,sp,-32
-    70002412:	ec06                	sd	ra,24(sp)
-    70002414:	e822                	sd	s0,16(sp)
-    70002416:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:148
-    uint64_t now = user_gettime();
-    70002418:	ffffe097          	auipc	ra,0xffffe
-    7000241c:	c4c080e7          	jalr	-948(ra) # 70000064 <user_gettime>
-    70002420:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:150
-    
     while (sleeping_queue && sleeping_queue->wake_time <= now) {
-    70002424:	a035                	j	70002450 <wakeup_sleeping_threads+0x40>
-/embryos/chapter12/apps/thread.c:151
+    70002398:	a815                	j	700023cc <wakeup_sleeping_threads+0x48>
+/embryos/chapter12/apps/thread.c:129
         thread_t *t = sleeping_queue;
-    70002426:	00001797          	auipc	a5,0x1
-    7000242a:	19a78793          	addi	a5,a5,410 # 700035c0 <sleeping_queue>
-    7000242e:	639c                	ld	a5,0(a5)
-    70002430:	fef43023          	sd	a5,-32(s0)
-/embryos/chapter12/apps/thread.c:152
+    7000239a:	00001797          	auipc	a5,0x1
+    7000239e:	20678793          	addi	a5,a5,518 # 700035a0 <sleeping_queue>
+    700023a2:	639c                	ld	a5,0(a5)
+    700023a4:	fef43023          	sd	a5,-32(s0)
+/embryos/chapter12/apps/thread.c:130
         sleeping_queue = t->next;
-    70002434:	fe043783          	ld	a5,-32(s0)
-    70002438:	7f98                	ld	a4,56(a5)
-    7000243a:	00001797          	auipc	a5,0x1
-    7000243e:	18678793          	addi	a5,a5,390 # 700035c0 <sleeping_queue>
-    70002442:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:153
+    700023a8:	fe043783          	ld	a5,-32(s0)
+    700023ac:	7f98                	ld	a4,56(a5)
+    700023ae:	00001797          	auipc	a5,0x1
+    700023b2:	1f278793          	addi	a5,a5,498 # 700035a0 <sleeping_queue>
+    700023b6:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:131
+        t->next = NULL;
+    700023b8:	fe043783          	ld	a5,-32(s0)
+    700023bc:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:132
         enqueue_runnable(t);
-    70002444:	fe043503          	ld	a0,-32(s0)
-    70002448:	00000097          	auipc	ra,0x0
-    7000244c:	db8080e7          	jalr	-584(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:150
+    700023c0:	fe043503          	ld	a0,-32(s0)
+    700023c4:	00000097          	auipc	ra,0x0
+    700023c8:	e3c080e7          	jalr	-452(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:128
     while (sleeping_queue && sleeping_queue->wake_time <= now) {
-    70002450:	00001797          	auipc	a5,0x1
-    70002454:	17078793          	addi	a5,a5,368 # 700035c0 <sleeping_queue>
-    70002458:	639c                	ld	a5,0(a5)
-    7000245a:	cb99                	beqz	a5,70002470 <wakeup_sleeping_threads+0x60>
-/embryos/chapter12/apps/thread.c:150 (discriminator 1)
-    7000245c:	00001797          	auipc	a5,0x1
-    70002460:	16478793          	addi	a5,a5,356 # 700035c0 <sleeping_queue>
-    70002464:	639c                	ld	a5,0(a5)
-    70002466:	779c                	ld	a5,40(a5)
-    70002468:	fe843703          	ld	a4,-24(s0)
-    7000246c:	faf77de3          	bgeu	a4,a5,70002426 <wakeup_sleeping_threads+0x16>
-/embryos/chapter12/apps/thread.c:155
+    700023cc:	00001797          	auipc	a5,0x1
+    700023d0:	1d478793          	addi	a5,a5,468 # 700035a0 <sleeping_queue>
+    700023d4:	639c                	ld	a5,0(a5)
+    700023d6:	cb99                	beqz	a5,700023ec <wakeup_sleeping_threads+0x68>
+/embryos/chapter12/apps/thread.c:128 (discriminator 1)
+    700023d8:	00001797          	auipc	a5,0x1
+    700023dc:	1c878793          	addi	a5,a5,456 # 700035a0 <sleeping_queue>
+    700023e0:	639c                	ld	a5,0(a5)
+    700023e2:	779c                	ld	a5,40(a5)
+    700023e4:	fe843703          	ld	a4,-24(s0)
+    700023e8:	faf779e3          	bgeu	a4,a5,7000239a <wakeup_sleeping_threads+0x16>
+/embryos/chapter12/apps/thread.c:134
     }
 }
-    70002470:	0001                	nop
-    70002472:	60e2                	ld	ra,24(sp)
-    70002474:	6442                	ld	s0,16(sp)
-    70002476:	6105                	addi	sp,sp,32
-    70002478:	8082                	ret
+    700023ec:	0001                	nop
+    700023ee:	60e2                	ld	ra,24(sp)
+    700023f0:	6442                	ld	s0,16(sp)
+    700023f2:	6105                	addi	sp,sp,32
+    700023f4:	8082                	ret
 
-000000007000247a <try_wakeup_input>:
+00000000700023f6 <try_wakeup_input>:
 try_wakeup_input():
-/embryos/chapter12/apps/thread.c:158
+/embryos/chapter12/apps/thread.c:137
 
-// Deliver one pending input event to one waiting thread.
+// Deliver queued input to waiting threads
 static void try_wakeup_input(void) {
-    7000247a:	1101                	addi	sp,sp,-32
-    7000247c:	ec06                	sd	ra,24(sp)
-    7000247e:	e822                	sd	s0,16(sp)
-    70002480:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:160
+    700023f6:	1101                	addi	sp,sp,-32
+    700023f8:	ec06                	sd	ra,24(sp)
+    700023fa:	e822                	sd	s0,16(sp)
+    700023fc:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:139
     int ev;
     while (waiting_input && input_q_pop(&ev)) {
-    70002482:	a83d                	j	700024c0 <try_wakeup_input+0x46>
-/embryos/chapter12/apps/thread.c:161
+    700023fe:	a83d                	j	7000243c <try_wakeup_input+0x46>
+/embryos/chapter12/apps/thread.c:140
         thread_t *w = waiting_input;
-    70002484:	00001797          	auipc	a5,0x1
-    70002488:	14478793          	addi	a5,a5,324 # 700035c8 <waiting_input>
-    7000248c:	639c                	ld	a5,0(a5)
-    7000248e:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:162
+    70002400:	00001797          	auipc	a5,0x1
+    70002404:	1a878793          	addi	a5,a5,424 # 700035a8 <waiting_input>
+    70002408:	639c                	ld	a5,0(a5)
+    7000240a:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:141
         waiting_input = w->next;
-    70002492:	fe843783          	ld	a5,-24(s0)
-    70002496:	7f98                	ld	a4,56(a5)
-    70002498:	00001797          	auipc	a5,0x1
-    7000249c:	13078793          	addi	a5,a5,304 # 700035c8 <waiting_input>
-    700024a0:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:163
+    7000240e:	fe843783          	ld	a5,-24(s0)
+    70002412:	7f98                	ld	a4,56(a5)
+    70002414:	00001797          	auipc	a5,0x1
+    70002418:	19478793          	addi	a5,a5,404 # 700035a8 <waiting_input>
+    7000241c:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:142
         w->next = NULL;
-    700024a2:	fe843783          	ld	a5,-24(s0)
-    700024a6:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:164
+    7000241e:	fe843783          	ld	a5,-24(s0)
+    70002422:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:143
         w->input_event = ev;
-    700024aa:	fe442703          	lw	a4,-28(s0)
-    700024ae:	fe843783          	ld	a5,-24(s0)
-    700024b2:	cbf8                	sw	a4,84(a5)
-/embryos/chapter12/apps/thread.c:165
+    70002426:	fe442703          	lw	a4,-28(s0)
+    7000242a:	fe843783          	ld	a5,-24(s0)
+    7000242e:	cbf8                	sw	a4,84(a5)
+/embryos/chapter12/apps/thread.c:144
         enqueue_runnable(w);
-    700024b4:	fe843503          	ld	a0,-24(s0)
-    700024b8:	00000097          	auipc	ra,0x0
-    700024bc:	d48080e7          	jalr	-696(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:160
+    70002430:	fe843503          	ld	a0,-24(s0)
+    70002434:	00000097          	auipc	ra,0x0
+    70002438:	dcc080e7          	jalr	-564(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:139
     while (waiting_input && input_q_pop(&ev)) {
-    700024c0:	00001797          	auipc	a5,0x1
-    700024c4:	10878793          	addi	a5,a5,264 # 700035c8 <waiting_input>
-    700024c8:	639c                	ld	a5,0(a5)
-    700024ca:	cb91                	beqz	a5,700024de <try_wakeup_input+0x64>
-/embryos/chapter12/apps/thread.c:160 (discriminator 1)
-    700024cc:	fe440793          	addi	a5,s0,-28
-    700024d0:	853e                	mv	a0,a5
-    700024d2:	00000097          	auipc	ra,0x0
-    700024d6:	0a0080e7          	jalr	160(ra) # 70002572 <input_q_pop>
-    700024da:	87aa                	mv	a5,a0
-/embryos/chapter12/apps/thread.c:160 (discriminator 2)
-    700024dc:	f7c5                	bnez	a5,70002484 <try_wakeup_input+0xa>
-/embryos/chapter12/apps/thread.c:167
+    7000243c:	00001797          	auipc	a5,0x1
+    70002440:	16c78793          	addi	a5,a5,364 # 700035a8 <waiting_input>
+    70002444:	639c                	ld	a5,0(a5)
+    70002446:	cb91                	beqz	a5,7000245a <try_wakeup_input+0x64>
+/embryos/chapter12/apps/thread.c:139 (discriminator 1)
+    70002448:	fe440793          	addi	a5,s0,-28
+    7000244c:	853e                	mv	a0,a5
+    7000244e:	00000097          	auipc	ra,0x0
+    70002452:	0a0080e7          	jalr	160(ra) # 700024ee <input_q_pop>
+    70002456:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/thread.c:139 (discriminator 2)
+    70002458:	f7c5                	bnez	a5,70002400 <try_wakeup_input+0xa>
+/embryos/chapter12/apps/thread.c:146
     }
 }
-    700024de:	0001                	nop
-    700024e0:	60e2                	ld	ra,24(sp)
-    700024e2:	6442                	ld	s0,16(sp)
-    700024e4:	6105                	addi	sp,sp,32
-    700024e6:	8082                	ret
+    7000245a:	0001                	nop
+    7000245c:	60e2                	ld	ra,24(sp)
+    7000245e:	6442                	ld	s0,16(sp)
+    70002460:	6105                	addi	sp,sp,32
+    70002462:	8082                	ret
 
-00000000700024e8 <input_q_push>:
+0000000070002464 <input_q_push>:
 input_q_push():
-/embryos/chapter12/apps/thread.c:169
+/embryos/chapter12/apps/thread.c:148
 
 static int input_q_push(int ev) {
-    700024e8:	1101                	addi	sp,sp,-32
-    700024ea:	ec06                	sd	ra,24(sp)
-    700024ec:	e822                	sd	s0,16(sp)
-    700024ee:	1000                	addi	s0,sp,32
-    700024f0:	87aa                	mv	a5,a0
-    700024f2:	fef42623          	sw	a5,-20(s0)
-/embryos/chapter12/apps/thread.c:170
+    70002464:	1101                	addi	sp,sp,-32
+    70002466:	ec06                	sd	ra,24(sp)
+    70002468:	e822                	sd	s0,16(sp)
+    7000246a:	1000                	addi	s0,sp,32
+    7000246c:	87aa                	mv	a5,a0
+    7000246e:	fef42623          	sw	a5,-20(s0)
+/embryos/chapter12/apps/thread.c:149
     if (input_q_count >= INPUT_Q_CAP) return 0;
-    700024f6:	00001797          	auipc	a5,0x1
-    700024fa:	0ba78793          	addi	a5,a5,186 # 700035b0 <input_q_count>
-    700024fe:	4398                	lw	a4,0(a5)
-    70002500:	03f00793          	li	a5,63
-    70002504:	00e7f463          	bgeu	a5,a4,7000250c <input_q_push+0x24>
-/embryos/chapter12/apps/thread.c:170 (discriminator 1)
-    70002508:	4781                	li	a5,0
-/embryos/chapter12/apps/thread.c:170
-    7000250a:	a8b9                	j	70002568 <input_q_push+0x80>
-/embryos/chapter12/apps/thread.c:171
+    70002472:	00001797          	auipc	a5,0x1
+    70002476:	11e78793          	addi	a5,a5,286 # 70003590 <input_q_count>
+    7000247a:	4398                	lw	a4,0(a5)
+    7000247c:	03f00793          	li	a5,63
+    70002480:	00e7f463          	bgeu	a5,a4,70002488 <input_q_push+0x24>
+/embryos/chapter12/apps/thread.c:149 (discriminator 1)
+    70002484:	4781                	li	a5,0
+/embryos/chapter12/apps/thread.c:149
+    70002486:	a8b9                	j	700024e4 <input_q_push+0x80>
+/embryos/chapter12/apps/thread.c:150
     input_q[input_q_tail] = ev;
-    7000250c:	00001797          	auipc	a5,0x1
-    70002510:	0a078793          	addi	a5,a5,160 # 700035ac <input_q_tail>
-    70002514:	439c                	lw	a5,0(a5)
-    70002516:	00001717          	auipc	a4,0x1
-    7000251a:	f9270713          	addi	a4,a4,-110 # 700034a8 <input_q>
-    7000251e:	1782                	slli	a5,a5,0x20
-    70002520:	9381                	srli	a5,a5,0x20
-    70002522:	078a                	slli	a5,a5,0x2
-    70002524:	97ba                	add	a5,a5,a4
-    70002526:	fec42703          	lw	a4,-20(s0)
-    7000252a:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:172
+    70002488:	00001797          	auipc	a5,0x1
+    7000248c:	10478793          	addi	a5,a5,260 # 7000358c <input_q_tail>
+    70002490:	439c                	lw	a5,0(a5)
+    70002492:	00001717          	auipc	a4,0x1
+    70002496:	ff670713          	addi	a4,a4,-10 # 70003488 <input_q>
+    7000249a:	1782                	slli	a5,a5,0x20
+    7000249c:	9381                	srli	a5,a5,0x20
+    7000249e:	078a                	slli	a5,a5,0x2
+    700024a0:	97ba                	add	a5,a5,a4
+    700024a2:	fec42703          	lw	a4,-20(s0)
+    700024a6:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:151
     input_q_tail = (input_q_tail + 1) % INPUT_Q_CAP;
+    700024a8:	00001797          	auipc	a5,0x1
+    700024ac:	0e478793          	addi	a5,a5,228 # 7000358c <input_q_tail>
+    700024b0:	439c                	lw	a5,0(a5)
+    700024b2:	2785                	addiw	a5,a5,1
+    700024b4:	2781                	sext.w	a5,a5
+    700024b6:	03f7f793          	andi	a5,a5,63
+    700024ba:	0007871b          	sext.w	a4,a5
+    700024be:	00001797          	auipc	a5,0x1
+    700024c2:	0ce78793          	addi	a5,a5,206 # 7000358c <input_q_tail>
+    700024c6:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:152
+    input_q_count++;
+    700024c8:	00001797          	auipc	a5,0x1
+    700024cc:	0c878793          	addi	a5,a5,200 # 70003590 <input_q_count>
+    700024d0:	439c                	lw	a5,0(a5)
+    700024d2:	2785                	addiw	a5,a5,1
+    700024d4:	0007871b          	sext.w	a4,a5
+    700024d8:	00001797          	auipc	a5,0x1
+    700024dc:	0b878793          	addi	a5,a5,184 # 70003590 <input_q_count>
+    700024e0:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:153
+    return 1;
+    700024e2:	4785                	li	a5,1
+/embryos/chapter12/apps/thread.c:154
+}
+    700024e4:	853e                	mv	a0,a5
+    700024e6:	60e2                	ld	ra,24(sp)
+    700024e8:	6442                	ld	s0,16(sp)
+    700024ea:	6105                	addi	sp,sp,32
+    700024ec:	8082                	ret
+
+00000000700024ee <input_q_pop>:
+input_q_pop():
+/embryos/chapter12/apps/thread.c:156
+
+static int input_q_pop(int *ev) {
+    700024ee:	1101                	addi	sp,sp,-32
+    700024f0:	ec06                	sd	ra,24(sp)
+    700024f2:	e822                	sd	s0,16(sp)
+    700024f4:	1000                	addi	s0,sp,32
+    700024f6:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/thread.c:157
+    if (input_q_count == 0) return 0;
+    700024fa:	00001797          	auipc	a5,0x1
+    700024fe:	09678793          	addi	a5,a5,150 # 70003590 <input_q_count>
+    70002502:	439c                	lw	a5,0(a5)
+    70002504:	e399                	bnez	a5,7000250a <input_q_pop+0x1c>
+/embryos/chapter12/apps/thread.c:157 (discriminator 1)
+    70002506:	4781                	li	a5,0
+/embryos/chapter12/apps/thread.c:157
+    70002508:	a085                	j	70002568 <input_q_pop+0x7a>
+/embryos/chapter12/apps/thread.c:158
+    *ev = input_q[input_q_head];
+    7000250a:	00001797          	auipc	a5,0x1
+    7000250e:	07e78793          	addi	a5,a5,126 # 70003588 <input_q_head>
+    70002512:	439c                	lw	a5,0(a5)
+    70002514:	00001717          	auipc	a4,0x1
+    70002518:	f7470713          	addi	a4,a4,-140 # 70003488 <input_q>
+    7000251c:	1782                	slli	a5,a5,0x20
+    7000251e:	9381                	srli	a5,a5,0x20
+    70002520:	078a                	slli	a5,a5,0x2
+    70002522:	97ba                	add	a5,a5,a4
+    70002524:	4398                	lw	a4,0(a5)
+    70002526:	fe843783          	ld	a5,-24(s0)
+    7000252a:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:159
+    input_q_head = (input_q_head + 1) % INPUT_Q_CAP;
     7000252c:	00001797          	auipc	a5,0x1
-    70002530:	08078793          	addi	a5,a5,128 # 700035ac <input_q_tail>
+    70002530:	05c78793          	addi	a5,a5,92 # 70003588 <input_q_head>
     70002534:	439c                	lw	a5,0(a5)
     70002536:	2785                	addiw	a5,a5,1
     70002538:	2781                	sext.w	a5,a5
     7000253a:	03f7f793          	andi	a5,a5,63
     7000253e:	0007871b          	sext.w	a4,a5
     70002542:	00001797          	auipc	a5,0x1
-    70002546:	06a78793          	addi	a5,a5,106 # 700035ac <input_q_tail>
+    70002546:	04678793          	addi	a5,a5,70 # 70003588 <input_q_head>
     7000254a:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:173
-    input_q_count++;
+/embryos/chapter12/apps/thread.c:160
+    input_q_count--;
     7000254c:	00001797          	auipc	a5,0x1
-    70002550:	06478793          	addi	a5,a5,100 # 700035b0 <input_q_count>
+    70002550:	04478793          	addi	a5,a5,68 # 70003590 <input_q_count>
     70002554:	439c                	lw	a5,0(a5)
-    70002556:	2785                	addiw	a5,a5,1
+    70002556:	37fd                	addiw	a5,a5,-1
     70002558:	0007871b          	sext.w	a4,a5
     7000255c:	00001797          	auipc	a5,0x1
-    70002560:	05478793          	addi	a5,a5,84 # 700035b0 <input_q_count>
+    70002560:	03478793          	addi	a5,a5,52 # 70003590 <input_q_count>
     70002564:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:174
+/embryos/chapter12/apps/thread.c:161
     return 1;
     70002566:	4785                	li	a5,1
-/embryos/chapter12/apps/thread.c:175
+/embryos/chapter12/apps/thread.c:162
 }
     70002568:	853e                	mv	a0,a5
     7000256a:	60e2                	ld	ra,24(sp)
@@ -5079,1227 +5062,1164 @@ static int input_q_push(int ev) {
     7000256e:	6105                	addi	sp,sp,32
     70002570:	8082                	ret
 
-0000000070002572 <input_q_pop>:
-input_q_pop():
-/embryos/chapter12/apps/thread.c:177
+0000000070002572 <reap_zombies>:
+reap_zombies():
+/embryos/chapter12/apps/thread.c:164
 
-static int input_q_pop(int *ev) {
+static void reap_zombies(void) {
     70002572:	1101                	addi	sp,sp,-32
     70002574:	ec06                	sd	ra,24(sp)
     70002576:	e822                	sd	s0,16(sp)
     70002578:	1000                	addi	s0,sp,32
-    7000257a:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:178
-    if (input_q_count == 0) return 0;
-    7000257e:	00001797          	auipc	a5,0x1
-    70002582:	03278793          	addi	a5,a5,50 # 700035b0 <input_q_count>
-    70002586:	439c                	lw	a5,0(a5)
-    70002588:	e399                	bnez	a5,7000258e <input_q_pop+0x1c>
-/embryos/chapter12/apps/thread.c:178 (discriminator 1)
-    7000258a:	4781                	li	a5,0
-/embryos/chapter12/apps/thread.c:178
-    7000258c:	a085                	j	700025ec <input_q_pop+0x7a>
-/embryos/chapter12/apps/thread.c:179
-    *ev = input_q[input_q_head];
-    7000258e:	00001797          	auipc	a5,0x1
-    70002592:	01a78793          	addi	a5,a5,26 # 700035a8 <input_q_head>
-    70002596:	439c                	lw	a5,0(a5)
-    70002598:	00001717          	auipc	a4,0x1
-    7000259c:	f1070713          	addi	a4,a4,-240 # 700034a8 <input_q>
-    700025a0:	1782                	slli	a5,a5,0x20
-    700025a2:	9381                	srli	a5,a5,0x20
-    700025a4:	078a                	slli	a5,a5,0x2
-    700025a6:	97ba                	add	a5,a5,a4
-    700025a8:	4398                	lw	a4,0(a5)
-    700025aa:	fe843783          	ld	a5,-24(s0)
-    700025ae:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:180
-    input_q_head = (input_q_head + 1) % INPUT_Q_CAP;
-    700025b0:	00001797          	auipc	a5,0x1
-    700025b4:	ff878793          	addi	a5,a5,-8 # 700035a8 <input_q_head>
-    700025b8:	439c                	lw	a5,0(a5)
-    700025ba:	2785                	addiw	a5,a5,1
-    700025bc:	2781                	sext.w	a5,a5
-    700025be:	03f7f793          	andi	a5,a5,63
-    700025c2:	0007871b          	sext.w	a4,a5
-    700025c6:	00001797          	auipc	a5,0x1
-    700025ca:	fe278793          	addi	a5,a5,-30 # 700035a8 <input_q_head>
-    700025ce:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:181
-    input_q_count--;
-    700025d0:	00001797          	auipc	a5,0x1
-    700025d4:	fe078793          	addi	a5,a5,-32 # 700035b0 <input_q_count>
-    700025d8:	439c                	lw	a5,0(a5)
-    700025da:	37fd                	addiw	a5,a5,-1
-    700025dc:	0007871b          	sext.w	a4,a5
-    700025e0:	00001797          	auipc	a5,0x1
-    700025e4:	fd078793          	addi	a5,a5,-48 # 700035b0 <input_q_count>
-    700025e8:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:182
-    return 1;
-    700025ea:	4785                	li	a5,1
-/embryos/chapter12/apps/thread.c:183
-}
-    700025ec:	853e                	mv	a0,a5
-    700025ee:	60e2                	ld	ra,24(sp)
-    700025f0:	6442                	ld	s0,16(sp)
-    700025f2:	6105                	addi	sp,sp,32
-    700025f4:	8082                	ret
-
-00000000700025f6 <reap_zombies>:
-reap_zombies():
-/embryos/chapter12/apps/thread.c:185
-
-static void reap_zombies(void) {
-    700025f6:	1101                	addi	sp,sp,-32
-    700025f8:	ec06                	sd	ra,24(sp)
-    700025fa:	e822                	sd	s0,16(sp)
-    700025fc:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:186
+/embryos/chapter12/apps/thread.c:165
     while (zombie_list) {
-    700025fe:	a091                	j	70002642 <reap_zombies+0x4c>
-/embryos/chapter12/apps/thread.c:187
+    7000257a:	a091                	j	700025be <reap_zombies+0x4c>
+/embryos/chapter12/apps/thread.c:166
         thread_t *z = zombie_list;
-    70002600:	00001797          	auipc	a5,0x1
-    70002604:	fd878793          	addi	a5,a5,-40 # 700035d8 <zombie_list>
-    70002608:	639c                	ld	a5,0(a5)
-    7000260a:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:188
+    7000257c:	00001797          	auipc	a5,0x1
+    70002580:	03c78793          	addi	a5,a5,60 # 700035b8 <zombie_list>
+    70002584:	639c                	ld	a5,0(a5)
+    70002586:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:167
         zombie_list = z->next;
-    7000260e:	fe843783          	ld	a5,-24(s0)
-    70002612:	7f98                	ld	a4,56(a5)
-    70002614:	00001797          	auipc	a5,0x1
-    70002618:	fc478793          	addi	a5,a5,-60 # 700035d8 <zombie_list>
-    7000261c:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:189
+    7000258a:	fe843783          	ld	a5,-24(s0)
+    7000258e:	7f98                	ld	a4,56(a5)
+    70002590:	00001797          	auipc	a5,0x1
+    70002594:	02878793          	addi	a5,a5,40 # 700035b8 <zombie_list>
+    70002598:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:168
         if (z->stack_base) free(z->stack_base);
-    7000261e:	fe843783          	ld	a5,-24(s0)
-    70002622:	679c                	ld	a5,8(a5)
-    70002624:	cb89                	beqz	a5,70002636 <reap_zombies+0x40>
-/embryos/chapter12/apps/thread.c:189 (discriminator 1)
-    70002626:	fe843783          	ld	a5,-24(s0)
-    7000262a:	679c                	ld	a5,8(a5)
-    7000262c:	853e                	mv	a0,a5
-    7000262e:	00000097          	auipc	ra,0x0
-    70002632:	b8c080e7          	jalr	-1140(ra) # 700021ba <free>
-/embryos/chapter12/apps/thread.c:190
+    7000259a:	fe843783          	ld	a5,-24(s0)
+    7000259e:	679c                	ld	a5,8(a5)
+    700025a0:	cb89                	beqz	a5,700025b2 <reap_zombies+0x40>
+/embryos/chapter12/apps/thread.c:168 (discriminator 1)
+    700025a2:	fe843783          	ld	a5,-24(s0)
+    700025a6:	679c                	ld	a5,8(a5)
+    700025a8:	853e                	mv	a0,a5
+    700025aa:	00000097          	auipc	ra,0x0
+    700025ae:	c10080e7          	jalr	-1008(ra) # 700021ba <free>
+/embryos/chapter12/apps/thread.c:169
         free(z);
-    70002636:	fe843503          	ld	a0,-24(s0)
-    7000263a:	00000097          	auipc	ra,0x0
-    7000263e:	b80080e7          	jalr	-1152(ra) # 700021ba <free>
-/embryos/chapter12/apps/thread.c:186
+    700025b2:	fe843503          	ld	a0,-24(s0)
+    700025b6:	00000097          	auipc	ra,0x0
+    700025ba:	c04080e7          	jalr	-1020(ra) # 700021ba <free>
+/embryos/chapter12/apps/thread.c:165
     while (zombie_list) {
-    70002642:	00001797          	auipc	a5,0x1
-    70002646:	f9678793          	addi	a5,a5,-106 # 700035d8 <zombie_list>
-    7000264a:	639c                	ld	a5,0(a5)
-    7000264c:	fbd5                	bnez	a5,70002600 <reap_zombies+0xa>
-/embryos/chapter12/apps/thread.c:192
+    700025be:	00001797          	auipc	a5,0x1
+    700025c2:	ffa78793          	addi	a5,a5,-6 # 700035b8 <zombie_list>
+    700025c6:	639c                	ld	a5,0(a5)
+    700025c8:	fbd5                	bnez	a5,7000257c <reap_zombies+0xa>
+/embryos/chapter12/apps/thread.c:171
     }
 }
-    7000264e:	0001                	nop
-    70002650:	0001                	nop
-    70002652:	60e2                	ld	ra,24(sp)
-    70002654:	6442                	ld	s0,16(sp)
-    70002656:	6105                	addi	sp,sp,32
-    70002658:	8082                	ret
+    700025ca:	0001                	nop
+    700025cc:	0001                	nop
+    700025ce:	60e2                	ld	ra,24(sp)
+    700025d0:	6442                	ld	s0,16(sp)
+    700025d2:	6105                	addi	sp,sp,32
+    700025d4:	8082                	ret
 
-000000007000265a <next_runnable>:
-next_runnable():
-/embryos/chapter12/apps/thread.c:195
-
-// Pick next runnable thread
-static thread_t *next_runnable(void) {
-    7000265a:	1141                	addi	sp,sp,-16
-    7000265c:	e406                	sd	ra,8(sp)
-    7000265e:	e022                	sd	s0,0(sp)
-    70002660:	0800                	addi	s0,sp,16
-/embryos/chapter12/apps/thread.c:196
-    wakeup_sleeping_threads();
-    70002662:	00000097          	auipc	ra,0x0
-    70002666:	dae080e7          	jalr	-594(ra) # 70002410 <wakeup_sleeping_threads>
-/embryos/chapter12/apps/thread.c:197
-    try_wakeup_input();
-    7000266a:	00000097          	auipc	ra,0x0
-    7000266e:	e10080e7          	jalr	-496(ra) # 7000247a <try_wakeup_input>
-/embryos/chapter12/apps/thread.c:199
-    
-    return dequeue_runnable();
-    70002672:	00000097          	auipc	ra,0x0
-    70002676:	c04080e7          	jalr	-1020(ra) # 70002276 <dequeue_runnable>
-    7000267a:	87aa                	mv	a5,a0
-/embryos/chapter12/apps/thread.c:200
-}
-    7000267c:	853e                	mv	a0,a5
-    7000267e:	60a2                	ld	ra,8(sp)
-    70002680:	6402                	ld	s0,0(sp)
-    70002682:	0141                	addi	sp,sp,16
-    70002684:	8082                	ret
-
-0000000070002686 <schedule>:
+00000000700025d6 <schedule>:
 schedule():
-/embryos/chapter12/apps/thread.c:203
+/embryos/chapter12/apps/thread.c:174
 
-// Main scheduler - chooses next thread to run
+// Main scheduler
 static void schedule(void) {
-    70002686:	7179                	addi	sp,sp,-48
-    70002688:	f406                	sd	ra,40(sp)
-    7000268a:	f022                	sd	s0,32(sp)
-    7000268c:	1800                	addi	s0,sp,48
-/embryos/chapter12/apps/thread.c:207
+    700025d6:	7139                	addi	sp,sp,-64
+    700025d8:	fc06                	sd	ra,56(sp)
+    700025da:	f822                	sd	s0,48(sp)
+    700025dc:	0080                	addi	s0,sp,64
+/embryos/chapter12/apps/thread.c:177
     while (1) {
-        // Don't reap when called from thread_exit() before switching away:
-        // in that case current_thread is NULL and we are still on the exiting stack.
+        // Only reap if we're not currently still executing on a dying thread's stack
         if (current_thread) {
-    7000268e:	00001797          	auipc	a5,0x1
-    70002692:	f4278793          	addi	a5,a5,-190 # 700035d0 <current_thread>
-    70002696:	639c                	ld	a5,0(a5)
-    70002698:	c789                	beqz	a5,700026a2 <schedule+0x1c>
-/embryos/chapter12/apps/thread.c:208
+    700025de:	00001797          	auipc	a5,0x1
+    700025e2:	fd278793          	addi	a5,a5,-46 # 700035b0 <current_thread>
+    700025e6:	639c                	ld	a5,0(a5)
+    700025e8:	c789                	beqz	a5,700025f2 <schedule+0x1c>
+/embryos/chapter12/apps/thread.c:178
             reap_zombies();
-    7000269a:	00000097          	auipc	ra,0x0
-    7000269e:	f5c080e7          	jalr	-164(ra) # 700025f6 <reap_zombies>
-/embryos/chapter12/apps/thread.c:211
+    700025ea:	00000097          	auipc	ra,0x0
+    700025ee:	f88080e7          	jalr	-120(ra) # 70002572 <reap_zombies>
+/embryos/chapter12/apps/thread.c:182
         }
 
-        thread_t *next = next_runnable();
-    700026a2:	00000097          	auipc	ra,0x0
-    700026a6:	fb8080e7          	jalr	-72(ra) # 7000265a <next_runnable>
-    700026aa:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:213
+        // First, wake timed events and deliver any already-buffered input
+        wakeup_sleeping_threads();
+    700025f2:	00000097          	auipc	ra,0x0
+    700025f6:	d92080e7          	jalr	-622(ra) # 70002384 <wakeup_sleeping_threads>
+/embryos/chapter12/apps/thread.c:183
+        try_wakeup_input();
+    700025fa:	00000097          	auipc	ra,0x0
+    700025fe:	dfc080e7          	jalr	-516(ra) # 700023f6 <try_wakeup_input>
+/embryos/chapter12/apps/thread.c:186
 
+        // Run a runnable thread if one exists
+        thread_t *next = dequeue_runnable();
+    70002602:	00000097          	auipc	ra,0x0
+    70002606:	c74080e7          	jalr	-908(ra) # 70002276 <dequeue_runnable>
+    7000260a:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/thread.c:187
         if (next) {
-    700026ae:	fe843783          	ld	a5,-24(s0)
-    700026b2:	c3e9                	beqz	a5,70002774 <schedule+0xee>
-/embryos/chapter12/apps/thread.c:214
+    7000260e:	fe843783          	ld	a5,-24(s0)
+    70002612:	c3e9                	beqz	a5,700026d4 <schedule+0xfe>
+/embryos/chapter12/apps/thread.c:188
             if (next == current_thread) return;
-    700026b4:	00001797          	auipc	a5,0x1
-    700026b8:	f1c78793          	addi	a5,a5,-228 # 700035d0 <current_thread>
-    700026bc:	639c                	ld	a5,0(a5)
-    700026be:	fe843703          	ld	a4,-24(s0)
-    700026c2:	16f70063          	beq	a4,a5,70002822 <schedule+0x19c>
-/embryos/chapter12/apps/thread.c:216
+    70002614:	00001797          	auipc	a5,0x1
+    70002618:	f9c78793          	addi	a5,a5,-100 # 700035b0 <current_thread>
+    7000261c:	639c                	ld	a5,0(a5)
+    7000261e:	fe843703          	ld	a4,-24(s0)
+    70002622:	1cf70e63          	beq	a4,a5,700027fe <schedule+0x228>
+/embryos/chapter12/apps/thread.c:190
 
             thread_t *prev = current_thread;
-    700026c6:	00001797          	auipc	a5,0x1
-    700026ca:	f0a78793          	addi	a5,a5,-246 # 700035d0 <current_thread>
-    700026ce:	639c                	ld	a5,0(a5)
-    700026d0:	fcf43823          	sd	a5,-48(s0)
-/embryos/chapter12/apps/thread.c:217
+    70002626:	00001797          	auipc	a5,0x1
+    7000262a:	f8a78793          	addi	a5,a5,-118 # 700035b0 <current_thread>
+    7000262e:	639c                	ld	a5,0(a5)
+    70002630:	fcf43423          	sd	a5,-56(s0)
+/embryos/chapter12/apps/thread.c:191
             current_thread = next;
-    700026d4:	00001797          	auipc	a5,0x1
-    700026d8:	efc78793          	addi	a5,a5,-260 # 700035d0 <current_thread>
-    700026dc:	fe843703          	ld	a4,-24(s0)
-    700026e0:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:219
+    70002634:	00001797          	auipc	a5,0x1
+    70002638:	f7c78793          	addi	a5,a5,-132 # 700035b0 <current_thread>
+    7000263c:	fe843703          	ld	a4,-24(s0)
+    70002640:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:193
 
             if (!prev) {
-    700026e2:	fd043783          	ld	a5,-48(s0)
-    700026e6:	e3b9                	bnez	a5,7000272c <schedule+0xa6>
-/embryos/chapter12/apps/thread.c:221
+    70002642:	fc843783          	ld	a5,-56(s0)
+    70002646:	e3b9                	bnez	a5,7000268c <schedule+0xb6>
+/embryos/chapter12/apps/thread.c:195
                 static void *dummy_sp;
                 if (!next->started) {
-    700026e8:	fe843783          	ld	a5,-24(s0)
-    700026ec:	4bbc                	lw	a5,80(a5)
-    700026ee:	e395                	bnez	a5,70002712 <schedule+0x8c>
-/embryos/chapter12/apps/thread.c:222
+    70002648:	fe843783          	ld	a5,-24(s0)
+    7000264c:	4bbc                	lw	a5,80(a5)
+    7000264e:	e395                	bnez	a5,70002672 <schedule+0x9c>
+/embryos/chapter12/apps/thread.c:196
                     next->started = 1;
-    700026f0:	fe843783          	ld	a5,-24(s0)
-    700026f4:	4705                	li	a4,1
-    700026f6:	cbb8                	sw	a4,80(a5)
-/embryos/chapter12/apps/thread.c:223
+    70002650:	fe843783          	ld	a5,-24(s0)
+    70002654:	4705                	li	a4,1
+    70002656:	cbb8                	sw	a4,80(a5)
+/embryos/chapter12/apps/thread.c:197
                     ctx_start(&dummy_sp, next->sp);
-    700026f8:	fe843783          	ld	a5,-24(s0)
-    700026fc:	6f9c                	ld	a5,24(a5)
-    700026fe:	85be                	mv	a1,a5
-    70002700:	00001517          	auipc	a0,0x1
-    70002704:	ee850513          	addi	a0,a0,-280 # 700035e8 <dummy_sp.0>
-    70002708:	ffffe097          	auipc	ra,0xffffe
-    7000270c:	9ac080e7          	jalr	-1620(ra) # 700000b4 <ctx_start>
-/embryos/chapter12/apps/thread.c:233
+    70002658:	fe843783          	ld	a5,-24(s0)
+    7000265c:	6f9c                	ld	a5,24(a5)
+    7000265e:	85be                	mv	a1,a5
+    70002660:	00001517          	auipc	a0,0x1
+    70002664:	f6850513          	addi	a0,a0,-152 # 700035c8 <dummy_sp.0>
+    70002668:	ffffe097          	auipc	ra,0xffffe
+    7000266c:	a4c080e7          	jalr	-1460(ra) # 700000b4 <ctx_start>
+/embryos/chapter12/apps/thread.c:207
                 next->started = 1;
                 ctx_start(&prev->sp, next->sp);
             } else {
                 ctx_switch(&prev->sp, next->sp);
             }
             return;
-    70002710:	aa11                	j	70002824 <schedule+0x19e>
-/embryos/chapter12/apps/thread.c:225
+    70002670:	aa41                	j	70002800 <schedule+0x22a>
+/embryos/chapter12/apps/thread.c:199
                     ctx_switch(&dummy_sp, next->sp);
-    70002712:	fe843783          	ld	a5,-24(s0)
-    70002716:	6f9c                	ld	a5,24(a5)
-    70002718:	85be                	mv	a1,a5
-    7000271a:	00001517          	auipc	a0,0x1
-    7000271e:	ece50513          	addi	a0,a0,-306 # 700035e8 <dummy_sp.0>
-    70002722:	ffffe097          	auipc	ra,0xffffe
-    70002726:	952080e7          	jalr	-1710(ra) # 70000074 <ctx_switch>
-/embryos/chapter12/apps/thread.c:233
+    70002672:	fe843783          	ld	a5,-24(s0)
+    70002676:	6f9c                	ld	a5,24(a5)
+    70002678:	85be                	mv	a1,a5
+    7000267a:	00001517          	auipc	a0,0x1
+    7000267e:	f4e50513          	addi	a0,a0,-178 # 700035c8 <dummy_sp.0>
+    70002682:	ffffe097          	auipc	ra,0xffffe
+    70002686:	9f2080e7          	jalr	-1550(ra) # 70000074 <ctx_switch>
+/embryos/chapter12/apps/thread.c:207
             return;
-    7000272a:	a8ed                	j	70002824 <schedule+0x19e>
-/embryos/chapter12/apps/thread.c:227
+    7000268a:	aa9d                	j	70002800 <schedule+0x22a>
+/embryos/chapter12/apps/thread.c:201
             } else if (!next->started) {
-    7000272c:	fe843783          	ld	a5,-24(s0)
-    70002730:	4bbc                	lw	a5,80(a5)
-    70002732:	e39d                	bnez	a5,70002758 <schedule+0xd2>
-/embryos/chapter12/apps/thread.c:228
+    7000268c:	fe843783          	ld	a5,-24(s0)
+    70002690:	4bbc                	lw	a5,80(a5)
+    70002692:	e39d                	bnez	a5,700026b8 <schedule+0xe2>
+/embryos/chapter12/apps/thread.c:202
                 next->started = 1;
-    70002734:	fe843783          	ld	a5,-24(s0)
-    70002738:	4705                	li	a4,1
-    7000273a:	cbb8                	sw	a4,80(a5)
-/embryos/chapter12/apps/thread.c:229
+    70002694:	fe843783          	ld	a5,-24(s0)
+    70002698:	4705                	li	a4,1
+    7000269a:	cbb8                	sw	a4,80(a5)
+/embryos/chapter12/apps/thread.c:203
                 ctx_start(&prev->sp, next->sp);
-    7000273c:	fd043783          	ld	a5,-48(s0)
-    70002740:	01878713          	addi	a4,a5,24
-    70002744:	fe843783          	ld	a5,-24(s0)
-    70002748:	6f9c                	ld	a5,24(a5)
-    7000274a:	85be                	mv	a1,a5
-    7000274c:	853a                	mv	a0,a4
-    7000274e:	ffffe097          	auipc	ra,0xffffe
-    70002752:	966080e7          	jalr	-1690(ra) # 700000b4 <ctx_start>
-/embryos/chapter12/apps/thread.c:233
+    7000269c:	fc843783          	ld	a5,-56(s0)
+    700026a0:	01878713          	addi	a4,a5,24
+    700026a4:	fe843783          	ld	a5,-24(s0)
+    700026a8:	6f9c                	ld	a5,24(a5)
+    700026aa:	85be                	mv	a1,a5
+    700026ac:	853a                	mv	a0,a4
+    700026ae:	ffffe097          	auipc	ra,0xffffe
+    700026b2:	a06080e7          	jalr	-1530(ra) # 700000b4 <ctx_start>
+/embryos/chapter12/apps/thread.c:207
             return;
-    70002756:	a0f9                	j	70002824 <schedule+0x19e>
-/embryos/chapter12/apps/thread.c:231
+    700026b6:	a2a9                	j	70002800 <schedule+0x22a>
+/embryos/chapter12/apps/thread.c:205
                 ctx_switch(&prev->sp, next->sp);
-    70002758:	fd043783          	ld	a5,-48(s0)
-    7000275c:	01878713          	addi	a4,a5,24
-    70002760:	fe843783          	ld	a5,-24(s0)
-    70002764:	6f9c                	ld	a5,24(a5)
-    70002766:	85be                	mv	a1,a5
-    70002768:	853a                	mv	a0,a4
-    7000276a:	ffffe097          	auipc	ra,0xffffe
-    7000276e:	90a080e7          	jalr	-1782(ra) # 70000074 <ctx_switch>
-/embryos/chapter12/apps/thread.c:233
+    700026b8:	fc843783          	ld	a5,-56(s0)
+    700026bc:	01878713          	addi	a4,a5,24
+    700026c0:	fe843783          	ld	a5,-24(s0)
+    700026c4:	6f9c                	ld	a5,24(a5)
+    700026c6:	85be                	mv	a1,a5
+    700026c8:	853a                	mv	a0,a4
+    700026ca:	ffffe097          	auipc	ra,0xffffe
+    700026ce:	9aa080e7          	jalr	-1622(ra) # 70000074 <ctx_switch>
+/embryos/chapter12/apps/thread.c:207
             return;
-    70002772:	a84d                	j	70002824 <schedule+0x19e>
-/embryos/chapter12/apps/thread.c:237
+    700026d2:	a23d                	j	70002800 <schedule+0x22a>
+/embryos/chapter12/apps/thread.c:212
         }
 
-        // No runnable thread: if input waiters exist, block for one input event.
+        // No runnable thread: poll input without blocking first
+        {
+            int ev = user_get(0);
+    700026d4:	4501                	li	a0,0
+    700026d6:	ffffe097          	auipc	ra,0xffffe
+    700026da:	95e080e7          	jalr	-1698(ra) # 70000034 <user_get>
+    700026de:	87aa                	mv	a5,a0
+    700026e0:	fef42223          	sw	a5,-28(s0)
+/embryos/chapter12/apps/thread.c:213
+            if (ev != 0) {
+    700026e4:	fe442783          	lw	a5,-28(s0)
+    700026e8:	2781                	sext.w	a5,a5
+    700026ea:	c3bd                	beqz	a5,70002750 <schedule+0x17a>
+/embryos/chapter12/apps/thread.c:214
+                if (!input_q_push(ev) && waiting_input) {
+    700026ec:	fe442783          	lw	a5,-28(s0)
+    700026f0:	853e                	mv	a0,a5
+    700026f2:	00000097          	auipc	ra,0x0
+    700026f6:	d72080e7          	jalr	-654(ra) # 70002464 <input_q_push>
+    700026fa:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/thread.c:214 (discriminator 1)
+    700026fc:	e7a9                	bnez	a5,70002746 <schedule+0x170>
+/embryos/chapter12/apps/thread.c:214 (discriminator 2)
+    700026fe:	00001797          	auipc	a5,0x1
+    70002702:	eaa78793          	addi	a5,a5,-342 # 700035a8 <waiting_input>
+    70002706:	639c                	ld	a5,0(a5)
+    70002708:	cf9d                	beqz	a5,70002746 <schedule+0x170>
+/embryos/chapter12/apps/thread.c:215
+                    thread_t *w = waiting_input;
+    7000270a:	00001797          	auipc	a5,0x1
+    7000270e:	e9e78793          	addi	a5,a5,-354 # 700035a8 <waiting_input>
+    70002712:	639c                	ld	a5,0(a5)
+    70002714:	fcf43823          	sd	a5,-48(s0)
+/embryos/chapter12/apps/thread.c:216
+                    waiting_input = w->next;
+    70002718:	fd043783          	ld	a5,-48(s0)
+    7000271c:	7f98                	ld	a4,56(a5)
+    7000271e:	00001797          	auipc	a5,0x1
+    70002722:	e8a78793          	addi	a5,a5,-374 # 700035a8 <waiting_input>
+    70002726:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:217
+                    w->next = NULL;
+    70002728:	fd043783          	ld	a5,-48(s0)
+    7000272c:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:218
+                    w->input_event = ev;
+    70002730:	fd043783          	ld	a5,-48(s0)
+    70002734:	fe442703          	lw	a4,-28(s0)
+    70002738:	cbf8                	sw	a4,84(a5)
+/embryos/chapter12/apps/thread.c:219
+                    enqueue_runnable(w);
+    7000273a:	fd043503          	ld	a0,-48(s0)
+    7000273e:	00000097          	auipc	ra,0x0
+    70002742:	ac2080e7          	jalr	-1342(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:221
+                }
+                try_wakeup_input();
+    70002746:	00000097          	auipc	ra,0x0
+    7000274a:	cb0080e7          	jalr	-848(ra) # 700023f6 <try_wakeup_input>
+/embryos/chapter12/apps/thread.c:222
+                continue;
+    7000274e:	a07d                	j	700027fc <schedule+0x226>
+/embryos/chapter12/apps/thread.c:227
+            }
+        }
+
+        // If some thread is sleeping, wait until the earliest wakeup
+        if (sleeping_queue) {
+    70002750:	00001797          	auipc	a5,0x1
+    70002754:	e5078793          	addi	a5,a5,-432 # 700035a0 <sleeping_queue>
+    70002758:	639c                	ld	a5,0(a5)
+    7000275a:	cf89                	beqz	a5,70002774 <schedule+0x19e>
+/embryos/chapter12/apps/thread.c:228
+            user_sleep(sleeping_queue->wake_time);
+    7000275c:	00001797          	auipc	a5,0x1
+    70002760:	e4478793          	addi	a5,a5,-444 # 700035a0 <sleeping_queue>
+    70002764:	639c                	ld	a5,0(a5)
+    70002766:	779c                	ld	a5,40(a5)
+    70002768:	853e                	mv	a0,a5
+    7000276a:	ffffe097          	auipc	ra,0xffffe
+    7000276e:	902080e7          	jalr	-1790(ra) # 7000006c <user_sleep>
+/embryos/chapter12/apps/thread.c:229
+            continue;
+    70002772:	a069                	j	700027fc <schedule+0x226>
+/embryos/chapter12/apps/thread.c:233
+        }
+
+        // Only if there are no sleeping threads left should we block for input
         if (waiting_input) {
     70002774:	00001797          	auipc	a5,0x1
-    70002778:	e5478793          	addi	a5,a5,-428 # 700035c8 <waiting_input>
+    70002778:	e3478793          	addi	a5,a5,-460 # 700035a8 <waiting_input>
     7000277c:	639c                	ld	a5,0(a5)
-    7000277e:	cbbd                	beqz	a5,700027f4 <schedule+0x16e>
-/embryos/chapter12/apps/thread.c:238
+    7000277e:	cbbd                	beqz	a5,700027f4 <schedule+0x21e>
+/embryos/chapter12/apps/thread.c:234
             int ev = user_get(1);
     70002780:	4505                	li	a0,1
     70002782:	ffffe097          	auipc	ra,0xffffe
     70002786:	8b2080e7          	jalr	-1870(ra) # 70000034 <user_get>
     7000278a:	87aa                	mv	a5,a0
-    7000278c:	fef42223          	sw	a5,-28(s0)
-/embryos/chapter12/apps/thread.c:240
-            // If queue is full, deliver directly to one waiting thread.
+    7000278c:	fef42023          	sw	a5,-32(s0)
+/embryos/chapter12/apps/thread.c:235
             if (!input_q_push(ev) && waiting_input) {
-    70002790:	fe442783          	lw	a5,-28(s0)
+    70002790:	fe042783          	lw	a5,-32(s0)
     70002794:	853e                	mv	a0,a5
     70002796:	00000097          	auipc	ra,0x0
-    7000279a:	d52080e7          	jalr	-686(ra) # 700024e8 <input_q_push>
+    7000279a:	cce080e7          	jalr	-818(ra) # 70002464 <input_q_push>
     7000279e:	87aa                	mv	a5,a0
-/embryos/chapter12/apps/thread.c:240 (discriminator 1)
-    700027a0:	e7a9                	bnez	a5,700027ea <schedule+0x164>
-/embryos/chapter12/apps/thread.c:240 (discriminator 2)
+/embryos/chapter12/apps/thread.c:235 (discriminator 1)
+    700027a0:	e7a9                	bnez	a5,700027ea <schedule+0x214>
+/embryos/chapter12/apps/thread.c:235 (discriminator 2)
     700027a2:	00001797          	auipc	a5,0x1
-    700027a6:	e2678793          	addi	a5,a5,-474 # 700035c8 <waiting_input>
+    700027a6:	e0678793          	addi	a5,a5,-506 # 700035a8 <waiting_input>
     700027aa:	639c                	ld	a5,0(a5)
-    700027ac:	cf9d                	beqz	a5,700027ea <schedule+0x164>
-/embryos/chapter12/apps/thread.c:241
+    700027ac:	cf9d                	beqz	a5,700027ea <schedule+0x214>
+/embryos/chapter12/apps/thread.c:236
                 thread_t *w = waiting_input;
     700027ae:	00001797          	auipc	a5,0x1
-    700027b2:	e1a78793          	addi	a5,a5,-486 # 700035c8 <waiting_input>
+    700027b2:	dfa78793          	addi	a5,a5,-518 # 700035a8 <waiting_input>
     700027b6:	639c                	ld	a5,0(a5)
     700027b8:	fcf43c23          	sd	a5,-40(s0)
-/embryos/chapter12/apps/thread.c:242
+/embryos/chapter12/apps/thread.c:237
                 waiting_input = w->next;
     700027bc:	fd843783          	ld	a5,-40(s0)
     700027c0:	7f98                	ld	a4,56(a5)
     700027c2:	00001797          	auipc	a5,0x1
-    700027c6:	e0678793          	addi	a5,a5,-506 # 700035c8 <waiting_input>
+    700027c6:	de678793          	addi	a5,a5,-538 # 700035a8 <waiting_input>
     700027ca:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:243
+/embryos/chapter12/apps/thread.c:238
                 w->next = NULL;
     700027cc:	fd843783          	ld	a5,-40(s0)
     700027d0:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:244
+/embryos/chapter12/apps/thread.c:239
                 w->input_event = ev;
     700027d4:	fd843783          	ld	a5,-40(s0)
-    700027d8:	fe442703          	lw	a4,-28(s0)
+    700027d8:	fe042703          	lw	a4,-32(s0)
     700027dc:	cbf8                	sw	a4,84(a5)
-/embryos/chapter12/apps/thread.c:245
+/embryos/chapter12/apps/thread.c:240
                 enqueue_runnable(w);
     700027de:	fd843503          	ld	a0,-40(s0)
     700027e2:	00000097          	auipc	ra,0x0
     700027e6:	a1e080e7          	jalr	-1506(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:247
+/embryos/chapter12/apps/thread.c:242
             }
             try_wakeup_input();
     700027ea:	00000097          	auipc	ra,0x0
-    700027ee:	c90080e7          	jalr	-880(ra) # 7000247a <try_wakeup_input>
-/embryos/chapter12/apps/thread.c:248
+    700027ee:	c0c080e7          	jalr	-1012(ra) # 700023f6 <try_wakeup_input>
+/embryos/chapter12/apps/thread.c:243
             continue;
-    700027f2:	a03d                	j	70002820 <schedule+0x19a>
-/embryos/chapter12/apps/thread.c:252
+    700027f2:	a029                	j	700027fc <schedule+0x226>
+/embryos/chapter12/apps/thread.c:247
         }
 
-        // No runnable and no input waiters: sleep until nearest wake deadline.
-        if (sleeping_queue) {
-    700027f4:	00001797          	auipc	a5,0x1
-    700027f8:	dcc78793          	addi	a5,a5,-564 # 700035c0 <sleeping_queue>
-    700027fc:	639c                	ld	a5,0(a5)
-    700027fe:	cf89                	beqz	a5,70002818 <schedule+0x192>
-/embryos/chapter12/apps/thread.c:253
-            user_sleep(sleeping_queue->wake_time);
-    70002800:	00001797          	auipc	a5,0x1
-    70002804:	dc078793          	addi	a5,a5,-576 # 700035c0 <sleeping_queue>
-    70002808:	639c                	ld	a5,0(a5)
-    7000280a:	779c                	ld	a5,40(a5)
-    7000280c:	853e                	mv	a0,a5
-    7000280e:	ffffe097          	auipc	ra,0xffffe
-    70002812:	85e080e7          	jalr	-1954(ra) # 7000006c <user_sleep>
-/embryos/chapter12/apps/thread.c:254
-            continue;
-    70002816:	a029                	j	70002820 <schedule+0x19a>
-/embryos/chapter12/apps/thread.c:258
-        }
-
-        // No runnable/sleeping/input-waiting thread left => process can end.
+        // Nothing left to run
         user_exit();
-    70002818:	ffffd097          	auipc	ra,0xffffd
-    7000281c:	7fc080e7          	jalr	2044(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:204
+    700027f4:	ffffe097          	auipc	ra,0xffffe
+    700027f8:	820080e7          	jalr	-2016(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/thread.c:175
     while (1) {
-    70002820:	b5bd                	j	7000268e <schedule+0x8>
-/embryos/chapter12/apps/thread.c:214
+    700027fc:	b3cd                	j	700025de <schedule+0x8>
+/embryos/chapter12/apps/thread.c:188
             if (next == current_thread) return;
-    70002822:	0001                	nop
-/embryos/chapter12/apps/thread.c:260
+    700027fe:	0001                	nop
+/embryos/chapter12/apps/thread.c:249
     }
 }
-    70002824:	70a2                	ld	ra,40(sp)
-    70002826:	7402                	ld	s0,32(sp)
-    70002828:	6145                	addi	sp,sp,48
-    7000282a:	8082                	ret
+    70002800:	70e2                	ld	ra,56(sp)
+    70002802:	7442                	ld	s0,48(sp)
+    70002804:	6121                	addi	sp,sp,64
+    70002806:	8082                	ret
 
-000000007000282c <exec_user>:
+0000000070002808 <exec_user>:
 exec_user():
-/embryos/chapter12/apps/thread.c:263
+/embryos/chapter12/apps/thread.c:252
 
-// Called when a new thread starts (must be called from thread context)
+// Called when a new thread starts
 void exec_user(void) {
-    7000282c:	1141                	addi	sp,sp,-16
-    7000282e:	e406                	sd	ra,8(sp)
-    70002830:	e022                	sd	s0,0(sp)
-    70002832:	0800                	addi	s0,sp,16
-/embryos/chapter12/apps/thread.c:264
+    70002808:	1141                	addi	sp,sp,-16
+    7000280a:	e406                	sd	ra,8(sp)
+    7000280c:	e022                	sd	s0,0(sp)
+    7000280e:	0800                	addi	s0,sp,16
+/embryos/chapter12/apps/thread.c:253
     current_thread->start_fn(current_thread->start_arg);
-    70002834:	00001797          	auipc	a5,0x1
-    70002838:	d9c78793          	addi	a5,a5,-612 # 700035d0 <current_thread>
-    7000283c:	639c                	ld	a5,0(a5)
-    7000283e:	63bc                	ld	a5,64(a5)
-    70002840:	00001717          	auipc	a4,0x1
-    70002844:	d9070713          	addi	a4,a4,-624 # 700035d0 <current_thread>
-    70002848:	6318                	ld	a4,0(a4)
-    7000284a:	6738                	ld	a4,72(a4)
-    7000284c:	853a                	mv	a0,a4
-    7000284e:	9782                	jalr	a5
-/embryos/chapter12/apps/thread.c:265
-    thread_exit();   // must not return
-    70002850:	00000097          	auipc	ra,0x0
-    70002854:	33e080e7          	jalr	830(ra) # 70002b8e <thread_exit>
-/embryos/chapter12/apps/thread.c:266
+    70002810:	00001797          	auipc	a5,0x1
+    70002814:	da078793          	addi	a5,a5,-608 # 700035b0 <current_thread>
+    70002818:	639c                	ld	a5,0(a5)
+    7000281a:	63bc                	ld	a5,64(a5)
+    7000281c:	00001717          	auipc	a4,0x1
+    70002820:	d9470713          	addi	a4,a4,-620 # 700035b0 <current_thread>
+    70002824:	6318                	ld	a4,0(a4)
+    70002826:	6738                	ld	a4,72(a4)
+    70002828:	853a                	mv	a0,a4
+    7000282a:	9782                	jalr	a5
+/embryos/chapter12/apps/thread.c:254
+    thread_exit();
+    7000282c:	00000097          	auipc	ra,0x0
+    70002830:	340080e7          	jalr	832(ra) # 70002b6c <thread_exit>
+/embryos/chapter12/apps/thread.c:255
 }
-    70002858:	0001                	nop
-    7000285a:	60a2                	ld	ra,8(sp)
-    7000285c:	6402                	ld	s0,0(sp)
-    7000285e:	0141                	addi	sp,sp,16
-    70002860:	8082                	ret
+    70002834:	0001                	nop
+    70002836:	60a2                	ld	ra,8(sp)
+    70002838:	6402                	ld	s0,0(sp)
+    7000283a:	0141                	addi	sp,sp,16
+    7000283c:	8082                	ret
 
-0000000070002862 <thread_init>:
+000000007000283e <thread_init>:
 thread_init():
+/embryos/chapter12/apps/thread.c:258
+
+// Initialize threading system
+void thread_init(void) {
+    7000283e:	1101                	addi	sp,sp,-32
+    70002840:	ec06                	sd	ra,24(sp)
+    70002842:	e822                	sd	s0,16(sp)
+    70002844:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:259
+    current_thread = NULL;
+    70002846:	00001797          	auipc	a5,0x1
+    7000284a:	d6a78793          	addi	a5,a5,-662 # 700035b0 <current_thread>
+    7000284e:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:260
+    runnable_queue = NULL;
+    70002852:	00001797          	auipc	a5,0x1
+    70002856:	d4678793          	addi	a5,a5,-698 # 70003598 <runnable_queue>
+    7000285a:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:261
+    sleeping_queue = NULL;
+    7000285e:	00001797          	auipc	a5,0x1
+    70002862:	d4278793          	addi	a5,a5,-702 # 700035a0 <sleeping_queue>
+    70002866:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:262
+    waiting_input = NULL;
+    7000286a:	00001797          	auipc	a5,0x1
+    7000286e:	d3e78793          	addi	a5,a5,-706 # 700035a8 <waiting_input>
+    70002872:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:263
+    zombie_list = NULL;
+    70002876:	00001797          	auipc	a5,0x1
+    7000287a:	d4278793          	addi	a5,a5,-702 # 700035b8 <zombie_list>
+    7000287e:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:264
+    input_q_head = input_q_tail = input_q_count = 0;
+    70002882:	00001797          	auipc	a5,0x1
+    70002886:	d0e78793          	addi	a5,a5,-754 # 70003590 <input_q_count>
+    7000288a:	0007a023          	sw	zero,0(a5)
+    7000288e:	00001797          	auipc	a5,0x1
+    70002892:	d0278793          	addi	a5,a5,-766 # 70003590 <input_q_count>
+    70002896:	4398                	lw	a4,0(a5)
+    70002898:	00001797          	auipc	a5,0x1
+    7000289c:	cf478793          	addi	a5,a5,-780 # 7000358c <input_q_tail>
+    700028a0:	c398                	sw	a4,0(a5)
+    700028a2:	00001797          	auipc	a5,0x1
+    700028a6:	cea78793          	addi	a5,a5,-790 # 7000358c <input_q_tail>
+    700028aa:	4398                	lw	a4,0(a5)
+    700028ac:	00001797          	auipc	a5,0x1
+    700028b0:	cdc78793          	addi	a5,a5,-804 # 70003588 <input_q_head>
+    700028b4:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:265
+    next_tid = 0;
+    700028b6:	00001797          	auipc	a5,0x1
+    700028ba:	d0a78793          	addi	a5,a5,-758 # 700035c0 <next_tid>
+    700028be:	0007a023          	sw	zero,0(a5)
+/embryos/chapter12/apps/thread.c:267
+
+    thread_t *main_thread = malloc(sizeof(thread_t));
+    700028c2:	05800513          	li	a0,88
+    700028c6:	fffff097          	auipc	ra,0xfffff
+    700028ca:	71c080e7          	jalr	1820(ra) # 70001fe2 <malloc>
+    700028ce:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/thread.c:268
+    if (!main_thread) user_exit();
+    700028d2:	fe843783          	ld	a5,-24(s0)
+    700028d6:	e789                	bnez	a5,700028e0 <thread_init+0xa2>
+/embryos/chapter12/apps/thread.c:268 (discriminator 1)
+    700028d8:	ffffd097          	auipc	ra,0xffffd
+    700028dc:	73c080e7          	jalr	1852(ra) # 70000014 <user_exit>
 /embryos/chapter12/apps/thread.c:270
 
-
-// Initialize the threading system
-void thread_init(void) {
-    70002862:	1101                	addi	sp,sp,-32
-    70002864:	ec06                	sd	ra,24(sp)
-    70002866:	e822                	sd	s0,16(sp)
-    70002868:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:273
-    // The main thread (current_thread) is already running
-    // We just need to set up the initial state
-    current_thread = NULL;  // Will be set when first thread is created
-    7000286a:	00001797          	auipc	a5,0x1
-    7000286e:	d6678793          	addi	a5,a5,-666 # 700035d0 <current_thread>
-    70002872:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:274
-    runnable_queue = NULL;
-    70002876:	00001797          	auipc	a5,0x1
-    7000287a:	d4278793          	addi	a5,a5,-702 # 700035b8 <runnable_queue>
-    7000287e:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:275
-    sleeping_queue = NULL;
-    70002882:	00001797          	auipc	a5,0x1
-    70002886:	d3e78793          	addi	a5,a5,-706 # 700035c0 <sleeping_queue>
-    7000288a:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:276
-    waiting_input = NULL;
-    7000288e:	00001797          	auipc	a5,0x1
-    70002892:	d3a78793          	addi	a5,a5,-710 # 700035c8 <waiting_input>
-    70002896:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:277
-    zombie_list = NULL;
-    7000289a:	00001797          	auipc	a5,0x1
-    7000289e:	d3e78793          	addi	a5,a5,-706 # 700035d8 <zombie_list>
-    700028a2:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:278
-    input_q_head = input_q_tail = input_q_count = 0;
-    700028a6:	00001797          	auipc	a5,0x1
-    700028aa:	d0a78793          	addi	a5,a5,-758 # 700035b0 <input_q_count>
-    700028ae:	0007a023          	sw	zero,0(a5)
-    700028b2:	00001797          	auipc	a5,0x1
-    700028b6:	cfe78793          	addi	a5,a5,-770 # 700035b0 <input_q_count>
-    700028ba:	4398                	lw	a4,0(a5)
-    700028bc:	00001797          	auipc	a5,0x1
-    700028c0:	cf078793          	addi	a5,a5,-784 # 700035ac <input_q_tail>
-    700028c4:	c398                	sw	a4,0(a5)
-    700028c6:	00001797          	auipc	a5,0x1
-    700028ca:	ce678793          	addi	a5,a5,-794 # 700035ac <input_q_tail>
-    700028ce:	4398                	lw	a4,0(a5)
-    700028d0:	00001797          	auipc	a5,0x1
-    700028d4:	cd878793          	addi	a5,a5,-808 # 700035a8 <input_q_head>
-    700028d8:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:279
-    next_tid = 0;
-    700028da:	00001797          	auipc	a5,0x1
-    700028de:	d0678793          	addi	a5,a5,-762 # 700035e0 <next_tid>
-    700028e2:	0007a023          	sw	zero,0(a5)
-/embryos/chapter12/apps/thread.c:283
-    
-    // Create and switch to main thread (becomes first thread)
-    // We'll do this by creating a thread for the current execution context
-    thread_t *main_thread = malloc(sizeof(thread_t));
-    700028e6:	05800513          	li	a0,88
-    700028ea:	fffff097          	auipc	ra,0xfffff
-    700028ee:	6f8080e7          	jalr	1784(ra) # 70001fe2 <malloc>
-    700028f2:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:284
-    if (!main_thread) user_exit();
-    700028f6:	fe843783          	ld	a5,-24(s0)
-    700028fa:	e789                	bnez	a5,70002904 <thread_init+0xa2>
-/embryos/chapter12/apps/thread.c:284 (discriminator 1)
-    700028fc:	ffffd097          	auipc	ra,0xffffd
-    70002900:	718080e7          	jalr	1816(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:286
-    
     main_thread->tid = next_tid++;
-    70002904:	00001797          	auipc	a5,0x1
-    70002908:	cdc78793          	addi	a5,a5,-804 # 700035e0 <next_tid>
-    7000290c:	439c                	lw	a5,0(a5)
-    7000290e:	0017871b          	addiw	a4,a5,1
-    70002912:	0007069b          	sext.w	a3,a4
-    70002916:	00001717          	auipc	a4,0x1
-    7000291a:	cca70713          	addi	a4,a4,-822 # 700035e0 <next_tid>
-    7000291e:	c314                	sw	a3,0(a4)
-    70002920:	fe843703          	ld	a4,-24(s0)
-    70002924:	c31c                	sw	a5,0(a4)
-/embryos/chapter12/apps/thread.c:287
-    main_thread->stack_base = NULL;  // Main thread uses existing stack
-    70002926:	fe843783          	ld	a5,-24(s0)
-    7000292a:	0007b423          	sd	zero,8(a5)
-/embryos/chapter12/apps/thread.c:288
+    700028e0:	00001797          	auipc	a5,0x1
+    700028e4:	ce078793          	addi	a5,a5,-800 # 700035c0 <next_tid>
+    700028e8:	439c                	lw	a5,0(a5)
+    700028ea:	0017871b          	addiw	a4,a5,1
+    700028ee:	0007069b          	sext.w	a3,a4
+    700028f2:	00001717          	auipc	a4,0x1
+    700028f6:	cce70713          	addi	a4,a4,-818 # 700035c0 <next_tid>
+    700028fa:	c314                	sw	a3,0(a4)
+    700028fc:	fe843703          	ld	a4,-24(s0)
+    70002900:	c31c                	sw	a5,0(a4)
+/embryos/chapter12/apps/thread.c:271
+    main_thread->stack_base = NULL;
+    70002902:	fe843783          	ld	a5,-24(s0)
+    70002906:	0007b423          	sd	zero,8(a5)
+/embryos/chapter12/apps/thread.c:272
     main_thread->stack_size = 0;
-    7000292e:	fe843783          	ld	a5,-24(s0)
-    70002932:	0007a823          	sw	zero,16(a5)
-/embryos/chapter12/apps/thread.c:289
+    7000290a:	fe843783          	ld	a5,-24(s0)
+    7000290e:	0007a823          	sw	zero,16(a5)
+/embryos/chapter12/apps/thread.c:273
     main_thread->sp = NULL;
-    70002936:	fe843783          	ld	a5,-24(s0)
-    7000293a:	0007bc23          	sd	zero,24(a5)
-/embryos/chapter12/apps/thread.c:290
+    70002912:	fe843783          	ld	a5,-24(s0)
+    70002916:	0007bc23          	sd	zero,24(a5)
+/embryos/chapter12/apps/thread.c:274
     main_thread->state = THREAD_RUNNABLE;
-    7000293e:	fe843783          	ld	a5,-24(s0)
-    70002942:	0207a023          	sw	zero,32(a5)
-/embryos/chapter12/apps/thread.c:291
+    7000291a:	fe843783          	ld	a5,-24(s0)
+    7000291e:	0207a023          	sw	zero,32(a5)
+/embryos/chapter12/apps/thread.c:275
     main_thread->wake_time = 0;
-    70002946:	fe843783          	ld	a5,-24(s0)
-    7000294a:	0207b423          	sd	zero,40(a5)
-/embryos/chapter12/apps/thread.c:292
+    70002922:	fe843783          	ld	a5,-24(s0)
+    70002926:	0207b423          	sd	zero,40(a5)
+/embryos/chapter12/apps/thread.c:276
     main_thread->waiting_sema = NULL;
-    7000294e:	fe843783          	ld	a5,-24(s0)
-    70002952:	0207b823          	sd	zero,48(a5)
-/embryos/chapter12/apps/thread.c:293
+    7000292a:	fe843783          	ld	a5,-24(s0)
+    7000292e:	0207b823          	sd	zero,48(a5)
+/embryos/chapter12/apps/thread.c:277
     main_thread->next = NULL;
-    70002956:	fe843783          	ld	a5,-24(s0)
-    7000295a:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:294
+    70002932:	fe843783          	ld	a5,-24(s0)
+    70002936:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:278
     main_thread->started = 1;
-    7000295e:	fe843783          	ld	a5,-24(s0)
-    70002962:	4705                	li	a4,1
-    70002964:	cbb8                	sw	a4,80(a5)
-/embryos/chapter12/apps/thread.c:295
+    7000293a:	fe843783          	ld	a5,-24(s0)
+    7000293e:	4705                	li	a4,1
+    70002940:	cbb8                	sw	a4,80(a5)
+/embryos/chapter12/apps/thread.c:279
     main_thread->start_fn = NULL;
-    70002966:	fe843783          	ld	a5,-24(s0)
-    7000296a:	0407b023          	sd	zero,64(a5)
-/embryos/chapter12/apps/thread.c:296
+    70002942:	fe843783          	ld	a5,-24(s0)
+    70002946:	0407b023          	sd	zero,64(a5)
+/embryos/chapter12/apps/thread.c:280
     main_thread->start_arg = NULL;
-    7000296e:	fe843783          	ld	a5,-24(s0)
-    70002972:	0407b423          	sd	zero,72(a5)
-/embryos/chapter12/apps/thread.c:297
+    7000294a:	fe843783          	ld	a5,-24(s0)
+    7000294e:	0407b423          	sd	zero,72(a5)
+/embryos/chapter12/apps/thread.c:281
     main_thread->input_event = 0;
-    70002976:	fe843783          	ld	a5,-24(s0)
-    7000297a:	0407aa23          	sw	zero,84(a5)
-/embryos/chapter12/apps/thread.c:299
-    
+    70002952:	fe843783          	ld	a5,-24(s0)
+    70002956:	0407aa23          	sw	zero,84(a5)
+/embryos/chapter12/apps/thread.c:283
+
     current_thread = main_thread;
-    7000297e:	00001797          	auipc	a5,0x1
-    70002982:	c5278793          	addi	a5,a5,-942 # 700035d0 <current_thread>
-    70002986:	fe843703          	ld	a4,-24(s0)
-    7000298a:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:300
+    7000295a:	00001797          	auipc	a5,0x1
+    7000295e:	c5678793          	addi	a5,a5,-938 # 700035b0 <current_thread>
+    70002962:	fe843703          	ld	a4,-24(s0)
+    70002966:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:284
 }
-    7000298c:	0001                	nop
-    7000298e:	60e2                	ld	ra,24(sp)
-    70002990:	6442                	ld	s0,16(sp)
-    70002992:	6105                	addi	sp,sp,32
-    70002994:	8082                	ret
+    70002968:	0001                	nop
+    7000296a:	60e2                	ld	ra,24(sp)
+    7000296c:	6442                	ld	s0,16(sp)
+    7000296e:	6105                	addi	sp,sp,32
+    70002970:	8082                	ret
 
-0000000070002996 <thread_create>:
+0000000070002972 <thread_create>:
 thread_create():
-/embryos/chapter12/apps/thread.c:303
+/embryos/chapter12/apps/thread.c:287
 
-// Create and start a new thread
+// Create a new thread
 void thread_create(void (*f)(void *), void *arg, unsigned int stack_size) {
-    70002996:	715d                	addi	sp,sp,-80
-    70002998:	e486                	sd	ra,72(sp)
-    7000299a:	e0a2                	sd	s0,64(sp)
-    7000299c:	0880                	addi	s0,sp,80
-    7000299e:	fca43423          	sd	a0,-56(s0)
-    700029a2:	fcb43023          	sd	a1,-64(s0)
-    700029a6:	87b2                	mv	a5,a2
-    700029a8:	faf42e23          	sw	a5,-68(s0)
-/embryos/chapter12/apps/thread.c:306
-    // Allocate stack - malloc aligns at 16 bytes
-
+    70002972:	715d                	addi	sp,sp,-80
+    70002974:	e486                	sd	ra,72(sp)
+    70002976:	e0a2                	sd	s0,64(sp)
+    70002978:	0880                	addi	s0,sp,80
+    7000297a:	fca43423          	sd	a0,-56(s0)
+    7000297e:	fcb43023          	sd	a1,-64(s0)
+    70002982:	87b2                	mv	a5,a2
+    70002984:	faf42e23          	sw	a5,-68(s0)
+/embryos/chapter12/apps/thread.c:288
     unsigned char *stack = (unsigned char *)malloc(stack_size);
-    700029ac:	fbc46783          	lwu	a5,-68(s0)
-    700029b0:	853e                	mv	a0,a5
-    700029b2:	fffff097          	auipc	ra,0xfffff
-    700029b6:	630080e7          	jalr	1584(ra) # 70001fe2 <malloc>
-    700029ba:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:307
+    70002988:	fbc46783          	lwu	a5,-68(s0)
+    7000298c:	853e                	mv	a0,a5
+    7000298e:	fffff097          	auipc	ra,0xfffff
+    70002992:	654080e7          	jalr	1620(ra) # 70001fe2 <malloc>
+    70002996:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/thread.c:289
     if (!stack) user_exit();
-    700029be:	fe843783          	ld	a5,-24(s0)
-    700029c2:	e789                	bnez	a5,700029cc <thread_create+0x36>
-/embryos/chapter12/apps/thread.c:307 (discriminator 1)
-    700029c4:	ffffd097          	auipc	ra,0xffffd
-    700029c8:	650080e7          	jalr	1616(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:310
-    
-    // Allocate thread control block
+    7000299a:	fe843783          	ld	a5,-24(s0)
+    7000299e:	e789                	bnez	a5,700029a8 <thread_create+0x36>
+/embryos/chapter12/apps/thread.c:289 (discriminator 1)
+    700029a0:	ffffd097          	auipc	ra,0xffffd
+    700029a4:	674080e7          	jalr	1652(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/thread.c:291
+
     thread_t *t = (thread_t *)malloc(sizeof(thread_t));
-    700029cc:	05800513          	li	a0,88
-    700029d0:	fffff097          	auipc	ra,0xfffff
-    700029d4:	612080e7          	jalr	1554(ra) # 70001fe2 <malloc>
-    700029d8:	fea43023          	sd	a0,-32(s0)
-/embryos/chapter12/apps/thread.c:311
+    700029a8:	05800513          	li	a0,88
+    700029ac:	fffff097          	auipc	ra,0xfffff
+    700029b0:	636080e7          	jalr	1590(ra) # 70001fe2 <malloc>
+    700029b4:	fea43023          	sd	a0,-32(s0)
+/embryos/chapter12/apps/thread.c:292
     if (!t) {
-    700029dc:	fe043783          	ld	a5,-32(s0)
-    700029e0:	eb99                	bnez	a5,700029f6 <thread_create+0x60>
-/embryos/chapter12/apps/thread.c:312
+    700029b8:	fe043783          	ld	a5,-32(s0)
+    700029bc:	eb99                	bnez	a5,700029d2 <thread_create+0x60>
+/embryos/chapter12/apps/thread.c:293
         free(stack);
-    700029e2:	fe843503          	ld	a0,-24(s0)
-    700029e6:	fffff097          	auipc	ra,0xfffff
-    700029ea:	7d4080e7          	jalr	2004(ra) # 700021ba <free>
-/embryos/chapter12/apps/thread.c:313
+    700029be:	fe843503          	ld	a0,-24(s0)
+    700029c2:	fffff097          	auipc	ra,0xfffff
+    700029c6:	7f8080e7          	jalr	2040(ra) # 700021ba <free>
+/embryos/chapter12/apps/thread.c:294
         user_exit();
-    700029ee:	ffffd097          	auipc	ra,0xffffd
-    700029f2:	626080e7          	jalr	1574(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:317
+    700029ca:	ffffd097          	auipc	ra,0xffffd
+    700029ce:	64a080e7          	jalr	1610(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/thread.c:297
     }
-    
-    // Initialize thread control block
+
     t->tid = next_tid++;
-    700029f6:	00001797          	auipc	a5,0x1
-    700029fa:	bea78793          	addi	a5,a5,-1046 # 700035e0 <next_tid>
-    700029fe:	439c                	lw	a5,0(a5)
-    70002a00:	0017871b          	addiw	a4,a5,1
-    70002a04:	0007069b          	sext.w	a3,a4
-    70002a08:	00001717          	auipc	a4,0x1
-    70002a0c:	bd870713          	addi	a4,a4,-1064 # 700035e0 <next_tid>
-    70002a10:	c314                	sw	a3,0(a4)
-    70002a12:	fe043703          	ld	a4,-32(s0)
-    70002a16:	c31c                	sw	a5,0(a4)
-/embryos/chapter12/apps/thread.c:318
+    700029d2:	00001797          	auipc	a5,0x1
+    700029d6:	bee78793          	addi	a5,a5,-1042 # 700035c0 <next_tid>
+    700029da:	439c                	lw	a5,0(a5)
+    700029dc:	0017871b          	addiw	a4,a5,1
+    700029e0:	0007069b          	sext.w	a3,a4
+    700029e4:	00001717          	auipc	a4,0x1
+    700029e8:	bdc70713          	addi	a4,a4,-1060 # 700035c0 <next_tid>
+    700029ec:	c314                	sw	a3,0(a4)
+    700029ee:	fe043703          	ld	a4,-32(s0)
+    700029f2:	c31c                	sw	a5,0(a4)
+/embryos/chapter12/apps/thread.c:298
     t->stack_base = stack;
-    70002a18:	fe043783          	ld	a5,-32(s0)
-    70002a1c:	fe843703          	ld	a4,-24(s0)
-    70002a20:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/thread.c:319
+    700029f4:	fe043783          	ld	a5,-32(s0)
+    700029f8:	fe843703          	ld	a4,-24(s0)
+    700029fc:	e798                	sd	a4,8(a5)
+/embryos/chapter12/apps/thread.c:299
     t->stack_size = stack_size;
-    70002a22:	fe043783          	ld	a5,-32(s0)
-    70002a26:	fbc42703          	lw	a4,-68(s0)
-    70002a2a:	cb98                	sw	a4,16(a5)
-/embryos/chapter12/apps/thread.c:320
+    700029fe:	fe043783          	ld	a5,-32(s0)
+    70002a02:	fbc42703          	lw	a4,-68(s0)
+    70002a06:	cb98                	sw	a4,16(a5)
+/embryos/chapter12/apps/thread.c:300
     t->state = THREAD_RUNNABLE;
-    70002a2c:	fe043783          	ld	a5,-32(s0)
-    70002a30:	0207a023          	sw	zero,32(a5)
-/embryos/chapter12/apps/thread.c:321
+    70002a08:	fe043783          	ld	a5,-32(s0)
+    70002a0c:	0207a023          	sw	zero,32(a5)
+/embryos/chapter12/apps/thread.c:301
     t->wake_time = 0;
-    70002a34:	fe043783          	ld	a5,-32(s0)
-    70002a38:	0207b423          	sd	zero,40(a5)
-/embryos/chapter12/apps/thread.c:322
+    70002a10:	fe043783          	ld	a5,-32(s0)
+    70002a14:	0207b423          	sd	zero,40(a5)
+/embryos/chapter12/apps/thread.c:302
     t->waiting_sema = NULL;
-    70002a3c:	fe043783          	ld	a5,-32(s0)
-    70002a40:	0207b823          	sd	zero,48(a5)
-/embryos/chapter12/apps/thread.c:324
-
+    70002a18:	fe043783          	ld	a5,-32(s0)
+    70002a1c:	0207b823          	sd	zero,48(a5)
+/embryos/chapter12/apps/thread.c:303
+    t->next = NULL;
+    70002a20:	fe043783          	ld	a5,-32(s0)
+    70002a24:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:304
     t->start_fn = f;
-    70002a44:	fe043783          	ld	a5,-32(s0)
-    70002a48:	fc843703          	ld	a4,-56(s0)
-    70002a4c:	e3b8                	sd	a4,64(a5)
-/embryos/chapter12/apps/thread.c:325
+    70002a28:	fe043783          	ld	a5,-32(s0)
+    70002a2c:	fc843703          	ld	a4,-56(s0)
+    70002a30:	e3b8                	sd	a4,64(a5)
+/embryos/chapter12/apps/thread.c:305
     t->start_arg = arg;
-    70002a4e:	fe043783          	ld	a5,-32(s0)
-    70002a52:	fc043703          	ld	a4,-64(s0)
-    70002a56:	e7b8                	sd	a4,72(a5)
-/embryos/chapter12/apps/thread.c:326
+    70002a32:	fe043783          	ld	a5,-32(s0)
+    70002a36:	fc043703          	ld	a4,-64(s0)
+    70002a3a:	e7b8                	sd	a4,72(a5)
+/embryos/chapter12/apps/thread.c:306
     t->started = 0;
-    70002a58:	fe043783          	ld	a5,-32(s0)
-    70002a5c:	0407a823          	sw	zero,80(a5)
-/embryos/chapter12/apps/thread.c:328
-
+    70002a3c:	fe043783          	ld	a5,-32(s0)
+    70002a40:	0407a823          	sw	zero,80(a5)
+/embryos/chapter12/apps/thread.c:307
     t->input_event = 0;
-    70002a60:	fe043783          	ld	a5,-32(s0)
-    70002a64:	0407aa23          	sw	zero,84(a5)
+    70002a44:	fe043783          	ld	a5,-32(s0)
+    70002a48:	0407aa23          	sw	zero,84(a5)
+/embryos/chapter12/apps/thread.c:309
+
+    unsigned char *sp = stack + stack_size;
+    70002a4c:	fbc46783          	lwu	a5,-68(s0)
+    70002a50:	fe843703          	ld	a4,-24(s0)
+    70002a54:	97ba                	add	a5,a5,a4
+    70002a56:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/thread.c:310
+    sp = (unsigned char *)((unsigned long)sp & ~15UL);
+    70002a5a:	fd843783          	ld	a5,-40(s0)
+    70002a5e:	9bc1                	andi	a5,a5,-16
+    70002a60:	fcf43c23          	sd	a5,-40(s0)
+/embryos/chapter12/apps/thread.c:311
+    t->sp = sp;
+    70002a64:	fe043783          	ld	a5,-32(s0)
+    70002a68:	fd843703          	ld	a4,-40(s0)
+    70002a6c:	ef98                	sd	a4,24(a5)
+/embryos/chapter12/apps/thread.c:313
+
+    enqueue_runnable(t);
+    70002a6e:	fe043503          	ld	a0,-32(s0)
+    70002a72:	fffff097          	auipc	ra,0xfffff
+    70002a76:	78e080e7          	jalr	1934(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:314
+}
+    70002a7a:	0001                	nop
+    70002a7c:	60a6                	ld	ra,72(sp)
+    70002a7e:	6406                	ld	s0,64(sp)
+    70002a80:	6161                	addi	sp,sp,80
+    70002a82:	8082                	ret
+
+0000000070002a84 <thread_yield>:
+thread_yield():
+/embryos/chapter12/apps/thread.c:317
+
+// Yield control
+void thread_yield(void) {
+    70002a84:	1101                	addi	sp,sp,-32
+    70002a86:	ec06                	sd	ra,24(sp)
+    70002a88:	e822                	sd	s0,16(sp)
+    70002a8a:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:318
+    thread_t *prev = current_thread;
+    70002a8c:	00001797          	auipc	a5,0x1
+    70002a90:	b2478793          	addi	a5,a5,-1244 # 700035b0 <current_thread>
+    70002a94:	639c                	ld	a5,0(a5)
+    70002a96:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:319
+    if (prev) {
+    70002a9a:	fe843783          	ld	a5,-24(s0)
+    70002a9e:	c799                	beqz	a5,70002aac <thread_yield+0x28>
+/embryos/chapter12/apps/thread.c:320
+        enqueue_runnable(prev);
+    70002aa0:	fe843503          	ld	a0,-24(s0)
+    70002aa4:	fffff097          	auipc	ra,0xfffff
+    70002aa8:	75c080e7          	jalr	1884(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:322
+    }
+    schedule();
+    70002aac:	00000097          	auipc	ra,0x0
+    70002ab0:	b2a080e7          	jalr	-1238(ra) # 700025d6 <schedule>
+/embryos/chapter12/apps/thread.c:323
+}
+    70002ab4:	0001                	nop
+    70002ab6:	60e2                	ld	ra,24(sp)
+    70002ab8:	6442                	ld	s0,16(sp)
+    70002aba:	6105                	addi	sp,sp,32
+    70002abc:	8082                	ret
+
+0000000070002abe <thread_sleep>:
+thread_sleep():
+/embryos/chapter12/apps/thread.c:326
+
+// Sleep until deadline
+void thread_sleep(uint64_t deadline) {
+    70002abe:	7179                	addi	sp,sp,-48
+    70002ac0:	f406                	sd	ra,40(sp)
+    70002ac2:	f022                	sd	s0,32(sp)
+    70002ac4:	1800                	addi	s0,sp,48
+    70002ac6:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/thread.c:327
+    thread_t *prev = current_thread;
+    70002aca:	00001797          	auipc	a5,0x1
+    70002ace:	ae678793          	addi	a5,a5,-1306 # 700035b0 <current_thread>
+    70002ad2:	639c                	ld	a5,0(a5)
+    70002ad4:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:328
+    if (prev) {
+    70002ad8:	fe843783          	ld	a5,-24(s0)
+    70002adc:	cb89                	beqz	a5,70002aee <thread_sleep+0x30>
+/embryos/chapter12/apps/thread.c:329
+        enqueue_sleeping(prev, deadline);
+    70002ade:	fd843583          	ld	a1,-40(s0)
+    70002ae2:	fe843503          	ld	a0,-24(s0)
+    70002ae6:	fffff097          	auipc	ra,0xfffff
+    70002aea:	7d2080e7          	jalr	2002(ra) # 700022b8 <enqueue_sleeping>
+/embryos/chapter12/apps/thread.c:331
+    }
+    schedule();
+    70002aee:	00000097          	auipc	ra,0x0
+    70002af2:	ae8080e7          	jalr	-1304(ra) # 700025d6 <schedule>
+/embryos/chapter12/apps/thread.c:332
+}
+    70002af6:	0001                	nop
+    70002af8:	70a2                	ld	ra,40(sp)
+    70002afa:	7402                	ld	s0,32(sp)
+    70002afc:	6145                	addi	sp,sp,48
+    70002afe:	8082                	ret
+
+0000000070002b00 <thread_get>:
+thread_get():
 /embryos/chapter12/apps/thread.c:335
 
-
-    
-    // Set up stack with return address and argument
-    // Stack grows downward; sp points to top(lowest address)
-    unsigned char *sp = stack + stack_size;  // Top of stack
-    70002a68:	fbc46783          	lwu	a5,-68(s0)
-    70002a6c:	fe843703          	ld	a4,-24(s0)
-    70002a70:	97ba                	add	a5,a5,a4
-    70002a72:	fcf43c23          	sd	a5,-40(s0)
-/embryos/chapter12/apps/thread.c:338
-    
-    // Align stack to 16 bytes (required for many ABIs)
-    sp = (unsigned char *)((unsigned long)sp & ~15UL);
-    70002a76:	fd843783          	ld	a5,-40(s0)
-    70002a7a:	9bc1                	andi	a5,a5,-16
-    70002a7c:	fcf43c23          	sd	a5,-40(s0)
-/embryos/chapter12/apps/thread.c:340
-    
-    t->sp = sp;
-    70002a80:	fe043783          	ld	a5,-32(s0)
-    70002a84:	fd843703          	ld	a4,-40(s0)
-    70002a88:	ef98                	sd	a4,24(a5)
-/embryos/chapter12/apps/thread.c:343
-    
-    // Add to runnable queue
-    enqueue_runnable(t);
-    70002a8a:	fe043503          	ld	a0,-32(s0)
-    70002a8e:	fffff097          	auipc	ra,0xfffff
-    70002a92:	772080e7          	jalr	1906(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:344
-}
-    70002a96:	0001                	nop
-    70002a98:	60a6                	ld	ra,72(sp)
-    70002a9a:	6406                	ld	s0,64(sp)
-    70002a9c:	6161                	addi	sp,sp,80
-    70002a9e:	8082                	ret
-
-0000000070002aa0 <thread_yield>:
-thread_yield():
-/embryos/chapter12/apps/thread.c:347
-
-// Yield control to next thread
-void thread_yield(void) {
-    70002aa0:	1101                	addi	sp,sp,-32
-    70002aa2:	ec06                	sd	ra,24(sp)
-    70002aa4:	e822                	sd	s0,16(sp)
-    70002aa6:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:348
-    thread_t *prev = current_thread;
-    70002aa8:	00001797          	auipc	a5,0x1
-    70002aac:	b2878793          	addi	a5,a5,-1240 # 700035d0 <current_thread>
-    70002ab0:	639c                	ld	a5,0(a5)
-    70002ab2:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:352
-  
-    
-    // Add current thread back to runnable queue
-    if (prev) {
-    70002ab6:	fe843783          	ld	a5,-24(s0)
-    70002aba:	c799                	beqz	a5,70002ac8 <thread_yield+0x28>
-/embryos/chapter12/apps/thread.c:353
-        enqueue_runnable(prev);
-    70002abc:	fe843503          	ld	a0,-24(s0)
-    70002ac0:	fffff097          	auipc	ra,0xfffff
-    70002ac4:	740080e7          	jalr	1856(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:357
-    }
-    
-    // Schedule next thread
-    schedule();
-    70002ac8:	00000097          	auipc	ra,0x0
-    70002acc:	bbe080e7          	jalr	-1090(ra) # 70002686 <schedule>
-/embryos/chapter12/apps/thread.c:358
-}
-    70002ad0:	0001                	nop
-    70002ad2:	60e2                	ld	ra,24(sp)
-    70002ad4:	6442                	ld	s0,16(sp)
-    70002ad6:	6105                	addi	sp,sp,32
-    70002ad8:	8082                	ret
-
-0000000070002ada <thread_sleep>:
-thread_sleep():
-/embryos/chapter12/apps/thread.c:361
-
-// Sleep until deadline (in nanoseconds)
-void thread_sleep(uint64_t deadline) {
-    70002ada:	7179                	addi	sp,sp,-48
-    70002adc:	f406                	sd	ra,40(sp)
-    70002ade:	f022                	sd	s0,32(sp)
-    70002ae0:	1800                	addi	s0,sp,48
-    70002ae2:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:362
-    thread_t *prev = current_thread;
-    70002ae6:	00001797          	auipc	a5,0x1
-    70002aea:	aea78793          	addi	a5,a5,-1302 # 700035d0 <current_thread>
-    70002aee:	639c                	ld	a5,0(a5)
-    70002af0:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:365
-
-    
-    if (prev) {
-    70002af4:	fe843783          	ld	a5,-24(s0)
-    70002af8:	cb89                	beqz	a5,70002b0a <thread_sleep+0x30>
-/embryos/chapter12/apps/thread.c:366
-        enqueue_sleeping(prev, deadline);
-    70002afa:	fd843583          	ld	a1,-40(s0)
-    70002afe:	fe843503          	ld	a0,-24(s0)
-    70002b02:	fffff097          	auipc	ra,0xfffff
-    70002b06:	7b6080e7          	jalr	1974(ra) # 700022b8 <enqueue_sleeping>
-/embryos/chapter12/apps/thread.c:369
-    }
-    
-    schedule();
-    70002b0a:	00000097          	auipc	ra,0x0
-    70002b0e:	b7c080e7          	jalr	-1156(ra) # 70002686 <schedule>
-/embryos/chapter12/apps/thread.c:370
-}
-    70002b12:	0001                	nop
-    70002b14:	70a2                	ld	ra,40(sp)
-    70002b16:	7402                	ld	s0,32(sp)
-    70002b18:	6145                	addi	sp,sp,48
-    70002b1a:	8082                	ret
-
-0000000070002b1c <thread_get>:
-thread_get():
-/embryos/chapter12/apps/thread.c:372
-
+// Wait for input
 int thread_get(void) {
-    70002b1c:	1101                	addi	sp,sp,-32
-    70002b1e:	ec06                	sd	ra,24(sp)
-    70002b20:	e822                	sd	s0,16(sp)
-    70002b22:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:374
+    70002b00:	1101                	addi	sp,sp,-32
+    70002b02:	ec06                	sd	ra,24(sp)
+    70002b04:	e822                	sd	s0,16(sp)
+    70002b06:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:337
     int ev;
     if (input_q_pop(&ev)) {
-    70002b24:	fe440793          	addi	a5,s0,-28
-    70002b28:	853e                	mv	a0,a5
-    70002b2a:	00000097          	auipc	ra,0x0
-    70002b2e:	a48080e7          	jalr	-1464(ra) # 70002572 <input_q_pop>
-    70002b32:	87aa                	mv	a5,a0
-/embryos/chapter12/apps/thread.c:374 (discriminator 1)
-    70002b34:	c781                	beqz	a5,70002b3c <thread_get+0x20>
-/embryos/chapter12/apps/thread.c:375
+    70002b08:	fe440793          	addi	a5,s0,-28
+    70002b0c:	853e                	mv	a0,a5
+    70002b0e:	00000097          	auipc	ra,0x0
+    70002b12:	9e0080e7          	jalr	-1568(ra) # 700024ee <input_q_pop>
+    70002b16:	87aa                	mv	a5,a0
+/embryos/chapter12/apps/thread.c:337 (discriminator 1)
+    70002b18:	c781                	beqz	a5,70002b20 <thread_get+0x20>
+/embryos/chapter12/apps/thread.c:338
         return ev;
-    70002b36:	fe442783          	lw	a5,-28(s0)
-    70002b3a:	a0a9                	j	70002b84 <thread_get+0x68>
-/embryos/chapter12/apps/thread.c:378
+    70002b1a:	fe442783          	lw	a5,-28(s0)
+    70002b1e:	a091                	j	70002b62 <thread_get+0x62>
+/embryos/chapter12/apps/thread.c:341
     }
 
     thread_t *self = current_thread;
-    70002b3c:	00001797          	auipc	a5,0x1
-    70002b40:	a9478793          	addi	a5,a5,-1388 # 700035d0 <current_thread>
-    70002b44:	639c                	ld	a5,0(a5)
-    70002b46:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:379
+    70002b20:	00001797          	auipc	a5,0x1
+    70002b24:	a9078793          	addi	a5,a5,-1392 # 700035b0 <current_thread>
+    70002b28:	639c                	ld	a5,0(a5)
+    70002b2a:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:342
     self->state = THREAD_WAITING_INPUT;
-    70002b4a:	fe843783          	ld	a5,-24(s0)
-    70002b4e:	4709                	li	a4,2
-    70002b50:	d398                	sw	a4,32(a5)
-/embryos/chapter12/apps/thread.c:380
+    70002b2e:	fe843783          	ld	a5,-24(s0)
+    70002b32:	4709                	li	a4,2
+    70002b34:	d398                	sw	a4,32(a5)
+/embryos/chapter12/apps/thread.c:343
     self->next = waiting_input;
-    70002b52:	00001797          	auipc	a5,0x1
-    70002b56:	a7678793          	addi	a5,a5,-1418 # 700035c8 <waiting_input>
-    70002b5a:	6398                	ld	a4,0(a5)
-    70002b5c:	fe843783          	ld	a5,-24(s0)
-    70002b60:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:381
+    70002b36:	00001797          	auipc	a5,0x1
+    70002b3a:	a7278793          	addi	a5,a5,-1422 # 700035a8 <waiting_input>
+    70002b3e:	6398                	ld	a4,0(a5)
+    70002b40:	fe843783          	ld	a5,-24(s0)
+    70002b44:	ff98                	sd	a4,56(a5)
+/embryos/chapter12/apps/thread.c:344
     waiting_input = self;
-    70002b62:	00001797          	auipc	a5,0x1
-    70002b66:	a6678793          	addi	a5,a5,-1434 # 700035c8 <waiting_input>
-    70002b6a:	fe843703          	ld	a4,-24(s0)
-    70002b6e:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:383
+    70002b46:	00001797          	auipc	a5,0x1
+    70002b4a:	a6278793          	addi	a5,a5,-1438 # 700035a8 <waiting_input>
+    70002b4e:	fe843703          	ld	a4,-24(s0)
+    70002b52:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:346
 
     schedule();
-    70002b70:	00000097          	auipc	ra,0x0
-    70002b74:	b16080e7          	jalr	-1258(ra) # 70002686 <schedule>
-/embryos/chapter12/apps/thread.c:384
-    return current_thread->input_event;
-    70002b78:	00001797          	auipc	a5,0x1
-    70002b7c:	a5878793          	addi	a5,a5,-1448 # 700035d0 <current_thread>
-    70002b80:	639c                	ld	a5,0(a5)
-    70002b82:	4bfc                	lw	a5,84(a5)
-/embryos/chapter12/apps/thread.c:385
+    70002b54:	00000097          	auipc	ra,0x0
+    70002b58:	a82080e7          	jalr	-1406(ra) # 700025d6 <schedule>
+/embryos/chapter12/apps/thread.c:347
+    return self->input_event;
+    70002b5c:	fe843783          	ld	a5,-24(s0)
+    70002b60:	4bfc                	lw	a5,84(a5)
+/embryos/chapter12/apps/thread.c:348
 }
-    70002b84:	853e                	mv	a0,a5
-    70002b86:	60e2                	ld	ra,24(sp)
-    70002b88:	6442                	ld	s0,16(sp)
-    70002b8a:	6105                	addi	sp,sp,32
-    70002b8c:	8082                	ret
+    70002b62:	853e                	mv	a0,a5
+    70002b64:	60e2                	ld	ra,24(sp)
+    70002b66:	6442                	ld	s0,16(sp)
+    70002b68:	6105                	addi	sp,sp,32
+    70002b6a:	8082                	ret
 
-0000000070002b8e <thread_exit>:
+0000000070002b6c <thread_exit>:
 thread_exit():
-/embryos/chapter12/apps/thread.c:389
-
+/embryos/chapter12/apps/thread.c:351
 
 // Exit current thread
 void thread_exit(void) {
-    70002b8e:	1101                	addi	sp,sp,-32
-    70002b90:	ec06                	sd	ra,24(sp)
-    70002b92:	e822                	sd	s0,16(sp)
-    70002b94:	1000                	addi	s0,sp,32
-/embryos/chapter12/apps/thread.c:390
+    70002b6c:	1101                	addi	sp,sp,-32
+    70002b6e:	ec06                	sd	ra,24(sp)
+    70002b70:	e822                	sd	s0,16(sp)
+    70002b72:	1000                	addi	s0,sp,32
+/embryos/chapter12/apps/thread.c:352
     thread_t *prev = current_thread;
-    70002b96:	00001797          	auipc	a5,0x1
-    70002b9a:	a3a78793          	addi	a5,a5,-1478 # 700035d0 <current_thread>
-    70002b9e:	639c                	ld	a5,0(a5)
-    70002ba0:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:391
+    70002b74:	00001797          	auipc	a5,0x1
+    70002b78:	a3c78793          	addi	a5,a5,-1476 # 700035b0 <current_thread>
+    70002b7c:	639c                	ld	a5,0(a5)
+    70002b7e:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:353
     current_thread = NULL;
-    70002ba4:	00001797          	auipc	a5,0x1
-    70002ba8:	a2c78793          	addi	a5,a5,-1492 # 700035d0 <current_thread>
-    70002bac:	0007b023          	sd	zero,0(a5)
-/embryos/chapter12/apps/thread.c:393
-    
-    if (prev) {
-    70002bb0:	fe843783          	ld	a5,-24(s0)
-    70002bb4:	c785                	beqz	a5,70002bdc <thread_exit+0x4e>
-/embryos/chapter12/apps/thread.c:394
-        prev->state = THREAD_DEAD;
-    70002bb6:	fe843783          	ld	a5,-24(s0)
-    70002bba:	4711                	li	a4,4
-    70002bbc:	d398                	sw	a4,32(a5)
-/embryos/chapter12/apps/thread.c:395
-        prev->next = zombie_list;
-    70002bbe:	00001797          	auipc	a5,0x1
-    70002bc2:	a1a78793          	addi	a5,a5,-1510 # 700035d8 <zombie_list>
-    70002bc6:	6398                	ld	a4,0(a5)
-    70002bc8:	fe843783          	ld	a5,-24(s0)
-    70002bcc:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:396
-        zombie_list = prev;
-    70002bce:	00001797          	auipc	a5,0x1
-    70002bd2:	a0a78793          	addi	a5,a5,-1526 # 700035d8 <zombie_list>
-    70002bd6:	fe843703          	ld	a4,-24(s0)
-    70002bda:	e398                	sd	a4,0(a5)
-/embryos/chapter12/apps/thread.c:400
-    }
-    
-    // Schedule next thread (and never return)
-    schedule();
-    70002bdc:	00000097          	auipc	ra,0x0
-    70002be0:	aaa080e7          	jalr	-1366(ra) # 70002686 <schedule>
-/embryos/chapter12/apps/thread.c:403
-    
-    // Should never reach here
-    user_exit();
-    70002be4:	ffffd097          	auipc	ra,0xffffd
-    70002be8:	430080e7          	jalr	1072(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:404
-}
-    70002bec:	0001                	nop
-    70002bee:	60e2                	ld	ra,24(sp)
-    70002bf0:	6442                	ld	s0,16(sp)
-    70002bf2:	6105                	addi	sp,sp,32
-    70002bf4:	8082                	ret
+    70002b82:	00001797          	auipc	a5,0x1
+    70002b86:	a2e78793          	addi	a5,a5,-1490 # 700035b0 <current_thread>
+    70002b8a:	0007b023          	sd	zero,0(a5)
+/embryos/chapter12/apps/thread.c:355
 
-0000000070002bf6 <sema_create>:
+    if (prev) {
+    70002b8e:	fe843783          	ld	a5,-24(s0)
+    70002b92:	c785                	beqz	a5,70002bba <thread_exit+0x4e>
+/embryos/chapter12/apps/thread.c:356
+        prev->state = THREAD_DEAD;
+    70002b94:	fe843783          	ld	a5,-24(s0)
+    70002b98:	4711                	li	a4,4
+    70002b9a:	d398                	sw	a4,32(a5)
+/embryos/chapter12/apps/thread.c:357
+        prev->next = zombie_list;
+    70002b9c:	00001797          	auipc	a5,0x1
+    70002ba0:	a1c78793          	addi	a5,a5,-1508 # 700035b8 <zombie_list>
+    70002ba4:	6398                	ld	a4,0(a5)
+    70002ba6:	fe843783          	ld	a5,-24(s0)
+    70002baa:	ff98                	sd	a4,56(a5)
+/embryos/chapter12/apps/thread.c:358
+        zombie_list = prev;
+    70002bac:	00001797          	auipc	a5,0x1
+    70002bb0:	a0c78793          	addi	a5,a5,-1524 # 700035b8 <zombie_list>
+    70002bb4:	fe843703          	ld	a4,-24(s0)
+    70002bb8:	e398                	sd	a4,0(a5)
+/embryos/chapter12/apps/thread.c:361
+    }
+
+    schedule();
+    70002bba:	00000097          	auipc	ra,0x0
+    70002bbe:	a1c080e7          	jalr	-1508(ra) # 700025d6 <schedule>
+/embryos/chapter12/apps/thread.c:362
+    user_exit();
+    70002bc2:	ffffd097          	auipc	ra,0xffffd
+    70002bc6:	452080e7          	jalr	1106(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/thread.c:363
+}
+    70002bca:	0001                	nop
+    70002bcc:	60e2                	ld	ra,24(sp)
+    70002bce:	6442                	ld	s0,16(sp)
+    70002bd0:	6105                	addi	sp,sp,32
+    70002bd2:	8082                	ret
+
+0000000070002bd4 <sema_create>:
 sema_create():
-/embryos/chapter12/apps/thread.c:407
+/embryos/chapter12/apps/thread.c:366
 
 // Create a semaphore
 struct sema *sema_create(unsigned int count) {
-    70002bf6:	7179                	addi	sp,sp,-48
-    70002bf8:	f406                	sd	ra,40(sp)
-    70002bfa:	f022                	sd	s0,32(sp)
-    70002bfc:	1800                	addi	s0,sp,48
-    70002bfe:	87aa                	mv	a5,a0
-    70002c00:	fcf42e23          	sw	a5,-36(s0)
-/embryos/chapter12/apps/thread.c:408
+    70002bd4:	7179                	addi	sp,sp,-48
+    70002bd6:	f406                	sd	ra,40(sp)
+    70002bd8:	f022                	sd	s0,32(sp)
+    70002bda:	1800                	addi	s0,sp,48
+    70002bdc:	87aa                	mv	a5,a0
+    70002bde:	fcf42e23          	sw	a5,-36(s0)
+/embryos/chapter12/apps/thread.c:367
     struct sema *s = (struct sema *)malloc(sizeof(struct sema));
-    70002c04:	4541                	li	a0,16
-    70002c06:	fffff097          	auipc	ra,0xfffff
-    70002c0a:	3dc080e7          	jalr	988(ra) # 70001fe2 <malloc>
-    70002c0e:	fea43423          	sd	a0,-24(s0)
-/embryos/chapter12/apps/thread.c:409
+    70002be2:	4541                	li	a0,16
+    70002be4:	fffff097          	auipc	ra,0xfffff
+    70002be8:	3fe080e7          	jalr	1022(ra) # 70001fe2 <malloc>
+    70002bec:	fea43423          	sd	a0,-24(s0)
+/embryos/chapter12/apps/thread.c:368
     if (!s) user_exit();
-    70002c12:	fe843783          	ld	a5,-24(s0)
-    70002c16:	e789                	bnez	a5,70002c20 <sema_create+0x2a>
-/embryos/chapter12/apps/thread.c:409 (discriminator 1)
-    70002c18:	ffffd097          	auipc	ra,0xffffd
-    70002c1c:	3fc080e7          	jalr	1020(ra) # 70000014 <user_exit>
-/embryos/chapter12/apps/thread.c:411
-    
+    70002bf0:	fe843783          	ld	a5,-24(s0)
+    70002bf4:	e789                	bnez	a5,70002bfe <sema_create+0x2a>
+/embryos/chapter12/apps/thread.c:368 (discriminator 1)
+    70002bf6:	ffffd097          	auipc	ra,0xffffd
+    70002bfa:	41e080e7          	jalr	1054(ra) # 70000014 <user_exit>
+/embryos/chapter12/apps/thread.c:370
+
     s->count = count;
-    70002c20:	fe843783          	ld	a5,-24(s0)
-    70002c24:	fdc42703          	lw	a4,-36(s0)
-    70002c28:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:412
+    70002bfe:	fe843783          	ld	a5,-24(s0)
+    70002c02:	fdc42703          	lw	a4,-36(s0)
+    70002c06:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:371
     s->waiting_list = NULL;
-    70002c2a:	fe843783          	ld	a5,-24(s0)
-    70002c2e:	0007b423          	sd	zero,8(a5)
-/embryos/chapter12/apps/thread.c:414
-    
+    70002c08:	fe843783          	ld	a5,-24(s0)
+    70002c0c:	0007b423          	sd	zero,8(a5)
+/embryos/chapter12/apps/thread.c:372
     return s;
-    70002c32:	fe843783          	ld	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:415
+    70002c10:	fe843783          	ld	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:373
 }
-    70002c36:	853e                	mv	a0,a5
-    70002c38:	70a2                	ld	ra,40(sp)
-    70002c3a:	7402                	ld	s0,32(sp)
-    70002c3c:	6145                	addi	sp,sp,48
-    70002c3e:	8082                	ret
+    70002c14:	853e                	mv	a0,a5
+    70002c16:	70a2                	ld	ra,40(sp)
+    70002c18:	7402                	ld	s0,32(sp)
+    70002c1a:	6145                	addi	sp,sp,48
+    70002c1c:	8082                	ret
 
-0000000070002c40 <sema_inc>:
+0000000070002c1e <sema_inc>:
 sema_inc():
-/embryos/chapter12/apps/thread.c:418
+/embryos/chapter12/apps/thread.c:376
 
-// Increment semaphore (V operation) - wake one waiter
+// Increment semaphore
 void sema_inc(struct sema *sema) {
-    70002c40:	7179                	addi	sp,sp,-48
-    70002c42:	f406                	sd	ra,40(sp)
-    70002c44:	f022                	sd	s0,32(sp)
-    70002c46:	1800                	addi	s0,sp,48
-    70002c48:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:419
+    70002c1e:	7179                	addi	sp,sp,-48
+    70002c20:	f406                	sd	ra,40(sp)
+    70002c22:	f022                	sd	s0,32(sp)
+    70002c24:	1800                	addi	s0,sp,48
+    70002c26:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/thread.c:377
     if (!sema) return;
-    70002c4c:	fd843783          	ld	a5,-40(s0)
-    70002c50:	cba9                	beqz	a5,70002ca2 <sema_inc+0x62>
-/embryos/chapter12/apps/thread.c:421
-    
+    70002c2a:	fd843783          	ld	a5,-40(s0)
+    70002c2e:	cba9                	beqz	a5,70002c80 <sema_inc+0x62>
+/embryos/chapter12/apps/thread.c:379
+
     if (sema->waiting_list) {
-    70002c52:	fd843783          	ld	a5,-40(s0)
-    70002c56:	679c                	ld	a5,8(a5)
-    70002c58:	cb9d                	beqz	a5,70002c8e <sema_inc+0x4e>
-/embryos/chapter12/apps/thread.c:423
-        // Wake up one waiting thread
+    70002c30:	fd843783          	ld	a5,-40(s0)
+    70002c34:	679c                	ld	a5,8(a5)
+    70002c36:	cb9d                	beqz	a5,70002c6c <sema_inc+0x4e>
+/embryos/chapter12/apps/thread.c:380
         thread_t *waiter = sema->waiting_list;
-    70002c5a:	fd843783          	ld	a5,-40(s0)
-    70002c5e:	679c                	ld	a5,8(a5)
-    70002c60:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:424
+    70002c38:	fd843783          	ld	a5,-40(s0)
+    70002c3c:	679c                	ld	a5,8(a5)
+    70002c3e:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:381
         sema->waiting_list = waiter->next;
-    70002c64:	fe843783          	ld	a5,-24(s0)
-    70002c68:	7f98                	ld	a4,56(a5)
-    70002c6a:	fd843783          	ld	a5,-40(s0)
-    70002c6e:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/thread.c:425
+    70002c42:	fe843783          	ld	a5,-24(s0)
+    70002c46:	7f98                	ld	a4,56(a5)
+    70002c48:	fd843783          	ld	a5,-40(s0)
+    70002c4c:	e798                	sd	a4,8(a5)
+/embryos/chapter12/apps/thread.c:382
         waiter->next = NULL;
-    70002c70:	fe843783          	ld	a5,-24(s0)
-    70002c74:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:426
+    70002c4e:	fe843783          	ld	a5,-24(s0)
+    70002c52:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:383
         waiter->waiting_sema = NULL;
-    70002c78:	fe843783          	ld	a5,-24(s0)
-    70002c7c:	0207b823          	sd	zero,48(a5)
-/embryos/chapter12/apps/thread.c:427
+    70002c56:	fe843783          	ld	a5,-24(s0)
+    70002c5a:	0207b823          	sd	zero,48(a5)
+/embryos/chapter12/apps/thread.c:384
         enqueue_runnable(waiter);
-    70002c80:	fe843503          	ld	a0,-24(s0)
-    70002c84:	fffff097          	auipc	ra,0xfffff
-    70002c88:	57c080e7          	jalr	1404(ra) # 70002200 <enqueue_runnable>
-    70002c8c:	a821                	j	70002ca4 <sema_inc+0x64>
-/embryos/chapter12/apps/thread.c:430
+    70002c5e:	fe843503          	ld	a0,-24(s0)
+    70002c62:	fffff097          	auipc	ra,0xfffff
+    70002c66:	59e080e7          	jalr	1438(ra) # 70002200 <enqueue_runnable>
+    70002c6a:	a821                	j	70002c82 <sema_inc+0x64>
+/embryos/chapter12/apps/thread.c:386
     } else {
-        // No waiters, increment count
         sema->count++;
-    70002c8e:	fd843783          	ld	a5,-40(s0)
-    70002c92:	439c                	lw	a5,0(a5)
-    70002c94:	2785                	addiw	a5,a5,1
-    70002c96:	0007871b          	sext.w	a4,a5
-    70002c9a:	fd843783          	ld	a5,-40(s0)
-    70002c9e:	c398                	sw	a4,0(a5)
-    70002ca0:	a011                	j	70002ca4 <sema_inc+0x64>
-/embryos/chapter12/apps/thread.c:419
+    70002c6c:	fd843783          	ld	a5,-40(s0)
+    70002c70:	439c                	lw	a5,0(a5)
+    70002c72:	2785                	addiw	a5,a5,1
+    70002c74:	0007871b          	sext.w	a4,a5
+    70002c78:	fd843783          	ld	a5,-40(s0)
+    70002c7c:	c398                	sw	a4,0(a5)
+    70002c7e:	a011                	j	70002c82 <sema_inc+0x64>
+/embryos/chapter12/apps/thread.c:377
     if (!sema) return;
-    70002ca2:	0001                	nop
-/embryos/chapter12/apps/thread.c:432
+    70002c80:	0001                	nop
+/embryos/chapter12/apps/thread.c:388
     }
 }
-    70002ca4:	70a2                	ld	ra,40(sp)
-    70002ca6:	7402                	ld	s0,32(sp)
-    70002ca8:	6145                	addi	sp,sp,48
-    70002caa:	8082                	ret
+    70002c82:	70a2                	ld	ra,40(sp)
+    70002c84:	7402                	ld	s0,32(sp)
+    70002c86:	6145                	addi	sp,sp,48
+    70002c88:	8082                	ret
 
-0000000070002cac <sema_dec>:
+0000000070002c8a <sema_dec>:
 sema_dec():
-/embryos/chapter12/apps/thread.c:435
+/embryos/chapter12/apps/thread.c:391
 
-// Decrement semaphore (P operation) - block if count is 0
+// Decrement semaphore
 void sema_dec(struct sema *sema) {
-    70002cac:	7179                	addi	sp,sp,-48
-    70002cae:	f406                	sd	ra,40(sp)
-    70002cb0:	f022                	sd	s0,32(sp)
-    70002cb2:	1800                	addi	s0,sp,48
-    70002cb4:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:436
+    70002c8a:	7179                	addi	sp,sp,-48
+    70002c8c:	f406                	sd	ra,40(sp)
+    70002c8e:	f022                	sd	s0,32(sp)
+    70002c90:	1800                	addi	s0,sp,48
+    70002c92:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/thread.c:392
     if (!sema) return;
-    70002cb8:	fd843783          	ld	a5,-40(s0)
-    70002cbc:	c3b5                	beqz	a5,70002d20 <sema_dec+0x74>
-/embryos/chapter12/apps/thread.c:438
-    
+    70002c96:	fd843783          	ld	a5,-40(s0)
+    70002c9a:	c3b5                	beqz	a5,70002cfe <sema_dec+0x74>
+/embryos/chapter12/apps/thread.c:394
+
     if (sema->count > 0) {
-    70002cbe:	fd843783          	ld	a5,-40(s0)
-    70002cc2:	439c                	lw	a5,0(a5)
-    70002cc4:	cb99                	beqz	a5,70002cda <sema_dec+0x2e>
-/embryos/chapter12/apps/thread.c:439
+    70002c9c:	fd843783          	ld	a5,-40(s0)
+    70002ca0:	439c                	lw	a5,0(a5)
+    70002ca2:	cb99                	beqz	a5,70002cb8 <sema_dec+0x2e>
+/embryos/chapter12/apps/thread.c:395
         sema->count--;
-    70002cc6:	fd843783          	ld	a5,-40(s0)
-    70002cca:	439c                	lw	a5,0(a5)
-    70002ccc:	37fd                	addiw	a5,a5,-1
-    70002cce:	0007871b          	sext.w	a4,a5
-    70002cd2:	fd843783          	ld	a5,-40(s0)
-    70002cd6:	c398                	sw	a4,0(a5)
-/embryos/chapter12/apps/thread.c:440
+    70002ca4:	fd843783          	ld	a5,-40(s0)
+    70002ca8:	439c                	lw	a5,0(a5)
+    70002caa:	37fd                	addiw	a5,a5,-1
+    70002cac:	0007871b          	sext.w	a4,a5
+    70002cb0:	fd843783          	ld	a5,-40(s0)
+    70002cb4:	c398                	sw	a4,0(a5)
+/embryos/chapter12/apps/thread.c:396
         return;
-    70002cd8:	a0a9                	j	70002d22 <sema_dec+0x76>
-/embryos/chapter12/apps/thread.c:444
+    70002cb6:	a0a9                	j	70002d00 <sema_dec+0x76>
+/embryos/chapter12/apps/thread.c:399
     }
-    
-    // Block current thread waiting on semaphore
+
     thread_t *prev = current_thread;
-    70002cda:	00001797          	auipc	a5,0x1
-    70002cde:	8f678793          	addi	a5,a5,-1802 # 700035d0 <current_thread>
-    70002ce2:	639c                	ld	a5,0(a5)
-    70002ce4:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:447
-
-    
+    70002cb8:	00001797          	auipc	a5,0x1
+    70002cbc:	8f878793          	addi	a5,a5,-1800 # 700035b0 <current_thread>
+    70002cc0:	639c                	ld	a5,0(a5)
+    70002cc2:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:400
     if (prev) {
-    70002ce8:	fe843783          	ld	a5,-24(s0)
-    70002cec:	c78d                	beqz	a5,70002d16 <sema_dec+0x6a>
-/embryos/chapter12/apps/thread.c:448
+    70002cc6:	fe843783          	ld	a5,-24(s0)
+    70002cca:	c78d                	beqz	a5,70002cf4 <sema_dec+0x6a>
+/embryos/chapter12/apps/thread.c:401
         prev->state = THREAD_WAITING_SEMA;
-    70002cee:	fe843783          	ld	a5,-24(s0)
-    70002cf2:	470d                	li	a4,3
-    70002cf4:	d398                	sw	a4,32(a5)
-/embryos/chapter12/apps/thread.c:449
+    70002ccc:	fe843783          	ld	a5,-24(s0)
+    70002cd0:	470d                	li	a4,3
+    70002cd2:	d398                	sw	a4,32(a5)
+/embryos/chapter12/apps/thread.c:402
         prev->waiting_sema = sema;
-    70002cf6:	fe843783          	ld	a5,-24(s0)
-    70002cfa:	fd843703          	ld	a4,-40(s0)
-    70002cfe:	fb98                	sd	a4,48(a5)
-/embryos/chapter12/apps/thread.c:452
-        
-        // Add to semaphore's waiting list
+    70002cd4:	fe843783          	ld	a5,-24(s0)
+    70002cd8:	fd843703          	ld	a4,-40(s0)
+    70002cdc:	fb98                	sd	a4,48(a5)
+/embryos/chapter12/apps/thread.c:403
         prev->next = sema->waiting_list;
-    70002d00:	fd843783          	ld	a5,-40(s0)
-    70002d04:	6798                	ld	a4,8(a5)
-    70002d06:	fe843783          	ld	a5,-24(s0)
-    70002d0a:	ff98                	sd	a4,56(a5)
-/embryos/chapter12/apps/thread.c:453
+    70002cde:	fd843783          	ld	a5,-40(s0)
+    70002ce2:	6798                	ld	a4,8(a5)
+    70002ce4:	fe843783          	ld	a5,-24(s0)
+    70002ce8:	ff98                	sd	a4,56(a5)
+/embryos/chapter12/apps/thread.c:404
         sema->waiting_list = prev;
-    70002d0c:	fd843783          	ld	a5,-40(s0)
-    70002d10:	fe843703          	ld	a4,-24(s0)
-    70002d14:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/thread.c:456
+    70002cea:	fd843783          	ld	a5,-40(s0)
+    70002cee:	fe843703          	ld	a4,-24(s0)
+    70002cf2:	e798                	sd	a4,8(a5)
+/embryos/chapter12/apps/thread.c:407
     }
-    
+
     schedule();
-    70002d16:	00000097          	auipc	ra,0x0
-    70002d1a:	970080e7          	jalr	-1680(ra) # 70002686 <schedule>
-    70002d1e:	a011                	j	70002d22 <sema_dec+0x76>
-/embryos/chapter12/apps/thread.c:436
+    70002cf4:	00000097          	auipc	ra,0x0
+    70002cf8:	8e2080e7          	jalr	-1822(ra) # 700025d6 <schedule>
+    70002cfc:	a011                	j	70002d00 <sema_dec+0x76>
+/embryos/chapter12/apps/thread.c:392
     if (!sema) return;
-    70002d20:	0001                	nop
-/embryos/chapter12/apps/thread.c:457
+    70002cfe:	0001                	nop
+/embryos/chapter12/apps/thread.c:408
 }
-    70002d22:	70a2                	ld	ra,40(sp)
-    70002d24:	7402                	ld	s0,32(sp)
-    70002d26:	6145                	addi	sp,sp,48
-    70002d28:	8082                	ret
+    70002d00:	70a2                	ld	ra,40(sp)
+    70002d02:	7402                	ld	s0,32(sp)
+    70002d04:	6145                	addi	sp,sp,48
+    70002d06:	8082                	ret
 
-0000000070002d2a <sema_release>:
+0000000070002d08 <sema_release>:
 sema_release():
-/embryos/chapter12/apps/thread.c:460
+/embryos/chapter12/apps/thread.c:411
 
-// Release semaphore (free resources)
+// Release semaphore
 void sema_release(struct sema *sema) {
-    70002d2a:	7179                	addi	sp,sp,-48
-    70002d2c:	f406                	sd	ra,40(sp)
-    70002d2e:	f022                	sd	s0,32(sp)
-    70002d30:	1800                	addi	s0,sp,48
-    70002d32:	fca43c23          	sd	a0,-40(s0)
-/embryos/chapter12/apps/thread.c:461
+    70002d08:	7179                	addi	sp,sp,-48
+    70002d0a:	f406                	sd	ra,40(sp)
+    70002d0c:	f022                	sd	s0,32(sp)
+    70002d0e:	1800                	addi	s0,sp,48
+    70002d10:	fca43c23          	sd	a0,-40(s0)
+/embryos/chapter12/apps/thread.c:412
     if (!sema) return;
-    70002d36:	fd843783          	ld	a5,-40(s0)
-    70002d3a:	c7b1                	beqz	a5,70002d86 <sema_release+0x5c>
-/embryos/chapter12/apps/thread.c:464
-    
-    // Wake all waiting threads
-    while (sema->waiting_list) {
-    70002d3c:	a815                	j	70002d70 <sema_release+0x46>
-/embryos/chapter12/apps/thread.c:465
-        thread_t *waiter = sema->waiting_list;
-    70002d3e:	fd843783          	ld	a5,-40(s0)
-    70002d42:	679c                	ld	a5,8(a5)
-    70002d44:	fef43423          	sd	a5,-24(s0)
-/embryos/chapter12/apps/thread.c:466
-        sema->waiting_list = waiter->next;
-    70002d48:	fe843783          	ld	a5,-24(s0)
-    70002d4c:	7f98                	ld	a4,56(a5)
-    70002d4e:	fd843783          	ld	a5,-40(s0)
-    70002d52:	e798                	sd	a4,8(a5)
-/embryos/chapter12/apps/thread.c:467
-        waiter->next = NULL;
-    70002d54:	fe843783          	ld	a5,-24(s0)
-    70002d58:	0207bc23          	sd	zero,56(a5)
-/embryos/chapter12/apps/thread.c:468
-        waiter->waiting_sema = NULL;
-    70002d5c:	fe843783          	ld	a5,-24(s0)
-    70002d60:	0207b823          	sd	zero,48(a5)
-/embryos/chapter12/apps/thread.c:469
-        enqueue_runnable(waiter);
-    70002d64:	fe843503          	ld	a0,-24(s0)
-    70002d68:	fffff097          	auipc	ra,0xfffff
-    70002d6c:	498080e7          	jalr	1176(ra) # 70002200 <enqueue_runnable>
-/embryos/chapter12/apps/thread.c:464
-    while (sema->waiting_list) {
-    70002d70:	fd843783          	ld	a5,-40(s0)
-    70002d74:	679c                	ld	a5,8(a5)
-    70002d76:	f7e1                	bnez	a5,70002d3e <sema_release+0x14>
-/embryos/chapter12/apps/thread.c:472
-    }
-    
-    free(sema);
-    70002d78:	fd843503          	ld	a0,-40(s0)
-    70002d7c:	fffff097          	auipc	ra,0xfffff
-    70002d80:	43e080e7          	jalr	1086(ra) # 700021ba <free>
-    70002d84:	a011                	j	70002d88 <sema_release+0x5e>
-/embryos/chapter12/apps/thread.c:461
-    if (!sema) return;
-    70002d86:	0001                	nop
-/embryos/chapter12/apps/thread.c:473
-}
-    70002d88:	70a2                	ld	ra,40(sp)
-    70002d8a:	7402                	ld	s0,32(sp)
-    70002d8c:	6145                	addi	sp,sp,48
-    70002d8e:	8082                	ret
+    70002d14:	fd843783          	ld	a5,-40(s0)
+    70002d18:	c7b1                	beqz	a5,70002d64 <sema_release+0x5c>
+/embryos/chapter12/apps/thread.c:414
 
-0000000070002d90 <user_delay>:
+    while (sema->waiting_list) {
+    70002d1a:	a815                	j	70002d4e <sema_release+0x46>
+/embryos/chapter12/apps/thread.c:415
+        thread_t *waiter = sema->waiting_list;
+    70002d1c:	fd843783          	ld	a5,-40(s0)
+    70002d20:	679c                	ld	a5,8(a5)
+    70002d22:	fef43423          	sd	a5,-24(s0)
+/embryos/chapter12/apps/thread.c:416
+        sema->waiting_list = waiter->next;
+    70002d26:	fe843783          	ld	a5,-24(s0)
+    70002d2a:	7f98                	ld	a4,56(a5)
+    70002d2c:	fd843783          	ld	a5,-40(s0)
+    70002d30:	e798                	sd	a4,8(a5)
+/embryos/chapter12/apps/thread.c:417
+        waiter->next = NULL;
+    70002d32:	fe843783          	ld	a5,-24(s0)
+    70002d36:	0207bc23          	sd	zero,56(a5)
+/embryos/chapter12/apps/thread.c:418
+        waiter->waiting_sema = NULL;
+    70002d3a:	fe843783          	ld	a5,-24(s0)
+    70002d3e:	0207b823          	sd	zero,48(a5)
+/embryos/chapter12/apps/thread.c:419
+        enqueue_runnable(waiter);
+    70002d42:	fe843503          	ld	a0,-24(s0)
+    70002d46:	fffff097          	auipc	ra,0xfffff
+    70002d4a:	4ba080e7          	jalr	1210(ra) # 70002200 <enqueue_runnable>
+/embryos/chapter12/apps/thread.c:414
+    while (sema->waiting_list) {
+    70002d4e:	fd843783          	ld	a5,-40(s0)
+    70002d52:	679c                	ld	a5,8(a5)
+    70002d54:	f7e1                	bnez	a5,70002d1c <sema_release+0x14>
+/embryos/chapter12/apps/thread.c:422
+    }
+
+    free(sema);
+    70002d56:	fd843503          	ld	a0,-40(s0)
+    70002d5a:	fffff097          	auipc	ra,0xfffff
+    70002d5e:	460080e7          	jalr	1120(ra) # 700021ba <free>
+    70002d62:	a011                	j	70002d66 <sema_release+0x5e>
+/embryos/chapter12/apps/thread.c:412
+    if (!sema) return;
+    70002d64:	0001                	nop
+/embryos/chapter12/apps/thread.c:423
+    70002d66:	70a2                	ld	ra,40(sp)
+    70002d68:	7402                	ld	s0,32(sp)
+    70002d6a:	6145                	addi	sp,sp,48
+    70002d6c:	8082                	ret
+
+0000000070002d6e <user_delay>:
 user_delay():
 /embryos/chapter12/apps/syslib.h:19
 extern int user_size(int file);
@@ -6308,48 +6228,48 @@ extern uint64_t user_gettime(void);
 extern void user_sleep(uint64_t deadline);
 
 static inline void user_delay(int delay_ms) {  // pseudo system call
-    70002d90:	7179                	addi	sp,sp,-48
-    70002d92:	f406                	sd	ra,40(sp)
-    70002d94:	f022                	sd	s0,32(sp)
-    70002d96:	1800                	addi	s0,sp,48
-    70002d98:	87aa                	mv	a5,a0
-    70002d9a:	fcf42e23          	sw	a5,-36(s0)
+    70002d6e:	7179                	addi	sp,sp,-48
+    70002d70:	f406                	sd	ra,40(sp)
+    70002d72:	f022                	sd	s0,32(sp)
+    70002d74:	1800                	addi	s0,sp,48
+    70002d76:	87aa                	mv	a5,a0
+    70002d78:	fcf42e23          	sw	a5,-36(s0)
 /embryos/chapter12/apps/syslib.h:20
     if (delay_ms <=0) return;  // no need to sleep
-    70002d9e:	fdc42783          	lw	a5,-36(s0)
-    70002da2:	2781                	sext.w	a5,a5
-    70002da4:	02f05c63          	blez	a5,70002ddc <user_delay+0x4c>
+    70002d7c:	fdc42783          	lw	a5,-36(s0)
+    70002d80:	2781                	sext.w	a5,a5
+    70002d82:	02f05c63          	blez	a5,70002dba <user_delay+0x4c>
 /embryos/chapter12/apps/syslib.h:21
     uint64_t now = user_gettime(); // nanoseconds since boot
-    70002da8:	ffffd097          	auipc	ra,0xffffd
-    70002dac:	2bc080e7          	jalr	700(ra) # 70000064 <user_gettime>
-    70002db0:	fea43423          	sd	a0,-24(s0)
+    70002d86:	ffffd097          	auipc	ra,0xffffd
+    70002d8a:	2de080e7          	jalr	734(ra) # 70000064 <user_gettime>
+    70002d8e:	fea43423          	sd	a0,-24(s0)
 /embryos/chapter12/apps/syslib.h:22
     uint64_t deadline = now + (uint64_t) delay_ms * 1000000ULL; // convert ms to ns
-    70002db4:	fdc42703          	lw	a4,-36(s0)
-    70002db8:	000f47b7          	lui	a5,0xf4
-    70002dbc:	24078793          	addi	a5,a5,576 # f4240 <text_file_end+0xf0149>
-    70002dc0:	02f707b3          	mul	a5,a4,a5
-    70002dc4:	fe843703          	ld	a4,-24(s0)
-    70002dc8:	97ba                	add	a5,a5,a4
-    70002dca:	fef43023          	sd	a5,-32(s0)
+    70002d92:	fdc42703          	lw	a4,-36(s0)
+    70002d96:	000f47b7          	lui	a5,0xf4
+    70002d9a:	24078793          	addi	a5,a5,576 # f4240 <text_file_end+0xf0169>
+    70002d9e:	02f707b3          	mul	a5,a4,a5
+    70002da2:	fe843703          	ld	a4,-24(s0)
+    70002da6:	97ba                	add	a5,a5,a4
+    70002da8:	fef43023          	sd	a5,-32(s0)
 /embryos/chapter12/apps/syslib.h:23
     user_sleep(deadline);
-    70002dce:	fe043503          	ld	a0,-32(s0)
-    70002dd2:	ffffd097          	auipc	ra,0xffffd
-    70002dd6:	29a080e7          	jalr	666(ra) # 7000006c <user_sleep>
-    70002dda:	a011                	j	70002dde <user_delay+0x4e>
+    70002dac:	fe043503          	ld	a0,-32(s0)
+    70002db0:	ffffd097          	auipc	ra,0xffffd
+    70002db4:	2bc080e7          	jalr	700(ra) # 7000006c <user_sleep>
+    70002db8:	a011                	j	70002dbc <user_delay+0x4e>
 /embryos/chapter12/apps/syslib.h:20
     if (delay_ms <=0) return;  // no need to sleep
-    70002ddc:	0001                	nop
+    70002dba:	0001                	nop
 /embryos/chapter12/apps/syslib.h:24
 }
-    70002dde:	70a2                	ld	ra,40(sp)
-    70002de0:	7402                	ld	s0,32(sp)
-    70002de2:	6145                	addi	sp,sp,48
-    70002de4:	8082                	ret
+    70002dbc:	70a2                	ld	ra,40(sp)
+    70002dbe:	7402                	ld	s0,32(sp)
+    70002dc0:	6145                	addi	sp,sp,48
+    70002dc2:	8082                	ret
 
-0000000070002de6 <clear>:
+0000000070002dc4 <clear>:
 clear():
 /embryos/chapter12/apps/splash.c:6
 #include "syslib.h"
@@ -6358,366 +6278,367 @@ clear():
 #define HEIGHT  11
 
 static void clear(void) {
-    70002de6:	1101                	addi	sp,sp,-32
-    70002de8:	ec06                	sd	ra,24(sp)
-    70002dea:	e822                	sd	s0,16(sp)
-    70002dec:	1000                	addi	s0,sp,32
+    70002dc4:	1101                	addi	sp,sp,-32
+    70002dc6:	ec06                	sd	ra,24(sp)
+    70002dc8:	e822                	sd	s0,16(sp)
+    70002dca:	1000                	addi	s0,sp,32
 /embryos/chapter12/apps/splash.c:7
     for (int r = 0; r < HEIGHT; r++)
-    70002dee:	fe042623          	sw	zero,-20(s0)
-    70002df2:	a091                	j	70002e36 <clear+0x50>
+    70002dcc:	fe042623          	sw	zero,-20(s0)
+    70002dd0:	a091                	j	70002e14 <clear+0x50>
 /embryos/chapter12/apps/splash.c:8
         for (int c = 0; c < WIDTH; c++)
-    70002df4:	fe042423          	sw	zero,-24(s0)
-    70002df8:	a015                	j	70002e1c <clear+0x36>
+    70002dd2:	fe042423          	sw	zero,-24(s0)
+    70002dd6:	a015                	j	70002dfa <clear+0x36>
 /embryos/chapter12/apps/splash.c:9
             user_put(c, r, CELL(' ', ANSI_WHITE, ANSI_BLACK));
-    70002dfa:	fec42703          	lw	a4,-20(s0)
-    70002dfe:	fe842783          	lw	a5,-24(s0)
-    70002e02:	72000613          	li	a2,1824
-    70002e06:	85ba                	mv	a1,a4
-    70002e08:	853e                	mv	a0,a5
-    70002e0a:	ffffd097          	auipc	ra,0xffffd
-    70002e0e:	222080e7          	jalr	546(ra) # 7000002c <user_put>
+    70002dd8:	fec42703          	lw	a4,-20(s0)
+    70002ddc:	fe842783          	lw	a5,-24(s0)
+    70002de0:	72000613          	li	a2,1824
+    70002de4:	85ba                	mv	a1,a4
+    70002de6:	853e                	mv	a0,a5
+    70002de8:	ffffd097          	auipc	ra,0xffffd
+    70002dec:	244080e7          	jalr	580(ra) # 7000002c <user_put>
 /embryos/chapter12/apps/splash.c:8 (discriminator 3)
         for (int c = 0; c < WIDTH; c++)
-    70002e12:	fe842783          	lw	a5,-24(s0)
-    70002e16:	2785                	addiw	a5,a5,1
-    70002e18:	fef42423          	sw	a5,-24(s0)
+    70002df0:	fe842783          	lw	a5,-24(s0)
+    70002df4:	2785                	addiw	a5,a5,1
+    70002df6:	fef42423          	sw	a5,-24(s0)
 /embryos/chapter12/apps/splash.c:8 (discriminator 1)
-    70002e1c:	fe842783          	lw	a5,-24(s0)
-    70002e20:	0007871b          	sext.w	a4,a5
-    70002e24:	02600793          	li	a5,38
-    70002e28:	fce7d9e3          	bge	a5,a4,70002dfa <clear+0x14>
+    70002dfa:	fe842783          	lw	a5,-24(s0)
+    70002dfe:	0007871b          	sext.w	a4,a5
+    70002e02:	02600793          	li	a5,38
+    70002e06:	fce7d9e3          	bge	a5,a4,70002dd8 <clear+0x14>
 /embryos/chapter12/apps/splash.c:7 (discriminator 2)
     for (int r = 0; r < HEIGHT; r++)
-    70002e2c:	fec42783          	lw	a5,-20(s0)
-    70002e30:	2785                	addiw	a5,a5,1
-    70002e32:	fef42623          	sw	a5,-20(s0)
+    70002e0a:	fec42783          	lw	a5,-20(s0)
+    70002e0e:	2785                	addiw	a5,a5,1
+    70002e10:	fef42623          	sw	a5,-20(s0)
 /embryos/chapter12/apps/splash.c:7 (discriminator 1)
-    70002e36:	fec42783          	lw	a5,-20(s0)
-    70002e3a:	0007871b          	sext.w	a4,a5
-    70002e3e:	47a9                	li	a5,10
-    70002e40:	fae7dae3          	bge	a5,a4,70002df4 <clear+0xe>
+    70002e14:	fec42783          	lw	a5,-20(s0)
+    70002e18:	0007871b          	sext.w	a4,a5
+    70002e1c:	47a9                	li	a5,10
+    70002e1e:	fae7dae3          	bge	a5,a4,70002dd2 <clear+0xe>
 /embryos/chapter12/apps/splash.c:10
 }
-    70002e44:	0001                	nop
-    70002e46:	0001                	nop
-    70002e48:	60e2                	ld	ra,24(sp)
-    70002e4a:	6442                	ld	s0,16(sp)
-    70002e4c:	6105                	addi	sp,sp,32
-    70002e4e:	8082                	ret
+    70002e22:	0001                	nop
+    70002e24:	0001                	nop
+    70002e26:	60e2                	ld	ra,24(sp)
+    70002e28:	6442                	ld	s0,16(sp)
+    70002e2a:	6105                	addi	sp,sp,32
+    70002e2c:	8082                	ret
 
-0000000070002e50 <put_centered>:
+0000000070002e2e <put_centered>:
 put_centered():
 /embryos/chapter12/apps/splash.c:12
 
 static void put_centered(const char *s, int row) {
-    70002e50:	7179                	addi	sp,sp,-48
-    70002e52:	f406                	sd	ra,40(sp)
-    70002e54:	f022                	sd	s0,32(sp)
-    70002e56:	1800                	addi	s0,sp,48
-    70002e58:	fca43c23          	sd	a0,-40(s0)
-    70002e5c:	87ae                	mv	a5,a1
-    70002e5e:	fcf42a23          	sw	a5,-44(s0)
+    70002e2e:	7179                	addi	sp,sp,-48
+    70002e30:	f406                	sd	ra,40(sp)
+    70002e32:	f022                	sd	s0,32(sp)
+    70002e34:	1800                	addi	s0,sp,48
+    70002e36:	fca43c23          	sd	a0,-40(s0)
+    70002e3a:	87ae                	mv	a5,a1
+    70002e3c:	fcf42a23          	sw	a5,-44(s0)
 /embryos/chapter12/apps/splash.c:13
     int len = 0; while (s[len]) len++;
-    70002e62:	fe042623          	sw	zero,-20(s0)
-    70002e66:	a031                	j	70002e72 <put_centered+0x22>
+    70002e40:	fe042623          	sw	zero,-20(s0)
+    70002e44:	a031                	j	70002e50 <put_centered+0x22>
 /embryos/chapter12/apps/splash.c:13 (discriminator 3)
-    70002e68:	fec42783          	lw	a5,-20(s0)
-    70002e6c:	2785                	addiw	a5,a5,1
-    70002e6e:	fef42623          	sw	a5,-20(s0)
+    70002e46:	fec42783          	lw	a5,-20(s0)
+    70002e4a:	2785                	addiw	a5,a5,1
+    70002e4c:	fef42623          	sw	a5,-20(s0)
 /embryos/chapter12/apps/splash.c:13 (discriminator 1)
-    70002e72:	fec42783          	lw	a5,-20(s0)
-    70002e76:	fd843703          	ld	a4,-40(s0)
-    70002e7a:	97ba                	add	a5,a5,a4
-    70002e7c:	0007c783          	lbu	a5,0(a5)
-    70002e80:	f7e5                	bnez	a5,70002e68 <put_centered+0x18>
+    70002e50:	fec42783          	lw	a5,-20(s0)
+    70002e54:	fd843703          	ld	a4,-40(s0)
+    70002e58:	97ba                	add	a5,a5,a4
+    70002e5a:	0007c783          	lbu	a5,0(a5)
+    70002e5e:	f7e5                	bnez	a5,70002e46 <put_centered+0x18>
 /embryos/chapter12/apps/splash.c:14
     if (row < 0 || row >= HEIGHT) return;
-    70002e82:	fd442783          	lw	a5,-44(s0)
-    70002e86:	2781                	sext.w	a5,a5
-    70002e88:	0c07c063          	bltz	a5,70002f48 <put_centered+0xf8>
+    70002e60:	fd442783          	lw	a5,-44(s0)
+    70002e64:	2781                	sext.w	a5,a5
+    70002e66:	0c07c063          	bltz	a5,70002f26 <put_centered+0xf8>
 /embryos/chapter12/apps/splash.c:14 (discriminator 2)
-    70002e8c:	fd442783          	lw	a5,-44(s0)
-    70002e90:	0007871b          	sext.w	a4,a5
-    70002e94:	47a9                	li	a5,10
-    70002e96:	0ae7c963          	blt	a5,a4,70002f48 <put_centered+0xf8>
+    70002e6a:	fd442783          	lw	a5,-44(s0)
+    70002e6e:	0007871b          	sext.w	a4,a5
+    70002e72:	47a9                	li	a5,10
+    70002e74:	0ae7c963          	blt	a5,a4,70002f26 <put_centered+0xf8>
 /embryos/chapter12/apps/splash.c:15
     int start = (WIDTH - len) / 2;
-    70002e9a:	02700793          	li	a5,39
-    70002e9e:	fec42703          	lw	a4,-20(s0)
-    70002ea2:	9f99                	subw	a5,a5,a4
-    70002ea4:	2781                	sext.w	a5,a5
-    70002ea6:	01f7d71b          	srliw	a4,a5,0x1f
-    70002eaa:	9fb9                	addw	a5,a5,a4
-    70002eac:	4017d79b          	sraiw	a5,a5,0x1
-    70002eb0:	fef42423          	sw	a5,-24(s0)
+    70002e78:	02700793          	li	a5,39
+    70002e7c:	fec42703          	lw	a4,-20(s0)
+    70002e80:	9f99                	subw	a5,a5,a4
+    70002e82:	2781                	sext.w	a5,a5
+    70002e84:	01f7d71b          	srliw	a4,a5,0x1f
+    70002e88:	9fb9                	addw	a5,a5,a4
+    70002e8a:	4017d79b          	sraiw	a5,a5,0x1
+    70002e8e:	fef42423          	sw	a5,-24(s0)
 /embryos/chapter12/apps/splash.c:16
     if (start < 0) start = 0;
-    70002eb4:	fe842783          	lw	a5,-24(s0)
-    70002eb8:	2781                	sext.w	a5,a5
-    70002eba:	0007d463          	bgez	a5,70002ec2 <put_centered+0x72>
+    70002e92:	fe842783          	lw	a5,-24(s0)
+    70002e96:	2781                	sext.w	a5,a5
+    70002e98:	0007d463          	bgez	a5,70002ea0 <put_centered+0x72>
 /embryos/chapter12/apps/splash.c:16 (discriminator 1)
-    70002ebe:	fe042423          	sw	zero,-24(s0)
+    70002e9c:	fe042423          	sw	zero,-24(s0)
 /embryos/chapter12/apps/splash.c:17
     for (int i = 0; i < len && start + i < WIDTH; i++)
-    70002ec2:	fe042223          	sw	zero,-28(s0)
-    70002ec6:	a899                	j	70002f1c <put_centered+0xcc>
+    70002ea0:	fe042223          	sw	zero,-28(s0)
+    70002ea4:	a899                	j	70002efa <put_centered+0xcc>
 /embryos/chapter12/apps/splash.c:18
         user_put(start + i, row, CELL(s[i], ANSI_WHITE, ANSI_BLACK));
-    70002ec8:	fe842783          	lw	a5,-24(s0)
-    70002ecc:	873e                	mv	a4,a5
-    70002ece:	fe442783          	lw	a5,-28(s0)
-    70002ed2:	9fb9                	addw	a5,a5,a4
-    70002ed4:	0007869b          	sext.w	a3,a5
-    70002ed8:	fe442783          	lw	a5,-28(s0)
-    70002edc:	fd843703          	ld	a4,-40(s0)
-    70002ee0:	97ba                	add	a5,a5,a4
-    70002ee2:	0007c783          	lbu	a5,0(a5)
-    70002ee6:	0107979b          	slliw	a5,a5,0x10
-    70002eea:	4107d79b          	sraiw	a5,a5,0x10
-    70002eee:	7007e793          	ori	a5,a5,1792
-    70002ef2:	0107979b          	slliw	a5,a5,0x10
-    70002ef6:	4107d79b          	sraiw	a5,a5,0x10
-    70002efa:	03079713          	slli	a4,a5,0x30
-    70002efe:	9341                	srli	a4,a4,0x30
-    70002f00:	fd442783          	lw	a5,-44(s0)
-    70002f04:	863a                	mv	a2,a4
-    70002f06:	85be                	mv	a1,a5
-    70002f08:	8536                	mv	a0,a3
-    70002f0a:	ffffd097          	auipc	ra,0xffffd
-    70002f0e:	122080e7          	jalr	290(ra) # 7000002c <user_put>
+    70002ea6:	fe842783          	lw	a5,-24(s0)
+    70002eaa:	873e                	mv	a4,a5
+    70002eac:	fe442783          	lw	a5,-28(s0)
+    70002eb0:	9fb9                	addw	a5,a5,a4
+    70002eb2:	0007869b          	sext.w	a3,a5
+    70002eb6:	fe442783          	lw	a5,-28(s0)
+    70002eba:	fd843703          	ld	a4,-40(s0)
+    70002ebe:	97ba                	add	a5,a5,a4
+    70002ec0:	0007c783          	lbu	a5,0(a5)
+    70002ec4:	0107979b          	slliw	a5,a5,0x10
+    70002ec8:	4107d79b          	sraiw	a5,a5,0x10
+    70002ecc:	7007e793          	ori	a5,a5,1792
+    70002ed0:	0107979b          	slliw	a5,a5,0x10
+    70002ed4:	4107d79b          	sraiw	a5,a5,0x10
+    70002ed8:	03079713          	slli	a4,a5,0x30
+    70002edc:	9341                	srli	a4,a4,0x30
+    70002ede:	fd442783          	lw	a5,-44(s0)
+    70002ee2:	863a                	mv	a2,a4
+    70002ee4:	85be                	mv	a1,a5
+    70002ee6:	8536                	mv	a0,a3
+    70002ee8:	ffffd097          	auipc	ra,0xffffd
+    70002eec:	144080e7          	jalr	324(ra) # 7000002c <user_put>
 /embryos/chapter12/apps/splash.c:17 (discriminator 4)
     for (int i = 0; i < len && start + i < WIDTH; i++)
-    70002f12:	fe442783          	lw	a5,-28(s0)
-    70002f16:	2785                	addiw	a5,a5,1
-    70002f18:	fef42223          	sw	a5,-28(s0)
+    70002ef0:	fe442783          	lw	a5,-28(s0)
+    70002ef4:	2785                	addiw	a5,a5,1
+    70002ef6:	fef42223          	sw	a5,-28(s0)
 /embryos/chapter12/apps/splash.c:17 (discriminator 1)
-    70002f1c:	fe442783          	lw	a5,-28(s0)
-    70002f20:	873e                	mv	a4,a5
-    70002f22:	fec42783          	lw	a5,-20(s0)
-    70002f26:	2701                	sext.w	a4,a4
-    70002f28:	2781                	sext.w	a5,a5
-    70002f2a:	02f75063          	bge	a4,a5,70002f4a <put_centered+0xfa>
+    70002efa:	fe442783          	lw	a5,-28(s0)
+    70002efe:	873e                	mv	a4,a5
+    70002f00:	fec42783          	lw	a5,-20(s0)
+    70002f04:	2701                	sext.w	a4,a4
+    70002f06:	2781                	sext.w	a5,a5
+    70002f08:	02f75063          	bge	a4,a5,70002f28 <put_centered+0xfa>
 /embryos/chapter12/apps/splash.c:17 (discriminator 3)
-    70002f2e:	fe842783          	lw	a5,-24(s0)
-    70002f32:	873e                	mv	a4,a5
-    70002f34:	fe442783          	lw	a5,-28(s0)
-    70002f38:	9fb9                	addw	a5,a5,a4
-    70002f3a:	0007871b          	sext.w	a4,a5
-    70002f3e:	02600793          	li	a5,38
-    70002f42:	f8e7d3e3          	bge	a5,a4,70002ec8 <put_centered+0x78>
-    70002f46:	a011                	j	70002f4a <put_centered+0xfa>
+    70002f0c:	fe842783          	lw	a5,-24(s0)
+    70002f10:	873e                	mv	a4,a5
+    70002f12:	fe442783          	lw	a5,-28(s0)
+    70002f16:	9fb9                	addw	a5,a5,a4
+    70002f18:	0007871b          	sext.w	a4,a5
+    70002f1c:	02600793          	li	a5,38
+    70002f20:	f8e7d3e3          	bge	a5,a4,70002ea6 <put_centered+0x78>
+    70002f24:	a011                	j	70002f28 <put_centered+0xfa>
 /embryos/chapter12/apps/splash.c:14
     if (row < 0 || row >= HEIGHT) return;
-    70002f48:	0001                	nop
+    70002f26:	0001                	nop
 /embryos/chapter12/apps/splash.c:19
 }
-    70002f4a:	70a2                	ld	ra,40(sp)
-    70002f4c:	7402                	ld	s0,32(sp)
-    70002f4e:	6145                	addi	sp,sp,48
-    70002f50:	8082                	ret
+    70002f28:	70a2                	ld	ra,40(sp)
+    70002f2a:	7402                	ld	s0,32(sp)
+    70002f2c:	6145                	addi	sp,sp,48
+    70002f2e:	8082                	ret
 
-0000000070002f52 <main>:
+0000000070002f30 <main>:
 main():
 /embryos/chapter12/apps/splash.c:21
 
 void main(void) {
-    70002f52:	7139                	addi	sp,sp,-64
-    70002f54:	fc06                	sd	ra,56(sp)
-    70002f56:	f822                	sd	s0,48(sp)
-    70002f58:	0080                	addi	s0,sp,64
+    70002f30:	7139                	addi	sp,sp,-64
+    70002f32:	fc06                	sd	ra,56(sp)
+    70002f34:	f822                	sd	s0,48(sp)
+    70002f36:	0080                	addi	s0,sp,64
 /embryos/chapter12/apps/splash.c:22
     clear();
-    70002f5a:	00000097          	auipc	ra,0x0
-    70002f5e:	e8c080e7          	jalr	-372(ra) # 70002de6 <clear>
+    70002f38:	00000097          	auipc	ra,0x0
+    70002f3c:	e8c080e7          	jalr	-372(ra) # 70002dc4 <clear>
 /embryos/chapter12/apps/splash.c:24
 
     const char *title = "EmbryOS";
-    70002f62:	00000797          	auipc	a5,0x0
-    70002f66:	17e78793          	addi	a5,a5,382 # 700030e0 <main+0x18e>
-    70002f6a:	fcf43c23          	sd	a5,-40(s0)
+    70002f40:	00000797          	auipc	a5,0x0
+    70002f44:	18078793          	addi	a5,a5,384 # 700030c0 <main+0x190>
+    70002f48:	fcf43c23          	sd	a5,-40(s0)
 /embryos/chapter12/apps/splash.c:25
     int cx = WIDTH / 2;
-    70002f6e:	47cd                	li	a5,19
-    70002f70:	fcf42a23          	sw	a5,-44(s0)
+    70002f4c:	47cd                	li	a5,19
+    70002f4e:	fcf42a23          	sw	a5,-44(s0)
 /embryos/chapter12/apps/splash.c:26
     int cy = HEIGHT / 2;
-    70002f74:	4795                	li	a5,5
-    70002f76:	fcf42823          	sw	a5,-48(s0)
+    70002f52:	4795                	li	a5,5
+    70002f54:	fcf42823          	sw	a5,-48(s0)
 /embryos/chapter12/apps/splash.c:29
 
     // expanding / contracting rings
     for (int phase = 0; phase < 12; phase++) {
-    70002f7a:	fe042623          	sw	zero,-20(s0)
-    70002f7e:	aa31                	j	7000309a <main+0x148>
+    70002f58:	fe042623          	sw	zero,-20(s0)
+    70002f5c:	aa31                	j	70003078 <main+0x148>
 /embryos/chapter12/apps/splash.c:30
         clear();
-    70002f80:	00000097          	auipc	ra,0x0
-    70002f84:	e66080e7          	jalr	-410(ra) # 70002de6 <clear>
+    70002f5e:	00000097          	auipc	ra,0x0
+    70002f62:	e66080e7          	jalr	-410(ra) # 70002dc4 <clear>
 /embryos/chapter12/apps/splash.c:32
 
         int radius = (phase <= 6) ? phase : 12 - phase;
-    70002f88:	fec42783          	lw	a5,-20(s0)
-    70002f8c:	0007871b          	sext.w	a4,a5
-    70002f90:	4799                	li	a5,6
-    70002f92:	00e7d963          	bge	a5,a4,70002fa4 <main+0x52>
+    70002f66:	fec42783          	lw	a5,-20(s0)
+    70002f6a:	0007871b          	sext.w	a4,a5
+    70002f6e:	4799                	li	a5,6
+    70002f70:	00e7d963          	bge	a5,a4,70002f82 <main+0x52>
 /embryos/chapter12/apps/splash.c:32 (discriminator 1)
-    70002f96:	47b1                	li	a5,12
-    70002f98:	fec42703          	lw	a4,-20(s0)
-    70002f9c:	9f99                	subw	a5,a5,a4
-    70002f9e:	fef42423          	sw	a5,-24(s0)
-    70002fa2:	a029                	j	70002fac <main+0x5a>
+    70002f74:	47b1                	li	a5,12
+    70002f76:	fec42703          	lw	a4,-20(s0)
+    70002f7a:	9f99                	subw	a5,a5,a4
+    70002f7c:	fef42423          	sw	a5,-24(s0)
+    70002f80:	a029                	j	70002f8a <main+0x5a>
 /embryos/chapter12/apps/splash.c:32 (discriminator 2)
-    70002fa4:	fec42783          	lw	a5,-20(s0)
-    70002fa8:	fef42423          	sw	a5,-24(s0)
+    70002f82:	fec42783          	lw	a5,-20(s0)
+    70002f86:	fef42423          	sw	a5,-24(s0)
 /embryos/chapter12/apps/splash.c:34
 
         for (int r = 0; r < HEIGHT; r++) {
-    70002fac:	fe042223          	sw	zero,-28(s0)
-    70002fb0:	a855                	j	70003064 <main+0x112>
+    70002f8a:	fe042223          	sw	zero,-28(s0)
+    70002f8e:	a855                	j	70003042 <main+0x112>
 /embryos/chapter12/apps/splash.c:35
             for (int c = 0; c < WIDTH; c++) {
-    70002fb2:	fe042023          	sw	zero,-32(s0)
-    70002fb6:	a851                	j	7000304a <main+0xf8>
+    70002f90:	fe042023          	sw	zero,-32(s0)
+    70002f94:	a851                	j	70003028 <main+0xf8>
 /embryos/chapter12/apps/splash.c:36
                 int dr = r - cy;
-    70002fb8:	fe442783          	lw	a5,-28(s0)
-    70002fbc:	873e                	mv	a4,a5
-    70002fbe:	fd042783          	lw	a5,-48(s0)
-    70002fc2:	40f707bb          	subw	a5,a4,a5
-    70002fc6:	fcf42623          	sw	a5,-52(s0)
+    70002f96:	fe442783          	lw	a5,-28(s0)
+    70002f9a:	873e                	mv	a4,a5
+    70002f9c:	fd042783          	lw	a5,-48(s0)
+    70002fa0:	40f707bb          	subw	a5,a4,a5
+    70002fa4:	fcf42623          	sw	a5,-52(s0)
 /embryos/chapter12/apps/splash.c:37
                 int dc = c - cx;
-    70002fca:	fe042783          	lw	a5,-32(s0)
-    70002fce:	873e                	mv	a4,a5
-    70002fd0:	fd442783          	lw	a5,-44(s0)
-    70002fd4:	40f707bb          	subw	a5,a4,a5
-    70002fd8:	fcf42423          	sw	a5,-56(s0)
+    70002fa8:	fe042783          	lw	a5,-32(s0)
+    70002fac:	873e                	mv	a4,a5
+    70002fae:	fd442783          	lw	a5,-44(s0)
+    70002fb2:	40f707bb          	subw	a5,a4,a5
+    70002fb6:	fcf42423          	sw	a5,-56(s0)
 /embryos/chapter12/apps/splash.c:38
                 int dist = dr*dr + dc*dc;
-    70002fdc:	fcc42783          	lw	a5,-52(s0)
-    70002fe0:	02f787bb          	mulw	a5,a5,a5
-    70002fe4:	0007871b          	sext.w	a4,a5
-    70002fe8:	fc842783          	lw	a5,-56(s0)
-    70002fec:	02f787bb          	mulw	a5,a5,a5
-    70002ff0:	2781                	sext.w	a5,a5
-    70002ff2:	9fb9                	addw	a5,a5,a4
-    70002ff4:	fcf42223          	sw	a5,-60(s0)
+    70002fba:	fcc42783          	lw	a5,-52(s0)
+    70002fbe:	02f787bb          	mulw	a5,a5,a5
+    70002fc2:	0007871b          	sext.w	a4,a5
+    70002fc6:	fc842783          	lw	a5,-56(s0)
+    70002fca:	02f787bb          	mulw	a5,a5,a5
+    70002fce:	2781                	sext.w	a5,a5
+    70002fd0:	9fb9                	addw	a5,a5,a4
+    70002fd2:	fcf42223          	sw	a5,-60(s0)
 /embryos/chapter12/apps/splash.c:40
                 // crude ring: show '.' near the chosen radius^2
                 if (dist >= (radius*radius - 2) && dist <= (radius*radius + 2))
-    70002ff8:	fe842783          	lw	a5,-24(s0)
-    70002ffc:	02f787bb          	mulw	a5,a5,a5
-    70003000:	2781                	sext.w	a5,a5
-    70003002:	37f9                	addiw	a5,a5,-2
-    70003004:	2781                	sext.w	a5,a5
-    70003006:	fc442703          	lw	a4,-60(s0)
-    7000300a:	2701                	sext.w	a4,a4
-    7000300c:	02f74a63          	blt	a4,a5,70003040 <main+0xee>
+    70002fd6:	fe842783          	lw	a5,-24(s0)
+    70002fda:	02f787bb          	mulw	a5,a5,a5
+    70002fde:	2781                	sext.w	a5,a5
+    70002fe0:	37f9                	addiw	a5,a5,-2
+    70002fe2:	2781                	sext.w	a5,a5
+    70002fe4:	fc442703          	lw	a4,-60(s0)
+    70002fe8:	2701                	sext.w	a4,a4
+    70002fea:	02f74a63          	blt	a4,a5,7000301e <main+0xee>
 /embryos/chapter12/apps/splash.c:40 (discriminator 1)
-    70003010:	fe842783          	lw	a5,-24(s0)
-    70003014:	02f787bb          	mulw	a5,a5,a5
-    70003018:	2781                	sext.w	a5,a5
-    7000301a:	2789                	addiw	a5,a5,2
-    7000301c:	2781                	sext.w	a5,a5
-    7000301e:	fc442703          	lw	a4,-60(s0)
-    70003022:	2701                	sext.w	a4,a4
-    70003024:	00e7ce63          	blt	a5,a4,70003040 <main+0xee>
+    70002fee:	fe842783          	lw	a5,-24(s0)
+    70002ff2:	02f787bb          	mulw	a5,a5,a5
+    70002ff6:	2781                	sext.w	a5,a5
+    70002ff8:	2789                	addiw	a5,a5,2
+    70002ffa:	2781                	sext.w	a5,a5
+    70002ffc:	fc442703          	lw	a4,-60(s0)
+    70003000:	2701                	sext.w	a4,a4
+    70003002:	00e7ce63          	blt	a5,a4,7000301e <main+0xee>
 /embryos/chapter12/apps/splash.c:41
                     user_put(c, r, CELL('.', ANSI_WHITE, ANSI_BLACK));
-    70003028:	fe442703          	lw	a4,-28(s0)
-    7000302c:	fe042783          	lw	a5,-32(s0)
-    70003030:	72e00613          	li	a2,1838
-    70003034:	85ba                	mv	a1,a4
-    70003036:	853e                	mv	a0,a5
-    70003038:	ffffd097          	auipc	ra,0xffffd
-    7000303c:	ff4080e7          	jalr	-12(ra) # 7000002c <user_put>
+    70003006:	fe442703          	lw	a4,-28(s0)
+    7000300a:	fe042783          	lw	a5,-32(s0)
+    7000300e:	72e00613          	li	a2,1838
+    70003012:	85ba                	mv	a1,a4
+    70003014:	853e                	mv	a0,a5
+    70003016:	ffffd097          	auipc	ra,0xffffd
+    7000301a:	016080e7          	jalr	22(ra) # 7000002c <user_put>
 /embryos/chapter12/apps/splash.c:35 (discriminator 2)
             for (int c = 0; c < WIDTH; c++) {
-    70003040:	fe042783          	lw	a5,-32(s0)
-    70003044:	2785                	addiw	a5,a5,1
-    70003046:	fef42023          	sw	a5,-32(s0)
+    7000301e:	fe042783          	lw	a5,-32(s0)
+    70003022:	2785                	addiw	a5,a5,1
+    70003024:	fef42023          	sw	a5,-32(s0)
 /embryos/chapter12/apps/splash.c:35 (discriminator 1)
-    7000304a:	fe042783          	lw	a5,-32(s0)
-    7000304e:	0007871b          	sext.w	a4,a5
-    70003052:	02600793          	li	a5,38
-    70003056:	f6e7d1e3          	bge	a5,a4,70002fb8 <main+0x66>
+    70003028:	fe042783          	lw	a5,-32(s0)
+    7000302c:	0007871b          	sext.w	a4,a5
+    70003030:	02600793          	li	a5,38
+    70003034:	f6e7d1e3          	bge	a5,a4,70002f96 <main+0x66>
 /embryos/chapter12/apps/splash.c:34 (discriminator 2)
         for (int r = 0; r < HEIGHT; r++) {
-    7000305a:	fe442783          	lw	a5,-28(s0)
-    7000305e:	2785                	addiw	a5,a5,1
-    70003060:	fef42223          	sw	a5,-28(s0)
+    70003038:	fe442783          	lw	a5,-28(s0)
+    7000303c:	2785                	addiw	a5,a5,1
+    7000303e:	fef42223          	sw	a5,-28(s0)
 /embryos/chapter12/apps/splash.c:34 (discriminator 1)
-    70003064:	fe442783          	lw	a5,-28(s0)
-    70003068:	0007871b          	sext.w	a4,a5
-    7000306c:	47a9                	li	a5,10
-    7000306e:	f4e7d2e3          	bge	a5,a4,70002fb2 <main+0x60>
+    70003042:	fe442783          	lw	a5,-28(s0)
+    70003046:	0007871b          	sext.w	a4,a5
+    7000304a:	47a9                	li	a5,10
+    7000304c:	f4e7d2e3          	bge	a5,a4,70002f90 <main+0x60>
 /embryos/chapter12/apps/splash.c:46
             }
         }
 
         // draw the logo in the middle
         put_centered(title, cy);
-    70003072:	fd042783          	lw	a5,-48(s0)
-    70003076:	85be                	mv	a1,a5
-    70003078:	fd843503          	ld	a0,-40(s0)
-    7000307c:	00000097          	auipc	ra,0x0
-    70003080:	dd4080e7          	jalr	-556(ra) # 70002e50 <put_centered>
+    70003050:	fd042783          	lw	a5,-48(s0)
+    70003054:	85be                	mv	a1,a5
+    70003056:	fd843503          	ld	a0,-40(s0)
+    7000305a:	00000097          	auipc	ra,0x0
+    7000305e:	dd4080e7          	jalr	-556(ra) # 70002e2e <put_centered>
 /embryos/chapter12/apps/splash.c:47
         user_delay(200);
-    70003084:	0c800513          	li	a0,200
-    70003088:	00000097          	auipc	ra,0x0
-    7000308c:	d08080e7          	jalr	-760(ra) # 70002d90 <user_delay>
+    70003062:	0c800513          	li	a0,200
+    70003066:	00000097          	auipc	ra,0x0
+    7000306a:	d08080e7          	jalr	-760(ra) # 70002d6e <user_delay>
 /embryos/chapter12/apps/splash.c:29 (discriminator 2)
     for (int phase = 0; phase < 12; phase++) {
-    70003090:	fec42783          	lw	a5,-20(s0)
-    70003094:	2785                	addiw	a5,a5,1
-    70003096:	fef42623          	sw	a5,-20(s0)
+    7000306e:	fec42783          	lw	a5,-20(s0)
+    70003072:	2785                	addiw	a5,a5,1
+    70003074:	fef42623          	sw	a5,-20(s0)
 /embryos/chapter12/apps/splash.c:29 (discriminator 1)
-    7000309a:	fec42783          	lw	a5,-20(s0)
-    7000309e:	0007871b          	sext.w	a4,a5
-    700030a2:	47ad                	li	a5,11
-    700030a4:	ece7dee3          	bge	a5,a4,70002f80 <main+0x2e>
+    70003078:	fec42783          	lw	a5,-20(s0)
+    7000307c:	0007871b          	sext.w	a4,a5
+    70003080:	47ad                	li	a5,11
+    70003082:	ece7dee3          	bge	a5,a4,70002f5e <main+0x2e>
 /embryos/chapter12/apps/splash.c:51
     }
 
     // final stable screen
     clear();
-    700030a8:	00000097          	auipc	ra,0x0
-    700030ac:	d3e080e7          	jalr	-706(ra) # 70002de6 <clear>
+    70003086:	00000097          	auipc	ra,0x0
+    7000308a:	d3e080e7          	jalr	-706(ra) # 70002dc4 <clear>
 /embryos/chapter12/apps/splash.c:52
     put_centered("EmbryOS", HEIGHT / 2 - 1);
-    700030b0:	4591                	li	a1,4
-    700030b2:	00000517          	auipc	a0,0x0
-    700030b6:	02e50513          	addi	a0,a0,46 # 700030e0 <main+0x18e>
-    700030ba:	00000097          	auipc	ra,0x0
-    700030be:	d96080e7          	jalr	-618(ra) # 70002e50 <put_centered>
+    7000308e:	4591                	li	a1,4
+    70003090:	00000517          	auipc	a0,0x0
+    70003094:	03050513          	addi	a0,a0,48 # 700030c0 <main+0x190>
+    70003098:	00000097          	auipc	ra,0x0
+    7000309c:	d96080e7          	jalr	-618(ra) # 70002e2e <put_centered>
 /embryos/chapter12/apps/splash.c:53
     put_centered("Life Has Begun", HEIGHT / 2 + 1);
-    700030c2:	4599                	li	a1,6
-    700030c4:	00000517          	auipc	a0,0x0
-    700030c8:	02450513          	addi	a0,a0,36 # 700030e8 <main+0x196>
-    700030cc:	00000097          	auipc	ra,0x0
-    700030d0:	d84080e7          	jalr	-636(ra) # 70002e50 <put_centered>
+    700030a0:	4599                	li	a1,6
+    700030a2:	00000517          	auipc	a0,0x0
+    700030a6:	02650513          	addi	a0,a0,38 # 700030c8 <main+0x198>
+    700030aa:	00000097          	auipc	ra,0x0
+    700030ae:	d84080e7          	jalr	-636(ra) # 70002e2e <put_centered>
 /embryos/chapter12/apps/splash.c:54
 }
-    700030d4:	0001                	nop
-    700030d6:	70e2                	ld	ra,56(sp)
-    700030d8:	7442                	ld	s0,48(sp)
-    700030da:	6121                	addi	sp,sp,64
-    700030dc:	8082                	ret
-    700030de:	0000                	unimp
-    700030e0:	6d45                	lui	s10,0x11
-    700030e2:	7262                	ld	tp,56(sp)
-    700030e4:	4f79                	li	t5,30
-    700030e6:	694c0053          	.insn	4, 0x694c0053
-    700030ea:	6566                	ld	a0,88(sp)
-    700030ec:	4820                	lw	s0,80(s0)
-    700030ee:	7361                	lui	t1,0xffff8
-    700030f0:	4220                	lw	s0,64(a2)
-    700030f2:	6765                	lui	a4,0x19
-    700030f4:	6e75                	lui	t3,0x1d
+    700030b2:	0001                	nop
+    700030b4:	70e2                	ld	ra,56(sp)
+    700030b6:	7442                	ld	s0,48(sp)
+    700030b8:	6121                	addi	sp,sp,64
+    700030ba:	8082                	ret
+    700030bc:	0000                	unimp
+    700030be:	0000                	unimp
+    700030c0:	6d45                	lui	s10,0x11
+    700030c2:	7262                	ld	tp,56(sp)
+    700030c4:	4f79                	li	t5,30
+    700030c6:	694c0053          	.insn	4, 0x694c0053
+    700030ca:	6566                	ld	a0,88(sp)
+    700030cc:	4820                	lw	s0,80(s0)
+    700030ce:	7361                	lui	t1,0xffff8
+    700030d0:	4220                	lw	s0,64(a2)
+    700030d2:	6765                	lui	a4,0x19
+    700030d4:	6e75                	lui	t3,0x1d
 	...
