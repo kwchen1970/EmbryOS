@@ -1,5 +1,5 @@
 
-For the thread control block design each thread is a thread control block called thread_t made in thread.c. Thread_t has fields for the thread id, stack base pointer, stack size, saved stack pointer aka the sp, thread state, wakeup time for sleeping threads, the semaphore the thread is waiting on, and a next pointer for the linked list queues. 
+Each thread is represented by a thread control block (thread_t) made in thread.c. Thread_t has fields for the thread id, stack base pointer, stack size, saved stack pointer aka the sp, thread state, wakeup time for sleeping threads, the semaphore the thread is waiting on, and a next pointer for the linked list queues. 
 
 Regarding run-queue organization we used a linked list queue to store the order threads ares runnable threads will run in. We store a sleeping threads in a sleeping thread queue and this is sorted by wake up time. this way the scheduler can wake up sleepers in the correct order once they are woken up. There is a seperated linked list for threads waiting for input. When a thread is blocked by a semaphore they are put in the semaphore's own waiting list. There is a zombie list for dead threads because it helps save space by allowing threads reuse stack and TCB that dead threads don't use anymore after they are freed. Blocked threads are not kept in the runnable queue until the blocking condition isn't true anymore.
 
@@ -7,8 +7,9 @@ For input multiplexing approach the process has only one source of the keyboards
 
 For semaphore blocking and wake-up logic the semaphores are counting semaphores that keep track of a count. With sema_dec if the count is greater than 0 the count decrements and returns but if that count is 0 the current thread is marked as waiting on that semaphore and put in the semaphore's waiting list then the scheduler can run another thread. sema_inc wakes up one blocked thread if there are any waiting otherwise it increments count. This way mulitple threads can interact safely and share things like the game state and drawing buffer without corrupting each other's updates.
 
+The game is created using 4-threads. We have a main thread  for rendering tbe bucket, game dots, etc. and keeping the game loop. We have a bucket thread that reads keyboard input and moves the bucket left and right accordingly. We have a falling thread that handles the dots falling downward and spawning new dots. We have a finally firework thread that adds fireworks in the background for distraction. 
 
-To play the game first start out in the embryos terminal. Type in game and press enter then you will be in the game. use the key "a" to make the grey bucket at the bottom go left and press "d" to go right. The goal is to catch the green balls as they fall and make your score in the corner go up. There are some distracting fireworks in the background to make the game harder.
+To play the game first start out in the embryos terminal. Type in "game" and press enter then you will be in the game. Use the key "a" to make the grey bucket at the bottom go left and press "d" to go right. The goal is to catch the green balls as they fall and make your score in the corner go up. There are some distracting fireworks in the background to make the game harder. 
 
 AI Tools Used: ChatGPT, Github Copilot
 Wrote up a detailed specification of the desired game ourselves (talking about the movement mechanics, bucket, balls, scoreboard, etc.), used AI to debug and implement the functionalities
