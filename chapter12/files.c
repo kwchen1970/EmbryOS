@@ -1,12 +1,13 @@
 #include "embryos.h"
+#include "bd_ufs.h"
 #include "dir.h"
 
 extern struct block ramdisk[], __ramdisk_end[];
 
 struct bd ramdisk_iface;
 struct ramdisk_state ramdisk_state;
-struct bd simple_iface;
-struct simple_state simple_state;
+struct bd ufs_iface;
+struct ufs_state ufs_state;
 struct flat flat_fs;
 
 void files_init(void) {
@@ -16,12 +17,12 @@ void files_init(void) {
     ramdisk_init(&ramdisk_iface, &ramdisk_state,
                  ramdisk, __ramdisk_end - ramdisk);
 
-    // Add the "simple" block device layer
-    simple_init(&simple_iface, &simple_state,
-                &ramdisk_iface, 0, 1);
+    // Initialize the UFS block device layer over the RAM disk
+    ufs_init(&ufs_iface, &ufs_state,
+             &ramdisk_iface, 0, 32);
 
     // Add and initialize the "flat file system"
-    flat_init(&flat_fs, &simple_iface, 1);
+    flat_init(&flat_fs, &ufs_iface, 1);
     if (flat_create(&flat_fs) != ROOT_DIR) die("files_init: root dir must be 1");
 
     // Add the applications to the file system
