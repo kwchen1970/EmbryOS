@@ -16,21 +16,52 @@ static void ufs_write_super(struct ufs_state *s){
 }
 
 static void ufs_read_inode(struct ufs_state *s, int inode, struct ufs_inode *out){
+    struct block *b = bd_alloc();
+    struct ufs_inode *table;
 
+    if (inode <=0 || inode > s->n_inodes) die("ufs_read_inode: bad inode");
+    s->lower->read(s->lower->state, s->inode_below, ufs_inode_blockno(inode),b);
+    table = (struct ufs_inode *) b;
+    *out = table[ufs_inode_offset(inode)];
+    bd_free(b);
 }
 
 static void ufs_write_inode(struct ufs_state *s, int inode, const struct ufs_inode *in) {
+    struct block *b = bd_alloc();
+    struct ufs_inode *table;
 
+    if (inode <= 0 || inode > s->n_inodes) die("ufs_write_inode: bad inode");
+
+    s->lower->read(s->lower->state, s->inode_below, ufs_inode_blockno(inode), b);
+    table = (struct ufs_inode *) b;
+    table[ufs_inode_offset(inode)] = *in;
+    s->lower->write(s->lower->state, s->inode_below, ufs_inode_blockno(inode), b);
+
+
+    bd_free(b);
 }
 
 int ufs_alloc(void *st){
-    for (){
+    struct ufs_state *s = st;
+    struct ufs_inode in;
+
+    for (int inode = 1; inode <=s->n_inodes; inode++){
+        ufs_read_inode(s,inode,&in);
+        if (!in.allocated) {
+            memset(&in, 0, sizeof(in));
+            in.allocated =1;
+            ufs_write_inode(s,inode,&in);
+            return inode;
+        }
 
     }
     return 0;
 }
 
 int ufs_size(void *st, int inode){
+    (void) st;
+    (void) inode;
+    return UFS_MAX_FILE_BLOCKS;
 
 }
 
