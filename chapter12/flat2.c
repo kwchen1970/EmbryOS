@@ -6,7 +6,10 @@ extern void stat_put(struct flat *fs, int file, struct stat_entry *st);
 int flat_read(struct flat *fs, int file, int off, void *dst, int n) {
     L4(L_NORM, L_FLAT_READ, file, off, (uintptr_t) dst, n);
     struct stat_entry st; stat_get(fs, file, &st);
-    if (off >= st.size) return 0;
+    if (off >= st.size) {
+        memset(dst, 0, n);
+        return n;
+    }
     if (off + n > st.size) n = st.size - off;
     char *d = dst;
     int blk = off / BLOCK_SIZE, pos = off % BLOCK_SIZE, remaining = n;
