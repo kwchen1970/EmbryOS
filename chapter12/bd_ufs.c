@@ -178,66 +178,120 @@ void ufs_write(void *st, int inode, int blk, const void *src) {
 
     if (blk == 0) {
         if (in.direct == 0) {
-            in.direct = ufs_alloc_block(s);
-            if (in.direct == 0) die("ufs_write: disk full");
+            int newblk = ufs_alloc_block(s);
+            if (newblk == 0) return;
+            in.direct = newblk;
             inode_dirty = 1;
         }
         s->lower->write(s->lower->state, s->inode_below, in.direct, src);
 
     } else if (blk <= (int) UFS_PTRS_PER_BLOCK) {
-        if (in.indirect == 0) {
-            in.indirect = ufs_alloc_block(s);
-            if (in.indirect == 0) die("ufs_write: disk full");
-            s->lower->write(s->lower->state, s->inode_below,
-                            in.indirect, &bd_null_block);
+        struct ufs_ptr_block *pb = (struct ufs_ptr_block *) bd_alloc();
+        int indirect_blk = in.indirect;
+        int new_indirect = 0;
+        int data_blk;
+
+        if (indirect_blk == 0) {
+            new_indirect = ufs_alloc_block(s);
+            if (new_indirect == 0) {
+                bd_free((struct block *) pb);
+                return;
+            }
+            indirect_blk = new_indirect;
+            memset(pb, 0, sizeof(*pb));
+        } else {
+            s->lower->read(s->lower->state, s->inode_below, indirect_blk, pb);
+        }
+
+        data_blk = pb->ptrs[blk - 1];
+        if (data_blk == 0) {
+            data_blk = ufs_alloc_block(s);
+            if (data_blk == 0) {
+                if (new_indirect != 0) ufs_free_block(s, new_indirect);
+                bd_free((struct block *) pb);
+                return;
+            }
+            pb->ptrs[blk - 1] = data_blk;
+        }
+
+        if (new_indirect != 0) {
+            in.indirect = indirect_blk;
             inode_dirty = 1;
         }
-        struct ufs_ptr_block *pb = (struct ufs_ptr_block *) bd_alloc();
-        s->lower->read(s->lower->state, s->inode_below, in.indirect, pb);
-        if (pb->ptrs[blk - 1] == 0) {
-            pb->ptrs[blk - 1] = ufs_alloc_block(s);
-            if (pb->ptrs[blk - 1] == 0) die("ufs_write: disk full");
-            s->lower->write(s->lower->state, s->inode_below, in.indirect, pb);
-        }
-        s->lower->write(s->lower->state, s->inode_below, pb->ptrs[blk - 1], src);
+        if (new_indirect != 0 || pb->ptrs[blk - 1] == data_blk)
+            s->lower->write(s->lower->state, s->inode_below, indirect_blk, pb);
+        s->lower->write(s->lower->state, s->inode_below, data_blk, src);
         bd_free((struct block *) pb);
 
     } else {
         int di = blk - (int) UFS_PTRS_PER_BLOCK - 1;
         int ind_idx = di / (int) UFS_PTRS_PER_BLOCK;
         int ptr_idx = di % (int) UFS_PTRS_PER_BLOCK;
+        struct ufs_ptr_block *pb = (struct ufs_ptr_block *) bd_alloc();
+        struct ufs_ptr_block *ipb = (struct ufs_ptr_block *) bd_alloc();
+        int dbl_blk = in.double_indirect;
+        int ind_blk;
+        int data_blk;
+        int new_double = 0;
+        int new_indirect = 0;
 
-        if (in.double_indirect == 0) {
-            in.double_indirect = ufs_alloc_block(s);
-            if (in.double_indirect == 0) die("ufs_write: disk full");
-            s->lower->write(s->lower->state, s->inode_below,
-                            in.double_indirect, &bd_null_block);
+        if (dbl_blk == 0) {
+            new_double = ufs_alloc_block(s);
+            if (new_double == 0) {
+                bd_free((struct block *) ipb);
+                bd_free((struct block *) pb);
+                return;
+            }
+            dbl_blk = new_double;
+            memset(pb, 0, sizeof(*pb));
+        } else {
+            s->lower->read(s->lower->state, s->inode_below, dbl_blk, pb);
+        }
+
+        ind_blk = pb->ptrs[ind_idx];
+        if (ind_blk == 0) {
+            new_indirect = ufs_alloc_block(s);
+            if (new_indirect == 0) {
+                if (new_double != 0) ufs_free_block(s, new_double);
+                bd_free((struct block *) ipb);
+                bd_free((struct block *) pb);
+                return;
+            }
+            ind_blk = new_indirect;
+            memset(ipb, 0, sizeof(*ipb));
+        } else {
+            s->lower->read(s->lower->state, s->inode_below, ind_blk, ipb);
+        }
+
+        data_blk = ipb->ptrs[ptr_idx];
+        if (data_blk == 0) {
+            data_blk = ufs_alloc_block(s);
+            if (data_blk == 0) {
+                if (new_indirect != 0) ufs_free_block(s, new_indirect);
+                if (new_double != 0) ufs_free_block(s, new_double);
+                bd_free((struct block *) ipb);
+                bd_free((struct block *) pb);
+                return;
+            }
+            ipb->ptrs[ptr_idx] = data_blk;
+        }
+
+        if (new_double != 0) {
+            in.double_indirect = dbl_blk;
             inode_dirty = 1;
         }
-
-        struct ufs_ptr_block *pb = (struct ufs_ptr_block *) bd_alloc();
-        s->lower->read(s->lower->state, s->inode_below, in.double_indirect, pb);
-        if (pb->ptrs[ind_idx] == 0) {
-            pb->ptrs[ind_idx] = ufs_alloc_block(s);
-            if (pb->ptrs[ind_idx] == 0) die("ufs_write: disk full");
-            s->lower->write(s->lower->state, s->inode_below,
-                            pb->ptrs[ind_idx], &bd_null_block);
-            s->lower->write(s->lower->state, s->inode_below,
-                            in.double_indirect, pb);
+        if (new_indirect != 0) {
+            pb->ptrs[ind_idx] = ind_blk;
+            s->lower->write(s->lower->state, s->inode_below, dbl_blk, pb);
+        } else if (new_double != 0) {
+            s->lower->write(s->lower->state, s->inode_below, dbl_blk, pb);
         }
-        int ind_blk = pb->ptrs[ind_idx];
-        bd_free((struct block *) pb);
-
-        struct ufs_ptr_block *ipb = (struct ufs_ptr_block *) bd_alloc();
-        s->lower->read(s->lower->state, s->inode_below, ind_blk, ipb);
-        if (ipb->ptrs[ptr_idx] == 0) {
-            ipb->ptrs[ptr_idx] = ufs_alloc_block(s);
-            if (ipb->ptrs[ptr_idx] == 0) die("ufs_write: disk full");
+        if (new_indirect != 0 || ipb->ptrs[ptr_idx] == data_blk)
             s->lower->write(s->lower->state, s->inode_below, ind_blk, ipb);
-        }
         s->lower->write(s->lower->state, s->inode_below,
-                        ipb->ptrs[ptr_idx], src);
+                        data_blk, src);
         bd_free((struct block *) ipb);
+        bd_free((struct block *) pb);
     }
 
     if (inode_dirty) ufs_write_inode(s, inode, &in);
