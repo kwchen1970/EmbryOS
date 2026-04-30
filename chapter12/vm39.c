@@ -41,10 +41,13 @@ int vm_is_mapped(void *base, uintptr_t va) {
 }
 
 void vm_flush(struct hart *hart, void *base) {
-    const int index = (VM_START >> 21) & (PTE_COUNT - 1);
-    hart->parent_page_table[index] = PT_ENTRY((uintptr_t) base, PTE(V));
-    kprintf("vm_flush: hart=%d parent=%X base=%X index=%d\n",
-        hart->idx, (uintptr_t)hart->parent_page_table, (uintptr_t)base, index);
+    uword_t *l1 = base;
+    int start = (VM_START >> 21) & (PTE_COUNT - 1);
+    int count = (VM_END - VM_START) >> 21;
+    for (int i = 0; i < count; i++)
+        hart->parent_page_table[start + i] = l1[start + i];
+    kprintf("vm_flush: hart=%d parent=%X base=%X\n",
+        hart->idx, (uintptr_t)hart->parent_page_table, (uintptr_t)base);
     asm volatile("sfence.vma zero, zero" ::: "memory");
 }
 
@@ -75,7 +78,10 @@ void vm_init(struct hart *hart) {
     uword_t base = (VM_START >> 30) << 30;
     for (int i = 0; i < PTE_COUNT; i++)
         hart->parent_page_table[i] = PT_ENTRY(base + i * (0x1ULL << 21), RWX|PTE(G));
-    hart->parent_page_table[(VM_START >> 21) & (PTE_COUNT - 1)] = 0;
+    int vm_start_idx = (VM_START >> 21) & (PTE_COUNT - 1);
+    int vm_count = (VM_END - VM_START) >> 21;
+    for (int i = 0; i < vm_count; i++)
+        hart->parent_page_table[vm_start_idx + i] = 0;
     if (hart->idx == 0) kprintf("Enabling virtual memory now\n");
     vm_enable(((uword_t) 1 << (BPW - 1)) | (((uword_t) root_pt) >> 12));
     asm volatile("sfence.vma zero, zero" ::: "memory");
