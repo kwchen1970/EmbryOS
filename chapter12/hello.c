@@ -10,8 +10,14 @@ void exception_handler(struct trap_frame *tf) {
     struct pcb *self = sched_self();
     if (self != 0 && self->executable > 0)
         proc_put(self, 0, 0, CELL('>', ANSI_BLACK, ANSI_RED));
-    kprintf("trap: cause=%D sepc=%X stval=%X",
-                        tf->scause & 0xFFF, tf->sepc, tf->stval);
+    const char *type = "unknown";
+    uword_t code = tf->scause & 0xFFF;
+    if (code == 12) type = "Instruction Page Fault";
+    else if (code == 13) type = "Load Page Fault";
+    else if (code == 15) type = "Store Page Fault";
+    else if (code == 8) type = "Syscall";
+    kprintf("trap: cause=%D (%s) sepc=%X stval=%X\n",
+        code, type, tf->sepc, tf->stval);
     if (self != 0 && self->executable > 0) {
         kprintf("<");
         sched_exit();

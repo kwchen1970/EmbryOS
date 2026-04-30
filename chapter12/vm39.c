@@ -3,6 +3,7 @@
 enum { V, R, W, X, U, G, A, D };
 #define PTE(x)              ((uword_t) 1 << (x))
 #define PT_ENTRY(pa, flags) ((((uword_t)(pa) & ~ (uword_t) 0xFFF) >> 2) | (flags))
+#define PTE_TO_PA(pte)      (((pte) & ~(uword_t)0x3FF) << 2)
 #define PTE_COUNT           (PAGE_SIZE / sizeof(uword_t))
 #define BPW                 (8 * sizeof(uword_t))   // bits per word
 #define RW                  (PTE(V)|PTE(R)|PTE(W)|PTE(A)|PTE(D))
@@ -11,53 +12,77 @@ enum { V, R, W, X, U, G, A, D };
 #if VBITS == 39
 
 void vm_map(void *base, uintptr_t va, void *frame) {
-    uword_t *pt = base;
-    int index = (va >> 12) & (PTE_COUNT - 1);
-    pt[index] = PT_ENTRY((uintptr_t) frame, RWX|PTE(U));
+    uword_t *l1 = base;
+    int vpn1 = (va >> 21) & (PTE_COUNT - 1);
+    int vpn0 = (va >> 12) & (PTE_COUNT - 1);
+    uword_t pte1 = l1[vpn1];
+    uword_t *l0;
+    if (!(pte1 & PTE(V))) {
+        l0 = frame_alloc();
+        memset(l0, 0, PAGE_SIZE);
+        l1[vpn1] = PT_ENTRY((uintptr_t)l0, PTE(V));
+        kprintf("vm_map: l1[%d]=%X l0[%d]=%X\n", vpn1, l1[vpn1], vpn0, l0[vpn0]);
+    } else {
+        l0 = (uword_t *)PTE_TO_PA(pte1);
+    }
+    l0[vpn0] = PT_ENTRY((uintptr_t)frame, RWX|PTE(U));
+    kprintf("vm_map: va=%X l0[%d]=%X\n", va, vpn0, l0[vpn0]);
+    asm volatile("sfence.vma zero, zero" ::: "memory");
 }
 
 int vm_is_mapped(void *base, uintptr_t va) {
-    uword_t *pt = base;
-    int index = (va >> 12) & (PTE_COUNT - 1);
-    return pt[index] & PTE(V);
+    uword_t *l1 = base;
+    int vpn1 = (va >> 21) & (PTE_COUNT - 1);
+    int vpn0 = (va >> 12) & (PTE_COUNT - 1);
+    uword_t pte1 = l1[vpn1];
+    if (!(pte1 & PTE(V))) return 0;
+    uword_t *l0 = (uword_t *)PTE_TO_PA(pte1);
+    return l0[vpn0] & PTE(V);
 }
 
 void vm_flush(struct hart *hart, void *base) {
-    const int index = (VM_START >> 21) & (PTE_COUNT - 1);  // 12 + 9
+    const int index = (VM_START >> 21) & (PTE_COUNT - 1);
     hart->parent_page_table[index] = PT_ENTRY((uintptr_t) base, PTE(V));
-    tlb_flush();
+    kprintf("vm_flush: hart=%d parent=%X base=%X index=%d\n",
+        hart->idx, (uintptr_t)hart->parent_page_table, (uintptr_t)base, index);
+    asm volatile("sfence.vma zero, zero" ::: "memory");
 }
 
 void vm_release(void *base) {
-    uword_t *pt = base;
+    uword_t *l1 = base;
     for (int i = 0; i < PTE_COUNT; i++) {
-        uword_t pte = pt[i];
-        if (pte & PTE(V)) frame_release((void *)((uintptr_t)(pte >> 10) << 12));
+        uword_t pte1 = l1[i];
+        if (pte1 & PTE(V)) {
+            uword_t *l0 = (uword_t *)PTE_TO_PA(pte1);
+            for (int j = 0; j < PTE_COUNT; j++) {
+                uword_t pte0 = l0[j];
+                if (pte0 & PTE(V)) frame_release((void *)PTE_TO_PA(pte0));
+            }
+            frame_release(l0);
+        }
     }
 }
 
 void vm_init(struct hart *hart) {
+    kprintf("vm_init start hart %d\n", hart->idx);
     uword_t *root_pt = frame_alloc();
     hart->parent_page_table = frame_alloc();
     memset(hart->parent_page_table, 0, PAGE_SIZE);
-
-    // First map everything 1-1
     for (int i = 0; i < PTE_COUNT; i++)
         root_pt[i] = PT_ENTRY(i * (0x1ULL << 30), RWX|PTE(G));
-
-    // Update the entry of VM_START
-    root_pt[VM_START >> 30] =           // 12 + 9 + 9
+    root_pt[VM_START >> 30] =
         PT_ENTRY((uword_t) hart->parent_page_table, PTE(V));
-
-    // Map VM_START "huge page" 1-1 as well for now
     uword_t base = (VM_START >> 30) << 30;
     for (int i = 0; i < PTE_COUNT; i++)
         hart->parent_page_table[i] = PT_ENTRY(base + i * (0x1ULL << 21), RWX|PTE(G));
-
+    hart->parent_page_table[(VM_START >> 21) & (PTE_COUNT - 1)] = 0;
     if (hart->idx == 0) kprintf("Enabling virtual memory now\n");
     vm_enable(((uword_t) 1 << (BPW - 1)) | (((uword_t) root_pt) >> 12));
-    tlb_flush();
+    asm volatile("sfence.vma zero, zero" ::: "memory");
     if (hart->idx == 0) kprintf("Virtual memory enabled\n");
+    struct pcb *self = sched_self();
+    if (self != 0 && self->base != 0)
+        vm_flush(hart, self->base);
 }
 
 #endif // VBITS == 39

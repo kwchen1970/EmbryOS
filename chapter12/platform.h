@@ -6,9 +6,10 @@
 #define VBITS 32            // # virtual address bits
 #define VM_END          0x70400000        // 1024 pages
 #endif
+
 #if __riscv_xlen == 64
 #define VBITS 39            // # virtual address bits
-#define VM_END          0x70200000        // 512 pages
+#define VM_END          0x80000000        // 256 MB
 #endif
 
 #define PAGE_SHIFT      12
