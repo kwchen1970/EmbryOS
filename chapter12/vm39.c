@@ -21,12 +21,10 @@ void vm_map(void *base, uintptr_t va, void *frame) {
         l0 = frame_alloc();
         memset(l0, 0, PAGE_SIZE);
         l1[vpn1] = PT_ENTRY((uintptr_t)l0, PTE(V));
-        kprintf("vm_map: l1[%d]=%X l0[%d]=%X\n", vpn1, l1[vpn1], vpn0, l0[vpn0]);
     } else {
         l0 = (uword_t *)PTE_TO_PA(pte1);
     }
     l0[vpn0] = PT_ENTRY((uintptr_t)frame, RWX|PTE(U));
-    kprintf("vm_map: va=%X l0[%d]=%X\n", va, vpn0, l0[vpn0]);
     asm volatile("sfence.vma zero, zero" ::: "memory");
 }
 
@@ -46,8 +44,6 @@ void vm_flush(struct hart *hart, void *base) {
     int count = (VM_END - VM_START) >> 21;
     for (int i = 0; i < count; i++)
         hart->parent_page_table[start + i] = l1[start + i];
-    kprintf("vm_flush: hart=%d parent=%X base=%X\n",
-        hart->idx, (uintptr_t)hart->parent_page_table, (uintptr_t)base);
     asm volatile("sfence.vma zero, zero" ::: "memory");
 }
 

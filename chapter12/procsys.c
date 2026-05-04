@@ -2,8 +2,6 @@
 
 // The process had a miss at the given virtual address.
 static void proc_miss(struct pcb *self, uintptr_t va) {
-    kprintf("proc_miss: va=%X base=%X hart=%d\n", 
-        va, (uintptr_t)self->base, self->hart->idx);
     if (vm_is_mapped(self->base, va)) die("proc_miss: already mapped??");
 
     // Allocate a frame
@@ -26,12 +24,6 @@ static void proc_miss(struct pcb *self, uintptr_t va) {
 }
 
 void proc_pagefault(struct trap_frame *tf) {
-    uword_t code = tf->scause & 0xFFF;
-    const char *type = "unknown";
-    if (code == 12) type = "Instruction Page Fault";
-    else if (code == 13) type = "Load Page Fault";
-    else if (code == 15) type = "Store Page Fault";
-    kprintf("pagefault: cause=%D (%s) sepc=%X stval=%X\n", code, type, tf->sepc, tf->stval);
     L1(L_NORM, L_PAGEFAULT, tf->stval);
     proc_miss(sched_self(), tf->stval);
 }

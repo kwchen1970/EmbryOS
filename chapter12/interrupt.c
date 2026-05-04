@@ -28,8 +28,6 @@ void software_trap_handler(struct trap_frame *tf) {
             case 8:  syscall_handler(tf); break;
             case 12: case 13: case 15:
                 if (VM_START <= tf->stval && tf->stval < VM_END) {
-                    struct pcb *self = sched_self();
-                    kprintf("pagefault: cause=%X sepc=%X stval=%X hart=%d\n", tf->scause, tf->sepc, tf->stval, self ? self->hart->idx : -1);
                     proc_pagefault(tf);
                     break;
                 }
